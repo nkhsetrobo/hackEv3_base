@@ -1,4 +1,4 @@
-//githubテスト
+//github使い方演習
 
 #ifndef _SPEED_SECTION_MANAGER_H_
 #define _SPEED_SECTION_MANAGER_H_
