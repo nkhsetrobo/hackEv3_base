@@ -8,6 +8,7 @@ Scene::Scene() : mState(UNDEFINED)
     mSsm = new SpeedSectionManager();
     mSlm = new SlalomSectionManager();
     mGsm = new GarageSectionManager();
+    mBsm = new BlockSectionManager();
 }
 
 bool Scene::run()
@@ -19,8 +20,17 @@ bool Scene::run()
         case START:
             execStart();
             break;
+        case INIT_SPEED:
+            initSpeed();
+            break;
         case SPEED:
             execSpeed();
+            break;
+        case INIT_BINGO:
+            initBingo();
+            break;
+        case BINGO:
+            execBingo();
             break;
         case INIT_SLALOM:
             initSlalom();
@@ -30,9 +40,6 @@ bool Scene::run()
             break;
         case INIT_GARAGE:
             initGarage();
-            break;
-        case INIT_SPEED:
-            initSpeed();
             break;
         case GARAGE:
             execGarage();
@@ -79,8 +86,23 @@ void Scene::execSpeed()
     {
         delete mSsm;
         // msg_log("test length");
-        mState = INIT_GARAGE;
+        mState = INIT_BINGO;
         // mState = FINISH;
+    }
+}
+
+void Scene::initBingo(){
+    mBsm->init();
+    mState=BINGO;
+}
+
+void Scene::execBingo()
+{
+    if(mBsm->run()){
+        delete mBsm;
+        // msg_log("Tail test");
+        
+        mState = FINISH;
     }
 }
 

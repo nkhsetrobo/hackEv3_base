@@ -30,6 +30,7 @@ bool LengthJudge::run()
     {
         if (mLength->getValue() >= mFinishlength)
         {
+           // printf("length judge\n");
             return true;
         }
         else

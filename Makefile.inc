@@ -47,7 +47,10 @@ APPL_CXXOBJS += \
 	GarageSectionManager.o\
 	Stop.o\
 	GyroJudge.o \
-	SonerJudge.o
+	SonerJudge.o \
+	BingoState.o \
+	BingoStateCarry.o \
+	BlockSectionManager.o
 
 SRCLANG := c++
 

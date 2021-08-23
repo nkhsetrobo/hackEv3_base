@@ -38,7 +38,8 @@ public:
         VIRTUAL,
         VIRTUAL2,
         TAIL,
-        ARM
+        ARM,
+        WEND=-1
     };
     enum JUDGE_NO
     {
@@ -50,7 +51,8 @@ public:
         TAILANGLE,
         ARMANGLE,
         STOP,
-        SONER
+        SONER,
+        JEND=-1
     };
 
 protected:

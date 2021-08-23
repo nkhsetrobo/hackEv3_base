@@ -9,30 +9,30 @@ typedef struct _Param1
   int flag;
   Section::WALKER_NO walk;
   Section::JUDGE_NO judge;
-  float speed;
-  float target;
-  float kp;
-  float ki;
-  float kd;
-  float angleTarget;
-  float anglekp;
+  double speed;
+  double target;
+  double kp;
+  double ki;
+  double kd;
+  double angleTarget;
+  double anglekp;
 
 
-  float absangle;
-  float round;
-  float forward;
-  float turn;
+  double absangle;
+  double round;
+  double forward;
+  double turn;
   bool _EDGE; //true=left,false=right
 
   Judge::JUDGE_MODE jflag;
 
-  float fangle;
-  float flength;
-  float bright1;
-  float bright2;
-  float color1;
-  float color2;
-  float count;
+  double fangle;
+  double flength;
+  double bright1;
+  double bright2;
+  double color1;
+  double color2;
+  double count;
   bool vangle;
 
 } wParam;
@@ -47,13 +47,13 @@ protected:
 private:
 
 
-  float YELLOW = 55;
-  float GREEN = 138;
-  float RED = 0;
-  float BLUE = 207;
-  float bspd = 11.5;
-  float bspd2 = bspd*0.6;
-  float bkp = 36;
+  double YELLOW = 55;
+  double GREEN = 138;
+  double RED = 0;
+  double BLUE = 207;
+  double bspd = 11.5;
+  double bspd2 = bspd*0.6;
+  double bkp = 36;
 
   int n;
 
@@ -68,10 +68,10 @@ private:
 
 #if defined(MAKE_RIGHT)
   const int _EDGE = LineTracer::RIGHTEDGE;
-  const int sign=-1;
+  const float sign=-1;
 #else
   const int _EDGE = LineTracer::LEFTEDGE;
-  const int sign=1;
+  const float sign=1;
 #endif
 
 wParam base[100] = {
@@ -485,6 +485,32 @@ wParam base_sc2_r[100] = {
 
                    {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},
 };
+
+wParam base_sc3_r[100] = {
+                    {0, Section::WALKER, Section::LENGTH, 30, 0,10, 5.0, 2.0, 0, 0 /*setparam*/, 0, 0, 30, 0, _EDGE, Judge::UPDATE, 0, 50, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL2, Section::LENGTH, 45, 0,40, 10.0, 3.5, 0, 0 /*setparam*/, 0, 0, 45, 0, _EDGE, Judge::UNUPDATE, 0, 135, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 40, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 95*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 27*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 35, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, 55*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL2, Section::LENGTH, 45, 0,40, 10.0, 3.5, 0, 0 /*setparam*/,  90*sign, 0,0 , 0, _EDGE, Judge::UPDATE, 0, 22, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 20, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, 22*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 260*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL2, Section::LENGTH, 45, 0,40, 10.0, 3.5, 0, 0 /*setparam*/,  260*sign, 0,0 , 0, _EDGE, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, -45*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 180*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL2, Section::LENGTH, 45, 0,40, 10.0, 3.5, 0, 0 /*setparam*/,  180*sign, 0,0 , 0, _EDGE, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, -42*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 95*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL2, Section::LENGTH, 45, 0,40, 10.0, 3.5, 0, 0 /*setparam*/,  90*sign, 0,0 , 0, _EDGE, Judge::UPDATE, 0, 5, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, 25*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 155*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 35, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, -20*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 95*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 40, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, 20*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 170*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 40, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, -35*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 97*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL2, Section::LENGTH, 50, 0,35, 30.0, 3.5,1.0, 1.00 /*setparam*/, 97*sign, 0, 35, 0, _EDGE, Judge::UPDATE, 0,20, -0, 0, 0, 0, 0},
+                    {0, Section::WALKER, Section::BRIGHTNESS, 40, 0,35, 30.0, 3.5,1.0, 1.00 /*setparam*/, 97*sign, 0, 50, 0, _EDGE, Judge::UNUPDATE, 0, 0, -0.8, 0, 0, 0, 0},
+                   {0, Section::TRACER, Section::LENGTH, 50, 0,30, 30.0, 3.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 0, 150, 0, 0, 0, 0, 0},
+                                     {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 00, 10000, 0, 0, 138, 0.35, 0 , 0 },  
+
+
+                    {-1, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 00, 10000, 0, 0, 138, 0.35, 0 , 0 },  
+};
+
 wParam outer[100] = {
                     {0, Section::TRACER, Section::LENGTH, 40, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 600, 0, 0, 0, 0, 0},
                     {0, Section::TRACER, Section::TURNANGLE, 40, 0, 45, 15.0, 3.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, -45*sign, 0, 0, 0, 0, 0, 0},
@@ -663,9 +689,9 @@ wParam outer_adv2[200] = {
                     // entry 入り口 / advanced センター置き
                   // {0, Section::TRACER, Section::LENGTH, 35, 0, kp, 4.0, 2.5, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UNUPDATE, 0, 100, 0, 0, 0, 0, 0},
                    {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, 0, !_EDGE, Judge::UPDATE, 00, 0, 0, 0, 55, 0.35, 0 , 0 },  //黄色
-                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, 0, !_EDGE, Judge::UPDATE, 00, 12, 0, 0, 0, 0.0, 0 , 0 },  //黄色
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, 0, !_EDGE, Judge::UPDATE, 00, 8, 0, 0, 0, 0.0, 0 , 0 },  //黄色
                    {0, Section::TRACER, Section::LENGTH, 20, 0, 15, 2.0, 1.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 00, 45, 0, 0,0, 0, 0}, 
-                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 10, 0, !_EDGE, Judge::UPDATE, 00, 0, 0, 0, 138, 0.35, 0 , 0 },  //緑色
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 12, 0, !_EDGE, Judge::UPDATE, 00, 0, 0, 0, 138, 0.35, 0 , 0 },  //緑色
                    {0, Section::VIRTUAL, Section::TURNANGLE, 5, 0, 20, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, -9.0*sign, 0, 0, false, Judge::UPDATE, -90*sign, 0, 0, 0, 0, 0, 0},
 
 
@@ -680,10 +706,11 @@ wParam outer_adv2[200] = {
 
 
                   // advanced ビンゴテスト 初期値クリア
-                  {0, Section::WALKER, Section::TURNANGLE,0, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 10*sign, false, Judge::UPDATE, -89*sign, 0, 0, 0, 0, 0, 0}, //下り  advanced
-                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, -5, 0, _EDGE, Judge::UPDATE, 00, -15, 0, 0,  0,0 , 0, 0}, 
+                  {0, Section::WALKER, Section::TURNANGLE,0, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 15*sign, false, Judge::UPDATE, -89*sign, 0, 0, 0, 0, 0, 0}, //下り  advanced
+                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, -10, 0, _EDGE, Judge::UPDATE, 00, -10, 0, 0,  0,0 , 0, 0}, 
                   {0, Section::TRACER, Section::LENGTH, bspd2, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 20, 0, 0, 0, 0, 0}, 
                    {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0},
+                    {-1},
 
                   // 1つ目　黄色
                   //旋回（左）後交点まで
@@ -848,10 +875,214 @@ wParam outer_adv2[200] = {
 
 };
 
-float kp=60.0;
-float vkp=38.0,vki=40.0,vkd=3.5;
-float vkp2=30.0,vki2=10.0,vkd2=5.0;
-//float vkp=0.0,vki=0.0,vkd=0.0;
+wParam outer_adv3[200] = {
+                    {0, Section::TRACER, Section::LENGTH, 25, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 20, 0, 0, 0, 0, 0},
+                    {0, Section::TRACER, Section::LENGTH, 42, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UNUPDATE, 0, 131, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 32, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 95*sign, 00, 0, !_EDGE, Judge::UPDATE, 27*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0, 30, 15.0, 4.0, 0, 0 /*setparam*/, 0, 70*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 82*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::VIRTUAL2, Section::LENGTH, 45, 0, 45, 15.0, 4.0, 0, 0  /*setparam*/, 82*sign , 0, 0, 0, !_EDGE, Judge::UPDATE, 00, 20, 0, 0, 0, 0.0, 0 , 0 },  //黄色
+                    {0, Section::VIRTUAL, Section::TURNANGLE, 42, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 50*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 174*sign, 0, 0, 0, 0, 0, 0},
+                   // {0, Section::TRACER, Section::TURNANGLE, 40, 0, 45, 15.0, 3.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, -45*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL2, Section::BRIGHTNESS, 45, 0,35, 20.0, 1.5, 1, 1 /*setparam*/, 174*sign, 0, 0, 0, false, Judge::UPDATE, 0, 0, -0.7, 0, 0, 0, 0}, //下り  advanced
+                  //  {0, Section::VIRTUAL, Section::TURNANGLE, 42, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 60*sign, 00, 0, !_EDGE, Judge::UNUPDATE, 170*sign, 0, 0, 0, 0, 0, 0},
+                    {0, Section::TRACER, Section::LENGTH, 45, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 250, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 00, 10000, 0, 0, 0, 0.0, 0 , 0 },  //黄色
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 00, 10000, 0, 0, 0, 0.0, 0 , 0 },  //黄色
+                    {0, Section::TRACER, Section::LENGTH, 45, 0, 45, 15.0, 3.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 80, 0, 0, 0, 0, 0},
+
+                  //  {0, Section::WALKER, Section::LENGTH, 00, 0, 45, 15.0, 3.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 10000, 0, 0, 0, 0, 0},
+
+                    // entry 入り口 / advanced センター置き
+                  // {0, Section::TRACER, Section::LENGTH, 35, 0, kp, 4.0, 2.5, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UNUPDATE, 0, 100, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, 0, !_EDGE, Judge::UPDATE, 00, 0, 0, 0, 55, 0.35, 0 , 0 },  //黄色
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, 0, !_EDGE, Judge::UPDATE, 00, 12, 0, 0, 0, 0.0, 0 , 0 },  //黄色
+                   {0, Section::TRACER, Section::LENGTH, 20, 0, 15, 2.0, 1.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 00, 45, 0, 0,0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 10, 0, !_EDGE, Judge::UPDATE, 00, 0, 0, 0, 138, 0.35, 0 , 0 },  //緑色
+                   {0, Section::VIRTUAL, Section::TURNANGLE, 5, 0, 20, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, -9.0*sign, 0, 0, false, Judge::UPDATE, -90*sign, 0, 0, 0, 0, 0, 0},
+
+
+                  // advanced センター置き
+                  {0, Section::TRACER, Section::LENGTH, 5, 0,25, 3.0, 1.0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0}, //下り  advanced
+                  {0, Section::WALKER, Section::LENGTH, 00, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 10, 0, false, Judge::UNUPDATE, 0, 57, 0, 0, 0, 0, 0}, //下り  advanced
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 5, 0, 20, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, -13*sign, 0, 0, false, Judge::UPDATE, -89*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL2, Section::LENGTH, 23, 0,35, 20.0, 1.5, 1, 1 /*setparam*/, -89*sign, 0, 0, 0, false, Judge::UPDATE, 0, 45, 0, 0, 0, 0, 0}, //下り  advanced
+                  {0, Section::VIRTUAL2, Section::LENGTH, 5, 0,30, 10.0, 1.0, 1, 1 /*setparam*/, -89*sign, 0, 0, 0, false, Judge::UNUPDATE, 0, 66, 0, 0, 0, 0, 0}, //下り  advanced
+                  //センター置き終了
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, -3, 0, _EDGE, Judge::UNUPDATE, 00, 60, 0, 0, 0,0 , 0 , 0 },  
+
+
+                  // advanced ビンゴテスト 初期値クリア
+                  {0, Section::WALKER, Section::TURNANGLE,0, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 10*sign, false, Judge::UPDATE, -89*sign, 0, 0, 0, 0, 0, 0}, //下り  advanced
+                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, -5, 0, _EDGE, Judge::UPDATE, 00, -15, 0, 0,  0,0 , 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd2, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 20, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0},
+                  // 1つ目　黄色
+                  //旋回（左）後交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 2, 0, 0,0, 0, 0}, 
+//                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 10.0, 1.0, 1.0, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.1, 1.0 /*setparam*/, 0, 9.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 15, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  GREEN,0.3, 0, 0}, 
+                   // 設置（左） 1
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 5, 0, 0,0, 0, 0}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 18.5*sign, 0, 0, false, Judge::UPDATE, 50*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -8, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 16.0*sign, 0, 0, false, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0},
+                  // {0, Section::WALKER, Section::TURNANGLE, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, -10*sign, _EDGE, Judge::UPDATE, 90*sign, 0, 0, 0,0, 0, 0}, 
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  //小旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 5.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 25, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  BLUE,0.3, 0, 0}, 
+   
+                  // 2つ目　緑色
+                   // 設置（左） 1
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 5, 0, 0,0, 0, 0}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 18.5*sign, 0, 0, false, Judge::UPDATE, 50*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -8, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 16.5*sign, 0, 0, false, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,40}, 
+
+                  // 3つ目　黄色
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 3, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 0, 24, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  BLUE,0.4, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 12.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 18, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  RED,0.3, 0, 0}, 
+                   // 設置（左） 2
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 5, 0, 0,0, 0, 0}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 18.5*sign, 0, 0, false, Judge::UPDATE, 50*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -8, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 16.0*sign, 0, 0, false, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,50}, 
+
+                  // 4つ目　赤色
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 3, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 0, 20, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  RED,0.3, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 15, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  RED,0.3, 0, 0}, 
+
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 6, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 0, 22, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.5*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0}, 
+                   // 設置（右） 
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 5, 0, 0,0, 0, 0}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, -18.5*sign, 0, 0, false, Judge::UPDATE, -50*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -8, 0, bkp*0.9, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, -14.0*sign, 0, 0, false, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,40}, 
+
+                  //5個目 赤
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 6, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 17, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  GREEN,0.3, 0, 0}, 
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 6, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 0, 28, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  GREEN,0.3, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 18, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  BLUE,0.4, 0, 0}, 
+                   // 設置（左） 2
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 5, 0, 0,0, 0, 0}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 18.5*sign, 0, 0, false, Judge::UPDATE, 50*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -8, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 16.0*sign, 0, 0, false, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,50}, 
+
+
+                  // 5つ目　青色
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 4, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd2, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 22, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  BLUE,0.4, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 2, 0, 0,0, 0, 0}, 
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 15, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  BLUE,0.4, 0, 0}, 
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 6, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 17, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  RED,0.4, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  RED,0.4, 0, 0}, 
+                   // 設置（右） 
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 5, 0, 0,0, 0, 0}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, -18.5*sign, 0, 0, false, Judge::UPDATE, -50*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -8, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, -15.0*sign, 0, 0, false, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+
+                // 6個目
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 6, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 17, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0}, 
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 6, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 0, 28, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  GREEN,0.3, 0, 0}, 
+                   // 設置（左） 2
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 5, 0, 0,0, 0, 0}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 18.5*sign, 0, 0, false, Judge::UPDATE, 50*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -8, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 16.0*sign, 0, 0, false, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,0, 0,20}, 
+                // 7個目
+                  //小旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 5.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 23, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  GREEN,0.3, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 15, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0}, 
+                    // 前方交点まで
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 6, 0, 0,0, 0, 0}, 
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,30, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 17, 0, 0, 0, 0, 0}, 
+                   {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd2, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0}, 
+                  //旋回（左）後交点まで
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, bkp, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 11.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, bspd, 0,bkp, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0}, 
+                  {0, Section::WALKER, Section::COLOR, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, bspd, 0, _EDGE, Judge::UPDATE, 00, 0, 0, 0,  YELLOW,0.3, 0, 0}, 
+                  //旋回（左）後その場設置
+                   {0, Section::VIRTUAL, Section::TURNANGLE, bspd2, 0, 10, 1.0, 1.0, 0.3, 1.0 /*setparam*/, 0, 10.0*sign, 0, 0, false, Judge::UPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, bspd2*0.5 ,0, 10, 1.0, 1.0, 0.1, 1.0 /*setparam*/, 0, 5.5*sign, 0, 0, false, Judge::UNUPDATE, (90+80)*sign, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, -bspd2*0.5, 0, 10, 1.0, 1.0, 0.1, 1.0 /*setparam*/, 0, 2.0*sign, 0, 0, false, Judge::UNUPDATE, 90*sign, 0, 0, 0, 0, 0, 0},
+                 
+                //終了処理
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 00, 100000, 0, 0,0, 0, 0}, 
+
+                   {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},
+
+
+};
+
+double kp=60.0;
+double vkp=38.0,vki=40.0,vkd=3.5;
+double vkp2=30.0,vki2=10.0,vkd2=5.0;
+//double vkp=0.0,vki=0.0,vkd=0.0;
 
 
 wParam sc_l[150] = {
@@ -1135,9 +1366,13 @@ wParam sc_l[150] = {
   void setWalker(Section *sc);
   void setJudge(Section *sc);
 
-  wParam *array[10] = {base_sc2_r, b};
+//  wParam *array[10] = {base_sc2_r, b};  // Rコース　ショートカットテスト
+//  wParam *array[10] = {base_sc3_r, b};  // Rコース 全速ショートカット
+//  wParam *array[10] = {base_sc2, b};  // Lコース　S字スキップ
+//wParam *array[10] = {base_sc, b};  // Lコース　S字バンプ越え
 //  wParam *array[10] = {outer, b};
-//  wParam *array[10] = {outer_adv2, b};
+  wParam *array[10] = {outer_adv2, b};
+//  wParam *array[10] = {outer_adv3, b}; //コーナーオブジェクト乗り越え
   wParam *wp;
 };
 #endif

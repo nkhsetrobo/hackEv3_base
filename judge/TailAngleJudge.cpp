@@ -26,12 +26,14 @@ bool TailAngleJudge::run()
     {
         if(mFinAngle <= mTailAngle->getValue())
         {
+            //printf("tail angle judge +\n");
             return true;
         }
     }
     else{
         if(mFinAngle >= mTailAngle->getValue())
         {
+            //printf("tail angle judge -\n");
             return true;
         }
     }

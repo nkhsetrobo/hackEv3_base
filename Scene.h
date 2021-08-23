@@ -4,6 +4,7 @@
 #include "SpeedSectionManager.h"
 #include "SlalomSectionManager.h"
 #include "GarageSectionManager.h"
+#include "BlockSectionManager.h"
 
 class Scene{
     public:
@@ -12,6 +13,8 @@ class Scene{
         void execUndefined();
         void execStart();
         void execSpeed();
+        void initBingo();
+        void execBingo();
         void initSlalom();
         void execSlalom();
         void initGarage();
@@ -25,6 +28,8 @@ class Scene{
             START,
             INIT_SPEED,
             SPEED,
+            INIT_BINGO,
+            BINGO,
             INIT_SLALOM,
             SLALOM,
             INIT_GARAGE,
@@ -37,5 +42,6 @@ class Scene{
         SpeedSectionManager *mSsm;
         SlalomSectionManager *mSlm;
         GarageSectionManager *mGsm;
+        BlockSectionManager *mBsm;
 };
 #endif

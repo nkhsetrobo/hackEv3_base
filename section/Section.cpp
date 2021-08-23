@@ -68,7 +68,7 @@ Walker *Section::selectWalker(int  no)
             // ((ArmWalker*)mWalker)->setFlag(1);
             break;
         default:
-            msg_log("selectWalker error!!");
+            printf("selectWalker error!! %d \n",no);
     }
 
     return mWalker;
@@ -103,7 +103,7 @@ Judge *Section::selectJudge(int no)
             mJudge = (Judge*)(new SonerJudge());
             break;
         default:
-            msg_log("selectJudge error!!");
+            printf("selectJudge error!! %d\n",no);
     }
     
     return mJudge;

@@ -52,7 +52,7 @@ void SlalomSectionManager::setWalker(Section *sc)
     break;
   case Section::TRACER:
     ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd); //(30, 0 ,  30, 0.2, 0.1 )
-    ((LineTracer *)walk)->setEdgeMode(wp[n]._EDGE);
+    ((LineTracer *)walk)->setEdgeMode(wp[n].edge);
     break;
 	case Section::TAIL:
     /*sprintf(buf[n],"Section %f,%f,%f,%f",wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd);
