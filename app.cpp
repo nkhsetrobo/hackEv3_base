@@ -148,10 +148,18 @@ void tracer_task(intptr_t unused) {
 
     // とりあえずここで、アームの固定。設計に基づいて変えるべし
     int arm_cnt = gArm->getCount();
+    //printf("%d\n",arm_cnt);
    // syslog(LOG_NOTICE,"%d",arm_cnt);
     int diff = -50 - arm_cnt;
 #if defined(MAKE_SIM)
-    gArm->setPWM(diff*4.0);
+    if(arm_cnt>-50){
+     // gArm->setPWM(diff*4.0);
+    }
+    else{
+      gArm->setPWM(0);
+      gArm->setBrake(true);
+    }
+    
 #endif
 
     gScene->run();

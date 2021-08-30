@@ -43,7 +43,7 @@ bool Section::run()
     return false;
 }
 
-Walker *Section::selectWalker(int  no)
+Walker *Section::selectWalker(int no)
 {
     switch(no) {
         case WALKER:

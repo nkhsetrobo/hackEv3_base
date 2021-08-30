@@ -83,7 +83,7 @@ void SpeedSectionManager::init(){
     for (n = 0; wp[n].flag != -1; n++)
     {
 
-      Section *sc = new Section();
+      Section *sc = new Section();    //区間の追加
 
       setWalker(sc);
       setJudge(sc);

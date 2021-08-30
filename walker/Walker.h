@@ -21,7 +21,7 @@ public:
     virtual void run();
     virtual void printInfo();
 
-    
+
 
 protected:
     Odometry *mOdo;

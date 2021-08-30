@@ -1,20 +1,13 @@
 #include "BingoSectionManager.h"
 
-
-
-BingoSectionManager::BingoSectionManager() : SectionManager()
+BingoSectionManager::BingoSectionManager()
 {
-
-  // test用初期化
-
-  mState=INIT;
-  mBingo = (Bingo*)(new Bingo());
-  mSectionIdx=0;
- 
-  
+    block_determination = new BlockDetermination();
+    circle_decision = new CircleDecision();
+    routeDecision = block_determination;
 }
 
-void BingoSectionManager::setWalker(Section *sc)
+void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
 {
 
   Walker *walk = sc->selectWalker(wp[n].walk);
@@ -48,7 +41,7 @@ void BingoSectionManager::setWalker(Section *sc)
   }
 }
 
-void BingoSectionManager::setJudge(Section *sc)
+void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定する
 {
 
   Judge *judge = sc->selectJudge(wp[n].judge);
@@ -74,92 +67,98 @@ void BingoSectionManager::setJudge(Section *sc)
     break;
   }
 }
-void BingoSectionManager::init(int i){
 
-    
-       
-    if(_EDGE==0){
+bool BingoSectionManager::run()    //走行する
+{
+    //bool ex = false;
+    //int block_num;    //ブロックナンバー
+    //int circle_num;    //サークルナンバー
 
-       wp=array[i];
+    //switch(mState)
+    //{
+        //case black_block:
+            //mState = pass_block;    //状態を黒ブロック処理中からブロックまで移動に更新
+        //case pass_block:/*運搬ブロック決定*/    //運搬ブロック決定
+            /* ブロックがなくなっているか判定
+            なくなっていれば終了 */
+            //if (/*全ブロック終了？*/) return ex;
+            //block_num = CurrentState->route_decision();    //ルートを決定する
+            //route_decision->pass_param(block_num, &param);    //移動パラメータを問い合わせる
+            //route_decision->pass_Color(block_num, &color);    //通過座標の色情報を問い合わせる
+
+            //s_addSection();    //区間の追加
+            //StateChange(CurrentState);    //状態遷
+            //mState = carry_block;    //状態を運搬ブロック決定からブロック運搬中に更新
+        //case carry_block/*質問箇所*/:    //ブロック運搬先決定中
+            //circle_num = CurrentState->route_decision();    //ルートを決定する
+            /*変数変えたほうがいいかも*/route_decision->pass_param(circle_num, &param);   //移動パラメータを問い合わせる
+            /*変数変えたほうがいいかも*/route_decision->pass_Color(circle_num, &color);   //通過座標の色情報を問い合わせる
+            //s_addSection();    //区間の追加
+            //StateChange(CurrentState);    //状態遷移
+            //mState = pass_block;    //ブロック運搬中から運搬ブロック決定更新
+     //}
+
+
+    return ex;
+}
+
+void BingoSectionManager::StateChange(RouteDecision *routeDecision)    //状態遷移
+{
+    /*ゲーム管理がルート決定型の状態を持っているのでそれを入れ替える
+    状態遷移の順番
+    黒ブロック処理
+    ↓
+    ブロック決定
+    ↓
+    ブロックサークル決定*/
+    if (routeDecision == circle_decision)
+    {
+        routeDecision = block_determination; 
     }
-    else{
-    
-       wp=array[i+10];
+    else
+    {
+        routeDecision = circle_decision;
     }
-     
+}
 
-      for (n = 0; wp[n].flag != -1; n++)
-      {
-
-
-        Section *sc = new Section();
-
+void BingoSectionManager::init()    //初期化
+{
+    //区間生成実行
+    for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
+    {
+        sc = new Section();
         setWalker(sc);
         setJudge(sc);
 
         addSection(sc);
-
-
-      }
-    
-
-
-
+    }
 }
 
-
-bool BingoSectionManager::exe_run()
+/*void BingoSectionManager::s_addSection()
 {
+    for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
+    {
+        section = new Section();    //クリエイトメッセージ
+        mWalker = section->selectWalker(n);    //走法の生成の依頼
+        mWalker->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
+        mJudge = section->selectJudge(n);    //判定の生成を依頼
+        mJudge->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
+        addSection(new Section());    //生成下区間をaddSectionへ渡す
+    }
+}*/
 
+void BingoSectionManager::running()    //実行する
+{
+    //区間生成実行
+    for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
+    {
+        sc = new Section();
+        setWalker(sc);
+        setJudge(sc);
 
- 
+        addSection(sc);
+    }
 
-    if(mSection[mSectionIdx]==nullptr)
-        return true;
-  //  if(mSectionIdx==0)
-    // msg_log("0");
-    //if(mSectionIdx==1)
-    // msg_log("1");
-    if(mSection[mSectionIdx]->run())
-        mSectionIdx++;
-    return false;
+    //状態遷移
+    StateChange(routeDecision);
 }
-bool BingoSectionManager::run(){
- 
-
-
-  bool ex=false;
-
-  switch(mState){
-    case INIT:
-
-        init(i2);
-        mState=RUN;
-    case RUN:
-
-        ex=exe_run();
-        if(ex==true)
-        mState=NUMBER;
-        ex=false;
-
- 
-
-    break;
-    case NUMBER:
-
-        if(i2!=0)
-        return true;
-      exe_number();
-      mState=INIT;
-    break;
-  }
-
-  return  ex;
-}
-
-void BingoSectionManager::exe_number(){
-    i2=ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_NUMBER);
-    printf("%d \n",i2);
-}
-
-

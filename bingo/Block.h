@@ -1,36 +1,29 @@
 #ifndef _BLOCK_H_
 #define _BLOCK_H_
 
-#include "BlockStorage.h"
+#include "TravelableArea.h"
 
-class BlockStorage;
-class RunningBody;
+typedef struct gameCoordinates    //ゲーム内座標
+{
+    double x;
+    double y;
+} gameCoordinates;
 
-class Block{
-    private:
-    int color;
-    int no;
-    int dx;
-    int dy;// ブロックの移動先の座標
-    int flag;//ブロックを運んだか運んでいないか
-    BlockStorage *blockstorage;
-    RunningBody *runningbody;
+class Block
+{
+public:
+    Block(int n);    //コンストラクタ
+    bool getE_move();    //有効移動成立のゲッタ
+    void EffectiveMovementJudgment(int block_num);    //ブロック有効移動判定
+    gameCoordinates BlockCoordinates(); //ブロック座標を問い合わせる
 
-    public:
-    Block(int color, int no);
-    void setBlockStorage(BlockStorage *blockstorage);
-    void setRunningBody(RunningBody *runningbody);
-    void setColor(int color);
-    void setNo(int no);
-    void setdX_Y(int x,int y);
-    void setFlag(int flag);
-    int getColor();
-    int getNo();
-    int getX();
-    int getY();
-    int getdX();
-    int getdY();
-    int getFlag();
+private:
+    int block_num;   //ブロックナンバー
+    bool b_succses_pass = false;    //有効移動が成立すればtrue
+    static const double r;    //半径
+    static const double h;    //高さ
+
+    TravelableArea *travelable_area;
 };
 
 #endif

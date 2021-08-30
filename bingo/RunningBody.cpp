@@ -1,37 +1,14 @@
 #include "RunningBody.h"
 
-RunningBody::RunningBody(int direction){
-    RunningBody::direction = direction;
+RunningBody::RunningBody()    //コンストラクタ
+{
+    block = new Block();    //運搬ブロックのインスタンス生成
+    ri.rb_coordinates.x = 1.0;    //走行体のx座標の初期化
+    ri.rb_coordinates.y = 1.0;    //走行体のy座標の初期化
+    direction = south;    //走行体の方角の初期化
 }
 
-void RunningBody::setBlockStorage(BlockStorage *blockstorage){
-    RunningBody::blockstorage = blockstorage;
-}
-
-void RunningBody::setBlock(Block *block){
-    if(block != nullptr)
-    {
-        block->setRunningBody(this);
-    }
-    RunningBody::block = block;
-}
-
-void RunningBody::setDirection(int direction){
-	RunningBody::direction = direction;
-}
-
-int RunningBody::getX(){
-    return blockstorage->getX();
-}
-	
-int RunningBody::getY(){
-    return blockstorage->getY();
-}
-	
-int RunningBody::getDirection(){
-    return direction;
-}
-	
-Block *RunningBody::getBlock(){
-    return block;
+runInfo RunningBody::get_runInfo()    //走行体情報を取得する
+{
+    return ri;    //取得した走行体情報をリターンする
 }

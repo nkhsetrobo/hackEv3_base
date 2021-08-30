@@ -1,7 +1,9 @@
 #include "BlackLine.h"
 
-BlackLine::BlackLine(int x, int y, int color)
-:BlockStorage(x,y,color)
+const double BlackLine::length = 250;    //定数
+
+BlackLine::BlackLine()
+:Travelablearea()
 {
-    
+    //コンストラクタ
 }

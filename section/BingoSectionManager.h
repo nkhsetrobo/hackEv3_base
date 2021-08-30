@@ -1,18 +1,11 @@
 #ifndef _BINGO_SECTION_MANAGER_H_
 #define _BINGO_SECTION_MANAGER_H_
+
 #include "SectionManager.h"
-#include "Bingo.h"
-#include "etroboc_ext.h"
+#include "RouteDecision.h"
 
-
-    
-
-typedef struct _Param2
+typedef struct _Param2    //パラメータの構造体
 {
-
-
-
-
     int flag;
     Section::WALKER_NO walk;
     Section::JUDGE_NO judge;
@@ -46,41 +39,38 @@ typedef struct _Param2
 
 } wParam3;
 
-
-
 class BingoSectionManager : public SectionManager
 {
 public:
-    BingoSectionManager();
-    void init(int i);
-    bool run();
-    bool exe_run();
-    void exe_number();
-    bool exe_run2();
+    BingoSectionManager();    //コンストラクタ
 
-protected:
+    bool run();    //走行する
+    void StateChange(Routedecision *routeDecision);    //状態遷移
+    void init();    //初期化
+    //void s_addSection();    //区間の追加
+    void running();    //実行する
+
 private:
-
-
-    enum State {
-        INIT,
-        NUMBER,
-        RUN      
-        };
-
-        State mState;
-
     int n;
-    int i2=0;
-
+    //int i2 = 0;
+    enum State    //状態
+    {
+        black_block,    //黒ブロック処理中
+        pass_block,    //ブロックまで移動
+        carry_block    //区間の追加
+    };
+    State mState;    //状態の変数
+    RouteDecision *block_determination;
+    RouteDecision *circle_decision;
+    RouteDecision *routeDecision;
 
     #if defined(MAKE_RIGHT)
-  const int _EDGE = LineTracer::LEFTEDGE;
-#else
-  const int _EDGE = LineTracer::RIGHTEDGE;
-#endif
+    const int _EDGE = LineTracer::LEFTEDGE;
+    #else
+    const int _EDGE = LineTracer::RIGHTEDGE;
+    #endif
 
-     Bingo *mBingo; 
+         Bingo *mBingo; 
 
     //{-1の時終了, Section::使いたいwalker, Section::使いたいjudge, 速度, 0, pの値, dの値, iの値, 0, 0 ,
     ///*setparam*/, 直線仮想ライントレースの角度, 円仮想ライントレースの半径, 単純走行のパワー, 単純走法の曲がり具合, 線のどちらを進むか,
@@ -278,4 +268,5 @@ wParam3 *array[20]={a,b,c,d,e,f,g,h,i,l,a1,d4,c3,b2,f6,e5,i9,h8,g7,l10};
     void setWalker(Section *sc);
     void setJudge(Section *sc);
 };
+
 #endif

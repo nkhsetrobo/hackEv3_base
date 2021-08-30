@@ -6,12 +6,13 @@
 
 #include "etroboc_ext.h" 
 
+extern Motor       *gArm;
+
 Scene::Scene():
     mState(UNDEFINED)
 {
     mSsm = new SpeedSectionManager();
     mBsm = new BingoSectionManager();
-
 }
 
 bool Scene::run()
@@ -66,11 +67,13 @@ void Scene::execStart()
     // とりあえず動かすだけなので、設計に基づいて書き直そう
     if (ev3_touch_sensor_is_pressed(EV3_PORT_1) == 1)
     {
-            mState=INIT_SPEED;
+        mState=INIT_SPEED;
     }
 }
 void Scene::execSpeed()
 {
+    //ev3_motor_stop(EV3_PORT_A,true);
+    //ev3_motor_set_power(EV3_PORT_A,0);
     if(mSsm->run()) {
         delete mSsm;
          msg_log("test length");
@@ -90,7 +93,7 @@ void Scene::execBingo()
 {
 
     
-    if(mBsm->run()) {
+    if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/) {
         delete mBsm;
          msg_log("test length2");
         mState = END;

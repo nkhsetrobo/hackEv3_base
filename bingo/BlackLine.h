@@ -1,11 +1,14 @@
 #ifndef _BLACK_LINE_H_
 #define _BLACK_LINE_H_
 
-#include "BlockStorage.h"
-class BlackLine : public BlockStorage{
-    public:
-    BlackLine(int x, int y, int color);
-};
+#include "TravelableArea.h"
 
+class BalckLine : public TravelableArea
+{
+public:
+    BlackLine();    //コンストラクタ
+private:
+    static const double length;    //長さ(定数)
+};
 
 #endif

@@ -1,62 +1,26 @@
 #include "Block.h"
 
-Block::Block(int color, int no){
-    Block::color = color;
-    Block::no = no;
-    dx = 0;
-    dy = 0;
-    flag = 0;
+const double Block::r = 30;    //半径
+const double Block::h = 30;    //半径
+
+Block::Block(int n)    //コンストラクタ
+{
+    travelable_area = new TravelableArea();    //走行可能領域のインスタンス生成
+    block_num = n;    //引数で受け取った番号をブロックナンバーに格納する
+    b_succses_pass = false;    //有効移動成立のメンバ変数に初期値を格納する
 }
 
-void Block::setBlockStorage(BlockStorage *blockstorage){
-    Block::blockstorage = blockstorage;
+bool Block::getE_move()
+{
+    return b_succses_pass;    //有効移動成立を表す変数をリターン
 }
 
-void Block::setRunningBody(RunningBody *runningbody){
-    Block::runningbody = runningbody;
+void Block::EffectiveMovementJudgment(int block_num)    //ブロックの有効移動判定
+{
+    b_succses_pass = true;    //有効移動成立
 }
 
-void Block::setColor(int color){
-    Block::color = color;
-}
-
-void Block::setNo(int no){
-    Block::no = no;
-}
-
-void Block::setdX_Y(int x, int y){
-    dx = x;
-    dy = y;
-}
-
-void Block::setFlag(int flag){
-    Block::flag = flag;
-}
-
-int Block::getColor(){
-    return color;
-}
-
-int Block::getNo(){
-    return no;
-}
-
-int Block::getX(){
-    return blockstorage->getX();
-}
-
-int Block::getY(){
-    return blockstorage->getY();
-}
-
-int Block::getdX(){
-    return dx;
-}
-
-int Block::getdY(){
-    return dy;
-}
-
-int Block::getFlag(){
-    return flag;
+gameCoordinates Block::BlockCoordinates()    //ブロック座標を問い合わせる
+{
+    return intersection_circle[block_num]->getCoordinates();    //ブロック座標を取得する
 }
