@@ -1,7 +1,7 @@
 #include "BlockStorage.h"
 
-BlockStorage::BlockStorage()
-:TravelableArea()
+BlockStorage::BlockStorage(int n, gameCoordinates c_coordinates)
+:TravelableArea(c_coordinates)		//コンストラクタ
 {
-	//コンストラクタ
+	BS_number = n;
 }

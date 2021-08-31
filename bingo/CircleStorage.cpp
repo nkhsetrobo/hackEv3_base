@@ -3,13 +3,14 @@
 const double CircleStorage::r = 110;   //半径
 const int  CircleStorage::dot_r = 30;    //点線半径
 
-CircleStorage::CircleStorage()
-:BlockStorage()
+CircleStorage::CircleStorage(int n, Color c_color, gameCoordinates c_coordinates)
+:BlockStorage(n, c_coordinates)    //コンストラクタ
 {
-    //コンストラクタ
+    color = c_color;
+    power_block_move = false;
 }
 
-int CircleStorage::getColor()    //色を取得する
+Color CircleStorage::getColor()    //色を取得する
 {
     return color;    //取得した色をリターン
 }

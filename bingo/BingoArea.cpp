@@ -76,10 +76,46 @@ bool C_SuccsesPass(int block_num)   //ブロックサークルが有効移動成
 
 gameCoordinates relative_coordinates(gameCoordinates coordinates, Direction direction)    //相対座標に変換する
 {
-    //中身は後で実装
+    double x = coordinates.x;
+    double y = coordinates.y;
+    switch(direction){
+        case north:     //走行体向きが北の場合（ｘ、ｙ）→（ｙ、3-ｘ）
+             x = coordinates.y;
+             y = 3 - coordinates.x;
+             break;
+        case south:     //走行体向きが南の場合（ｘ、ｙ）→（3-ｙ、ｘ）
+            x = 3 - coordinates.y;
+            y = coordinates.x;
+            break;
+        case west:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
+            x = 3 - coordinates.y;
+            y = 3 - coordinates.x;
+            break;
+    }
+    coordinates.x = x;
+    coordinates.y = y,
+    return coordinates;
 }
 
 gameCoordiantes absolute_coordinates(gameCoordinates coordinates, Direction direction)    //絶対座標に変換する
 {
-    //中身は後で実装
+    double x = coordinates.x;
+    double y = coordinates.y;
+    switch(direction){
+        case north:     //走行体向きが北の場合（ｘ、ｙ）→（3-ｙ、ｘ）
+             x = 3 - coordinates.y;
+             y = coordinates.x;
+             break;
+        case south:     //走行体向きが南の場合（ｘ、ｙ）→（ｙ、3-ｘ）
+            x = coordinates.y;
+            y = 3 - coordinates.x;
+            break;
+        case west:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
+            x = 3 - coordinates.y;
+            y = 3 - coordinates.x;
+            break;
+    }
+    coordinates.x = x;
+    coordinates.y = y,
+    return coordinates;
 }

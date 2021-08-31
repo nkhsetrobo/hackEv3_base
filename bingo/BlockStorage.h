@@ -6,7 +6,7 @@
 class BlockStorage : public TravelableArea
 {
 public:
-	BlockStorage();
+	BlockStorage(int n, gameCoordinates c_coordinates);
 
 private:
 	int BS_number;     //ブロック置き場ナンバー

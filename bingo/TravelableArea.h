@@ -13,7 +13,7 @@ typedef struct gameCoordinates    //ゲーム内座標
 class TravelableArea
 {
 public:
-    TravelableArea();    //コンストラクタ
+    TravelableArea(gameCoordinates c_coordinates);    //コンストラクタ
     gameCoordinates getCoordinates();    //座標を取得する
 private:
     gameCoordinates coordinates;    //座標
