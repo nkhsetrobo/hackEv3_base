@@ -106,10 +106,6 @@ void Scene::initBingo(){
     mState = BINGO;
 
 }
-void Scene::execGarage()
-{
-
-}
 
 void Scene::finish(){
 

@@ -7,12 +7,11 @@
 class Scene{
     public:
         Scene();
-        bool run();
+        bool run();    //実行する
         void execUndefined();
         void execStart();
         void execSpeed();
         void execBingo();
-        void execGarage();
         void initSpeed();
         void initBingo();
         void finish();
@@ -25,11 +24,10 @@ class Scene{
             SPEED,
             INIT_BINGO,
             BINGO,
-            GARAGE,
             END
         };
 
-        State mState;
+        State mState;    //状態を保持する列挙型
 
         SpeedSectionManager *mSsm;
         BingoSectionManager *mBsm;

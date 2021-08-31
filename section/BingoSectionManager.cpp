@@ -1,6 +1,7 @@
 #include "BingoSectionManager.h"
 
 BingoSectionManager::BingoSectionManager()
+:SectionManager()
 {
     block_determination = new BlockDetermination();
     circle_decision = new CircleDecision();
@@ -68,35 +69,38 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
   }
 }
 
-bool BingoSectionManager::run()    //走行する
-{
+//bool BingoSectionManager::run()    //走行する(色々間違えているので修正必要)
+//{
+    //走行するメソッドの振る舞いがよくわかない
+    /*ルート決定がわかったよってパラメータを投げる事で実行されるメソッド
+    */
     //bool ex = false;
     //int block_num;    //ブロックナンバー
     //int circle_num;    //サークルナンバー
 
-    //switch(mState)
-    //{
-        //case black_block:
-            //mState = pass_block;    //状態を黒ブロック処理中からブロックまで移動に更新
-        //case pass_block:/*運搬ブロック決定*/    //運搬ブロック決定
+    switch(mState)
+    {
+        case black_block:
+            mState = pass_block;    //状態を黒ブロック処理中からブロックまで移動に更新
+        case pass_block:/*運搬ブロック決定*/    //運搬ブロック決定
             /* ブロックがなくなっているか判定
             なくなっていれば終了 */
-            //if (/*全ブロック終了？*/) return ex;
-            //block_num = CurrentState->route_decision();    //ルートを決定する
-            //route_decision->pass_param(block_num, &param);    //移動パラメータを問い合わせる
-            //route_decision->pass_Color(block_num, &color);    //通過座標の色情報を問い合わせる
+            if (/*全ブロック終了？*/) return ex;
+            block_num = CurrentState->route_decision();    //ルートを決定する
+            route_decision->pass_param(block_num, &param);    //移動パラメータを問い合わせる
+            route_decision->pass_Color(block_num, &color);    //通過座標の色情報を問い合わせる
 
-            //s_addSection();    //区間の追加
-            //StateChange(CurrentState);    //状態遷
-            //mState = carry_block;    //状態を運搬ブロック決定からブロック運搬中に更新
-        //case carry_block/*質問箇所*/:    //ブロック運搬先決定中
-            //circle_num = CurrentState->route_decision();    //ルートを決定する
+            s_addSection();    //区間の追加
+            StateChange(CurrentState);    //状態遷
+            mState = carry_block;    //状態を運搬ブロック決定からブロック運搬中に更新
+        case carry_block/*質問箇所*/:    //ブロック運搬先決定中
+            circle_num = CurrentState->route_decision();    //ルートを決定する
             /*変数変えたほうがいいかも*/route_decision->pass_param(circle_num, &param);   //移動パラメータを問い合わせる
             /*変数変えたほうがいいかも*/route_decision->pass_Color(circle_num, &color);   //通過座標の色情報を問い合わせる
-            //s_addSection();    //区間の追加
-            //StateChange(CurrentState);    //状態遷移
-            //mState = pass_block;    //ブロック運搬中から運搬ブロック決定更新
-     //}
+            s_addSection();    //区間の追加
+            StateChange(CurrentState);    //状態遷移
+            mState = pass_block;    //ブロック運搬中から運搬ブロック決定更新
+     }
 
 
     return ex;
