@@ -2,8 +2,8 @@
 
 const double PassingCircle::r = 50;    //半径
 
-PassingCircle::PassingCircle()
-:TravelableArea()
+PassingCircle::PassingCircle(gameCoordiantes c_coordinates)
+:TravelableArea(c_coordinates)
 {
-    //コンストラクタ
+    //コンストラクタ中身無し
 }

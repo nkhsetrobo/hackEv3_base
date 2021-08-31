@@ -1,12 +1,12 @@
 #include "ColorBlock.h"
 
-ColorBlock::ColorBlock(int i, int c)
-:Block(i)
+ColorBlock::ColorBlock(int n, Color c)
+:Block(n)
 {
     color = c;
 }
 
-int ColorBlock::getColor()
+Color ColorBlock::getColor()
 {
     return color;    //オブジェクトの属性である色の情報をリターン
 }

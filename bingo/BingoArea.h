@@ -28,12 +28,16 @@ public:
     gameCoordinates BlockCoordinates(int block_num);    //ブロック座標の問い合わせを依頼する
     runInfo RunningInformation();    //走行体情報を問い合わせる
     gameCoordinates CircleCoordinates(int circle_num);    //ブロックサークル座標を問い合わせる
-    int CircleColor(gameCoordinates pass_coordinates);    //交点サークルの色を問い合わせる
+    Color CircleColor(gameCoordinates pass_coordinates);    //交点サークルの色を問い合わせる
     int BlockColor(int block_num);    //ブロックの色を問い合わせる
     bool B_SuccsesPass(int block_num);    //ブロックが有効移動成立しているか問い合わせる
     bool C_SuccsesPass(int circle_num);    //ブロックサークルが有効移動成立しているか問い合わせる
     gameCoordinates relative_coordinates(gameCoordinates coordinates, Direction rb_direction);    //相対座標系に変換する
     gameCoordinates absolute_coordinates(gameCoordinates coordinates, Direction rb_direction);    //絶対座標系に変換する
+    static const int circle_count;    //交点サークルの個数
+    static const int block_count;    //ブロックの個数
+    static const int c_color_count;    //同色のサークル数
+    static const int b_color_const;    //同色のブロック数
 
 private:
     enum Direction    //方向
@@ -43,14 +47,14 @@ private:
         south,    //南
         west    //西
     };
-    enum ColorBlock
+    enum Color
     {
         blue,   //青
         red,    //赤
         green,  //緑
-        yellow  //黄色
+        yellow  //黄
     };
-    
+    RouteDecision* routeDecision;
     RunningBody* run_body;
     Block* b_block;
     Block* c_block[8];
