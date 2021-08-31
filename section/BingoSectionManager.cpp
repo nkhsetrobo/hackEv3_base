@@ -5,7 +5,7 @@ BingoSectionManager::BingoSectionManager()
 {
     block_determination = new BlockDetermination();
     circle_decision = new CircleDecision();
-    routeDecision = block_determination;
+    route_decision = block_determination;
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
@@ -78,50 +78,43 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
     //int block_num;    //ブロックナンバー
     //int circle_num;    //サークルナンバー
 
-    switch(mState)
-    {
-        case black_block:
-            mState = pass_block;    //状態を黒ブロック処理中からブロックまで移動に更新
-        case pass_block:/*運搬ブロック決定*/    //運搬ブロック決定
+    //switch(mState)
+    //{
+        //case black_block:
+            //mState = pass_block;    //状態を黒ブロック処理中からブロックまで移動に更新
+        //case pass_block:/*運搬ブロック決定*/    //運搬ブロック決定
             /* ブロックがなくなっているか判定
             なくなっていれば終了 */
-            if (/*全ブロック終了？*/) return ex;
-            block_num = CurrentState->route_decision();    //ルートを決定する
-            route_decision->pass_param(block_num, &param);    //移動パラメータを問い合わせる
-            route_decision->pass_Color(block_num, &color);    //通過座標の色情報を問い合わせる
+            //if (/*全ブロック終了？*/) return ex;
+            //block_num = CurrentState->route_decision();    //ルートを決定する
+            //route_decision->pass_param(block_num, &param);    //移動パラメータを問い合わせる
+            //route_decision->pass_Color(block_num, &color);    //通過座標の色情報を問い合わせる
 
-            s_addSection();    //区間の追加
-            StateChange(CurrentState);    //状態遷
-            mState = carry_block;    //状態を運搬ブロック決定からブロック運搬中に更新
-        case carry_block/*質問箇所*/:    //ブロック運搬先決定中
-            circle_num = CurrentState->route_decision();    //ルートを決定する
-            /*変数変えたほうがいいかも*/route_decision->pass_param(circle_num, &param);   //移動パラメータを問い合わせる
-            /*変数変えたほうがいいかも*/route_decision->pass_Color(circle_num, &color);   //通過座標の色情報を問い合わせる
-            s_addSection();    //区間の追加
-            StateChange(CurrentState);    //状態遷移
-            mState = pass_block;    //ブロック運搬中から運搬ブロック決定更新
-     }
+            //s_addSection();    //区間の追加
+            //StateChange(CurrentState);    //状態遷
+            //mState = carry_block;    //状態を運搬ブロック決定からブロック運搬中に更新
+        //case carry_block/*質問箇所*/:    //ブロック運搬先決定中
+            //circle_num = CurrentState->route_decision();    //ルートを決定する
+            /*変数変えたほうがいいかも*///route_decision->pass_param(circle_num, &param);   //移動パラメータを問い合わせる
+            /*変数変えたほうがいいかも*///route_decision->pass_Color(circle_num, &color);   //通過座標の色情報を問い合わせる
+            //s_addSection();    //区間の追加
+            //StateChange(CurrentState);    //状態遷移
+            //mState = pass_block;    //ブロック運搬中から運搬ブロック決定更新
+     //}
 
 
-    return ex;
-}
+    //return ex;
+//}
 
 void BingoSectionManager::StateChange(RouteDecision *routeDecision)    //状態遷移
 {
-    /*ゲーム管理がルート決定型の状態を持っているのでそれを入れ替える
-    状態遷移の順番
-    黒ブロック処理
-    ↓
-    ブロック決定
-    ↓
-    ブロックサークル決定*/
-    if (routeDecision == circle_decision)
+    if (route_decision == circle_decision)
     {
-        routeDecision = block_determination; 
+        route_decision = block_determination; 
     }
     else
     {
-        routeDecision = circle_decision;
+        route_decision = circle_decision;
     }
 }
 
