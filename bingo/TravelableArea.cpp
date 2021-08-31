@@ -1,8 +1,8 @@
 #include "TravelableArea.h"
 
-TravelableArea::TravelableArea()
+TravelableArea::TravelableArea(gameCoordinates c_coordinates)
 {
-    //コンストラクタ
+    coordinates = c_coordinates;
 }
 
 gameCoordinates TravelableArea::getCoordinates()    //座標を取得する
