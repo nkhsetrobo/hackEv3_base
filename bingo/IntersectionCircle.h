@@ -6,7 +6,7 @@
 class IntersectionCircle : public PassingCircle
 {
 public:
-    IntersectionCircle(int n, int c);    //コンストラクタ
+    IntersectionCircle(int n, int c, gameCoordinates c_coordinates);    //コンストラクタ
     int getColor();    //色を取得する
 
 private:

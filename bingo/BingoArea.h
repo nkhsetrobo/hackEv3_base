@@ -50,7 +50,7 @@ private:
         green,  //緑
         yellow  //黄色
     };
-    RouteDecision* routeDecision;
+    
     RunningBody* run_body;
     Block* b_block;
     Block* c_block[8];

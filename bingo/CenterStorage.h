@@ -4,7 +4,7 @@
 class CircleStorage : public BlockStorage
 {
 public:
-    CircleStorage();    //コンストラクタ
+    CircleStorage(int n, gameCoordinates c_coordinates);    //コンストラクタ
 private:
     static const double r;    //半径
 }
