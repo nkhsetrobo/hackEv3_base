@@ -45,7 +45,7 @@ public:
     BingoSectionManager();    //コンストラクタ
 
     bool run();    //走行する
-    void StateChange(Routedecision *routeDecision);    //状態遷移
+    void stateChange(Routedecision *routeDecision);    //状態遷移
     void init();    //初期化
     //void s_addSection();    //区間の追加
     void running();    //実行する
@@ -53,16 +53,16 @@ public:
 private:
     int n;
     //int i2 = 0;
-    enum State    //状態
+    enum STATE    //状態
     {
         black_block,    //黒ブロック処理中
         pass_block,    //ブロックまで移動
         carry_block    //区間の追加
     };
-    State mState;    //状態の変数
+    STATE mState;    //状態の変数
     RouteDecision *block_determination;
     RouteDecision *circle_decision;
-    RouteDecision *routeDecision;
+    RouteDecision *route_decision;
 
     #if defined(MAKE_RIGHT)
     const int _EDGE = LineTracer::LEFTEDGE;
