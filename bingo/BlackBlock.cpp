@@ -1,7 +1,7 @@
 #include "BlackBlock.h"
 
-BlackBlock::BlackBlock()
-:Block()
+BlackBlock::BlackBlock(int n)
+:Block(n)
 {
-    //コンストラクタ
+    
 }
