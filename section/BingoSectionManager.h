@@ -3,6 +3,7 @@
 
 #include "SectionManager.h"
 #include "RouteDecision.h"
+#include "etroboc_ext.h"
 
 typedef struct _Param2    //パラメータの構造体
 {
@@ -43,23 +44,23 @@ class BingoSectionManager : public SectionManager
 {
 public:
     BingoSectionManager();    //コンストラクタ
-
     bool run();    //走行する
+    bool exe_run();
+    void exe_number();
     void stateChange(Routedecision *routeDecision);    //状態遷移
     void init();    //初期化
     //void s_addSection();    //区間の追加
     void running();    //実行する
-
 private:
-    int n;
-    //int i2 = 0;
-    enum STATE    //状態
+    enum State
     {
-        black_block,    //黒ブロック処理中
-        pass_block,    //ブロックまで移動
-        carry_block    //区間の追加
+       INIT,
+       NUMBER,
+       RUN
     };
-    STATE mState;    //状態の変数
+    State mState;    //状態の変数
+    int n;
+    int i2 = 0;
     RouteDecision *block_determination;
     RouteDecision *circle_decision;
     RouteDecision *route_decision;
@@ -70,7 +71,7 @@ private:
     const int _EDGE = LineTracer::RIGHTEDGE;
     #endif
 
-         Bingo *mBingo; 
+    ingo *mBingo; 
 
     //{-1の時終了, Section::使いたいwalker, Section::使いたいjudge, 速度, 0, pの値, dの値, iの値, 0, 0 ,
     ///*setparam*/, 直線仮想ライントレースの角度, 円仮想ライントレースの半径, 単純走行のパワー, 単純走法の曲がり具合, 線のどちらを進むか,
