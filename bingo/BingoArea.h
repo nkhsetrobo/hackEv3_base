@@ -34,9 +34,9 @@ public:
     bool C_SuccsesPass(int circle_num);    //ブロックサークルが有効移動成立しているか問い合わせる
     gameCoordinates relative_coordinates(gameCoordinates coordinates, Direction rb_direction);    //相対座標系に変換する
     gameCoordinates absolute_coordinates(gameCoordinates coordinates, Direction rb_direction);    //絶対座標系に変換する
-    static const int circle_count;    //交点サークルの個数
     static const int block_count;    //ブロックの個数
     static const int c_color_count;    //同色のサークル数
+    static const int colorkind_count;    //色の種類数
     static const int b_color_const;    //同色のブロック数
 
 private:

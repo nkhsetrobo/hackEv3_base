@@ -4,5 +4,5 @@
 class BlackBlock : public Block
 {
 public:
-    BlackBlock();    //コンストラクタ
+    BlackBlock(int n);    //コンストラクタ
 };

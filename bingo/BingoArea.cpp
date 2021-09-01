@@ -1,9 +1,9 @@
 #include "BingoArea.h"
 
-const int BingoArea::circle_count = 16;
-const int BingoArea::block_count = 9;
-const int BingoArea::c_color_count = 4;
-const int BingoArea::b_color_count = 2;
+const int BingoArea::COLORKIND_COUNT = 4;
+const int BingoArea::BLOCK_COUNT = 9;
+const int BingoArea::C_COLOR_COUNT = 4;
+const int BingoArea::B_COLOR_COUNT = 2;
 
 BingoArea::BingoArea()    //コンストラクタ
 {
@@ -17,16 +17,29 @@ BingoArea::BingoArea()    //コンストラクタ
 void BingoArea::init_block()    //ブロックの初期化
 {
     Color c;
+    int i = 0;
     /*
     *ブロックナンバーについて
     *黒が0、青が1,2、赤が3,4、緑が5,6、黄色が7,8　
     */
-    b_block = new BlackBlock(c);
-    for (int i = 1; i < block_count; i++)
+    b_block = new BlackBlock(i);
+    for (i = 1; i < BLOCK_COUNT; i++)
     {
-        if(i % color_count == 0)
+        if(i % B_COLOR_COUNT == 1)
         {
-            c++;
+            switch(c)
+                case NULL:
+                    c = blue;
+                    break;
+                case blue:
+                    c = red;
+                    break;
+                case red:
+                    c = green;
+                    break;
+                case green:
+                    c = yellow;
+                    break;
         }
         c_block[i] = new ColorBlock(i,c);
     }
@@ -34,22 +47,74 @@ void BingoArea::init_block()    //ブロックの初期化
 
 void BingoArea::init_circle()    //交点サークル初期化
 {
+    game_coordinates coordinates;
     //（交点サークルナンバー, 色, 座標）
-    for(int i = 0; i < )
+    coordinates.x = 0.0;
+    coordinates.y = 0.0;
+    intersection_circle[0] = new IntersectionCircle(0, red, coordinates);    //赤
+    coordinates.y = 1.0;
+    intersection_circle[1] = new IntersectionCircle(1, red, coordinates);    //赤
+    coordinates.y = 2.0;
+    intersection_circle[2] = new IntersectionCircle(2, blue, coordinates);    //青
+    coordinates.y = 3.0;
+    intersection_circle[3] = new IntersectionCircle(3, blue, coordinates);    //青
+    coordinates.x = 1.0;
+    coordinates.y = 0.0;
+    intersection_circle[4] = new IntersectionCircle(4, red, coordinates);    //赤
+    coordinates.y = 1.0;
+    intersection_circle[5] = new IntersectionCircle(5, red, coordinates);    //赤
+    coordinates.y = 2.0;
+    intersection_circle[6] = new IntersectionCircle(6, blue, coordinates);    //青
+    coordinates.y = 3.0;
+    intersection_circle[7] = new IntersectionCircle(7, blue, coordinates);    //青
+    coordinates.x = 2.0;
+    coordinates.y = 0.0;
+    intersection_circle[8] = new IntersectionCircle(8, yellow, coordinates);    //黄
+    coordinates.y = 1.0;
+    intersection_circle[9] = new IntersectionCircle(9, yellow, coordinates);    //黄
+    coordinates.y = 2.0;
+    intersection_circle[10] = new IntersectionCircle(10, green, coordinates);    //緑
+    coordinates.y = 3.0;
+    intersection_circle[11] = new IntersectionCircle(11, green, coordinates);    //緑
+    coordinates.x = 3.0;
+    coordinates.y = 0.0;
+    intersection_circle[12] = new IntersectionCircle(12, yellow, coordinates);    //黄
+    coordinates.y = 1.0;
+    intersection_circle[13] = new IntersectionCircle(13, yellow, coordinates);    //黄
+    coordinates.y = 2.0;
+    intersection_circle[14] = new IntersectionCircle(14, green, coordinates);    //緑
+    coordinates.y = 3.0;
+    intersection_circle[15] = new IntersectionCircle(15, green, coordinates);    //緑
+    
 }
 
 void BingoArea::init_storage()    //ブロックサークル初期化
 {
-    center_storage = new CenterStorage(0, 1.5, 1.5);    //(ブロック置き場ナンバー, 座標x,y)
-    circle_storage[0] = new CircleStorage(1, 3, 0.5, 0.5);   //(ブロック置き場ナンバー, 色, 座標x,y)
-    circle_storage[1] = new CircleStorage(2, 2, 0.5, 1.5);
-    circle_storage[2] = new CircleStorage(3, 1, 0.5, 2.5);
-    circle_storage[3] = new CircleStorage(4, 0, 1.5, 0.5);
-    
-    circle_storage[4] = new CircleStorage(5, 3, 1.5, 2.5);
-    circle_storage[5] = new CircleStorage(6, 2, 2.5, 0.5);
-    circle_storage[6] = new CircleStorage(7, 1, 2.5, 1.5);
-    circle_storage[7] = new CircleStorage(8, 0, 2.5, 2.5);
+    //(ブロック置き場ナンバー, 座標x,y)
+    game_coordinates coordinates;
+    coordinates.x = 1.5;
+    coordinates.y = 1.5;
+    center_storage = new CenterStorage(0, coordinates);    //センターブロック置き場
+    //(ブロック置き場ナンバー, 色, 座標x,y)
+    coordinates.x = 0.5;
+    coordinates.y = 0.5;
+    circle_storage[0] = new CircleStorage(1, yellow, coordinates);    //黄  
+    coordinates.y = 1.5;
+    circle_storage[1] = new CircleStorage(2, green, coordinates);    //緑
+    coordinates.y = 2.5;
+    circle_storage[2] = new CircleStorage(3, red, 0.5, 2.5);    //赤
+    coordinates.x = 1.5;
+    coordinates.y = 0.5;
+    circle_storage[3] = new CircleStorage(4, blue, 1.5, 0.5);    //青
+    coordinates.y = 2.5;
+    circle_storage[4] = new CircleStorage(5, yellow, 1.5, 2.5);    //黄
+     coordinates.x = 2.5;
+    coordinates.y = 0.5;
+    circle_storage[5] = new CircleStorage(6, green, 2.5, 0.5);    //緑
+    coordinates.y = 1.5;
+    circle_storage[6] = new CircleStorage(7, red, 2.5, 1.5);    //赤
+    coordinates.y = 2.5;
+    circle_storage[7] = new CircleStorage(8, blue, 2.5, 2.5);    //青
 }
 
 gameCoordinates BlockCoordinates(int block_num)    //ブロック座標を問い合わせる
