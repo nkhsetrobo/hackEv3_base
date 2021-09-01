@@ -3,6 +3,8 @@
 #include "SectionManager.h"
 #include "BingoState.h"
 #include "BingoStateCarry.h"
+#include "BingoStateMove.h"
+#include "Area.h"
 
 class BlockSectionManager : public SectionManager {
     public:
@@ -10,13 +12,22 @@ class BlockSectionManager : public SectionManager {
 
         void setState(BingoState *bst);
         void init();
-       // bool run();
+        bool run();        
+        int getError();
+
+        void initArea();
+    
+        static BingoState *msCarryState;
+        static BingoState *msMoveState;
+        static Area *msArea;
+
     protected:
-        static BingoState *msCarrayState;
 
 
     private:
         BingoState *mState;
+        int error_code;
+
 
 };
 

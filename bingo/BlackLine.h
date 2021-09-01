@@ -1,10 +1,16 @@
-#ifndef _BLACK_LINE_H_
-#define _BLACK_LINE_H_
+#ifndef __BLACK_LINE_H__
+#define __BLACK_LINE_H__
 
-#include "BlockStorage.h"
-class BlackLine : public BlockStorage{
+#include "BlockPlace.h"
+
+class BlackLine : public BlockPlace
+{
     public:
-    BlackLine(int x, int y, int color);
+        BlackLine(int node);
+
+
+    private:
+    
 };
 
 

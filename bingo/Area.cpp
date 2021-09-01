@@ -5,7 +5,7 @@
 #include "BlackLine.h"
 
 #include "util.h"
-
+#include "etroboc_ext.h"
 
 Area::Area(int idx)
 {   
@@ -56,9 +56,9 @@ Area::Area(int idx)
 
         // 走行体初期化
         runner = new Runner();
-        runner->setStart(bp[44]);
-        runner->setEnd(bp[44]);
-        runner->setDir(DIR::N);
+        runner->setStart(bp[30]);
+        runner->setEnd(bp[30]);
+        runner->setDir(DIR::S);
 
 
     }
@@ -101,7 +101,7 @@ Area::Area(int idx)
         runner = new Runner();
         runner->setStart(bp[46]);
         runner->setEnd(bp[46]);
-        runner->setDir(DIR::N);
+        runner->setDir(DIR::S);
 
     }
 
@@ -153,14 +153,15 @@ void Area::setDefaultBlock()
     */
   
     // test 9/14
-    bp[0]->addBlock(new Block(COLOR::BLUE));
-    bp[4]->addBlock(new Block(COLOR::BLACK));
-    bp[16]->addBlock(new Block(COLOR::GREEN));
-    bp[20]->addBlock(new Block(COLOR::RED));
-    bp[28]->addBlock(new Block(COLOR::RED));
-    bp[32]->addBlock(new Block(COLOR::YELLOW));
-    bp[44]->addBlock(new Block(COLOR::BLUE));
-    bp[48]->addBlock(new Block(COLOR::GREEN));
+    bp[2]->addBlock(new Block(COLOR::GREEN));
+    bp[6]->addBlock(new Block(COLOR::BLUE));
+    bp[14]->addBlock(new Block(COLOR::RED));
+    bp[18]->addBlock(new Block(COLOR::YELLOW));
+    bp[30]->addBlock(new Block(COLOR::RED));
+    bp[34]->addBlock(new Block(COLOR::YELLOW));
+    bp[42]->addBlock(new Block(COLOR::BLUE));
+    bp[46]->addBlock(new Block(COLOR::GREEN));
+
     
     // デバッグ用のデフォルト値
     //bp[32]->addBlock(new Block(COLOR::RED));
@@ -215,10 +216,11 @@ void Area::setDefaultBlock()
     bp[48]->addBlock(new Block(COLOR::YELLOW));
  */
     // debug用ブロックサークル用初期値
-    bp[26]->addBlock(new Block(COLOR::YELLOW));
+   // bp[26]->addBlock(new Block(COLOR::YELLOW));
     //bp[38]->addBlock(new Block(COLOR::GREEN));
    
 }
+
 
 void Area::modifyBlockColor(int no,COLOR col )
 {
@@ -367,4 +369,99 @@ void Area::assignBlockList()
 int *Area::getAssingPointer()
 {
     return assign;
+}
+
+void Area::getBlockCircles(COLOR col, int idxs[])
+{
+    int node2idx[49];
+    node2idx[8]= 0;
+    node2idx[10] = 1;
+    node2idx[12] = 2;
+    node2idx[22] = 3;
+    node2idx[26] = 4;
+    node2idx[36] = 5;
+    node2idx[38] = 6;
+    node2idx[40] = 7;
+
+    int cnt=0;
+    for(int i=0;i<49;i++) {
+        if(bp[i]->getKind()==BPKIND::BLOCK) {
+            if( ((BlockCircle*)bp[i])->getColor()==col) {
+                if(bp[i]->getBlock()==nullptr) {
+                    printf("THIS PLACE IS EMPTY %d\n",i);
+                    idxs[cnt++]=node2idx[i];
+                }
+            }
+        }
+    }
+    idxs[cnt]=-1;
+}
+
+void Area::getBlockListIdxs(int node[])
+{
+    int node2idx[49]= {0,-1,1,-1,2,-1,3,
+                     -1,-1,-1,-1,-1,-1,-1, 
+                    4,-1,5,-1,6,-1,7, 
+                    -1,-1,-1,-1,-1,-1,-1, 
+                    8,-1,9,-1,10,-1,11, 
+                    -1,-1,-1,-1,-1,-1,-1,  
+                    12,-1,13,-1,14,-1,15 };
+
+    getBlockList(node);
+    for(int i=0;node[i]!=-1;i++ ) {
+        node[i] = node2idx[node[i]];
+    }
+
+}
+
+void Area::initBlockFromApi()
+{
+    int lookup[100];
+    lookup['A'] = 0;
+    lookup['B'] = 2;
+    lookup['C'] = 4;
+    lookup['D'] = 6;
+
+    lookup['E'] = 14;
+    lookup['F'] = 16;
+    lookup['G'] = 18;
+    lookup['H'] = 20;
+
+    lookup['J'] = 28;
+    lookup['K'] = 30;
+    lookup['L'] = 32;
+    lookup['M'] = 34;
+
+    lookup['P'] = 42;
+    lookup['Q'] = 44;
+    lookup['R'] = 46;
+    lookup['S'] = 48;
+
+    int red1 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED1);
+    int red2 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED2);
+    int green1 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN1);
+    int green2 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN2);
+    int blue1 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE1);
+    int blue2 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE2);
+    int yellow1 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW1);
+    int yellow2 = ETRoboc_getCourseInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW2);
+
+    // bp[lookup[red1]]->getBlock()->setColor(COLOR::RED);
+    // bp[lookup[red2]]->getBlock()->setColor(COLOR::RED);
+    // bp[lookup[green1]]->getBlock()->setColor(COLOR::GREEN);
+    // bp[lookup[green2]]->getBlock()->setColor(COLOR::GREEN);
+    // bp[lookup[blue1]]->getBlock()->setColor(COLOR::BLUE);
+    // bp[lookup[blue2]]->getBlock()->setColor(COLOR::BLUE);
+    // bp[lookup[yellow1]]->getBlock()->setColor(COLOR::YELLOW);
+    // bp[lookup[yellow2]]->getBlock()->setColor(COLOR::YELLOW);
+
+    modifyBlockColorByNodeId(lookup[red1],COLOR::RED);
+    modifyBlockColorByNodeId(lookup[red2],COLOR::RED);
+    modifyBlockColorByNodeId(lookup[green1],COLOR::GREEN);
+    modifyBlockColorByNodeId(lookup[green2],COLOR::GREEN);
+    modifyBlockColorByNodeId(lookup[blue1],COLOR::BLUE);
+    modifyBlockColorByNodeId(lookup[blue2],COLOR::BLUE);
+    modifyBlockColorByNodeId(lookup[yellow1],COLOR::YELLOW);
+    modifyBlockColorByNodeId(lookup[yellow2],COLOR::YELLOW);
+    
 }

@@ -86,7 +86,10 @@ void Scene::execSpeed()
     {
         delete mSsm;
         // msg_log("test length");
-        mState = INIT_BINGO;
+
+        BlockSectionManager::msArea->initBlockFromApi();
+
+       mState = INIT_BINGO;
         // mState = FINISH;
     }
 }
@@ -99,10 +102,12 @@ void Scene::initBingo(){
 void Scene::execBingo()
 {
     if(mBsm->run()){
-        delete mBsm;
+       // delete mBsm;
         // msg_log("Tail test");
-        
-        mState = FINISH;
+        if(mBsm->getError()!=0) 
+            mState = FINISH;
+        else
+            mState = INIT_BINGO;
     }
 }
 

@@ -50,7 +50,15 @@ APPL_CXXOBJS += \
 	SonerJudge.o \
 	BingoState.o \
 	BingoStateCarry.o \
-	BlockSectionManager.o
+	BingoStateMove.o \
+	BlockSectionManager.o \
+	Area.o \
+	BlockPlace.o \
+	CrossCircle.o \
+	Runner.o \
+	BlackLine.o \
+	Block.o \
+	BlockCircle.o
 
 SRCLANG := c++
 

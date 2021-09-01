@@ -32,7 +32,7 @@ SimpleWalker::SimpleWalker(
 
 void SimpleWalker::init() {
 
-    printf("SimpleWalker init %f,%d\n",mForward,mTurn);
+   // printf("SimpleWalker init %f,%d\n",mForward,mTurn);
 
     if(mMode_flag)
         setCommandV(mForward,mTurn);

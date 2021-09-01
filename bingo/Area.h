@@ -24,6 +24,10 @@ class Area
         void cleanBlocks();
         void assignBlockList();
         int *getAssingPointer();
+        void getBlockCircles(COLOR col, int idxs[]);
+        void getBlockListIdxs(int node[]);
+        void initBlockFromApi();
+
     private:
         int course;
         int bonus;

@@ -55,7 +55,7 @@ void SpeedControl::setTargetSpeed(double speed)
 int SpeedControl::getPwm()
 {
     // 直接制御なら
-    //mMode_flag=false;
+   // mMode_flag=false;
     if(!mMode_flag) {
 	    //ev3_speaker_play_tone(NOTE_F4,50);
         mForward = mTargetSpeed;
@@ -72,8 +72,9 @@ int SpeedControl::getPwm()
   //  syslog(LOG_NOTICE,"spd %d fwd %d op%d",(int)mCurrentSpeed,(int)mForward,(int)op);
    int pwd = (int)((op>0)?(op+0.5):(op-0.5));
     mForward += pwd; 
-    int maxFwd = 85;
-    
+    int maxFwd = fabs(mTargetSpeed)>0?fabs(mTargetSpeed)*3.0:85;
+    if (maxFwd>85) maxFwd=85;
+
     if(mForward>maxFwd) {
         // syslog(LOG_NOTICE,"over speed");
         mForward=maxFwd;

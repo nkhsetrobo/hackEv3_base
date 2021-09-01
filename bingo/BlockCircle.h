@@ -1,15 +1,22 @@
-#ifndef _BLOCK_CIRCLE_H_
-#define _BLOCK_CIRCLE_H_
+#ifndef __BLOCK_CIRCLE_H__
+#define __BLOCK_CIRCLE_H__
 
-#include "BlockStorage.h"
-class BlockCircle : public BlockStorage{
+#include "BlockPlace.h"
+
+class BlockCircle : public BlockPlace
+{
     public:
-    BlockCircle(int x, int y, int color, int no);
-    void setNo(int no);
-    int getNo();
+        BlockCircle(int node,int id, COLOR color);
+        COLOR getColor();
+        int getid();
 
     private:
-    int no;
+        int circleid;
+        COLOR color;
+
+       
+    
 };
+
 
 #endif

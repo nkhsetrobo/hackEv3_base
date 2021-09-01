@@ -61,6 +61,8 @@ class SectionManager {
         wsParam *wp;
         wsParam param[500];
         int n;
+
+        static int msPrevWalker; 
     private:
 };
 

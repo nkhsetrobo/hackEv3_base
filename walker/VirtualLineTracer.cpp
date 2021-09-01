@@ -60,7 +60,12 @@ void VirtualLineTracer::init()
     cx = mXPosition->getvalue() - mround * sin((mTurnAngle->getValue() / 180) * M_PI);
     cy = mYPosition->getvalue() + mround * cos((mTurnAngle->getValue() / 180) * M_PI);
 
-    printf("Virurl %f,%f,%f\n",  cx,cy,mround );
+    mPid->setKp(mPFactor); 
+    mPid->setKi(mIFactor);
+    mPid->setKd(mDFactor);
+    mPid->resetParam();
+
+   // printf("Virurl %f,%f,%f\n",  cx,cy,mround );
 }
 
 void VirtualLineTracer::setCenterPosition(float centerx, float centery)

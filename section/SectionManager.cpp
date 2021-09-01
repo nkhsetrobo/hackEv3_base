@@ -1,5 +1,7 @@
 #include "SectionManager.h"
 
+int SectionManager::msPrevWalker=0;
+
 SectionManager::SectionManager()
 {
     // msg_log("SectionManger");
@@ -56,7 +58,7 @@ void SectionManager::setWalker(Section * sc,wsParam *wp,int n)
     switch (wp[n].walk)
     {
     case Section::VIRTUAL2:
-        printf("create VIRTUAL2 \n");
+      //  printf("create VIRTUAL2 \n");
         // syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
         ((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
         ((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
@@ -64,19 +66,19 @@ void SectionManager::setWalker(Section * sc,wsParam *wp,int n)
 
         break;
     case Section::WALKER:
-        printf("create WALKER \n");
+      //  printf("create WALKER \n");
         ((SimpleWalker *)walk)->setCommandV(wp[n].forward, wp[n].turn);
 
         break;
     case Section::VIRTUAL:
-        printf("create VIRTUAL \n");
+     //   printf("create VIRTUAL \n");
 
         ((VirtualLineTracer *)walk)->setRound(wp[n].round);
         ((VirtualLineTracer *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(20,2, 0.2, 0,1,1)
 
         break;
     case Section::TRACER:
-         printf("create TRACER \n");
+      //   printf("create TRACER \n");
        ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(30, 0 ,  30, 0.2, 0.1 )
         ((LineTracer *)walk)->setEdgeMode(wp[n].edge);
 
@@ -111,12 +113,12 @@ void SectionManager::setJudge(Section * sc,wsParam *wp2, int n)
     switch (wp2[n].judge)
     {
     case Section::TURNANGLE:
-        printf("create turn angle judge\n");
+      //  printf("create turn angle judge\n");
         ((TurnAngleJudge *)judge)->setupdate(wp2[n].jflag);
         ((TurnAngleJudge *)judge)->setFinishAngle(wp2[n].fangle);
         break;
     case Section::LENGTH:
-        printf("create length judge\n");
+      //  printf("create length judge\n");
         ((LengthJudge *)judge)->setFinLength(wp2[n].flength);
         ((LengthJudge *)judge)->setupdate(wp2[n].jflag);
         break;

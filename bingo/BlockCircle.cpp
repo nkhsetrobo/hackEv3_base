@@ -1,16 +1,20 @@
 #include "BlockCircle.h"
 
-BlockCircle::BlockCircle(int x, int y, int color, int no)
-:BlockStorage(x, y, color)
+BlockCircle::BlockCircle(int node,int id,COLOR col)
+        :BlockPlace(node),
+        circleid(id),
+        color(col)
 {
-   BlockCircle::no = no;
+    kind=BPKIND::BLOCK;
+
 }
 
-
-void BlockCircle::setNo(int no){
-    BlockCircle::no = no;
+COLOR BlockCircle::getColor()
+{
+    return color;
 }
 
-int BlockCircle::getNo(){
-    return no;
+int BlockCircle::getid()
+{
+    return circleid;
 }

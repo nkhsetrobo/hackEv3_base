@@ -84,7 +84,7 @@ void LineTracer::setParam(float speed,float target,float kp, float ki, float kd,
                         float angleTarget,float angleKp) 
 {
 
-    printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",speed,target, kp,ki,kd, angleTarget,angleKp);
+   // printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",speed,target, kp,ki,kd, angleTarget,angleKp);
   
     mTargetSpeed = speed;
     mTarget= target;
@@ -145,7 +145,10 @@ void LineTracer::printInfo()
 
 void LineTracer::init(){
 
-    printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",mTargetSpeed, mPFactor,mIFactor,mDFactor);
-
+   // printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",mTargetSpeed, mPFactor,mIFactor,mDFactor);
+    mPid->setKp(mPFactor); 
+    mPid->setKi(mIFactor);
+    mPid->setKd(mDFactor);
+    mPid->resetParam();
     
 }
