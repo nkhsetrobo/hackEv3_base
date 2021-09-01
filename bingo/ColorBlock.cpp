@@ -1,9 +1,11 @@
 #include "ColorBlock.h"
 
-ColorBlock::ColorBlock(int n, Color c)
+ColorBlock::ColorBlock(int n, Color c, IntersectionCircle i_circle)
 :Block(n)
 {
     color = c;
+    circle = i_circle;
+
 }
 
 Color ColorBlock::getColor()

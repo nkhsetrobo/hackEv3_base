@@ -6,6 +6,21 @@
 #include "Block.h"
 #include "TravelableArea.h"
 
+enum Direction    //方向
+{
+    north,    //北
+    east,    //東
+    south,    //南
+    west    //西
+};
+enum Color    //色
+{
+    blue,    //青
+    red,    //赤
+    green,    //緑
+    yellow    //黄
+};
+
 typedef struct gameCoordinates    //ゲーム内座標
 {
     double x;
@@ -22,9 +37,8 @@ class BingoArea
 {
 public:
     BingoArea();    //コンストラクタ
-    void init_block();    //ブロックの初期化
-    void init_circle();    //交点サークルの
-    void init_storage();    //ブロックサークルの初期化
+    void initCircle();    //交点サークル、ブロックの初期化
+    void initStorage();    //ブロックサークルの初期化
     gameCoordinates BlockCoordinates(int block_num);    //ブロック座標の問い合わせを依頼する
     runInfo RunningInformation();    //走行体情報を問い合わせる
     gameCoordinates CircleCoordinates(int circle_num);    //ブロックサークル座標を問い合わせる
@@ -34,26 +48,9 @@ public:
     bool C_SuccsesPass(int circle_num);    //ブロックサークルが有効移動成立しているか問い合わせる
     gameCoordinates relative_coordinates(gameCoordinates coordinates, Direction rb_direction);    //相対座標系に変換する
     gameCoordinates absolute_coordinates(gameCoordinates coordinates, Direction rb_direction);    //絶対座標系に変換する
-    static const int block_count;    //ブロックの個数
-    static const int c_color_count;    //同色のサークル数
-    static const int colorkind_count;    //色の種類数
-    static const int b_color_const;    //同色のブロック数
-
+    static const BLOCK_COUNT;    //ブロックの個数
+    
 private:
-    enum Direction    //方向
-    {
-        north,    //北
-        east,    //東
-        south,    //南
-        west    //西
-    };
-    enum Color
-    {
-        blue,   //青
-        red,    //赤
-        green,  //緑
-        yellow  //黄
-    };
     RouteDecision* routeDecision;
     RunningBody* run_body;
     Block* b_block;

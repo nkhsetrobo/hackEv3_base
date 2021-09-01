@@ -1,51 +1,16 @@
 #include "BingoArea.h"
 
-const int BingoArea::COLORKIND_COUNT = 4;
 const int BingoArea::BLOCK_COUNT = 9;
-const int BingoArea::C_COLOR_COUNT = 4;
-const int BingoArea::B_COLOR_COUNT = 2;
 
 BingoArea::BingoArea()    //コンストラクタ
 {
     travelable_area = new TravelableArea();
     run_body = new RunningBody();
-    init_block();   //ブロックの初期化
-    init_circle();    //交点サークル初期化
-    init_storage();   //ブロックサークル初期化
+    initCircleBlock();    //交点サークル初期化
+    initStorage();   //ブロックサークル初期化
 }
 
-void BingoArea::init_block()    //ブロックの初期化
-{
-    Color c;
-    int i = 0;
-    /*
-    *ブロックナンバーについて
-    *黒が0、青が1,2、赤が3,4、緑が5,6、黄色が7,8　
-    */
-    b_block = new BlackBlock(i);
-    for (i = 1; i < BLOCK_COUNT; i++)
-    {
-        if(i % B_COLOR_COUNT == 1)
-        {
-            switch(c)
-                case NULL:
-                    c = blue;
-                    break;
-                case blue:
-                    c = red;
-                    break;
-                case red:
-                    c = green;
-                    break;
-                case green:
-                    c = yellow;
-                    break;
-        }
-        c_block[i] = new ColorBlock(i,c);
-    }
-}
-
-void BingoArea::init_circle()    //交点サークル初期化
+void BingoArea::init_CircleBlock()    //交点サークル初期化
 {
     game_coordinates coordinates;
     //（交点サークルナンバー, 色, 座標）
@@ -86,6 +51,23 @@ void BingoArea::init_circle()    //交点サークル初期化
     coordinates.y = 3.0;
     intersection_circle[15] = new IntersectionCircle(15, green, coordinates);    //緑
     
+    for(int i = 0; i < BLOCK_COUNT; i++)
+    {
+        if(i == 0)
+        {
+            b_block = new BlackBlock(i);
+        }else
+        {
+            if(i = 1 || 2 || 5 || 6)
+            {
+                c_block[i] = new ColorBlock(i, blue, IntersectionCircle[2 * i - 1]);
+            }
+            else{
+                c_block[i] = new ColorBlock(i, blue, IntersectionCircle[2 * i - 2]);
+            }
+        }
+        
+    }
 }
 
 void BingoArea::init_storage()    //ブロックサークル初期化
