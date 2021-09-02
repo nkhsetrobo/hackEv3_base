@@ -25,6 +25,6 @@ public:
 private:
 	runInfo ri;   //走行体情報
 	Block *block;
-}
+};
 
 #endif
