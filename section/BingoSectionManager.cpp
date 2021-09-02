@@ -106,6 +106,49 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
     //return ex;
 //}
 
+bool BingoSectionManager::run()
+{
+    bool ex=false;
+
+    switch(mState) {
+        case INIT:
+            init(i2);
+            mState=RUN;
+        case RUN:
+            ex=exe_run();
+            if(ex==true)
+            mState=NUMBER;
+            ex=false;
+            break;
+        case NUMBER:
+            if(i2!=0)
+            return true;
+            exe_number();
+            mState=INIT;
+            break;
+    }
+    return ex;
+}
+
+bool BingoSectionManager::exe_run()
+{
+    if(mSection[mSectionIdx]==nullptr)
+        return true;
+    //if(mSectionIdx==0)
+    // msg_log("0");
+    //if(mSectionIdx==1)
+    // msg_log("1");
+    if(mSection[mSectionIdx]->run())
+        mSectionIdx++;
+    return false;
+}
+
+void BingoSectionManager::exe_number()
+{
+    i2=ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_NUMBER);
+    printf("%d \n",i2);
+}
+
 void BingoSectionManager::StateChange(RouteDecision *routeDecision)    //状態遷移
 {
     if (route_decision == circle_decision)
@@ -118,12 +161,22 @@ void BingoSectionManager::StateChange(RouteDecision *routeDecision)    //状態�
     }
 }
 
-void BingoSectionManager::init()    //初期化
+void BingoSectionManager::init(int i)    //初期化
 {
+    if (_EDGE == 0)
+    {
+       wp = array[i];
+    }
+    else
+    {
+       wp = array[i + 10];
+    }
+
     //区間生成実行
     for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
     {
-        sc = new Section();
+        Section *sc = new Section();
+
         setWalker(sc);
         setJudge(sc);
 

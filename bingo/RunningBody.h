@@ -3,11 +3,13 @@
 
 #include "Block.h"
 
-typedef struct gameCoordinates    //ゲーム内座標
+enum Direction    //方向
 {
-	double x;
-	double y;
-} gameCoordinates;
+	north,
+	east,
+	south,
+	west
+};
 
 typedef struct runInfo    //走行体情報
 {
@@ -21,13 +23,6 @@ public:
 	runInfo get_runInfo();	//走行体情報を取得する
 
 private:
-    enum Direction    //方向
-	{
-        north,    //北
-		east,    //東
-        south,    //南
-		west    //西
-	};
 	runInfo ri;   //走行体情報
 	Block *block;
 }
