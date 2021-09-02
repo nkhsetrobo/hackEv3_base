@@ -15,7 +15,6 @@ public:
     Block(int n);    //コンストラクタ
     bool getE_move();    //有効移動成立のゲッタ
     void EffectiveMovementJudgment(int block_num);    //ブロック有効移動判定
-    gameCoordinates BlockCoordinates(); //ブロック座標を問い合わせる
 
 private:
     int block_num;   //ブロックナンバー

@@ -19,8 +19,3 @@ void Block::EffectiveMovementJudgment(int block_num)    //ブロックの有効�
 {
     b_succses_pass = true;    //有効移動成立
 }
-
-gameCoordinates Block::BlockCoordinates()    //ブロック座標を問い合わせる
-{
-    return intersection_circle[block_num]->getCoordinates();    //ブロック座標を取得する
-}
