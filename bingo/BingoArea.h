@@ -6,13 +6,13 @@
 #include "Block.h"
 #include "TravelableArea.h"
 
-enum Direction    //方向
+/*enum Direction    //方向
 {
     north,    //北
     east,    //東
     south,    //南
     west    //西
-};
+};*/
 
 enum Color    //色
 {
@@ -41,13 +41,12 @@ public:
     bool objSuccsesPass(object object_type, int object_num);    //コース内要素が有効移動成立しているか問い合わせる
     gameCoordinates relativeCoordinates(gameCoordinates coordinates, Direction rb_direction);    //相対座標系に変換する
     gameCoordinates absoluteCoordinates(gameCoordinates coordinates, Direction rb_direction);    //絶対座標系に変換する
-    bool coordinatesConparison(gameCoordiantes pass_coordinates, gameCoordiantes g_coordinates);    //座標比較同値ならtrue
+    bool coordinatesConparison(gameCoordinates pass_coordinates, gameCoordinates g_coordinates);    //座標比較同値ならtrue
     static const int INTERSECTION_CIRCLE_COUNT;    //交点サークルの個数
     static const int BLOCK_COUNT;    //ブロックの個数
     static const int STORAGE_COUNT;    //ブロック置き場の個数
     
 private:
-    RouteDecision* routeDecision;
     RunningBody* run_body;
     TravelableArea* object_management_array[34];
     int intersection_circle[16];

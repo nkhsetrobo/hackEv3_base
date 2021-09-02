@@ -129,7 +129,7 @@ void BingoArea::initStorage()    //ブロックサークル初期化
     }
 }
 
-gameCoordinates BingoArea::objCoordinates(object object_type, int object_num)    //コース内要素座標を問い合わせる
+BingoArea::gameCoordinates BingoArea::objCoordinates(object object_type, int object_num)    //コース内要素座標を問い合わせる
 {
     switch(object_type)
     {
@@ -140,7 +140,7 @@ gameCoordinates BingoArea::objCoordinates(object object_type, int object_num)   
     }
 }
 
-runInfo BingoArea::runningInformation()    //走行体情報を問い合わせる
+BingoArea::runInfo BingoArea::runningInformation()    //走行体情報を問い合わせる
 {
     return run_body->get_runInfo();    //走行体情報を問い合わせる
 }
@@ -160,7 +160,7 @@ int BingoArea::circleColor(Coordinates pass_coordinates)    //交点サークル
     return static_cast<IntersectionCircle>object_management_array[i]->getColor();    //色を取得する
 }
 
-Color BingoArea::blockColor(int block_num)    //ブロックの色を問い合わせる
+BingoArea::Color BingoArea::blockColor(int block_num)    //ブロックの色を問い合わせる
 {
     return static_cast<ColorBlock>object_management_array[block[block_num]]->getColor();
 }
@@ -176,7 +176,7 @@ bool BingoArea::objSuccsesPass(object object_type, int　object_num)   //有効�
     }
 }
 
-gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, Direction direction)    //相対座標に変換する
+BingoArea::gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, Direction direction)    //相対座標に変換する
 {
     double x = coordinates.x;
     double y = coordinates.y;
@@ -200,7 +200,7 @@ gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, Dire
     return coordinates;
 }
 
-gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordinates, Direction direction)    //絶対座標に変換する
+BingoArea::gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordinates, Direction direction)    //絶対座標に変換する
 {
     double x = coordinates.x;
     double y = coordinates.y;
