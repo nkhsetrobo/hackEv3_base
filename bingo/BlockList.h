@@ -3,17 +3,17 @@
 
 #include "RouteDecision.h"
 
-typedef struct gameCoordinates    //ゲーム内座標
+/*typedef struct gameCoordinates    //ゲーム内座標
 {
     double x;
     double y;
-} gameCoordiantes;
+} gameCoordiantes;*/
 
-typedef struct runInfo    //走行体情報
+/*typedef struct runInfo    //走行体情報
 {
     Direction direction;    //方向
     gameCoordinates rb_coordinates;    //走行体座標
-} runInfo;
+} runInfo;*/
 
 /*ここに移動パターンのパラメータの構造体を定義する*/
 
