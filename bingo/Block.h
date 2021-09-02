@@ -7,12 +7,12 @@ class Block
 {
 public:
     Block(int n);    //コンストラクタ
-    bool getE_move();    //有効移動成立のゲッタ
-    void EffectiveMovementJudgment(int block_num);    //ブロック有効移動判定
+    bool getSuccsesPass();    //有効移動成立のゲッタ
+    void EffectiveMovementJudgment();    //ブロック有効移動判定
 
 private:
     int block_num;   //ブロックナンバー
-    bool b_succses_pass = false;    //有効移動が成立すればtrue
+    bool succses_pass = false;    //有効移動が成立すればtrue
     static const double r;    //半径
     static const double h;    //高さ
 

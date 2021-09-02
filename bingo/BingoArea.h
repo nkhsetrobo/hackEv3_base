@@ -44,7 +44,7 @@ public:
     bool coordinatesConparison(gameCoordiantes pass_coordinates, gameCoordiantes g_coordinates);    //座標比較同値ならtrue
     static const int INTERSECTION_CIRCLE_COUNT;    //交点サークルの個数
     static const int BLOCK_COUNT;    //ブロックの個数
-    static const int STORAGE;    //ブロック置き場の個数
+    static const int STORAGE_COUNT;    //ブロック置き場の個数
     
 private:
     RouteDecision* routeDecision;
