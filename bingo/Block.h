@@ -3,12 +3,6 @@
 
 #include "TravelableArea.h"
 
-typedef struct gameCoordinates    //ゲーム内座標
-{
-    double x;
-    double y;
-} gameCoordinates;
-
 class Block
 {
 public:
