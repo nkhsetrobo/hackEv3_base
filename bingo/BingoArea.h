@@ -28,18 +28,6 @@ enum object    //コース内要素
     storage    //ブロック置き場
 };
 
-typedef struct gameCoordinates    //ゲーム内座標
-{
-    double x;
-    double y;
-} gameCoordinates;
-
-typedef struct runInfo    //走行体情報
-{
-    Direction direction;    //方向
-    gameCoordinates game_coordinates;    //ゲーム内座標
-} runInfo;
-
 class BingoArea
 {
 public:
