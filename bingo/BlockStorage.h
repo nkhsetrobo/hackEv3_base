@@ -7,9 +7,11 @@ class BlockStorage : public TravelableArea
 {
 public:
 	BlockStorage(int n, gameCoordinates c_coordinates);
+	bool getSuccsesPass();
 
 private:
-	int BS_number;     //ブロック置き場ナンバー
-	bool b_succses_pass;    //有効移動成立
+	int bs_number;     //ブロック置き場ナンバー
+	bool succses_pass;    //有効移動成立
 	Block *brock;
+	TravelableArea *travelable_area;
 };

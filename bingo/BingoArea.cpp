@@ -2,7 +2,7 @@
 
 const int BingoArea::INTERSECTION_CIRCLE_COUNT = 16;
 const int BingoArea::BLOCK_COUNT = 9;
-const int BingoArea::STORAGE = 9;
+const int BingoArea::STORAGE_COUNT = 9;
 
 BingoArea::BingoArea()    //コンストラクタ
 {
@@ -122,7 +122,7 @@ void BingoArea::initStorage()    //ブロックサークル初期化
     object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, blue, coordinates);    //青
 
     int j = INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT;
-    for(i = 0; i < STORAGE; i++)
+    for(i = 0; i < STORAGE_COUNT; i++)
     {
         storage[i] = j;
         j++;
@@ -157,12 +157,12 @@ int BingoArea::circleColor(Coordinates pass_coordinates)    //交点サークル
             break;
         }
     }
-    return object_management_array[i]->getColor();    //色を取得する
+    return static_cast<IntersectionCircle>object_management_array[i]->getColor();    //色を取得する
 }
 
 Color BingoArea::blockColor(int block_num)    //ブロックの色を問い合わせる
 {
-    return object_management_array[block[block_num]]->getColor();
+    return static_cast<ColorBlock>object_management_array[block[block_num]]->getColor();
 }
 
 bool BingoArea::objSuccsesPass(object object_type, int　object_num)   //有効移動成立しているか問い合わせる
@@ -170,11 +170,10 @@ bool BingoArea::objSuccsesPass(object object_type, int　object_num)   //有効�
     switch(object_type)
     {
         case block:
-            return object_management_array[block[object_num]]->
+            return static_cast<Block>object_management_array[block[object_num]]->getSuccsesPass();
         case storage:
-            return object_management_array[storage[object_num]]->
+            return static_cast<Block>object_management_array[storage[object_num]]->getSuccsesPass();
     }
-    return circle_storage[circle_num]->getE_move();
 }
 
 gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, Direction direction)    //相対座標に変換する

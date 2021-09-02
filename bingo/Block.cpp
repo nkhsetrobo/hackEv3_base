@@ -10,12 +10,12 @@ Block::Block(int n)    //コンストラクタ
     b_succses_pass = false;    //有効移動成立のメンバ変数に初期値を格納する
 }
 
-bool Block::getE_move()
+bool Block::getSuccsesPass()
 {
-    return b_succses_pass;    //有効移動成立を表す変数をリターン
+    return succses_pass;    //有効移動成立を表す変数をリターン
 }
 
-void Block::EffectiveMovementJudgment(int block_num)    //ブロックの有効移動判定
+void Block::EffectiveMovementJudgment()    //ブロックの有効移動判定
 {
-    b_succses_pass = true;    //有効移動成立
+    succses_pass = true;    //有効移動成立
 }
