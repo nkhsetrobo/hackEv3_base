@@ -1,9 +1,5 @@
 #include "BingoArea.h"
 
-const int BingoArea::INTERSECTION_CIRCLE_COUNT = 16;
-const int BingoArea::BLOCK_COUNT = 9;
-const int BingoArea::STORAGE_COUNT = 9;
-
 BingoArea::BingoArea()    //コンストラクタ
 {
     travelable_area = new TravelableArea();
