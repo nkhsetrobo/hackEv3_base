@@ -11,7 +11,7 @@ void RouteDecition::passParam(passList *wp)  //移動パラメータを問い合
 {
     block_list->getParam(&wp, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
     //移動パターンリストクラスのパラメータとコストの配列320通りを全探索
-    bingo_area->updateRunInfo(wp.e_cood, wp.e_dir, (bingo_area->runningInformation()).dir);
+    bingo_area->updateRunInfo(wp.e_cood, wp.e_dir, (bingo_area->runningInformation()).dir);    //走行体情報を更新する
 }
 
 int RouteDecision::pass_Color(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる
@@ -20,9 +20,9 @@ int RouteDecision::pass_Color(gameCoordinates pass_coordinates)    //通過座�
     //交点サークルを問い合わせる
 }
 
-bool RouteDecision::minCompare(int now_minCost, int cost)    //最小コスト比較
+bool RouteDecision::minCompare(int now_min_cost, int cost)    //最小コスト比較
 {
-    if (now_minCost > cost)
+    if (now_min_cost > cost)
     {
         return true;
     }
