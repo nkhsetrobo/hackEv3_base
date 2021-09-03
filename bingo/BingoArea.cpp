@@ -156,7 +156,7 @@ int BingoArea::circleColor(Coordinates pass_coordinates)    //交点サークル
     return static_cast<IntersectionCircle>object_management_array[i]->getColor();    //色を取得する
 }
 
-BingoArea::Color BingoArea::blockColor(int block_num)    //ブロックの色を問い合わせる
+BingoArea::color BingoArea::blockColor(int block_num)    //ブロックの色を問い合わせる
 {
     return static_cast<ColorBlock>object_management_array[block[block_num]]->getColor();
 }
@@ -172,7 +172,7 @@ bool BingoArea::objSuccsesPass(object object_type, int　object_num)   //有効�
     }
 }
 
-BingoArea::gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, Direction direction)    //相対座標に変換する
+BingoArea::gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, direction direction)    //相対座標に変換する
 {
     double x = coordinates.x;
     double y = coordinates.y;
@@ -196,7 +196,7 @@ BingoArea::gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordi
     return coordinates;
 }
 
-BingoArea::gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordinates, Direction direction)    //絶対座標に変換する
+BingoArea::gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordinates, direction direction)    //絶対座標に変換する
 {
     double x = coordinates.x;
     double y = coordinates.y;
@@ -219,13 +219,13 @@ BingoArea::gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordi
     return coordinates;
 }
 
-void updateRunInfo(gameCoordiantes new_coodiantes, Direction new_direction, Direction old_direction)
+void updateRunInfo(gameCoordiantes new_coodiantes, direction new_direction, direction old_direction)
 {
     Direction absolute_direction = convertDirection(old_direction, new_direction);
     run_body->setInfo(new_coodiantes, absolute_direction);
 }
 
-Direction convertDirection(Direction run_direction, Direction relative_direction)
+direction convertDirection(direction run_direction, direction relative_direction)
 {
     Direction new_direction;
     switch(run_direction)
