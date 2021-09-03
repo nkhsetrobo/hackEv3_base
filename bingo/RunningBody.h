@@ -9,7 +9,7 @@ class RunningBody
 {
 public:
 	runInfo getRunInfo();	//走行体情報を取得する
-    void setInfo(gameCoordiantes new_coodiantes, Direction new_direction);    //走行体情報を更新する
+    void setInfo(gameCoordinates new_coodiantes, direction new_direction);    //走行体情報を更新する
 private:
 	runInfo ri;   //走行体情報
 	Block *block;
