@@ -6,10 +6,7 @@
 #include "Block.h"
 #include "TravelableArea.h"
 #include "Enum.h"
-
-#define INTERSECTION_CIRCLE_COUNT 16    //交点サークルの個数
-#define BLOCK_COUNT 9    //ブロックの個数
-#define STORAGE_COUNT 9    //ブロック置き場の個数
+#include "Constant.h"
 
 class BingoArea
 {

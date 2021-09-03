@@ -9,7 +9,7 @@ CircleDecision::CircleDecision()    //コンストラクタ
 int CircleDecision::routeDecision()    //ルート決定する
 {
     run_info = bingo_area->RunningBodyInformation();    //走行体情報を問い合わせる
-    for (int i = 0; i < 9; i++)    //ブロックサークルを線型探索
+    for (int i = 0; i < STORAGE_COUNT; i++)    //ブロックサークルを線型探索
     {
         if (!bingo_area->C_SuccsesPass(i) && bingo_area->BlockColor(i) == bingo_area->intersection_circle[i]->gerColor())    //有効移動未成立のブロックと同色のブロックサークル全て/*ビンゴエリア経由必要*/
         {

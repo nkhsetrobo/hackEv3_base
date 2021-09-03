@@ -2,6 +2,7 @@
 #define _CIRCLE_DECISION_H_
 
 #include "RouteDecision.h"
+#include "Constant.h"
 
 class CircleCoordinates : public RouteDecision
 {
