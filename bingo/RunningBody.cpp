@@ -17,5 +17,5 @@ void setInfo(gameCoordiantes new_coodiantes, Direction new_direction)
 {
     ri.rb_coordinates.x = new_coodiantes.x;
     ri.rb_coordinates.y = new_coodiantes.y;
-    direction = new_direction;
+    ri.dir = new_direction;
 }
