@@ -218,3 +218,72 @@ BingoArea::gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordi
     coordinates.y = y,
     return coordinates;
 }
+
+void updateRunInfo(gameCoordiantes new_coodiantes, Direction new_direction, Direction old_direction)
+{
+    Direction absolute_direction = convertDirection(old_direction, new_direction);
+    run_body->setInfo(new_coodiantes, absolute_direction);
+}
+
+Direction convertDirection(Direction run_direction, Direction relative_direction)
+{
+    Direction new_direction;
+    switch(run_direction)
+    {
+        case north:
+            switch(relative_direction)
+            {
+                case north:
+                    new_direction = west;
+                    break;
+                case east:
+                    new_direction = north;
+                    break;
+                case south:
+                    new_direction = east;
+                    break;
+                case west:
+                    new_direction = south;
+                    break;
+            }
+            break;
+        case east:
+            new_direction = relative_direction;
+            break;
+        case south:
+            switch(relative_direction)
+            {
+                case north:
+                    new_direction = east;
+                    break;
+                case east:
+                    new_direction = south;
+                    break;
+                case south:
+                    new_direction = west;
+                    break;
+                case west:
+                    new_direction = north;
+                    break;
+            }
+            break;
+        case west:
+            switch(relative_direction)
+            {
+                case north:
+                    new_direction = south;
+                    break;
+                case east:
+                    new_direction = west;
+                    break;
+                case south:
+                    new_direction = north;
+                    break;
+                case west:
+                    new_direction = east;
+                    break;
+            }
+            break;
+    }
+    return new_direction;
+}

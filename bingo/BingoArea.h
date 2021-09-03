@@ -25,13 +25,15 @@ public:
     gameCoordinates relativeCoordinates(gameCoordinates coordinates, Direction rb_direction);    //相対座標系に変換する
     gameCoordinates absoluteCoordinates(gameCoordinates coordinates, Direction rb_direction);    //絶対座標系に変換する
     bool coordinatesConparison(gameCoordinates pass_coordinates, gameCoordinates g_coordinates);    //座標比較同値ならtrue
+    void updateRunInfo(gameCoordiantes new_coodiantes, Direction new_direction, Direction old_direction);    //走行体情報を更新する
+    Direction convertDirection(Direction run_direction, Direction relative_direction);    //相対座標系における方向を絶対座標系に変換する
     
 private:
     RunningBody* run_body;
-    TravelableArea* object_management_array[34];
-    int intersection_circle[16];
-    int storage[9];
-    int block[9];
+    TravelableArea* object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + STORAGE_COUNT];
+    int intersection_circle[INTERSECTION_CIRCLE_COUNT];
+    int storage[STORAGE_COUNT];
+    int block[BLOCK_COUNT];
 };
 
 #endif
