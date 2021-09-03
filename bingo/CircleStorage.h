@@ -3,12 +3,7 @@
 
 #include "BlockStorage.h"
 #include "Enum.h"
-
-typedef struct gameCoordinates    //ゲーム内座標
-{
-    double x;
-    double y;
-} gameCoordinates;
+#include "Struct.h"
 
 class CircleStorage : public BlockStorage
 {
