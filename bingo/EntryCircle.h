@@ -9,7 +9,7 @@ public:
     EntryCircle();    //コンストラクタ
 private:
     int entry_circle_num;    //進入サークルナンバー
-    int color;    //色
+    int c_color;    //色
 };
 
 #endif

@@ -22,6 +22,7 @@ typedef struct _runInfo    //走行体情報
 } runInfo;
 
 typedef struct _getCostCoordinates    //コスト取得座標
+{
     gameCoordinates g_coordinates;    //目的地の座標
     int cost;    //コスト
 } getCostCoordinates;
@@ -49,7 +50,5 @@ typedef struct _pidParam    //制御パラメータ
     float i,
     float d
 } pidParam;
-
-
 
 #endif

@@ -3,20 +3,7 @@
 
 #include "RouteDecision.h"
 #include "Enum.h"
-
-/*typedef struct gameCoordinates    //ゲーム内座標
-{
-    double x;
-    double y;
-} gameCoordiantes;*/
-
-/*typedef struct runInfo    //走行体情報
-{
-    Direction direction;    //方向
-    gameCoordinates rb_coordinates;    //走行体座標
-} runInfo;*/
-
-/*ここに移動パターンのパラメータの構造体を定義する*/
+#include "Struct.h"
 
 /*
 typedef struct PassList
@@ -25,8 +12,7 @@ typedef struct PassList
     目的地座標
     移動コスト
     移動パラメータの配列
-} PassList;
-}
+} PassList; //Struct.hに書き込む必要あり?
 */
 
 class BlockList

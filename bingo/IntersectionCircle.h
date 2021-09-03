@@ -7,12 +7,12 @@
 class IntersectionCircle : public PassingCircle
 {
 public:
-    IntersectionCircle(int n, Color c, gameCoordinates c_coordinates);    //コンストラクタ
-    Color getColor();    //色を取得する
+    IntersectionCircle(int n, color c, gameCoordinates c_coordinates);    //コンストラクタ
+    color getColor();    //色を取得する
 
 private:
     int inter_circle_num;    //交点サークルナンバー
-    Color color;    //色
+    color inter_color;    //色
 };
 
 #endif

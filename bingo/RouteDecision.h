@@ -5,41 +5,7 @@
 #include "BingoArea.h"
 #include "BlockList.h"
 #include "Enum.h"
-
-/*typedef struct _Param2    //パラメータの構造体
-{
-    int mwalker;
-    int front;   //前進量
-    int turn;    //旋回量
-    Coordinates coordinates;    //目標地点
-    float speed;    //目標速度
-    float x;    //中心x座標
-    float y;    //中心y座標
-    float radius;    //旋回半径
-    float mjudge;
-    float atai;    //値
-    gameCoordinates p_coordinates;    //通過座標
-    int mcolor;    //色
-    float sat;    //彩度
-} wParam3; */
-
-typedef struct Coordinates    //座標
-{
-    int x;    //x座標
-    int y;    //y座標
-} Coordinates;
-
-typedef struct gameCoordinates
-{
-    double x;
-    double y;
-} gameCoordinates;
-
-typedef struct runInfo    //走行体情報
-{
-    gameCoordinates game_coordinates;    //ゲーム内座標
-    Direction direction;    //方向
-} runInfo;
+#include "Struct.h"
 
 class RouteDecition
 {

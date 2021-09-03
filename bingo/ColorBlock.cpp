@@ -1,14 +1,14 @@
 #include "ColorBlock.h"
 
-ColorBlock::ColorBlock(int n, Color c, IntersectionCircle i_circle)
+ColorBlock::ColorBlock(int n, color c, IntersectionCircle *i_circle)
 :Block(n)
 {
-    color = c;
+    b_color = c;
     circle = i_circle;
 
 }
 
-Color ColorBlock::getColor()
+color ColorBlock::getColor()
 {
-    return color;    //オブジェクトの属性である色の情報をリターン
+    return b_color;    //オブジェクトの属性である色の情報をリターン
 }

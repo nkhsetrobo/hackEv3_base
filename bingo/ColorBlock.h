@@ -3,22 +3,17 @@
 
 #include "Block.h"
 #include "Enum.h"
-
-typedef struct gameCoordinates    //ゲーム内座標
-{
-    double x;
-    double y;
-} gameCoordinates;
+#include "Struct.h"
 
 class ColorBlock : public Block
 {
 public:
-    ColorBlock(int n, Color c, IntersectionCircle i_circle);    //コンストラクタ
-    Color getColor();    //色を取得する
+    ColorBlock(int n, color c, IntersectionCircle *i_circle);    //コンストラクタ
+    color getColor();    //色を取得する
 
 private:
-    Color color;    //色
-    IntersectionCircle circle;
+    color b_color;    //色
+    IntersectionCircle *circle;
 }
 
 #endif

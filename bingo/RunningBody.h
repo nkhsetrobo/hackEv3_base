@@ -3,12 +3,7 @@
 
 #include "Block.h"
 #include "Enum.h"
-
-typedef struct runInfo    //走行体情報
-{
-    gameCoordinates rb_coordinates;    //走行体座標
-    Direction direction;    //方向
-} runInfo;
+#include "Struct.h"
 
 class RunningBody
 {
