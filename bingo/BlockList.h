@@ -19,7 +19,7 @@ class BlockList
 {
 public:
     double getCost(gameCoordinates rb_coordiantes, gameCoordinates goal_coordinates);    //コストを取得する
-    void getParam(/*パラメータ型*/ *wp, gameCoordiantes rb_coordinates, gameCoordinates goal_coordinates);    //移動パラメータを取得する
+    void getParam(/*パラメータ型*/ *wp, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates);    //移動パラメータを取得する
 private:
     double cost;    //移動コスト
     PassList pass_list[320];    //初期値の設定必要(パラメータ担当がやってくれている)
