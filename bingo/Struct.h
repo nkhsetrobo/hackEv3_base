@@ -17,7 +17,7 @@ typedef struct _Coordinates    //座標
 
 typedef struct _runInfo    //走行体情報
 {
-    direction dir;    //方向
+    direction rb_dir;    //方向
     gameCoordinates rb_coordinates;    //走行体座標
 } runInfo;
 
