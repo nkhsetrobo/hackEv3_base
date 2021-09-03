@@ -12,7 +12,7 @@ class RouteDecition
 public:
     RouteDecition();    //コンストラクタ
     void passParam(passList *wp);    //移動パラメータを問い合わせる
-    int passColor(gameCoordiantes pass_coordinates);    //通過座標の色情報を問い合わせる
+    int passColor(gameCoordinates pass_coordinates);    //通過座標の色情報を問い合わせる
     bool minCompare(int now_min_cost, int cost);    //最小コストを比較
     virtual int routeDecision();    //ルートを決定する(仮想関数)
 
