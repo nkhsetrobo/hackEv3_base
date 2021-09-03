@@ -17,13 +17,10 @@ public:
     virtual int routeDecision();    //ルートを決定する(仮想関数)
 
 private:
-    runInfo run_info;    //走行体情報
     int num;
     int min_cost = 999;    //最小移動コスト
-    runInfo run_info;    //走行体情報
     gameCoordinates goal_coordinates;    //目標地点座標
     passList *wp;    //パラメータ
-
     BingoArea *bingo_area;
     BingoSectionManager *bingo_manager;
     BlockList *block_list;
