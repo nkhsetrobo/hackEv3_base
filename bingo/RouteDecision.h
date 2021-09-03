@@ -4,6 +4,7 @@
 #include "BingoSectionManager.h"
 #include "BingoArea.h"
 #include "BlockList.h"
+#include "Enum.h"
 
 /*typedef struct _Param2    //パラメータの構造体
 {
@@ -44,19 +45,12 @@ class RouteDecition
 {
 public:
     RouteDecition();    //コンストラクタ
-    void pass_param(wParam3 *wp);    //移動パラメータを問い合わせる
-    int pass_Color(gameCoordiantes pass_coordinates);    //通過座標の色情報を問い合わせる
+    void passParam(wParam3 *wp);    //移動パラメータを問い合わせる
+    int passColor(gameCoordiantes pass_coordinates);    //通過座標の色情報を問い合わせる
     bool minCompare(int now_minCost, int cost);    //最小コストを比較
-    virtual int route_decision();    //ルートを決定する(仮想関数)
+    virtual int routeDecision();    //ルートを決定する(仮想関数)
 
 private:
-    enum Dicrection    //方向
-    {
-        north,    //北
-        east,    //東
-        south,    //南
-        west    //西
-    }
     runInfo run_info;    //走行体情報
     int num;
     int minCost = 999;    //最小移動コスト

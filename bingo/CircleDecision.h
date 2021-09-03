@@ -7,7 +7,7 @@ class CircleCoordinates : public RouteDecision
 {
 public:
     CircleDecision();    //コンストラクタ
-    int route_decision();    //ルートを決定する
+    int routeDecision();    //ルートを決定する
 };
 
 #endif

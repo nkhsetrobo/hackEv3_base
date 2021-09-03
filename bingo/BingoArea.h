@@ -5,28 +5,7 @@
 #include "RunningBody.h"
 #include "Block.h"
 #include "TravelableArea.h"
-
-/*enum Direction    //方向
-{
-    north,    //北
-    east,    //東
-    south,    //南
-    west    //西
-};*/
-
-enum Color    //色
-{
-    blue,    //青
-    red,    //赤
-    green,    //緑
-    yellow    //黄
-};
-
-enum object    //コース内要素
-{
-    block,    //ブロック
-    storage    //ブロック置き場
-};
+#include "Enum.h"
 
 class BingoArea
 {

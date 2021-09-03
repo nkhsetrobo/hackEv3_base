@@ -6,7 +6,7 @@ CircleDecision::CircleDecision()    //コンストラクタ
     
 }
 
-int CircleDecision::route_decision()    //ルート決定する
+int CircleDecision::routeDecision()    //ルート決定する
 {
     run_info = bingo_area->RunningBodyInformation();    //走行体情報を問い合わせる
     for (int i = 0; i < 9; i++)    //ブロックサークルを線型探索

@@ -8,7 +8,7 @@ RunningBody::RunningBody()    //コンストラクタ
     direction = south;    //走行体の方角の初期化
 }
 
-runInfo RunningBody::get_runInfo()    //走行体情報を取得する
+runInfo RunningBody::getRunInfo()    //走行体情報を取得する
 {
     return ri;    //取得した走行体情報をリターンする
 }

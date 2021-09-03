@@ -2,14 +2,7 @@
 #define _RUNNING_BODY_H_
 
 #include "Block.h"
-
-enum Direction    //方向
-{
-	north,
-	east,
-	south,
-	west
-};
+#include "Enum.h"
 
 typedef struct runInfo    //走行体情報
 {
@@ -20,7 +13,7 @@ typedef struct runInfo    //走行体情報
 class RunningBody
 {
 public:
-	runInfo get_runInfo();	//走行体情報を取得する
+	runInfo getRunInfo();	//走行体情報を取得する
 
 private:
 	runInfo ri;   //走行体情報
