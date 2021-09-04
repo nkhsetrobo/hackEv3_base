@@ -13,7 +13,7 @@ public:
     bool run();    //走行する
     bool exe_run();
     void exe_number();
-    void rdStateChange(Routedecision *routeDecision);    //ルート決定状態遷移
+    void rdStateChange(RouteDecision *routeDecision);    //ルート決定状態遷移
     void mStateChange(State m_state);    //初期化、実行の状態遷移
     void init();    //初期化
     //void s_addSection();    //区間の追加
