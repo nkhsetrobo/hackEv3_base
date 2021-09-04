@@ -13,40 +13,40 @@ void BingoArea::init_CircleBlock()    //交点サークル初期化
     //（交点サークルナンバー, 色, 座標）
     coordinates.x = 0.0;
     coordinates.y = 0.0;
-    object_management_array[0] = new IntersectionCircle(0, red, coordinates);    //赤
+    object_management_array[0] = new IntersectionCircle(0, RED, coordinates);    //赤
     coordinates.y = 1.0;
-    object_management_array[1] = new IntersectionCircle(1, red, coordinates);    //赤
+    object_management_array[1] = new IntersectionCircle(1, RED, coordinates);    //赤
     coordinates.y = 2.0;
-    object_management_array[2] = new IntersectionCircle(2, blue, coordinates);    //青
+    object_management_array[2] = new IntersectionCircle(2, BLUE, coordinates);    //青
     coordinates.y = 3.0;
-    object_management_array[3] = new IntersectionCircle(3, blue, coordinates);    //青
+    object_management_array[3] = new IntersectionCircle(3, BLUE, coordinates);    //青
     coordinates.x = 1.0;
     coordinates.y = 0.0;
-    object_management_array[4] = new IntersectionCircle(4, red, coordinates);    //赤
+    object_management_array[4] = new IntersectionCircle(4, RED, coordinates);    //赤
     coordinates.y = 1.0;
-    object_management_array[5] = new IntersectionCircle(5, red, coordinates);    //赤
+    object_management_array[5] = new IntersectionCircle(5, RED, coordinates);    //赤
     coordinates.y = 2.0;
-    object_management_array[6] = new IntersectionCircle(6, blue, coordinates);    //青
+    object_management_array[6] = new IntersectionCircle(6, BLUE, coordinates);    //青
     coordinates.y = 3.0;
-    object_management_array[7] = new IntersectionCircle(7, blue, coordinates);    //青
+    object_management_array[7] = new IntersectionCircle(7, BLUE, coordinates);    //青
     coordinates.x = 2.0;
     coordinates.y = 0.0;
-    object_management_array[8] = new IntersectionCircle(8, yellow, coordinates);    //黄
+    object_management_array[8] = new IntersectionCircle(8, YELLOW, coordinates);    //黄
     coordinates.y = 1.0;
-    object_management_array[9] = new IntersectionCircle(9, yellow, coordinates);    //黄
+    object_management_array[9] = new IntersectionCircle(9, YELLOW, coordinates);    //黄
     coordinates.y = 2.0;
-    object_management_array[10] = new IntersectionCircle(10, green, coordinates);    //緑
+    object_management_array[10] = new IntersectionCircle(10, GREEN, coordinates);    //緑
     coordinates.y = 3.0;
-    object_management_array[11] = new IntersectionCircle(11, green, coordinates);    //緑
+    object_management_array[11] = new IntersectionCircle(11, GREEN, coordinates);    //緑
     coordinates.x = 3.0;
     coordinates.y = 0.0;
-    object_management_array[12] = new IntersectionCircle(12, yellow, coordinates);    //黄
+    object_management_array[12] = new IntersectionCircle(12, YELLOW, coordinates);    //黄
     coordinates.y = 1.0;
-    object_management_array[13] = new IntersectionCircle(13, yellow, coordinates);    //黄
+    object_management_array[13] = new IntersectionCircle(13, YELLOW, coordinates);    //黄
     coordinates.y = 2.0;
-    object_management_array[14] = new IntersectionCircle(14, green, coordinates);    //緑
+    object_management_array[14] = new IntersectionCircle(14, GREEN, coordinates);    //緑
     coordinates.y = 3.0;
-    object_management_array[15] = new IntersectionCircle(15, green, coordinates);    //緑
+    object_management_array[15] = new IntersectionCircle(15, GREEN, coordinates);    //緑
 
     for(int i = 0; i < INTERSECTION_CIRCLE_COUNT; i++)
     {
@@ -62,10 +62,10 @@ void BingoArea::init_CircleBlock()    //交点サークル初期化
         {
             if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
             {
-                object_management_array[i] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, blue, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+                object_management_array[i] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
             }
             else{
-                object_management_array[i] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, blue, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+                object_management_array[i] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
             }
         }
         
@@ -91,30 +91,30 @@ void BingoArea::initStorage()    //ブロックサークル初期化
     i++;
     coordinates.x = 0.5;
     coordinates.y = 0.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, yellow, coordinates);    //黄  
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, YELLOW, coordinates);    //黄  
     i++;
     coordinates.y = 1.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, green, coordinates);    //緑
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, GREEN, coordinates);    //緑
     i++;
     coordinates.y = 2.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, red, coordinates);    //赤
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, RED, coordinates);    //赤
     i++;
     coordinates.x = 1.5;
     coordinates.y = 0.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, blue, coordinates);    //青
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, BLUE, coordinates);    //青
     i++;
     coordinates.y = 2.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, yellow, coordinates);    //黄
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, YELLOW, coordinates);    //黄
     i++;
     coordinates.x = 2.5;
     coordinates.y = 0.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, green, coordinates);    //緑
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, GREEN, coordinates);    //緑
     i++;
     coordinates.y = 1.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, red, coordinates);    //赤
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, RED, coordinates);    //赤
     i++;
     coordinates.y = 2.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, blue, coordinates);    //青
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, BLUE, coordinates);    //青
 
     int j = INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT;
     for(i = 0; i < STORAGE_COUNT; i++)
@@ -177,15 +177,15 @@ gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, dire
     double y = coordinates.y;
     switch(direction)
     {
-        case north:     //走行体向きが北の場合（ｘ、ｙ）→（ｙ、3-ｘ）
+        case NORTH:     //走行体向きが北の場合（ｘ、ｙ）→（ｙ、3-ｘ）
              x = coordinates.y;
              y = 3 - coordinates.x;
              break;
-        case south:     //走行体向きが南の場合（ｘ、ｙ）→（3-ｙ、ｘ）
+        case SOUTH:     //走行体向きが南の場合（ｘ、ｙ）→（3-ｙ、ｘ）
             x = 3 - coordinates.y;
             y = coordinates.x;
             break;
-        case west:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
+        case WEST:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
             x = 3 - coordinates.y;
             y = 3 - coordinates.x;
             break;
@@ -200,15 +200,15 @@ gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordinates, dire
     double x = coordinates.x;
     double y = coordinates.y;
     switch(direction){
-        case north:     //走行体向きが北の場合（ｘ、ｙ）→（3-ｙ、ｘ）
+        case NORTH:     //走行体向きが北の場合（ｘ、ｙ）→（3-ｙ、ｘ）
              x = 3 - coordinates.y;
              y = coordinates.x;
              break;
-        case south:     //走行体向きが南の場合（ｘ、ｙ）→（ｙ、3-ｘ）
+        case SOUTH:     //走行体向きが南の場合（ｘ、ｙ）→（ｙ、3-ｘ）
             x = coordinates.y;
             y = 3 - coordinates.x;
             break;
-        case west:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
+        case WEST:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
             x = 3 - coordinates.y;
             y = 3 - coordinates.x;
             break;
@@ -229,57 +229,57 @@ BingoArea::direction convertDirection(direction run_direction, direction relativ
     direction new_direction;
     switch(run_direction)
     {
-        case north:
+        case NORTH:
             switch(relative_direction)
             {
-                case north:
-                    new_direction = west;
+                case NORTH:
+                    new_direction = WEST;
                     break;
-                case east:
-                    new_direction = north;
+                case EAST:
+                    new_direction = NORTH;
                     break;
-                case south:
-                    new_direction = east;
+                case SOUTH:
+                    new_direction = EAST;
                     break;
-                case west:
-                    new_direction = south;
+                case WEST:
+                    new_direction = SOUTH;
                     break;
             }
             break;
-        case east:
+        case EAST:
             new_direction = relative_direction;
             break;
-        case south:
+        case SOUTH:
             switch(relative_direction)
             {
-                case north:
-                    new_direction = east;
+                case NORTH:
+                    new_direction = EAST;
                     break;
-                case east:
-                    new_direction = south;
+                case EAST:
+                    new_direction = SOUTH;
                     break;
-                case south:
-                    new_direction = west;
+                case SOUTH:
+                    new_direction = WEST;
                     break;
-                case west:
-                    new_direction = north;
+                case WEST:
+                    new_direction = NORTH;
                     break;
             }
             break;
-        case west:
+        case WEST:
             switch(relative_direction)
             {
-                case north:
-                    new_direction = south;
+                case NORTH:
+                    new_direction = SOUTH;
                     break;
-                case east:
-                    new_direction = west;
+                case EAST:
+                    new_direction = WEST;
                     break;
-                case south:
-                    new_direction = north;
+                case SOUTH:
+                    new_direction = NORTH;
                     break;
-                case west:
-                    new_direction = east;
+                case WEST:
+                    new_direction = EAST;
                     break;
             }
             break;
