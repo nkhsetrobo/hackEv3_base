@@ -136,7 +136,7 @@ BingoArea::gameCoordinates BingoArea::objCoordinates(object object_type, int obj
     }
 }
 
-BingoArea::runInfo BingoArea::runningInformation()    //走行体情報を問い合わせる
+runInfo BingoArea::runningInformation()    //走行体情報を問い合わせる
 {
     return run_body->get_runInfo();    //走行体情報を問い合わせる
 }
@@ -172,7 +172,7 @@ bool BingoArea::objSuccsesPass(object object_type, int　object_num)   //有効�
     }
 }
 
-BingoArea::gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, direction direction)    //相対座標に変換する
+gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, direction direction)    //相対座標に変換する
 {
     double x = coordinates.x;
     double y = coordinates.y;
@@ -196,7 +196,7 @@ BingoArea::gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordi
     return coordinates;
 }
 
-BingoArea::gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordinates, direction direction)    //絶対座標に変換する
+gameCoordiantes BingoArea::absoluteCoordinates(gameCoordinates coordinates, direction direction)    //絶対座標に変換する
 {
     double x = coordinates.x;
     double y = coordinates.y;
@@ -225,7 +225,7 @@ void updateRunInfo(gameCoordiantes new_coodiantes, direction new_direction, dire
     run_body->setInfo(new_coodiantes, absolute_direction);
 }
 
-direction convertDirection(direction run_direction, direction relative_direction)
+BingoArea::direction convertDirection(direction run_direction, direction relative_direction)
 {
     direction new_direction;
     switch(run_direction)

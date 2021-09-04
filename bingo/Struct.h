@@ -27,7 +27,7 @@ typedef struct _getCostCoordinates    //コスト取得座標
     int cost;    //コスト
 } getCostCoordinates;
 
-typedef struct _Param2
+typedef struct _Param
 {
     WALKER_NO mwalker;    //走法
     int front;    //前進量
@@ -42,13 +42,48 @@ typedef struct _Param2
     gameCoordinates p_coordinates;    //通過座標
     int mcolor;    //色
     float sat;    //彩度
+} Param;
+
+typedef struct _Param2    //パラメータの構造体
+{
+    int flag;
+    Section::WALKER_NO walk;
+    Section::JUDGE_NO judge;
+    float speed;
+    float target;
+    float kp;
+    float ki;
+    float kd;
+    float angleTarget;
+    float anglekp;
+
+    float absangle;
+    float round;
+
+    float forward;
+    float turn;
+
+    bool _EDGE; //true=left,false=right
+
+
+    Judge::JUDGE_MODE jflag;
+
+    float fangle;
+    float flength;
+    float bright1;
+    float bright2;
+    float color1;
+    float color2;
+    float count;
+    bool vangle;
+
 } wParam3;
 
 typedef struct _pidParam    //制御パラメータ
 {
-    float p,
-    float i,
-    float d
+    float p;
+    float i;
+    float d;
 } pidParam;
 
 #endif
