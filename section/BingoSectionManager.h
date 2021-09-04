@@ -6,6 +6,12 @@
 #include "etroboc_ext.h"
 #include "Struct.h"
 
+enum State
+    {
+       INIT,
+       RUN
+    };
+
 class BingoSectionManager : public SectionManager
 {
 public:
@@ -22,11 +28,7 @@ public:
     static RouteDecision *circle_decision;
     static RouteDecision *block_decision;
 private:
-    enum State
-    {
-       INIT,
-       RUN
-    };
+   
     wParam3 wp[100];
     mparam p[100];
     State mState;    //状態の変数
