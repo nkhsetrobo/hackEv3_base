@@ -24,7 +24,7 @@ public:
     bool run();    //走行する
     bool exe_run();
     void exe_number();
-    void rdStateChange(RouteDecision *routeDecision);    //ルート決定状態遷移
+    void rdStateChange(RouteDecision *rd_state);    //ルート決定状態遷移
     void mStateChange(State m_state);    //初期化、実行の状態遷移
     void init();    //初期化
     //void s_addSection();    //区間の追加
@@ -42,6 +42,7 @@ private:
     int n;
     int block_num;
     RouteDecision *rdState;
+    Section *sc;
 
     #if defined(MAKE_RIGHT)
     const int _EDGE = LineTracer::LEFTEDGE;

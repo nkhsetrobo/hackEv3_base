@@ -125,7 +125,7 @@ bool BingoSectionManager::run()
               ex = true;
               break;
             }
-            rd_state->passParam(p);
+            rdState->passParam(p);
             chengeToSenpai();
             init();
             mStateChange(RUN);
@@ -155,7 +155,7 @@ bool BingoSectionManager::exe_run()
     return false;
 }
 
-void BingoSectionManager::StateChange(RouteDecision *rd_state)    //状態遷移
+void BingoSectionManager::rdStateChange(RouteDecision *rd_state)    //状態遷移
 {
     rdState = rd_state;
 }
@@ -203,17 +203,14 @@ void BingoSectionManager::running()    //実行する
 
         addSection(sc);
     }
-
-    //状態遷移
-    StateChange(routeDecision);
 }
 
-void chengeToSenpai()
+void BingoSectionManager::chengeToSenpai()
 {
     
 }
 
-int getBlockNum()
+int BingoSectionManager::getBlockNum()
 {
   return block_num;
 }
