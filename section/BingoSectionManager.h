@@ -5,6 +5,11 @@
 #include "RouteDecision.h"
 #include "etroboc_ext.h"
 #include "Struct.h"
+#include "BingoArea.h"
+#include "CircleDecision.h"
+#include "BlockDetermination.h"
+
+class RouteDecision;
 
 enum State
     {

@@ -17,7 +17,7 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
     }
 }
 
-void BlockList::getParam(/*パラメータ型*/ *wp, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
+void BlockList::getParam(mParam *wp, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
 {
     //移動パラメータを取得する
     for (int i = 0; i < 320; i++)   //移動パラメータを持った構造体の配列を線型探索

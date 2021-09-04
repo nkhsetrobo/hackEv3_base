@@ -1,15 +1,16 @@
 #include "BingoSectionManager.h"
+#include "RouteDecision.h"
 
-BingoSectionManager::RouteDecision *circle_decision;
-BingoSectionManager::RouteDecision *block_decision;
-BingoSectionManager::BingoArea *bingo_area;
+RouteDecision *BingoSectionManager::circle_decision;
+RouteDecision *BingoSectionManager::block_decision;
+BingoArea *BingoSectionManager::bingo_area;
 
 BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
-    BingoSectionManager::circle_decision = new CircleDecision();
-    BingoSectionManager::block_decision = new block_determination();
-    BingoSectionManager::bingo_area = new BingoArea();
+    circle_decision = new CircleDecision();
+    block_decision = new BlockDetermination();
+    bingo_area = new BingoArea();
     rdState = block_decision;
 }
 

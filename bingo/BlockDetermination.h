@@ -10,3 +10,5 @@ public:
     BlockDetermination();    //コンストラクタ
     int routeDecision();    //ルートを決定する
 };
+
+#endif
