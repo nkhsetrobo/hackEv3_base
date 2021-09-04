@@ -30,7 +30,7 @@ public:
 private:
    
     wParam3 wp[100];
-    mparam p[100];
+    mParam p[100];
     State mState;    //状態の変数
     int n;
     RouteDecision *rdState;
@@ -40,8 +40,6 @@ private:
     #else
     const int _EDGE = LineTracer::RIGHTEDGE;
     #endif
-
-    ingo *mBingo; 
 
     //{-1の時終了, Section::使いたいwalker, Section::使いたいjudge, 速度, 0, pの値, dの値, iの値, 0, 0 ,
     ///*setparam*/, 直線仮想ライントレースの角度, 円仮想ライントレースの半径, 単純走行のパワー, 単純走法の曲がり具合, 線のどちらを進むか,

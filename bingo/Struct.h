@@ -27,7 +27,7 @@ typedef struct _getCostCoordinates    //コスト取得座標
     int cost;    //コスト
 } getCostCoordinates;
 
-typedef struct _Param
+typedef struct _mParam
 {
     WALKER_NO mwalker;    //走法
     int front;    //前進量
@@ -42,7 +42,7 @@ typedef struct _Param
     gameCoordinates p_coordinates;    //通過座標
     int mcolor;    //色
     float sat;    //彩度
-} Param;
+} mParam;
 
 typedef struct _Param2    //パラメータの構造体
 {
@@ -85,5 +85,15 @@ typedef struct _pidParam    //制御パラメータ
     float i;
     float d;
 } pidParam;
+
+typedef struct _passList    //パラメータ群
+{
+    _gameCoordinates s_cood;
+    _gameCoordinates e_cood;
+    double cost;
+    direction dir;
+    //north east→ west south
+    _mParam param[10];
+}passList;
 
 #endif
