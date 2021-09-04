@@ -3,24 +3,24 @@
 
 enum direction    //方向
 {
-    north,
-    east,
-    south,
-    west
+    NORTH,
+    EAST,
+    SAUTH,
+    WEST
 };
 
 enum color    //色
 {
-    blue,
-    red,
-    green,
-    yellow
+    BLUE,
+    RED,
+    GREEN,
+    YELLOW
 };
 
 enum object    //コース内要素
 {
-    block,
-    storage
+    BLOCK,
+    STORAGE
 };
 
 enum WALKER_NO 
