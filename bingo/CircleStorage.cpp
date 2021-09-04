@@ -3,10 +3,10 @@
 const double CircleStorage::r = 110;   //半径
 const int  CircleStorage::dot_r = 30;    //点線半径
 
-CircleStorage::CircleStorage(int n, Color c_color, gameCoordinates c_coordinates)
+CircleStorage::CircleStorage(int n, color c_color, gameCoordinates c_coordinates)
 :BlockStorage(n, c_coordinates)    //コンストラクタ
 {
-    color = c_color;
+    cs_color = c_color;
     power_block_move = false;
 }
 

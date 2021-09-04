@@ -4,7 +4,7 @@
 #include "RouteDecision.h"
 #include "Constant.h"
 
-class CircleCoordinates : public RouteDecision
+class CircleDecision : public RouteDecision
 {
 public:
     CircleDecision();    //コンストラクタ

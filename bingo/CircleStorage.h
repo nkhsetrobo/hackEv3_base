@@ -8,7 +8,7 @@
 class CircleStorage : public BlockStorage
 {
 public:
-    CircleStorage(int n, Color color, gameCoordinates c_coordinates);    //コンストラクタ
+    CircleStorage(int n, color c_color, gameCoordinates c_coordinates);    //コンストラクタ
     color getColor();    //色を取得する
 private:
     color cs_color;    //色情報
