@@ -2,7 +2,7 @@
 
 #include "ev3api.h"
 
-#include "Bingo.h"
+//#include "Bingo.h"
 
 #include "etroboc_ext.h" 
 

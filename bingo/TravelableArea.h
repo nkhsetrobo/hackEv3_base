@@ -3,12 +3,7 @@
 
 #include "BingoArea.h"
 #include "Block.h"
-
-typedef struct gameCoordinates    //ゲーム内座標
-{
-    double x;
-    double y;
-} gameCoordinates;
+#include "Struct.h"
 
 class TravelableArea
 {
@@ -17,7 +12,6 @@ public:
     gameCoordinates getCoordinates();    //座標を取得する
 private:
     gameCoordinates coordinates;    //座標
-    BingoArea *bingo_area;
     Block *block;
 };
 

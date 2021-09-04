@@ -13,7 +13,7 @@ runInfo RunningBody::getRunInfo()    //走行体情報を取得する
     return ri;    //取得した走行体情報をリターンする
 }
 
-void setInfo(gameCoordiantes new_coodiantes, Direction new_direction)
+void setInfo(gameCoordiantes new_coodiantes, direction new_direction)
 {
     ri.rb_coordinates.x = new_coodiantes.x;
     ri.rb_coordinates.y = new_coodiantes.y;

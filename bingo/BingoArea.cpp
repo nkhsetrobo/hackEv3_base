@@ -227,7 +227,7 @@ void updateRunInfo(gameCoordiantes new_coodiantes, direction new_direction, dire
 
 direction convertDirection(direction run_direction, direction relative_direction)
 {
-    Direction new_direction;
+    direction new_direction;
     switch(run_direction)
     {
         case north:
