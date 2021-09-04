@@ -119,7 +119,7 @@ bool BingoSectionManager::run()
     switch(mState)
     {
         case INIT:
-            block_num = rd_state->routeDecision();
+            block_num = rdState->routeDecision();
             if(block_num == 0)
             {
               ex = true;
