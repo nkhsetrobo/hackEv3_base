@@ -8,5 +8,5 @@ class BlockDetermination : public RouteDecision
 {
 public:
     BlockDetermination();    //コンストラクタ
-    int routDecision();    //ルートを決定する
+    int routeDecision();    //ルートを決定する
 };

@@ -1,11 +1,14 @@
 #include "BingoSectionManager.h"
 
+BingoSectionManager::RouteDecision *circle_decision;
+BingoSectionManager::RouteDecision *block_decision;
+
 BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
-    block_determination = new BlockDetermination();
-    circle_decision = new CircleDecision();
-    route_decision = block_determination;
+    BingoSectionManager::circle_decision = new CircleDecision();
+    BingoSectionManager::block_decision = new block_determination();
+    rdState = block_decision;
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
@@ -109,22 +112,22 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
 bool BingoSectionManager::run()
 {
     bool ex=false;
+    int num;
 
-    switch(mState) {
+    switch(mState)
+    {
         case INIT:
+            num = rd_state->routeDecision();
             init(i2);
-            mState=RUN;
-        case RUN:
-            ex=exe_run();
-            if(ex==true)
-            mState=NUMBER;
-            ex=false;
+            mStateChange();
             break;
-        case NUMBER:
-            if(i2!=0)
-            return true;
-            exe_number();
-            mState=INIT;
+        case RUN:
+            ex = exe_run();
+            if (ex == true)
+            {
+                rdStateChange();
+            }
+            ex = false;
             break;
     }
     return ex;
@@ -143,35 +146,14 @@ bool BingoSectionManager::exe_run()
     return false;
 }
 
-void BingoSectionManager::exe_number()
+void BingoSectionManager::StateChange(RouteDecision *rd_state)    //状態遷移
 {
-    i2=ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_NUMBER);
-    printf("%d \n",i2);
-}
-
-void BingoSectionManager::StateChange(RouteDecision *routeDecision)    //状態遷移
-{
-    if (route_decision == circle_decision)
-    {
-        route_decision = block_determination; 
-    }
-    else
-    {
-        route_decision = circle_decision;
-    }
+    rdState = rd_state;
 }
 
 void BingoSectionManager::init(int i)    //初期化
 {
-    if (_EDGE == 0)
-    {
-       wp = array[i];
-    }
-    else
-    {
-       wp = array[i + 10];
-    }
-
+    switch()
     //区間生成実行
     for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
     {
