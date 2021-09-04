@@ -30,6 +30,7 @@ public:
     //void s_addSection();    //区間の追加
     void running();    //実行する
     void chengeToSenpai();    //先輩から受け継がれた形に変換する
+    int getBlockNum();    //運搬するブロックナンバーをgetする
     static RouteDecision *circle_decision;
     static RouteDecision *block_decision;
     static BingoArea *bingo_area;
@@ -39,6 +40,7 @@ private:
     mParam p[100];
     State mState;    //状態の変数
     int n;
+    int block_num;
     RouteDecision *rdState;
 
     #if defined(MAKE_RIGHT)

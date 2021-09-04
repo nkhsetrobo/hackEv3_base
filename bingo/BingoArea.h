@@ -8,6 +8,7 @@
 #include "Enum.h"
 #include "Constant.h"
 
+
 class BingoArea
 {
 public:

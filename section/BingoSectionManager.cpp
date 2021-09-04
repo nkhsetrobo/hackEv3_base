@@ -115,12 +115,11 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
 bool BingoSectionManager::run()
 {
     bool ex=false;
-    int num;
-    
+
     switch(mState)
     {
         case INIT:
-            num = rd_state->routeDecision();
+            block_num = rd_state->routeDecision();
             rd_state->passParam(p);
             chengeToSenpai();
             init();
@@ -207,4 +206,9 @@ void BingoSectionManager::running()    //実行する
 void chengeToSenpai()
 {
     
+}
+
+int getBlockNum()
+{
+  return block_num;
 }
