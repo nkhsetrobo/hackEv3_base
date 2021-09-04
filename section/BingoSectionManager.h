@@ -27,6 +27,7 @@ public:
     void chengeToSenpai();    //先輩から受け継がれた形に変換する
     static RouteDecision *circle_decision;
     static RouteDecision *block_decision;
+    static BingoArea *bingo_area;
 private:
    
     wParam3 wp[100];

@@ -36,13 +36,8 @@ bool Scene::run()
         case INIT_BINGO:
             initBingo();
             break;
-        case GARAGE:
-            execGarage();
-            break;
         case END:
-
             finish();
-
         default:
             return true;
     }
@@ -91,23 +86,22 @@ void Scene::initSpeed(){
 
 void Scene::execBingo()
 {
-
-    
-    if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/) {
+    if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/)
+    {
         delete mBsm;
          msg_log("test length2");
         mState = END;
     }
-
 }
 
-void Scene::initBingo(){
-
+void Scene::initBingo()
+{
+    mBsm->init();
     mState = BINGO;
 
 }
 
-void Scene::finish(){
-
+void Scene::finish()
+{
     ETRoboc_notifyCompletedToSimulator();
 }

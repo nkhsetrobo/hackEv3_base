@@ -2,7 +2,6 @@
 
 BingoArea::BingoArea()    //コンストラクタ
 {
-    travelable_area = new TravelableArea();
     run_body = new RunningBody();
     initCircleBlock();    //交点サークル初期化
     initStorage();   //ブロックサークル初期化
