@@ -113,19 +113,21 @@ bool BingoSectionManager::run()
 {
     bool ex=false;
     int num;
-
+    
     switch(mState)
     {
         case INIT:
             num = rd_state->routeDecision();
-            init(i2);
-            mStateChange();
+            rd_state->passParam(p);
+            chengeToSenpai();
+            init();
+            mStateChange(RUN);
             break;
         case RUN:
             ex = exe_run();
             if (ex == true)
             {
-                rdStateChange();
+                mStateChange(INIT);
             }
             ex = false;
             break;
@@ -151,9 +153,13 @@ void BingoSectionManager::StateChange(RouteDecision *rd_state)    //状態遷移
     rdState = rd_state;
 }
 
-void BingoSectionManager::init(int i)    //初期化
+void BingoSectionManager::mStateChange(State m_state)
 {
-    switch()
+    mState = m_state;
+}
+
+void BingoSectionManager::init()    //初期化
+{
     //区間生成実行
     for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
     {
@@ -193,4 +199,9 @@ void BingoSectionManager::running()    //実行する
 
     //状態遷移
     StateChange(routeDecision);
+}
+
+void chengeToSenpai()
+{
+    
 }

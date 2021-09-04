@@ -7,11 +7,12 @@ RouteDecision::RouteDecition()
     block_list = new BlockList();
 }
 
-void RouteDecition::passParam(passList *wp)  //移動パラメータを問い合わせる
+void RouteDecition::passParam(param *p)  //移動パラメータを問い合わせる
 {
     block_list->getParam(&wp, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
     //移動パターンリストクラスのパラメータとコストの配列320通りを全探索
-    bingo_area->updateRunInfo(wp.e_cood, wp.e_dir, (bingo_area->runningInformation()).dir);    //走行体情報を更新する
+    bingo_area->updateRunInfo(wp.e_cood, wp.e_dir, bingo_area->runningInformation().dir);    //走行体情報を更新する
+    p = *wp.mparam;
 }
 
 int RouteDecision::pass_Color(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる

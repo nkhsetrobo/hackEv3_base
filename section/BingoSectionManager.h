@@ -4,41 +4,7 @@
 #include "SectionManager.h"
 #include "RouteDecision.h"
 #include "etroboc_ext.h"
-
-typedef struct _Param2    //パラメータの構造体
-{
-    int flag;
-    Section::WALKER_NO walk;
-    Section::JUDGE_NO judge;
-    float speed;
-    float target;
-    float kp;
-    float ki;
-    float kd;
-    float angleTarget;
-    float anglekp;
-
-    float absangle;
-    float round;
-
-    float forward;
-    float turn;
-
-    bool _EDGE; //true=left,false=right
-
-
-    Judge::JUDGE_MODE jflag;
-
-    float fangle;
-    float flength;
-    float bright1;
-    float bright2;
-    float color1;
-    float color2;
-    float count;
-    bool vangle;
-
-} wParam3;
+#include "Struct.h"
 
 class BingoSectionManager : public SectionManager
 {
@@ -47,10 +13,12 @@ public:
     bool run();    //走行する
     bool exe_run();
     void exe_number();
-    void stateChange(Routedecision *routeDecision);    //状態遷移
+    void rdStateChange(Routedecision *routeDecision);    //ルート決定状態遷移
+    void mStateChange(State m_state);    //初期化、実行の状態遷移
     void init();    //初期化
     //void s_addSection();    //区間の追加
     void running();    //実行する
+    void chengeToSenpai();    //先輩から受け継がれた形に変換する
     static RouteDecision *circle_decision;
     static RouteDecision *block_decision;
 private:
@@ -59,10 +27,10 @@ private:
        INIT,
        RUN
     };
-    wParam3 *wp;
+    wParam3 wp[100];
+    mparam p[100];
     State mState;    //状態の変数
     int n;
-    int i2 = 0;
     RouteDecision *rdState;
 
     #if defined(MAKE_RIGHT)
@@ -83,7 +51,7 @@ private:
     //Virtual->setParam(20,2,0.2,0,1,1)
     //Walker->setCommand(0,10)
     int ho=0;
-   
+    
     void setWalker(Section *sc);
     void setJudge(Section *sc);
 };
