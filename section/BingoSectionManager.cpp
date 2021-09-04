@@ -120,6 +120,11 @@ bool BingoSectionManager::run()
     {
         case INIT:
             block_num = rd_state->routeDecision();
+            if(block_num == 0)
+            {
+              ex = true;
+              break;
+            }
             rd_state->passParam(p);
             chengeToSenpai();
             init();

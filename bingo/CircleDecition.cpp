@@ -34,6 +34,22 @@ int CircleDecision::routeDecision()    //ルート決定する
             circle_num[1] = 5;
             break;            
     }
+
+    for (int i = 0; i < 2; i++)
+	{
+        if (!bingo_area->SuccsesPass(STORAGE, circle_num[i})/*有効移動が成立しているか*/);
+        {
+	        goal_coordinates = bingo_area->BlockCoordinates(circle_num[i});    //ブロック座標を問い合わせる
+	        cost = block_list->getCost(run_info.rb_coordinates, goal_coordinates);    //コストを取得する
+	        if (minCompare(min_cost, cost))    //更新処理
+            {
+		        min_cost = cost;
+		        num = i;
+	        }
+        }
+	}
+    return num;    //取得したサークルナンバーをリターンする
+
     bsm->rdStateChange(block_decision);
     return num;
 }

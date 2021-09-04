@@ -7,6 +7,7 @@ BlockDetermination::BlockDetermination()
 
 int BlockDetermination::route_decision()    //ルートを決定する
 {
+	num = 0;
     run_info = bingo_area->RunningInformation();    //走行体情報を問い合わせる
 	for (int i = 0; i < BLOCK_COUNT; i++)
 	{
