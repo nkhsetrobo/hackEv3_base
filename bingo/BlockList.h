@@ -1,9 +1,10 @@
 #ifndef _BLOCK_LIST_H_
 #define _BLOCK_LIST_H_
 
-#include "RouteDecision.h"
 #include "Enum.h"
 #include "Struct.h"
+
+class RouteDecision;
 
 /*
 typedef struct PassList
@@ -22,7 +23,7 @@ public:
     void getParam(/*パラメータ型*/ *wp, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates);    //移動パラメータを取得する
 private:
     double cost;    //移動コスト
-    PassList pass_list[320];    //初期値の設定必要(パラメータ担当がやってくれている)
+    //PassList pass_list[320];    //初期値の設定必要(パラメータ担当がやってくれている)
     /*パラメータ型*/ wp[];    //移動パラメータの配列(サイズはまだ知らない)
 
     RouteDecision *routeDecision;    //関連

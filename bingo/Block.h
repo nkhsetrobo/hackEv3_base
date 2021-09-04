@@ -1,7 +1,7 @@
 #ifndef _BLOCK_H_
 #define _BLOCK_H_
 
-#include "TravelableArea.h"
+class TravelableArea;
 
 class Block
 {
