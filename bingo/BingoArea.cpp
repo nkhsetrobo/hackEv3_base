@@ -53,30 +53,106 @@ void BingoArea::init_CircleBlock()    //交点サークル初期化
         intersection_circle[i] = i;
     }
     
-    for(int i = INTERSECTION_CIRCLE_COUNT; i < INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT; i++)
-    {
-        if(i == INTERSECTION_CIRCLE_COUNT)
-        {
-            object_management_array[i] = new BlackBlock(i - INTERSECTION_CIRCLE_COUNT);
-        }else
-        {
-            if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
-            {
-                object_management_array[i] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
-            }
-            else{
-                object_management_array[i] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
-            }
-        }
-        
-    }
-    int j = INTERSECTION_CIRCLE_COUNT
+    int block_num;
+    char block_c;
+    int  block_num[84];
+    block_num['A'] = 1;
+    block_num['B'] = 1;
+    block_num['C'] = 2;
+    block_num['D'] = 2;
+    block_num['E'] = 3;
+    block_num['F'] = 3;
+    block_num['G'] = 4;
+    block_num['H'] = 4;
+    block_num['J'] = 5;
+    block_num['K'] = 5;
+    block_num['L'] = 6;
+    block_num['M'] = 6;
+    block_num['P'] = 7;
+    block_num['Q'] = 7;
+    block_num['R'] = 8;
+    block_num['S'] = 8;
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE1);
     
-    for(int i = 0; i < BLOCK_COUNT; i++)
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
     {
-        block[i] = j;
-        j++;
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
     }
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE2);
+    
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
+    {
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, BLUE, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+    }
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED1);
+    
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
+    {
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, RED, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, RED, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+    }  
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED2);
+    
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
+    {
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, RED, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, RED, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+    }
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN1);
+    
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
+    {
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, GREEN, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, GREEN, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+    }
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN2);
+    
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
+    {
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, GREEN, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, GREEN, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+    }
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW1);
+    
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
+    {
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, YELLOW, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, YELLOW, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+    }
+
+    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW2);
+
+    i = block_num[block_c];
+    if(i - INTERSECTION_CIRCLE_COUNT = 1 || 2 || 5 || 6)
+    {
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, YELLOW, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
+    }else{
+        object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, YELLOW, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
+    }
+        
 }
 
 void BingoArea::initStorage()    //ブロックサークル初期化
