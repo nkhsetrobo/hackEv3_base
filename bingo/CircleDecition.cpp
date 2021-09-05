@@ -48,7 +48,6 @@ int CircleDecision::routeDecision()    //ルート決定する
 	        }
         }
 	}
-    return num;    //取得したサークルナンバーをリターンする
 
     bsm->rdStateChange(block_decision);
     return num;
