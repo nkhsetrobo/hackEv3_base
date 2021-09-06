@@ -181,18 +181,18 @@ void BingoSectionManager::init()    //初期化
     }
 }
 
-void BingoSectionManager::s_addSection()
-{
-    for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
-    {
-        section = new Section();    //クリエイトメッセージ
-        mWalker = section->selectWalker(n);    //走法の生成の依頼
-        mWalker->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
-        mJudge = section->selectJudge(n);    //判定の生成を依頼
-        mJudge->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
-        addSection(new Section());    //生成した区間をaddSectionへ渡す
-    }
-}
+// void BingoSectionManager::s_addSection()
+// {
+//     for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
+//     {
+//         sc = new Section();    //クリエイトメッセージ
+//         mWalker = sc->selectWalker(n);    //走法の生成の依頼
+//         mWalker->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
+//         mJudge = sc->selectJudge(n);    //判定の生成を依頼
+//         mJudge->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
+//         addSection(new Section());    //生成した区間をaddSectionへ渡す
+//     }
+// }
 
 void BingoSectionManager::running()    //実行する
 {
@@ -209,11 +209,11 @@ void BingoSectionManager::running()    //実行する
 
 void BingoSectionManager::chengeToSenpai()
 {
-    for(int i = 0; i < (sizeof p/p[0] - 1); i++)
+    for(int i = 0; p[i].front != -1; i++)
     {
         
-        wp[i] = {0, p[i].WALKER_NO, p[i].JUDGE_NO, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, UPDATE, 0, 0, 0, 0, 0, 0.5, 0}
-        switch(p[i].WALKER_NO)
+        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
+        switch(p[i].mwalker)
         {
             case WALKER:
                 wp[i].kd = 0.5;
@@ -225,13 +225,13 @@ void BingoSectionManager::chengeToSenpai()
                 wp[i].kd = 0.3;
                 break;
         }
-        switch(p[i].JUDGE_NO)
+        switch(p[i].mjudge)
         {
             case LENGTH:
-                wp[i].flength = atai;
+                wp[i].flength = p[i].atai;
                 break;
             case TURNANGLE:
-                wp[i].fangle = atai;
+                wp[i].fangle = p[i].atai;
                 break;
             case BRIGHTNESS:
                 wp[i].bright1 = -0.5;

@@ -43,6 +43,8 @@ private:
     int block_num;
     RouteDecision *rdState;
     Section *sc;
+    Walker *mWalker;
+    Judge *mJudge;
 
     #if defined(MAKE_RIGHT)
     const int _EDGE = LineTracer::LEFTEDGE;

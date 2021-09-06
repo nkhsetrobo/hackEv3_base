@@ -2,6 +2,8 @@
 #define _STRUCT_H_
 
 #include "Enum.h"
+#include "Section.h"
+#include "Judge.h"
 
 typedef struct _gameCoordinates    //ゲーム内座標
 {
@@ -29,7 +31,7 @@ typedef struct _getCostCoordinates    //コスト取得座標
 
 typedef struct _mParam
 {
-    section::WALKER_NO mwalker;    //走法
+    Section::WALKER_NO mwalker;    //走法
     int front;    //前進量
     int turn;     //旋回量
     Coordinates coordinates;    //目標地点
@@ -37,7 +39,7 @@ typedef struct _mParam
     float x;    //中心x座標
     float y;    //中心y座標
     float radius;    //旋回半径
-    section::JUDGE_NO mjudge;    //判定
+    Section::JUDGE_NO mjudge;    //判定
     float atai;    //値
     gameCoordinates p_coordinates;    //通過座標
     color mcolor;    //色
