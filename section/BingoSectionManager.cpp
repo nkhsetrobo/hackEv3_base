@@ -181,7 +181,7 @@ void BingoSectionManager::init()    //初期化
     }
 }
 
-/*void BingoSectionManager::s_addSection()
+void BingoSectionManager::s_addSection()
 {
     for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
     {
@@ -190,9 +190,9 @@ void BingoSectionManager::init()    //初期化
         mWalker->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
         mJudge = section->selectJudge(n);    //判定の生成を依頼
         mJudge->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
-        addSection(new Section());    //生成下区間をaddSectionへ渡す
+        addSection(new Section());    //生成した区間をaddSectionへ渡す
     }
-}*/
+}
 
 void BingoSectionManager::running()    //実行する
 {
@@ -209,7 +209,53 @@ void BingoSectionManager::running()    //実行する
 
 void BingoSectionManager::chengeToSenpai()
 {
-    
+    for(int i = 0; i < (sizeof p/p[0] - 1); i++)
+    {
+        
+        wp[i] = {0, p[i].WALKER_NO, p[i].JUDGE_NO, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, UPDATE, 0, 0, 0, 0, 0, 0.5, 0}
+        switch(p[i].WALKER_NO)
+        {
+            case WALKER:
+                wp[i].kd = 0.5;
+                break;
+            case TRACER:
+                wp[i].kd = 0.8;
+                break;
+            case VIRTUAL:
+                wp[i].kd = 0.3;
+                break;
+        }
+        switch(p[i].JUDGE_NO)
+        {
+            case LENGTH:
+                wp[i].flength = atai;
+                break;
+            case TURNANGLE:
+                wp[i].fangle = atai;
+                break;
+            case BRIGHTNESS:
+                wp[i].bright1 = -0.5;
+                wp[i].bright2 = 0;
+                break;
+            case COLOR:
+                switch(p[i].mcolor)
+                {
+                    case BLUE:
+                        wp[i].color1 = 220;
+                        break;
+                    case RED:
+                        wp[i].color1 = 350;
+                        break;
+                    case GREEN:
+                        wp[i].color1 = 156;
+                        break;
+                    case YELLOW:
+                        wp[i].color1 = 60;
+                        break;
+                }
+                break;
+        }
+    }
 }
 
 int BingoSectionManager::getBlockNum()
