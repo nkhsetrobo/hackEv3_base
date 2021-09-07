@@ -25,37 +25,37 @@ private:
                             {
                                 {0.0,0.0},{0.0,1.0},3.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{0.0,2.0},6.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{0.0,3.0},9.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
                             },
                             //4
                             {},
@@ -65,56 +65,56 @@ private:
                             {
                                 {0.0,0.0},{1.0,0.0},5.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
                             },
                             {
                                 {0.0,0.0},{1.0,1.0},8.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{1.0,2.0},11.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{1.0,3.0},14.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
 
                             },
                             //4
@@ -125,73 +125,73 @@ private:
                             {
                                 {0.0,0.0},{2.0,0.0},8.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{2.0,1.0},11.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{2.0,2.0},14.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{2.0,3.0},17.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
 
                             },
                             //4
@@ -202,89 +202,89 @@ private:
                             {
                                 {0.0,0.0},{3.0,0.0},11.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{3.0,1.0},14.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{3.0,2,0},19.5,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,0.0},{3.0,3.0},20.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
 
                             }
                         };
@@ -293,276 +293,276 @@ private:
                             {
                                 {0.0,1.0},{0.0,0.0},12.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
 
                             },
                             {},//空白
                             {
                                 {0.0,1.0},{0.0,2.0},3.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{0.0,3.0},6.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {0.0,1.0},{0.5,0.5},12.0,EAST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //左Uターン
 				                //キャッチ
-                                {Section::WALKER,5,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,2,{},BLUE,NULL},
+                                {Section::WALKER,5,0,{},0,0,0,0,Section::LENGTH,2,{},BLUE,0},
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,12,Section::TURNANGLE,200,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,12,Section::TURNANGLE,200,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-10,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-10,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-5,NULL,NULL,6,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-5,0,0,6,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,0.5},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0.5},
                                 //まっすぐ下がる
-                                {Section::WALKER,-23,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-42,{},BLUE,NULL},
+                                {Section::WALKER,-23,0,{},0,0,0,0,Section::LENGTH,-42,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{0.5,1.5},12.5,EAST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{0.5,2.5},15.5,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,1.0},{1.0,0.0},10.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{1.0,1.0},5.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{1.0,2.0},8.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{1.0,3.0},11.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {0.0,1.0},{1.5,0.5},9.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {},
                             {
                                 {0.0,1.0},{1.5,2.5},12.5,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,1.0},{2.0,0.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{2.0,1.0},8.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{2.0,2.0},11.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{2.0,3.0},14.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
 
 
                             },
@@ -570,173 +570,173 @@ private:
                             {
                                 {0.0,1.0},{2.5,0.5},12.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{2.5,1.5},12.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{02,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{02,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{2.5,2.5},15.5,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,1.0},{3.0,0.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{3.0,1.0},11.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{3.0,2.0},14.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,1.0},{3.0,3.0},17.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
 
                             }
                         };
@@ -745,453 +745,453 @@ private:
                             {
                                 {0.0,2.0},{0.0,0.0},15.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{0.0,1.0},12.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
 
                             },
                             {},//空白
                             {
                                 {0.0,2.0},{0.0,3.0},3.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {0.0,2.0},{0.5,0.5},14.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{0.5,1.5},12.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //左Uターン
 				                //キャッチ
-                                {Section::WALKER,5,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,2,{},BLUE,NULL},
+                                {Section::WALKER,5,0,{},0,0,0,0,Section::LENGTH,2,{},BLUE,0},
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,12,Section::TURNANGLE,200,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,12,Section::TURNANGLE,200,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-10,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-10,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-5,NULL,NULL,6,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-5,0,0,6,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,0.5},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0.5},
                                 //まっすぐ下がる
-                                {Section::WALKER,-23,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-42,{},BLUE,NULL},
+                                {Section::WALKER,-23,0,{},0,0,0,0,Section::LENGTH,-42,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
 
                             },
                             {
                                 {0.0,2.0},{0.5,2.5},12.5,EAST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,2.0},{1.0,0.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{1.0,1.0},10.0,EAST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{1.0,2.0},5.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{1.0,3.0},8.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {0.0,2.0},{1.5,0.5},14.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {},
                             {
                                 {0.0,2.0},{1.5,2.5},9.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,2.0},{2.0,0.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{2.0,1.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{2.0,2.0},8.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{2.0,3.0},11.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {0.0,2.0},{2.5,0.5},17.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{2.5,1.5},12.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{2.5,2.5},12.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,2.0},{3.0,0.0},19.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
 
 
                             },
                             {
                                 {0.0,2.0},{3.0,1.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{3.0,2.0},11.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,2.0},{3.0,3.0},14.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
 
                             }
                         };
@@ -1200,37 +1200,37 @@ private:
                             {
                                {0.0,3.0},{0.0,0.0},18.0,WEST,
                                {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{0.0,1.0},15.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{0.0,2.0},12.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
 
                             },
                             {},//空白
@@ -1238,476 +1238,476 @@ private:
                             {
                                 {0.0,3.0},{0.5,0.5},17.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{0.5,1.5},14.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{0.5,2.5},17.0,NORTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //左Uターン
 				                //キャッチ
-                                {Section::WALKER,5,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,2,{},BLUE,NULL},
+                                {Section::WALKER,5,0,{},0,0,0,0,Section::LENGTH,2,{},BLUE,0},
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,12,Section::TURNANGLE,200,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,12,Section::TURNANGLE,200,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-10,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-10,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-5,NULL,NULL,6,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-5,0,0,6,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,0.5},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0.5},
                                 //まっすぐ下がる
-                                {Section::WALKER,-23,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-42,{},BLUE,NULL},
+                                {Section::WALKER,-23,0,{},0,0,0,0,Section::LENGTH,-42,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,3.0},{1.0,0.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{1.0,1.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{1.0,2.0},10.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{1.0,3.0},5.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {0.0,3.0},{1.5,0.5},17.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {},
                             {
                                 {0.0,3.0},{1.5,2.5},17.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,3.0},{2.0,0.0},19.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{2.0,1.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{2.0,2.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{2.0,3.0},8.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {0.0,3.0},{2.5,0.5},20.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{2.5,1.5},17.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{2.5,2.5},20.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {0.0,3.0},{3.0,0.0},22.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
 
 
                             },
                             {
                                 {0.0,3.0},{3.0,1.0},19.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{3.0,2.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
 
                             },
                             {
                                 {0.0,3.0},{3.0,3.0},11.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
 
                             }
                         };
@@ -1716,54 +1716,54 @@ private:
                             {
                                 {1.0,1.0},{0.0,0.0},11.0,WEST,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{0.0,1.0},5.5,NORTH,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{0.0,2.0},8.5,NORTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{0.0,3.0},11.5,NORTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
 
                             },
                             //4
@@ -1771,95 +1771,95 @@ private:
                                 {1.0,1.0},{0.5,0.5},7.5,NORTH,
                                 {//右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{0.5,1.5},4.5,EAST,
                                 {//左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{0.5,2.5},7.5,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,1.0},{1.0,0.0},12.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
 
                             },
                             {},//空白
                             {
                                 {1.0,1.0},{1.0,2.0},3.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{1.0,3.0},6.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
 
                             },
                             //4
@@ -1867,242 +1867,242 @@ private:
                                 {1.0,1.0},{1.5,0.5},7.0,SOUTH,
                                 {//左Uターン
 				                //キャッチ
-                                {Section::WALKER,5,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,2,{},BLUE,NULL},
+                                {Section::WALKER,5,0,{},0,0,0,0,Section::LENGTH,2,{},BLUE,0},
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,12,Section::TURNANGLE,200,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,12,Section::TURNANGLE,200,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-10,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-10,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-5,NULL,NULL,6,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-5,0,0,6,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,0.5},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0.5},
                                 //まっすぐ下がる
-                                {Section::WALKER,-23,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-42,{},BLUE,NULL},
+                                {Section::WALKER,-23,0,{},0,0,0,0,Section::LENGTH,-42,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {},
                             {
                                 {1.0,1.0},{1.5,2.5},7.0,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,1.0},{2.0,0.0},10.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{2.0,1.0},5.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{2.0,2.0},8.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{2.0,3.0},11.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {1.0,1.0},{2.5,0.5},9.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{2.5,1.5},9.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{2.5,2.5},12.5,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,1.0},{3.0,0.0},13.0,EAST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
 
 
                             },
                             {
                                 {1.0,1.0},{3.0,1.0},8.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{3.0,2.0},11.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,1.0},{3.0,3.0},14.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
 
                             }
                         };
@@ -2111,188 +2111,188 @@ private:
                             {
                                 {1.0,2.0},{0.0,0.0},14.0,EAST,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{0.0,1.0},11.0,EAST,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{0.0,2.0},5.5,NORTH,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{0.0,3.0},8.5,NORTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {1.0,2.0},{0.5,0.5},19.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                             },
                             {
                                 {1.0,2.0},{0.5,1.5},7.5,NORTH,
                                 {//右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{0.5,2.5},4.5,EAST,
                                 {//左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,2.0},{1.0,0.0},15.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{1.0,1.0},12.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
 
                             },
                             {},//空白
                             {
                                 {1.0,2.0},{1.0,3.0},8.5,EAST,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {1.0,2.0},{1.5,0.5},14.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {},
@@ -2300,215 +2300,215 @@ private:
                                 {1.0,2.0},{1.5,2.5},4.5,EAST,
                                 {//左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,2.0},{2.0,0.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{2.0,1.0},10.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{2.0,2.0},5.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{2.0,3.0},8.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {1.0,2.0},{2.5,0.5},14.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{2.5,1.5},9.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{2.5,2.5},9.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,2.0},{3.0,0.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{3.0,1.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{3.0,2.0},8.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,2.0},{3.0,3.0},8.0,SOUTH,
                                 {/*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
 
                             }
                         };
@@ -2518,181 +2518,181 @@ private:
                             {
                                 {1.0,3.0},{0.0,0.0},17.0,WEST,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{0.0,1.0},14.0,WEST,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{0.0,2.0},11.0,WEST,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{0.0,3.0},5.5,NORTH,
                                 {//左に90度
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {1.0,3.0},{0.5,0.5},19.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{0.5,1.5},16.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //右斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
 			                    //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{0.5,2.5},19.0,NORTH,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //左Uターン
 				                //キャッチ
-                                {Section::WALKER,5,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,2,{},BLUE,NULL},
+                                {Section::WALKER,5,0,{},0,0,0,0,Section::LENGTH,2,{},BLUE,0},
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,12,Section::TURNANGLE,200,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,12,Section::TURNANGLE,200,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-10,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-10,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-5,NULL,NULL,6,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-5,0,0,6,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,0.5},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0.5},
                                 //まっすぐ下がる
-                                {Section::WALKER,-23,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-42,{},BLUE,NULL},
+                                {Section::WALKER,-23,0,{},0,0,0,0,Section::LENGTH,-42,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,3.0},{1.0,0.0},18.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{1.0,1.0},15.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{1.0,2.0},12.0,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
 
                             },
                             {},//空白
@@ -2700,273 +2700,273 @@ private:
                             {
                                 {1.0,3.0},{1.5,0.5},19.5,WEST,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                             },
                             {},
                             {
                                 {1.0,3.0},{1.5,2.5},19.5,SOUTH,
                                 {/*180度旋回*/
-                                {Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,3.0},{2.0,0.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{2.0,1.0},13.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{2.0,2.0},10.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{2.0,3.0},5.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
 
                             },
                             //4
                             {
                                 {1.0,3.0},{2.5,0.5},17.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}}
 
                             },
                             {
                                 {1.0,3.0},{2.5,1.5},14.5,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //左入れ
                                 //キャッチ
-                                {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                 //左斜め前に置く
-                                {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //元の場所に戻る
-                                {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{2.5,2.5},17.5,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //右Uターン
                                 //Uターン
-                                {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                 //戻る！
-                                {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 //角度調整
-                                {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                 //まっすぐ下がる
-                                {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
 				                //ストップ
-                                {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                             },
                             //3
                             {
                                 {1.0,3.0},{3.0,0.0},19.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{3.0,1.0},16.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{3.0,2.0},5.0,WEST,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
 
                             },
                             {
                                 {1.0,3.0},{3.0,3.0},8.0,SOUTH,
                                 {//右に90度
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 /*walker*/			//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
 
                             }
                         };
@@ -2976,365 +2976,365 @@ private:
                             {
                                 {2.0,1.0},{0.0,0.0},14.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{0.0,1.0},8.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{0.0,2.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{0.0,3.0},14.5,NORTH
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,1.0},{0.5,0.5},10.0,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,1.0},{0.5,1.5},9.5,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                                 },
                                 {
                                     {{2.0,1.0},{0.5,2.5},12.5,NORTH,
                                     {//サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //キャッチ
-                                    {0,7,0,{},NULL,NULL,NULL,NULL,NULL,1,3,{},BLUE,NULL},
+                                    {0,7,0,{},0,0,0,0,0,1,3,{},BLUE,0},
                                     //右斜め前に置く
-                                    {2,NULL,NULL,{},5,NULL,NULL,-23,1,22,{},BLUE,NULL},
+                                    {2,0,0,{},5,0,0,-23,1,22,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {0,-5,0,{},NULL,NULL,NULL,NULL,1,-3,{},BLUE,NULL},
+                                    {0,-5,0,{},0,0,0,0,1,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {2,NULL,NULL,{},-5,NULL,NULL,-19,3,55,{},BLUE,NULL},
+                                    {2,0,0,{},-5,0,0,-19,3,55,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {0,-5,0,NULL,{},NULL,NULL,NULL,1,-11,{},BLUE,NULL},
+                                    {0,-5,0,0,{},0,0,0,1,-11,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {1,NULL,0,{},5.0,NULL,NULL,NULL,0,NULL,{1,2},BLUE,0.5}}
+                                    {1,0,0,{},5.0,0,0,0,0,0,{1,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,1.0},{1.0,0.0},11.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{1.0,1.0},5.5,NORTH,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,1,0},{1.0,2.0},8.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{1.0,3.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,1.0},{1.5,0.5},7.5,NORTH,
                                     {//キャッチ
-                                    {Section::WALKER,5,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,2,{},BLUE,NULL},
+                                    {Section::WALKER,5,0,{},0,0,0,0,Section::LENGTH,2,{},BLUE,0},
                                     //Uターン
-                                    {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,12,Section::TURNANGLE,200,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},8,0,0,12,Section::TURNANGLE,200,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-10,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-10,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //戻る！
-                                    {Section::VIRTUAL,NULL,NULL,{},-5,NULL,NULL,6,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-5,0,0,6,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     //角度調整
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0.5},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-23,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-42,{},BLUE,NULL},
+                                    {Section::WALKER,-23,0,{},0,0,0,0,Section::LENGTH,-42,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                                 },
                                 {},
                                 {
                                     {2.0,1.0},{1.5,2.5},7.5,EAST,
                                     {//サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,1.0},{2.0,0.0},12.0,WEST,
-                                {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 			                	/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
                             },
                             {},
                             {
                                 {2.0,1.0},{2.0,2.0},3.0,EAST,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{2.0,3.0},6.0,EAST,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,1.0},{2.5,0.5},7.0,SOUTH,
                                     {//Uターン
-                                    {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //戻る！
-                                    {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     //角度調整
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,NULL},
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                    {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,1.0},{2.5,1.5},4.0,EAST,
                                     {//キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,1.0},{2.5,2.5},7.0,EAST,
                                     {//サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,1.0},{3.0,0.0},10.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 			                	/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{3.0,1.0},10.0,SOUTH,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 			                	/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{3.0,2.0},8.0,SOUTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 			                	/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,1.0},{3.0,3.0},11.0,SOUTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 			                	/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
                             }
                         };
 
@@ -3343,370 +3343,370 @@ private:
                             {
                                 {2.0,2.0},{0.0,0.0},17.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{0.0,1.0},14.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{0.0,2.0},8.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{0.0,3.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,2.0},{0.5,0.5},15.0,WEST,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,2.0},{0.5,1.5},10.0,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,2.0},{0.5,1.5},9.5,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,2.0},{1.0,0.0},14.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{1.0,1.0},11.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{1.0,2.0},5.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{1.0,3.0},8.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,2.0},{1.5,0.5},16.0,WEST,
-                                    {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                    {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                                 },
                                 {},
                                 {
                                     {2.0,2.0},{1.5,2.5},4.5,EAST,
                                     {//キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,2.0},{2.0,0.0},15.0,WEST,
-                                {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{2.0,1.0},12.0,WEST,
-                                {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                             },
                             {},
                             {
                                 {2.0,2.0},{2.0,3.0},3.0,EAST,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,2.0},{2.5,0.5},16.5,WEST,
-                                    {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                    {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,2.0},{2.5,1.5},7.0,SOUTH,
                                     {//Uターン
-                                    {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //戻る！
-                                    {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     //角度調整
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{0,1},BLUE,NULL},
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{0,1},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                    {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
 
                                 },
                                 {
                                     {2.0,2.0},{2.5,2.5},4.0,EAST,
                                     {//キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,2.0},{3.0,0.0},13.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{3.0,1.0},10.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{3.0,2.0},5.0,SOUTH,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,2.0},{3.0,3.0},3.0,SOUTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
                             }
                         };
 
@@ -3715,458 +3715,458 @@ private:
                             {
                                 {2.0,3.0},{0.0,0.0},20.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{0.0,1.0},17.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{0.0,2.0},14.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
                                 }
                             },
                             {
                                 {2.0,3.0},{0.0,3.0},8.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,3.0},{0.5,0.5},18.0,WEST,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,3.0},{0.5,1.5},15.0,WEST,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,3.0},{0.5,2.5},18.0,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //Uターン
-                                    {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //戻る！
-                                    {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     //角度調整
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{0,1},BLUE,NULL},
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{0,1},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                    {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,3.0},{1.0,0.0},17.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{1.0,1.0},14.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{1.0,2.0},11.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //旋回
-                				{Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                				{Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 	                			/*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{1.0,2.0},5.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {2.0,3.0},{1.5,0.5},18.5,WEST,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                                 },
                                 {},
                                 {
                                     {2.0,3.0},{1.5,2.5},7.5,NORTH,
                                     {//キャッチ
-                                    {Section::WALKER,5,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,2,{},BLUE,NULL},
+                                    {Section::WALKER,5,0,{},0,0,0,0,Section::LENGTH,2,{},BLUE,0},
                                     //Uターン
-                                    {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,12,Section::TURNANGLE,200,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},8,0,0,12,Section::TURNANGLE,200,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-10,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-10,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //戻る！
-                                    {Section::VIRTUAL,NULL,NULL,{},-5,NULL,NULL,6,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-5,0,0,6,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     //角度調整
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{},BLUE,0.5},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-23,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-42,{},BLUE,NULL},
+                                    {Section::WALKER,-23,0,{},0,0,0,0,Section::LENGTH,-42,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,3.0},{2.0,0.0},18.0,WEST,
-                                {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{2.0,1.0},15.0,WEST,
-                                {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{2.0,2.0},12.0,WEST,
-                                {{Section::VIRTUAL,NULL,NULL,{},15,NULL,NULL,-3,Section::TURNANGLE,-145,{},BLUE,NULL},
+                                {{Section::VIRTUAL,0,0,{},15,0,0,-3,Section::TURNANGLE,-145,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},10.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},10.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                             },
                             {},
                             //4
                                 {
                                     {2.0,3.0},{2.5,0.5},23.5,SOUTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,3.0},{2.5,1.5},20.5,SOUTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                                 },
                                 {
                                     {2.0,3.0},{2.5,2.5},7.0,SOUTH,
                                     {//Uターン
-                                    {Section::VIRTUAL,NULL,NULL,{},8,NULL,NULL,-12,Section::TURNANGLE,-195,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},8,0,0,-12,Section::TURNANGLE,-195,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //戻る！
-                                    {Section::VIRTUAL,NULL,NULL,{},-10,NULL,NULL,-8,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-10,0,0,-8,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     //角度調整
-                                    {Section::TRACER,NULL,NULL,{},5.0,NULL,NULL,NULL,Section::LENGTH,7,{0,1},BLUE,NULL},
+                                    {Section::TRACER,0,0,{},5.0,0,0,0,Section::LENGTH,7,{0,1},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-37,{},BLUE,NULL},
+                                    {Section::WALKER,-30,0,{},0,0,0,0,Section::LENGTH,-37,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},8.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},8.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {2.0,3.0},{3.0,0.0},16.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,0},BLUE,0.5}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
                                 }
                             },
                             {
                                 {2.0,3.0},{3.0,1.0},13.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{3.0,2.0},10.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
                             },
                             {
                                 {2.0,3.0},{3.0,3.0},5.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},13.0,NULL,NULL,-12,Section::TURNANGLE,-75,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},13.0,0,0,-12,Section::TURNANGLE,-75,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},14.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
                             }
                         };
 
@@ -4175,90 +4175,90 @@ private:
                             {
                                 {3.0,0.0},{0.0,0.0},11.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{0.0,1.0},14.0,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{0.0,2.0},17.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{0.0,3.0},20.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
                             },
                                 {},
                                 {},
@@ -4266,74 +4266,74 @@ private:
                             {
                                 {3.0,0.0},{1.0,0.0},20.0,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{1.0,1.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{1.0,2.0},14.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{1.0,3.0},17.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
                             },
                                 {},
                                 {},
@@ -4341,58 +4341,58 @@ private:
                             {
                                 {3.0,0.0},{2.0,0.0},20.0,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{2.0,1.0},8.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{2.0,2.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{2.0,3.0},14.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}}
                             },
                                 {},
                                 {},
@@ -4401,35 +4401,35 @@ private:
                             {
                                 {3.0,0.0},{3.0,1.0},3.0,EAST,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{3.0,2.0},6.0,EAST,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}}
                             },
                             {
                                 {3.0,0.0},{3.0,3.0},9.0,EAST,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
                             }
                         };
 
@@ -4438,337 +4438,337 @@ private:
                             {
                                 {3.0,1.0},{0.0,0.0},17.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{0.0,1.0},11.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{0.0,2.0},14.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{0.0,3.0},17.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{0,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {3.0,1.0},{0.5,0.5},13.0,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                     //サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                                 },
                                 {
                                     {3.0,1.0},{0.5,1.5},12.5,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                     //サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                                 },
                                 {
                                     {3.0,1.0},{0.5,2.5},15.5,NORTH,
                                     {//サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                     //サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {3.0,1.0},{1.0,0.0},14.0,WEST,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{1.0,1.0},8.5,NORTH,
                                 {//旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{1.0,2.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{1.0,3.0},14.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
                                 //旋回
-				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+				                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
 				                /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{1,3},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}}
                             },
                             //4
                                 {
                                     {3.0,1.0},{1.5,0.5},10.0,NORTH,
                                     {//旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //左斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},20,NULL,NULL,21,Section::LENGTH,16,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},20,0,0,21,Section::LENGTH,16,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,15,Section::TURNANGLE,-50,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,15,Section::TURNANGLE,-50,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-8,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-8,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},18.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                                 },
                                 {},
                                 {
                                     {3.0,1.0},{1.5,2.5},12.5,NORTH,
                                     {//サークル突破
-                                    {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                    {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                     //旋回
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                    {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                    {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5},
+                                    {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
                                     //キャッチ
-                                    {Section::WALKER,15,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,4,{},BLUE,NULL},
+                                    {Section::WALKER,15,0,{},0,0,0,0,Section::LENGTH,4,{},BLUE,0},
                                     //右斜め前に置く
-                                    {Section::VIRTUAL,NULL,NULL,{},18,NULL,NULL,-21,Section::LENGTH,18,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},18,0,0,-21,Section::LENGTH,18,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,1,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-20,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-3,{},BLUE,NULL},
+                                    {Section::WALKER,-20,0,{},0,0,0,0,Section::LENGTH,-3,{},BLUE,0},
                                     //元の場所に戻る
-                                    {Section::VIRTUAL,NULL,NULL,{},-20,NULL,NULL,-15,Section::TURNANGLE,53,{},BLUE,NULL},
+                                    {Section::VIRTUAL,0,0,{},-20,0,0,-15,Section::TURNANGLE,53,{},BLUE,0},
                                     //まっすぐ下がる
-                                    {Section::WALKER,-21,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-12,{},BLUE,NULL},
+                                    {Section::WALKER,-21,0,{},0,0,0,0,Section::LENGTH,-12,{},BLUE,0},
                                     //ストップ
-                                    {Section::WALKER,0,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,-1,{},BLUE,NULL},
+                                    {Section::WALKER,0,0,{},0,0,0,0,Section::LENGTH,-1,{},BLUE,0},
                                     /*linetrace色判定*/
-                                    {Section::TRACER,NULL,0,{},9.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                    {Section::TRACER,0,0,{},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                                 },
                                 //3
                             {
                                 {3.0,1.0},{2.0,0.0},11.0,WEST,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5},
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,0},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{2.0,1.0},5.5,NORTH,
                                 {//旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,1},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{2.0,2.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //旋回
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
-                                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,11,Section::TURNANGLE,60,{},BLUE,0},
+                                {Section::VIRTUAL,0,0,{},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},7.0,NULL,NULL,NULL,Section::COLOR,NULL,{2,2},BLUE,0.5}}
+                                {Section::TRACER,0,0,{},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}}
                             },
                             {
                                 {3.0,1.0},{2.0,3.0},11.5,NORTH,
                                 {//サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,2},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
                                 //サークル突破
-                                {Section::WALKER,30,0,{},NULL,NULL,NULL,NULL,Section::LENGTH,17,{},BLUE,NULL},
+                                {Section::WALKER,30,0,{},0,0,0,0,Section::LENGTH,17,{},BLUE,0},
                                 /*linetrace色判定*/
-                                {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
+                                {Section::TRACER,0,0,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5},
                                 //旋回
 				                {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,11,Section::TURNANGLE,60,{},BLUE,NULL},
                                 {Section::VIRTUAL,NULL,NULL,{},10.0,NULL,NULL,10,Section::BRIGHTNESS,-0.5,{},BLUE,NULL},
