@@ -23,22 +23,5 @@ enum object    //コース内要素
     STORAGE
 };
 
-enum WALKER_NO
-{
-    WNONE,
-    WALKER,    //単純走法
-    TRACER,    //ライントレース
-    VIRTUAL,    //曲線仮想ライントレース
-    VIRTUAL2    //直線仮想ライントレース
-};
-
-enum JUDGE_NO {
-    JNONE,
-    LENGTH,
-    TURNANGLE,
-    BRIGHTNESS,
-    COLOR,
-    STOP
-};
 
 #endif

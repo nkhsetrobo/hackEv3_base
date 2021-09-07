@@ -90,12 +90,12 @@ typedef struct _pidParam    //制御パラメータ
 
 typedef struct _passList    //パラメータ群
 {
-    _gameCoordinates s_cood;
-    _gameCoordinates e_cood;
+    gameCoordinates s_cood;
+    gameCoordinates e_cood;
     double cost;
     direction dir;
     //north east→ west south
-    _mParam param[10];
+    mParam param[100];
 }passList;
 
 #endif
