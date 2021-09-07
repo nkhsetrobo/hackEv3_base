@@ -5,7 +5,7 @@ enum direction    //方向
 {
     NORTH,
     EAST,
-    SAUTH,
+    SOUTH,
     WEST
 };
 
@@ -23,13 +23,13 @@ enum object    //コース内要素
     STORAGE
 };
 
-enum WALKER_NO 
+enum WALKER_NO
 {
     WNONE,
-    WALKER,
-    TRACER,
-    VIRTUAL,
-    VIRTUAL2
+    WALKER,    //単純走法
+    TRACER,    //ライントレース
+    VIRTUAL,    //曲線仮想ライントレース
+    VIRTUAL2    //直線仮想ライントレース
 };
 
 enum JUDGE_NO {

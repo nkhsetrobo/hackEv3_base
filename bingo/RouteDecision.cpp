@@ -13,12 +13,8 @@ void RouteDecition::passParam(param *p)  //移動パラメータを問い合わ�
 
     p = *wp.mparam;
     int i;
-    for(i = 0, p[i + 1].front != -1, i++)
-    {
-        
-    }
+    for(i = 0, p[i + 1].front != -1, i++){}
     bingo_area->updateRunInfo(p[i].coordinates, wp.e_dir, bingo_area->runningInformation().dir);    //走行体情報を更新する
-    
 }
 
 int RouteDecision::pass_Color(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる

@@ -30,7 +30,6 @@ class Section {
         Judge *createAbnormalJudge();
         int getAbnormalFlag();
 
-        
         enum WALKER_NO {
             WNONE,
             WALKER,
@@ -51,7 +50,6 @@ class Section {
         Walker *mWalker;
         Judge *mJudge;
         Judge * aJudge;
-        
 
         bool first;
         bool first2;

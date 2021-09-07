@@ -7,9 +7,9 @@ BingoArea::BingoArea()    //コンストラクタ
     initStorage();   //ブロックサークル初期化
 }
 
-void BingoArea::init_CircleBlock()    //交点サークル初期化
+void BingoArea::initCircleBlock()    //交点サークル初期化
 {
-    game_coordinates coordinates;
+    gameCoordinates coordinates;
     //（交点サークルナンバー, 色, 座標）
     coordinates.x = 0.0;
     coordinates.y = 0.0;
@@ -52,11 +52,10 @@ void BingoArea::init_CircleBlock()    //交点サークル初期化
     {
         intersection_circle[i] = i;
     }
-    
     int block_num;
     char block_c;
     int  block_num[84];
-    block_num['A'] = 1;
+    block_num[(int)'A'] = 1;
     block_num['B'] = 1;
     block_num['C'] = 2;
     block_num['D'] = 2;
@@ -101,7 +100,7 @@ void BingoArea::init_CircleBlock()    //交点サークル初期化
         object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, RED, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 1]);
     }else{
         object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, RED, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
-    }  
+    }
 
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED2);
     
@@ -152,7 +151,6 @@ void BingoArea::init_CircleBlock()    //交点サークル初期化
     }else{
         object_management_array[i + INTERSECTION_CIRCLE_COUNT] = new ColorBlock(i - INTERSECTION_CIRCLE_COUNT, YELLOW, object_management_array[2 * (i - INTERSECTION_CIRCLE_COUNT) - 2]);
     }
-        
 }
 
 void BingoArea::initStorage()    //ブロックサークル初期化
@@ -167,7 +165,7 @@ void BingoArea::initStorage()    //ブロックサークル初期化
     i++;
     coordinates.x = 0.5;
     coordinates.y = 0.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, YELLOW, coordinates);    //黄  
+    object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, YELLOW, coordinates);    //黄
     i++;
     coordinates.y = 1.5;
     object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + i] = new CircleStorage(i, GREEN, coordinates);    //緑
@@ -207,7 +205,7 @@ BingoArea::gameCoordinates BingoArea::objCoordinates(object object_type, int obj
         case block:
             return object_management_array[block[object_num]]->getCoordinates();
         case storage:
-            return object_management_array[storage[object_num]]->getCoordinates();    
+            return object_management_array[storage[object_num]]->getCoordinates();
     }
 }
 
@@ -240,9 +238,9 @@ bool BingoArea::objSuccsesPass(object object_type, int　object_num)   //有効�
 {
     switch(object_type)
     {
-        case block:
+        case BLOCK:
             return static_cast<Block>object_management_array[block[object_num]]->getSuccsesPass();
-        case storage:
+        case STORAGE:
             return static_cast<Block>object_management_array[storage[object_num]]->getSuccsesPass();
     }
 }
@@ -267,7 +265,7 @@ gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, dire
             break;
     }
     coordinates.x = x;
-    coordinates.y = y,
+    coordinates.y = y;
     return coordinates;
 }
 

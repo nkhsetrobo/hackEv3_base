@@ -7,6 +7,7 @@
 #include "TravelableArea.h"
 #include "Enum.h"
 #include "Constant.h"
+#include "Struct.h"
 
 
 class BingoArea
@@ -28,7 +29,7 @@ public:
     
 private:
     RunningBody* run_body;
-    TravelableArea* object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + STORAGE_COUNT];
+    TravelableArea object_management_array[INTERSECTION_CIRCLE_COUNT + BLOCK_COUNT + STORAGE_COUNT];
     int intersection_circle[INTERSECTION_CIRCLE_COUNT];
     int storage[STORAGE_COUNT];
     int block[BLOCK_COUNT];
