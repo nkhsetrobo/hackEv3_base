@@ -50,29 +50,31 @@ void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定�
 
 void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定する
 {
-
-  Judge *judge = sc->selectJudge(wp[n].judge);
-
-  switch (wp[n].judge)
-  {
-  case Section::TURNANGLE:
-    ((TurnAngleJudge *)judge)->setupdate(wp[n].jflag);
-    ((TurnAngleJudge *)judge)->setFinishAngle(wp[n].fangle);
-    break;
-  case Section::LENGTH:
-     ((LengthJudge *)judge)->setFinLength(wp[n].flength);
-      ((LengthJudge *)judge)->setupdate(wp[n].jflag);
-    break;
-  case Section::BRIGHTNESS:
-    ((BrightnessJudge *)judge)->setBrightness(wp[n].bright1, wp[n].bright2);
-    break;
-  case Section::COLOR:
-    ((ColorJudge *)judge)->setColor(wp[n].color1, wp[n].color2);
-    break;
-      case Section::STOP:
-    ((Stop *)judge)->setCount(wp[n].count);
-    break;
-  }
+    Judge *judge = sc->selectJudge(wp[n].judge);
+    Judge *aJudge;
+    switch (wp[n].judge)
+    {
+    case Section::TURNANGLE:
+        ((TurnAngleJudge *)judge)->setupdate(wp[n].jflag);
+        ((TurnAngleJudge *)judge)->setFinishAngle(wp[n].fangle);
+        break;
+    case Section::LENGTH:
+        ((LengthJudge *)judge)->setFinLength(wp[n].flength);
+        ((LengthJudge *)judge)->setupdate(wp[n].jflag);
+        break;
+    case Section::BRIGHTNESS:
+        ((BrightnessJudge *)judge)->setBrightness(wp[n].bright1, wp[n].bright2);
+        break;
+    case Section::COLOR:
+        ((ColorJudge *)judge)->setColor(wp[n].color1, wp[n].color2);
+        aJudge = sc->createAbnormalJudge();
+        ((LengthJudge *)aJudge)->setFinLength(30);
+        ((LengthJudge *)aJudge)->setupdate(UPDATE);
+        break;
+        case Section::STOP:
+        ((Stop *)judge)->setCount(wp[n].count);
+        break;
+    }
 }
 
 //bool BingoSectionManager::run()    //走行する(色々間違えているので修正必要)
@@ -134,6 +136,7 @@ bool BingoSectionManager::run()
         case RUN:
             printf("test2");
             ex = exe_run();
+
             if (ex == true)
             {
                 mStateChange(INIT);
@@ -153,7 +156,15 @@ bool BingoSectionManager::exe_run()
     //if(mSectionIdx==1)
     // msg_log("1");
     if(mSection[mSectionIdx]->run())
+    {
+        if(mSection[mSectionIdx]->getAbnormalFlag == 1)
+        {
+            ETRoboc_notifyCompletedToSimulator();
+        }
         mSectionIdx++;
+    }
+
+       
     return false;
 }
 

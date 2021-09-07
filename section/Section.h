@@ -27,7 +27,9 @@ class Section {
 
         Walker *selectWalker(int no);
         Judge *selectJudge(int no);
+        Judge *abnormalJudge()
 
+        
         enum WALKER_NO {
             WNONE,
             WALKER,
@@ -47,12 +49,14 @@ class Section {
     protected:
         Walker *mWalker;
         Judge *mJudge;
-         bool first;
+        Judge * aJudge;
+        
+
+        bool first;
         bool first2;
 
-
     private:
-
+        int abnormal_flg = 0;
 
 
 };

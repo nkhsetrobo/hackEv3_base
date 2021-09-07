@@ -53,9 +53,9 @@ bool LengthJudge::run()
 void LengthJudge::init()
 {
     if(update == Judge::UPDATE){
-        gStart = mLength->getValue(); // 更新
-        mStartlength=mLength->getValue();
-        mFinishlength = mFinishlength + gStart; // 現在地からの距離
+        gStart = mLength->getValue();    // 更新
+        mStartlength=mLength->getValue();    
+        mFinishlength = mFinishlength + gStart;    // 現在地からの距離
     }
     else{
     

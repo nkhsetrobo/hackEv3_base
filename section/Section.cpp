@@ -26,10 +26,22 @@ bool Section::run()
     if(first2){
       //  msg_log("3");
         mJudge->init();
+        if(aJudge != nullptr)
+        {
+            aJudge->init();
+        }
+        
         first2 = false;
     }
     //判定
-    if(mJudge->run()){
+    if(mJudge->run())
+    {
+        return true;
+    }
+    //異常判定
+    if(aJudge != nullptr && aJudge->run())
+    {
+        abnormal_flg = 1;
         return true;
     }
 
@@ -39,7 +51,7 @@ bool Section::run()
         first = false;
     }
     mWalker->run();
-    
+    abnormal_flg = 0;
     return false;
 }
 
@@ -91,7 +103,19 @@ Judge *Section::selectJudge(int no)
     return mJudge;
 }
 
+Judge *Section::createAbnormalJudge()
+{
+    aJudge = (Judge*)(new LengthJudge());
+    return aJudge;
+}
+
+
+
 void Section::init(){
 
     mWalker->init();
+}
+
+int getAbnormalFlag(){
+    return abnormal_flg;
 }

@@ -15,6 +15,7 @@ class Judge{
     Judge();
     virtual bool run();
     virtual void init();
+    int detection_abnormal();
 
     enum  JUDGE_MODE
     {
