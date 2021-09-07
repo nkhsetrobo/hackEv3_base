@@ -1193,7 +1193,7 @@ private:
                                 /*linetrace色判定*/
                                 {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
 
-                            },
+                            }
                         };
     passList table03[25] =
                         {
@@ -1709,7 +1709,7 @@ private:
                                 /*linetrace色判定*/
                                 {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
 
-                            },
+                            }
                         };
     passList table11[25] =
                         {
@@ -2104,7 +2104,7 @@ private:
                                 /*linetrace色判定*/
                                 {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
 
-                            },
+                            }
                         };
     passList table12[25] =
                         {
@@ -2510,7 +2510,7 @@ private:
                                 /*linetrace色判定*/
                                 {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
 
-                            },
+                            }
                         };
 
     passList table13[25] =
@@ -2968,7 +2968,7 @@ private:
                                 /*linetrace色判定*/
                                 {Section::TRACER,NULL,NULL,{},20.0,NULL,NULL,NULL,Section::COLOR,NULL,{3,3},BLUE,0.5}}
 
-                            },
+                            }
                         };
 
     passList table21[25] =
