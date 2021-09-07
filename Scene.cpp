@@ -4,7 +4,7 @@
 
 //#include "Bingo.h"
 
-#include "etroboc_ext.h" 
+#include "etroboc_ext.h"
 
 extern Motor       *gArm;
 
@@ -48,13 +48,11 @@ void Scene::execUndefined()
 {
     msg_log("Press Touch Button to start.");
  //   Bingo *mBingo = new Bingo();
- //     mBingo->get(); 
+ //     mBingo->get();
 
- 
+
     ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
 
-
-  
     mState=START;
 }
 void Scene::execStart()
