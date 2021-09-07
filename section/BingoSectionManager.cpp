@@ -69,7 +69,7 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
         ((ColorJudge *)judge)->setColor(wp[n].color1, wp[n].color2);
         aJudge = sc->createAbnormalJudge();
         ((LengthJudge *)aJudge)->setFinLength(30);
-        ((LengthJudge *)aJudge)->setupdate(UPDATE);
+        ((LengthJudge *)aJudge)->setupdate(Judge::UPDATE);
         break;
         case Section::STOP:
         ((Stop *)judge)->setCount(wp[n].count);
@@ -157,7 +157,7 @@ bool BingoSectionManager::exe_run()
     // msg_log("1");
     if(mSection[mSectionIdx]->run())
     {
-        if(mSection[mSectionIdx]->getAbnormalFlag == 1)
+        if(mSection[mSectionIdx]->getAbnormalFlag() == 1)
         {
             ETRoboc_notifyCompletedToSimulator();
         }

@@ -41,7 +41,7 @@ bool Section::run()
     //異常判定
     if(aJudge != nullptr && aJudge->run())
     {
-        abnormal_flg = 1;
+        abnormal_flag = 1;
         return true;
     }
 
@@ -51,7 +51,7 @@ bool Section::run()
         first = false;
     }
     mWalker->run();
-    abnormal_flg = 0;
+    abnormal_flag = 0;
     return false;
 }
 
@@ -116,6 +116,6 @@ void Section::init(){
     mWalker->init();
 }
 
-int getAbnormalFlag(){
-    return abnormal_flg;
+int Section::getAbnormalFlag(){
+    return abnormal_flag;
 }
