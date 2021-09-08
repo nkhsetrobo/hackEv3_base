@@ -19,7 +19,7 @@ public:
     gameCoordinates objCoordinates(object object_type, int objrct_num);    //コース内要素座標を問い合わせる
     runInfo runningInformation();    //走行体情報を問い合わせる
     color circleColor(gameCoordinates pass_coordinates);    //交点サークルの色を問い合わせる
-    int blockColor(int block_num);    //ブロックの色を問い合わせる
+    color blockColor(int block_num);    //ブロックの色を問い合わせる
     bool objSuccsesPass(object object_type, int object_num);    //コース内要素が有効移動成立しているか問い合わせる
     gameCoordinates relativeCoordinates(gameCoordinates coordinates, direction rb_direction);    //相対座標系に変換する
     gameCoordinates absoluteCoordinates(gameCoordinates coordinates, direction rb_direction);    //絶対座標系に変換する

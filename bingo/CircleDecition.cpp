@@ -8,11 +8,11 @@ CircleDecision::CircleDecision()    //コンストラクタ
 
 int CircleDecision::routeDecision()    //ルート決定する
 {
-    runInfo run_info = bingo_area->RunningBodyInformation();    //走行体情報を問い合わせる
-    gameCoordiantes ri_coordinates = bingo_area->relativeCoordinates(run_info.coordinates,run_info.dir);    //相対座標に変換
-    block_num = BingoSectionManager bsm->getBlockNum();
+    runInfo run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
+    gameCoordinates ri_coordinates = bingo_area->relativeCoordinates(run_info.rb_coordinates,run_info.rb_dir);    //相対座標に変換
+    num = bsm->getBlockNum();
 
-    color block_color = bsm->blockColor(block_num);
+    color block_color = bingo_area->blockColor(num);
 
     int circle_num[2]; 
     switch(block_color)
@@ -37,10 +37,10 @@ int CircleDecision::routeDecision()    //ルート決定する
 
     for (int i = 0; i < 2; i++)
 	{
-        if (!bingo_area->SuccsesPass(STORAGE, circle_num[i])/*有効移動が成立しているか*/);
+        if (!bingo_area->objSuccsesPass(STORAGE, circle_num[i])/*有効移動が成立しているか*/);
         {
-	        goal_coordinates = bingo_area->BlockCoordinates(circle_num[i]);    //ブロック座標を問い合わせる
-	        cost = block_list->getCost(run_info.rb_coordinates, goal_coordinates);    //コストを取得する
+	        goal_coordinates = bingo_area->objCoordinates(STORAGE, circle_num[i]);    //ブロック座標を問い合わせる
+	        double cost = block_list->getCost(run_info.rb_coordinates, goal_coordinates);    //コストを取得する
 	        if (minCompare(min_cost, cost))    //更新処理
             {
 		        min_cost = cost;
@@ -49,6 +49,6 @@ int CircleDecision::routeDecision()    //ルート決定する
         }
 	}
 
-    bsm->rdStateChange(block_decision);
+    bsm->rdStateChange(BingoSectionManager::block_decision);
     return num;
 }
