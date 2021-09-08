@@ -10,7 +10,7 @@ public:
     bool getSuccsesPass();    //有効移動成立のゲッタ
     void effectiveMovementJudgment();    //ブロック有効移動判定
 
-private:
+protected:
     int block_num;   //ブロックナンバー
     bool succses_pass = false;    //有効移動が成立すればtrue
     static const double r;    //半径

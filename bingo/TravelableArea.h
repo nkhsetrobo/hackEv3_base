@@ -10,8 +10,11 @@ class TravelableArea
 public:
     TravelableArea(gameCoordinates c_coordinates);    //コンストラクタ
     gameCoordinates getCoordinates();    //座標を取得する
-private:
+    
+protected:
     gameCoordinates coordinates;    //座標
+
+private:
     Block *block;
 };
 

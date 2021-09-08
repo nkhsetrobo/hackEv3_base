@@ -7,7 +7,7 @@ class PassingCircle : public TravelableArea
 {
 public:
     PassingCircle(gameCoordiantes c_coordinates);    //コンストラクタ
-private:
+protected:
     static const double r;    //半径
 };
 
