@@ -14,9 +14,7 @@ private:
     int block_num;   //ブロックナンバー
     bool succses_pass = false;    //有効移動が成立すればtrue
     static const double r;    //半径
-    static const double h;    //高さ
-
-    TravelableArea *travelable_area;
+    static const double h;    //高さ;
 };
 
 #endif

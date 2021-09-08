@@ -25,7 +25,7 @@ private:
     gameCoordinates goal_coordinates;    //目標地点座標
     passList wp[100];    //paramを含む拡張版パラメータ
     mParam p[100];    //自分たちのパラメータ
-    BingoArea *bingo_area;
+    BingoArea *bingoarea;
     BingoSectionManager *bingo_manager;
     BlockList *block_list;
 };

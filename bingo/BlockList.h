@@ -16,7 +16,6 @@ private:
     passList pass_list[320];    //初期値の設定必要(パラメータ担当がやってくれている)
     mParam p[100];    //移動パラメータの配列(サイズはまだ知らない)
 
-    RouteDecision *routeDecision;    //関連
 	//{{開始座標},{終了座標},コスト,方向,{{移動パラメータ},{0,0}・・・}};
 
 // pass_list[0] =

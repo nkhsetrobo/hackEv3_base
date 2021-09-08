@@ -5,9 +5,8 @@ const double Block::h = 30;    //半径
 
 Block::Block(int n)    //コンストラクタ
 {
-    travelable_area = new TravelableArea();    //走行可能領域のインスタンス生成
     block_num = n;    //引数で受け取った番号をブロックナンバーに格納する
-    b_succses_pass = false;    //有効移動成立のメンバ変数に初期値を格納する
+    succses_pass = false;    //有効移動成立のメンバ変数に初期値を格納する
 }
 
 bool Block::getSuccsesPass()

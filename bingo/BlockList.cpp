@@ -2,7 +2,6 @@
 
 BlockList::BlockList()    //コンストラクタ
 {
-    routedecision = new RouteDecision();
     pass_list[0] =
     {
         {0.0,0.0},{0.0,1.0},3.0,EAST,
@@ -5418,7 +5417,7 @@ BlockList::BlockList()    //コンストラクタ
         }
     };
 
-    pass_list[269] = 
+    pass_list[269] =
     {
         {3.0,1.0},{2.5,1.5},12.5,EAST,
         {//旋回
@@ -5632,7 +5631,7 @@ BlockList::BlockList()    //コンストラクタ
         }
     };
 
-    pass_list[279] = 
+    pass_list[279] =
     {
         {3.0,2.0},{0.5,1.5},13.0,NORTH,
         {//旋回
@@ -6595,19 +6594,18 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
         if (pass_list[i].s_cood == rb_coordinates && pass_list[i].e_cood == goal_coordinates)
         {
             return pass_list[i].cost;    //取得したコストをリターンする
-            break;
         }
     }
 }
 
-void BlockList::getParam(mParam *wp, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
+void BlockList::getParam(mParam *p, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
 {
     //移動パラメータを取得する
     for (int i = 0; i < 320; i++)   //移動パラメータを持った構造体の配列を線型探索
     {
         if (pass_list[i].s_cood == rb_coordinates && pass_list[i].e_cood == goal_coordinates)
         {
-            wp = //移動パラメータのポインタを属性の移動パラメータの配列に代入
+            p = *pass_list[i].param;//移動パラメータのポインタを属性の移動パラメータの配列に代入
         }
     }
 }
