@@ -1,7 +1,8 @@
 #ifndef _PASSING_CIRCLE_H_
 #define _PASSING_CIRCLE_H_
 
-class TravelableArea;
+#include "TravelableArea.h"
+//class TravelableArea;
 
 class PassingCircle : public TravelableArea
 {

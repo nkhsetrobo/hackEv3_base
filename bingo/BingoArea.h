@@ -7,7 +7,7 @@
 #include "TravelableArea.h"
 #include "IntersectionCircle.h"
 //#include "CenterStorage.h"
-//#include "ColorBlock.h"
+#include "ColorBlock.h"
 //#include "CircleStorage.h"
 #include "Enum.h"
 #include "Constant.h"
@@ -21,7 +21,7 @@ class CircleStorage;
 class Block;
 //class IntersectionCircle;
 class CenterStorage;
-class ColorBlock;
+//class ColorBlock;
 
 class BingoArea
 {
@@ -43,7 +43,7 @@ public:
 private:
     RunningBody* run_body;
     TravelableArea *object_management_array[INTERSECTION_CIRCLE_COUNT + STORAGE_COUNT];
-    Block *block_management_arry[BLOCK_COUNT];
+    Block *block_management_array[BLOCK_COUNT];
     int intersection_circle[INTERSECTION_CIRCLE_COUNT];
     int storage[STORAGE_COUNT];
 };
