@@ -40,13 +40,25 @@ APPL_CXXOBJS += \
 	TailAngleJudge.o\
 	Stop.o\
 	BingoSectionManager.o\
-	Bingo.o\
-	BlackLine.o\
+	BingoArea.o\
+	BlackBlock.o\
 	Block.o\
-	BlockCircle.o\
+	BlockDetermination.o\
+	BlockList.o\
 	BlockStorage.o\
+	CenterStorage.o\
+	CircleDecision.o\
+    CircleStorage.o\
+	ColorBlock.o\
+	Constant.o\
+	Enum.o\
+	PassingCircl.o\
+	RouteDecision.o\
 	IntersectionCircle.o\
-	RunningBody.o
+	RunningBody.o\
+	Struct.o\
+	TravelableArea.o\
+
 
 SRCLANG := c++
 
