@@ -1,9 +1,11 @@
 #ifndef _TRAVELABLE_AREA_H_
 #define _TRAVELABLE_AREA_H_
 
-#include "BingoArea.h"
+//#include "BingoArea.h"
 #include "Block.h"
 #include "Struct.h"
+
+class BingoArea;
 
 class TravelableArea
 {
