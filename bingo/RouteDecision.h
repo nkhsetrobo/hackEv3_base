@@ -30,6 +30,5 @@ protected:
     BingoSectionManager *bingo_manager;
     BlockList *block_list;
     passList pass_list;
-    wParam3 wp;
 };
 #endif

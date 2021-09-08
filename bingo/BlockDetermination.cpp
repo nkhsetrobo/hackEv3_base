@@ -9,7 +9,7 @@ int BlockDetermination::routeDecision()    //ルートを決定する
 {
 	num = 0;
 	double cost;
-    runInfo run_info = bingo_area->RunningInformation();    //走行体情報を問い合わせる
+    runInfo run_info = RouteDecision::bingo_area->RunningInformation();    //走行体情報を問い合わせる
 	for (int i = 0; i < BLOCK_COUNT; i++)
 	{
         if (!bingo_area->B_SuccsesPass(i)/*有効移動が成立しているか*/);
