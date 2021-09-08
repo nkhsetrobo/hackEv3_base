@@ -4,6 +4,7 @@
 #include "Block.h"
 #include "Enum.h"
 #include "Struct.h"
+#include "TravelableArea.h"
 
 class ColorBlock : public Block
 {

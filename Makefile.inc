@@ -50,13 +50,10 @@ APPL_CXXOBJS += \
 	CircleDecision.o\
     CircleStorage.o\
 	ColorBlock.o\
-	Constant.o\
-	Enum.o\
 	PassingCircle.o\
 	RouteDecision.o\
 	IntersectionCircle.o\
 	RunningBody.o\
-	Struct.o\
 	TravelableArea.o\
 
 

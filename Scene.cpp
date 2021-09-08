@@ -8,6 +8,8 @@
 
 extern Motor       *gArm;
 
+BingoSectionManager *Scene::mBsm;
+
 Scene::Scene():
     mState(UNDEFINED)
 {

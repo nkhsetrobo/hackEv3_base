@@ -6,9 +6,9 @@
 //#include "Block.h"
 #include "TravelableArea.h"
 #include "IntersectionCircle.h"
-//#include "CenterStorage.h"
+#include "CenterStorage.h"
 #include "ColorBlock.h"
-//#include "CircleStorage.h"
+#include "CircleStorage.h"
 #include "Enum.h"
 #include "Constant.h"
 #include "Struct.h"
@@ -16,11 +16,11 @@
 
 class RouteDecision;
 //class TravelableArea;
-class CircleStorage;
+//class CircleStorage;
 //class RunningBody;
 class Block;
 //class IntersectionCircle;
-class CenterStorage;
+//class CenterStorage;
 //class ColorBlock;
 
 class BingoArea
@@ -39,7 +39,7 @@ public:
     bool coordinatesConparison(gameCoordinates pass_coordinates, gameCoordinates g_coordinates);    //座標比較同値ならtrue
     void updateRunInfo(gameCoordinates new_coordinates, direction new_direction, direction old_direction);    //走行体情報を更新する
     direction convertDirection(direction run_direction, direction relative_direction);    //相対座標系における方向を絶対座標系に変換する
-   
+
 private:
     RunningBody* run_body;
     TravelableArea *object_management_array[INTERSECTION_CIRCLE_COUNT + STORAGE_COUNT];

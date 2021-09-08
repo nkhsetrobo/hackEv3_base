@@ -2,13 +2,15 @@
 #define _ROUTE_DECISION_H_
 
 //#include "BingoSectionManager.h"
-//#include "BingoArea.h"
+#include "BingoArea.h"
 #include "BlockList.h"
 #include "Enum.h"
 #include "Struct.h"
+//#include "Scene.h"
 
-class BingoArea;
+//class BingoArea;
 class BingoSectionManager;
+//class Scene;
 
 class RouteDecision
 {

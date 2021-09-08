@@ -229,9 +229,18 @@ color BingoArea::circleColor(gameCoordinates pass_coordinates)    //交点サー
     return ((IntersectionCircle *)object_management_array[i])->getColor();    //色を取得する
 }
 
+bool BingoArea::coordinatesConparison(gameCoordinates pass_coordinates, gameCoordinates g_coordinates)
+{
+    if(pass_coordinates.x == g_coordinates.x && pass_coordinates.y == g_coordinates.y)
+    {
+        return true;
+    }
+    return false;
+}
+
 color BingoArea::blockColor(int block_num)    //ブロックの色を問い合わせる
 {
-    return ((ColorBlock *)object_management_array[block[block_num]])->getColor();
+    return ((ColorBlock *)object_management_array[block_num])->getColor();
 }
 
 bool BingoArea::objSuccsesPass(object object_type, int object_num)   //有効移動成立しているか問い合わせる
@@ -239,7 +248,7 @@ bool BingoArea::objSuccsesPass(object object_type, int object_num)   //有効移
     switch(object_type)
     {
         case BLOCK:
-            return ((Block *)object_management_array[block[object_num]])->getSuccsesPass();
+            return ((Block *)object_management_array[object_num])->getSuccsesPass();
         case STORAGE:
             return ((Block *)object_management_array[storage[object_num]])->getSuccsesPass();
     }

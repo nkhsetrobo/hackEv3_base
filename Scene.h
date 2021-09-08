@@ -14,7 +14,9 @@ class Scene{
         void execBingo();
         void initSpeed();
         void initBingo();
+
         void finish();
+        static BingoSectionManager *mBsm;
 
     private:
         enum State {
@@ -30,6 +32,5 @@ class Scene{
         State mState;    //状態を保持する列挙型
 
         SpeedSectionManager *mSsm;
-        BingoSectionManager *mBsm;
 };
 #endif

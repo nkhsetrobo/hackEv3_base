@@ -2,14 +2,16 @@
 #define _BINGO_SECTION_MANAGER_H_
 
 #include "SectionManager.h"
-#include "RouteDecision.h"
+//#include "RouteDecision.h"
 #include "etroboc_ext.h"
 #include "Struct.h"
 #include "BingoArea.h"
 #include "CircleDecision.h"
 #include "BlockDetermination.h"
 
-class RouteDecision;
+//class RouteDecision;
+//class CircleDecision;
+//class BlockDetermination;
 
 enum State
     {

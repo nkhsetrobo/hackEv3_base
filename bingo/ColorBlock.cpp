@@ -15,5 +15,5 @@ color ColorBlock::getColor()
 
 gameCoordinates ColorBlock::getCoordinates()
 {
-    return i_circle->getCoordinates();
+    return circle->getCoordinates();
 }

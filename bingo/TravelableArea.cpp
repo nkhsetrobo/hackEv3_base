@@ -7,5 +7,5 @@ TravelableArea::TravelableArea(gameCoordinates c_coordinates)
 
 gameCoordinates TravelableArea::getCoordinates()    //座標を取得する
 {
-    return coordiantes;
+    return coordinates;
 }
