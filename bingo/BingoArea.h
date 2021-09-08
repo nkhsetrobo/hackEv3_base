@@ -1,20 +1,27 @@
 #ifndef _BINGO_AREA_H_
 #define _BINGO_AREA_H_
 
-#include "RouteDecision.h"
-#include "RunningBody.h"
-#include "Block.h"
-#include "TravelableArea.h"
-#include "IntersectionCircle.h"
-#include "CenterStorage.h"
-#include "ColorBlock.h"
-#include "CircleStorage.h"
+//#include "RouteDecision.h"
+//#include "RunningBody.h"
+//#include "Block.h"
+//#include "TravelableArea.h"
+//#include "IntersectionCircle.h"
+//#include "CenterStorage.h"
+//#include "ColorBlock.h"
+//#include "CircleStorage.h"
 #include "Enum.h"
 #include "Constant.h"
 #include "Struct.h"
 #include "etroboc_ext.h"
 
-
+class RouteDecision;
+class TravelableArea;
+class CircleStorage;
+class RunningBody;
+class Block;
+class IntersectionCircle;
+class CenterStorage;
+class ColorBlock;
 
 class BingoArea
 {
