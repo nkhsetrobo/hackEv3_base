@@ -9,12 +9,13 @@ class RouteDecision;
 class BlockList
 {
 public:
+    BlockList();
     double getCost(gameCoordinates rb_coordiantes, gameCoordinates goal_coordinates);    //コストを取得する
     void getParam(passList *ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates);    //移動パラメータを取得する
 private:
     double cost;    //移動コスト
     passList pass_list[320];    //初期値の設定必要(パラメータ担当がやってくれている)
-    passList ret_pass_list;    //受け渡しのためのポインタ
+    passList *ret_pass_list;    //受け渡しのためのポインタ
     mParam p[100];    //移動パラメータの配列(サイズはまだ知らない)
 
 	//{{開始座標},{終了座標},コスト,方向,{{移動パラメータ},{0,0}・・・}};

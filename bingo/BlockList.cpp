@@ -327,7 +327,7 @@ BlockList::BlockList()    //コンストラクタ
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
         }
     };
     pass_list[19] =
@@ -591,7 +591,7 @@ BlockList::BlockList()    //コンストラクタ
     };
     pass_list[32] =
     {
-        {0.0,1.0},{2.5,1{.5},{12.5,SOUTH,
+        {0.0,1.0},{2.5,1.5},12.5,SOUTH,
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
@@ -3379,7 +3379,7 @@ BlockList::BlockList()    //コンストラクタ
 
     pass_list[170] =
     {
-        {2.0,1.0},{0.0,3.0},14.5,NORTH
+        {2.0,1.0},{0.0,3.0},14.5,NORTH,
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
@@ -3457,7 +3457,7 @@ BlockList::BlockList()    //コンストラクタ
 
     pass_list[173] =
     {
-        {{2.0,1.0},{0.5,2.5},12.5,NORTH,
+        {2.0,1.0},{0.5,2.5},12.5,NORTH,
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
@@ -3468,7 +3468,7 @@ BlockList::BlockList()    //コンストラクタ
             /*linetrace色判定*/
             {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
             //キャッチ
-            {0,7,0,{0,0},0,0,0,0,0,1,3,{0,0},BLUE,0},
+            {0,7,0,{0,0},0,0,0,0,1,3,{0,0},BLUE,0},
             //右斜め前に置く
             {2,0,0,{0,0},5,0,0,-23,1,22,{0,0},BLUE,0},
             //まっすぐ下がる
@@ -3476,7 +3476,7 @@ BlockList::BlockList()    //コンストラクタ
             //元の場所に戻る
             {2,0,0,{0,0},-5,0,0,-19,3,55,{0,0},BLUE,0},
             //まっすぐ下がる
-            {0,-5,0,0,{0,0},0,0,0,1,-11,{0,0},BLUE,0},
+            {0,-5,0,{0,0},0,0,0,0,1,-11,{0,0},BLUE,0},
             /*linetrace色判定*/
             {1,0,0,{0,0},5.0,0,0,0,0,0,{1,2},BLUE,0.5}
         }
@@ -3512,7 +3512,7 @@ BlockList::BlockList()    //コンストラクタ
 
     pass_list[176] =
     {
-        {2.0,1,0},{1.0,2.0},8.5,NORTH,
+        {2.0,1.0},{1.0,2.0},8.5,NORTH,
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
@@ -6005,7 +6005,7 @@ BlockList::BlockList()    //コンストラクタ
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
         }
     };
 
@@ -6419,7 +6419,7 @@ BlockList::BlockList()    //コンストラクタ
 
     pass_list[312] = 
     {
-        {3.0,3.0},{2.0,2.0},11.0,WEST
+        {3.0,3.0},{2.0,2.0},11.0,WEST,
         {//旋回
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
@@ -6512,7 +6512,7 @@ BlockList::BlockList()    //コンストラクタ
         }
     };
 
-    pass_list[316]
+    pass_list[316] =
     {
         {3.0,3.0},{2.5,2.5},18.5,SOUTH,
         {//旋回
@@ -6591,7 +6591,7 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
 {
     for (int i = 0; i < 320; i++)    //コストを持った配列を線型探索
     {
-        if (pass_list[i].s_cood == rb_coordinates && pass_list[i].e_cood == goal_coordinates)
+        if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
             return pass_list[i].cost;    //取得したコストをリターンする
         }
@@ -6603,9 +6603,10 @@ void BlockList::getParam(passList *ret_pass_list, gameCoordinates rb_coordinates
     //移動パラメータを取得する
     for (int i = 0; i < 320; i++)   //移動パラメータを持った構造体の配列を線型探索
     {
-        if (pass_list[i].s_cood == rb_coordinates && pass_list[i].e_cood == goal_coordinates)
+        if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
-            ret_pass_list = pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
+            ret_pass_list = &pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
+            break;
         }
     }
 }

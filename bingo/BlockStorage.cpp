@@ -7,7 +7,7 @@ BlockStorage::BlockStorage(int n, gameCoordinates c_coordinates)
 	succses_pass = false;
 }
 
-bool getSuccsesPass()
+bool BlockStorage::getSuccsesPass()
 {
-	return succses_pass
+	return succses_pass;
 }

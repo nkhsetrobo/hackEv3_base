@@ -1,10 +1,13 @@
-#ifndef _CENTER_CIRCLE_H_
-#define _CENTER_CIRCLE_H_
+#ifndef _CENTER_STRAGE_H_
+#define _CENTER_STRAGE_H_
 
-class CircleStorage : public BlockStorage
+#include "BlockStorage.h"
+
+class CenterStorage : public BlockStorage
 {
 public:
-    CircleStorage(int n, gameCoordinates c_coordinates);    //コンストラクタ
+    CenterStorage(int n, gameCoordinates c_coordinates);    //コンストラクタ
 private:
     static const double r;    //半径
-}
+};
+#endif
