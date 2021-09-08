@@ -3468,17 +3468,17 @@ BlockList::BlockList()    //コンストラクタ
             /*linetrace色判定*/
             {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
             //キャッチ
-            {0,7,0,{0,0},0,0,0,0,1,3,{0,0},BLUE,0},
+            {Section::WALKER,7,0,{0,0},0,0,0,0,Section::LENGTH,3,{0,0},BLUE,0},
             //右斜め前に置く
-            {2,0,0,{0,0},5,0,0,-23,1,22,{0,0},BLUE,0},
+            {Section::VIRTUAL,0,0,{0,0},5,0,0,-23,Section::LENGTH,22,{0,0},BLUE,0},
             //まっすぐ下がる
-            {0,-5,0,{0,0},0,0,0,0,1,-3,{0,0},BLUE,0},
+            {Section::WALKER,-5,0,{0,0},0,0,0,0,Section::LENGTH,-3,{0,0},BLUE,0},
             //元の場所に戻る
-            {2,0,0,{0,0},-5,0,0,-19,3,55,{0,0},BLUE,0},
+            {Section::VIRTUAL,0,0,{0,0},-5,0,0,-19,Section::TURNANGLE,55,{0,0},BLUE,0},
             //まっすぐ下がる
-            {0,-5,0,{0,0},0,0,0,0,1,-11,{0,0},BLUE,0},
+            {Section::WALKER,-5,0,{0,0},0,0,0,0,Section::LENGTH,-11,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {1,0,0,{0,0},5.0,0,0,0,0,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
         }
     };
     //3

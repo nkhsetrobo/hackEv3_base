@@ -1,4 +1,4 @@
-#include "PassingCircle"
+#include "PassingCircle.h"
 
 const double PassingCircle::r = 50;    //半径
 
