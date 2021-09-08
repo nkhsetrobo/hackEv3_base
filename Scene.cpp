@@ -21,6 +21,7 @@ bool Scene::run()
 {
     switch(mState) {
         case UNDEFINED:
+            //printf("test");
             execUndefined();
             break;
         case START:
@@ -72,7 +73,7 @@ void Scene::execSpeed()
     if(mSsm->run()) {
         delete mSsm;
          msg_log("test length");
-        mState =BINGO;
+        mState = INIT_BINGO;
     }
 }
 void Scene::initSpeed(){
