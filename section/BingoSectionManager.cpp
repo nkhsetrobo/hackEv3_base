@@ -226,29 +226,29 @@ void BingoSectionManager::chengeToSenpai()
         wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
         switch(p[i].mwalker)
         {
-            case WALKER:
+            case Section::WALKER:
                 wp[i].kd = 0.5;
                 break;
-            case TRACER:
+            case Section::TRACER:
                 wp[i].kd = 0.8;
                 break;
-            case VIRTUAL:
+            case Section::VIRTUAL:
                 wp[i].kd = 0.3;
                 break;
         }
         switch(p[i].mjudge)
         {
-            case LENGTH:
+            case Section::LENGTH:
                 wp[i].flength = p[i].atai;
                 break;
-            case TURNANGLE:
+            case Section::TURNANGLE:
                 wp[i].fangle = p[i].atai;
                 break;
-            case BRIGHTNESS:
+            case Section::BRIGHTNESS:
                 wp[i].bright1 = -0.5;
                 wp[i].bright2 = 0;
                 break;
-            case COLOR:
+            case Section::COLOR:
                 switch(p[i].mcolor)
                 {
                     case BLUE:
