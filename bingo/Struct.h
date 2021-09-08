@@ -32,8 +32,8 @@ typedef struct _getCostCoordinates    //コスト取得座標
 typedef struct _mParam
 {
     Section::WALKER_NO mwalker;    //走法
-    int front;    //前進量
-    int turn;     //旋回量
+    float front;    //前進量
+    float turn;     //旋回量
     Coordinates coordinates;    //目標地点
     float speed;    //目標速度
     float x;    //中心x座標
@@ -95,7 +95,7 @@ typedef struct _passList    //パラメータ群
     double cost;
     direction dir;
     //north east→ west south
-    _mParam param[100];
+    mParam param[100];
 }passList;
 
 #endif

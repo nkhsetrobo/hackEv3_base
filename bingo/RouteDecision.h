@@ -16,18 +16,20 @@ public:
     RouteDecision();    //コンストラクタ
     void passParam(mParam *p);    //移動パラメータを問い合わせる
     int passColor(gameCoordinates pass_coordinates);    //通過座標の色情報を問い合わせる
-    bool minCompare(int now_min_cost, int cost);    //最小コストを比較
+    bool minCompare(double now_min_cost, double cost);    //最小コストを比較
     virtual int routeDecision();    //ルートを決定する(仮想関数)
 
-private:
+protected:
+    runInfo run_info;
     int num;
-    int min_cost = 999;    //最小移動コスト
+    double min_cost = 999;    //最小移動コスト
     gameCoordinates goal_coordinates;    //目標地点座標
     passList wp[100];    //paramを含む拡張版パラメータ
     mParam p[100];    //自分たちのパラメータ
-    BingoArea *bingoarea;
+    BingoArea *bingo_area;
     BingoSectionManager *bingo_manager;
     BlockList *block_list;
+    passList pass_list;
+    wParam3 wp;
 };
-
 #endif

@@ -6544,7 +6544,7 @@ BlockList::BlockList()    //コンストラクタ
         }
     };
 
-    pass_list[317] = 
+    pass_list[317] =
     {
         {3.0,3.0},{3.0,0.0},18.0,WEST,
         {
@@ -6598,14 +6598,14 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
     }
 }
 
-void BlockList::getParam(mParam *p, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
+void BlockList::getParam(passList *ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
 {
     //移動パラメータを取得する
     for (int i = 0; i < 320; i++)   //移動パラメータを持った構造体の配列を線型探索
     {
         if (pass_list[i].s_cood == rb_coordinates && pass_list[i].e_cood == goal_coordinates)
         {
-            p = *pass_list[i].param;//移動パラメータのポインタを属性の移動パラメータの配列に代入
+            ret_pass_list = pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
         }
     }
 }

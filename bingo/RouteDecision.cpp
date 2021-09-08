@@ -1,20 +1,21 @@
 #include "RouteDecision.h"
 
-RouteDecision::RouteDecition()
+
+RouteDecision::RouteDecision()
 {
     bingo_area = new BingoArea();
     bingo_manager = new BingoSectionManager();
     block_list = new BlockList();
 }
 
-void RouteDecision::passParam(param *p)  //移動パラメータを問い合わせる
+void RouteDecision::passParam(mParam *p)  //移動パラメータを問い合わせる
 {
-    block_list->getParam(&wp, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
+    block_list->getParam(&pass_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
 
-    p = *wp.mparam;
+    p = pass_list.param;
     int i;
-    for(i = 0, p[i + 1].front != -1, i++){}
-    bingo_area->updateRunInfo(p[i].coordinates, wp.e_dir, bingo_area->runningInformation().dir);    //走行体情報を更新する
+    for(i = 0; p[i + 1].front != -1; i++){}
+    bingo_area->updateRunInfo(p[i].coordinates, pass_list.dir, bingo_area->runningInformation().dir);    //走行体情報を更新する
 }
 
 int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる
@@ -23,7 +24,7 @@ int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標
     //交点サークルを問い合わせる
 }
 
-bool RouteDecision::minCompare(int now_min_cost, int cost)    //最小コスト比較
+bool RouteDecision::minCompare(double now_min_cost, double cost)    //最小コスト比較
 {
     if (now_min_cost > cost)
     {
