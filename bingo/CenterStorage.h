@@ -2,6 +2,7 @@
 #define _CENTER_STRAGE_H_
 
 #include "BlockStorage.h"
+#include "Struct.h"
 
 class CenterStorage : public BlockStorage
 {

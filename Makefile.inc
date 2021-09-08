@@ -52,7 +52,7 @@ APPL_CXXOBJS += \
 	ColorBlock.o\
 	Constant.o\
 	Enum.o\
-	PassingCircl.o\
+	PassingCircle.o\
 	RouteDecision.o\
 	IntersectionCircle.o\
 	RunningBody.o\
