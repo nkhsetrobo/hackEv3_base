@@ -17,3 +17,5 @@ private:
 	Block *brock;
 	TravelableArea *travelable_area;
 };
+
+#endif
