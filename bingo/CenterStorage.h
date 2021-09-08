@@ -1,8 +1,8 @@
 #ifndef _CENTER_STRAGE_H_
 #define _CENTER_STRAGE_H_
 
-#include "BlockStorage.h"
 #include "Struct.h"
+#include "BlockStorage.h"
 
 class CenterStorage : public BlockStorage
 {
