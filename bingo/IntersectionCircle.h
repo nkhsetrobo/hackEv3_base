@@ -3,6 +3,7 @@
 
 #include "PassingCircle.h"
 #include "Enum.h"
+#include "Struct.h"
 
 class IntersectionCircle : public PassingCircle
 {

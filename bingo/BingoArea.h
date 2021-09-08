@@ -6,11 +6,13 @@
 #include "Block.h"
 #include "TravelableArea.h"
 #include "IntersectionCircle.h"
+#include "CenterStorage.h"
 #include "ColorBlock.h"
 #include "CircleStorage.h"
 #include "Enum.h"
 #include "Constant.h"
 #include "Struct.h"
+#include "etroboc_ext.h"
 
 
 

@@ -1,6 +1,6 @@
 #include "IntersectionCircle.h"
 
-IntersectionCircle::IntersectionCIrcle(int n, color c, gameCoordiantes c_coordinates)
+IntersectionCircle::IntersectionCircle(int n, color c, gameCoordinates c_coordinates)
 :PassingCircle(c_coordinates)
 {
     inter_circle_num = n;    //引数で受け取った番号を交点サークルナンバーにする
