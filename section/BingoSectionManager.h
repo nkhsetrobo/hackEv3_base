@@ -33,6 +33,7 @@ public:
     void running();    //実行する
     void chengeToSenpai();    //先輩から受け継がれた形に変換する
     int getBlockNum();    //運搬するブロックナンバーをgetする
+	void initBingo();
     static RouteDecision *circle_decision;
     static RouteDecision *block_decision;
     static BingoArea *bingo_area;

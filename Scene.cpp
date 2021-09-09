@@ -96,7 +96,7 @@ void Scene::execBingo()
 
 void Scene::initBingo()
 {
-    mBsm->init();
+    mBsm->initBingo();
     mState = BINGO;
 
 }

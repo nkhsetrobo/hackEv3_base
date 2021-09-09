@@ -181,7 +181,7 @@ void BingoSectionManager::mStateChange(State m_state)
 void BingoSectionManager::init()    //初期化
 {
     //区間生成実行
-    for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
+    /*for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
     {
         Section *sc = new Section();
 
@@ -189,7 +189,7 @@ void BingoSectionManager::init()    //初期化
         setJudge(sc);
 
         addSection(sc);
-    }
+    }*/
 }
 
 // void BingoSectionManager::s_addSection()
@@ -272,4 +272,9 @@ void BingoSectionManager::chengeToSenpai()
 int BingoSectionManager::getBlockNum()
 {
   return block_num;
+}
+
+void BingoSectionManager::initBingo()
+{
+	bingo_area->initBingo();
 }
