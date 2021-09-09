@@ -14,3 +14,8 @@ color CircleStorage::getColor()    //色を取得する
 {
     return cs_color;    //取得した色をリターン
 }
+
+void CircleStorage::effectPowerBlockMove()
+{
+    power_block_move = true;
+}

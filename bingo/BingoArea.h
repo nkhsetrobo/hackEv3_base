@@ -40,6 +40,7 @@ public:
     void updateRunInfo(gameCoordinates new_coordinates, direction new_direction, direction old_direction);    //走行体情報を更新する
     direction convertDirection(direction run_direction, direction relative_direction);    //相対座標系における方向を絶対座標系に変換する
 	void initBingo();
+    void updateTransportStatus(object obj, int obj_num);
 
 private:
     RunningBody* run_body;

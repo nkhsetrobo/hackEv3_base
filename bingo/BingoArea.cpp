@@ -373,3 +373,16 @@ void BingoArea::initBingo()
 	initCircleBlock();
 	initStorage();
 }
+
+void BingoArea::updateTransportStatus(object obj, int obj_num)
+{
+    switch (obj)
+    {
+    case BLOCK:
+        block_management_array[obj_num]->effectiveMovementJudgment();
+        break;
+    case STORAGE:
+        ((CircleStorage*)object_management_array[INTERSECTION_CIRCLE_COUNT + obj_num])->effectPowerBlockMove();
+        break;
+    }
+}

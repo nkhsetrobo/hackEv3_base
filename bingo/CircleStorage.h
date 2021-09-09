@@ -10,6 +10,7 @@ class CircleStorage : public BlockStorage
 public:
     CircleStorage(int n, color c_color, gameCoordinates c_coordinates);    //コンストラクタ
     color getColor();    //色を取得する
+    void effectPowerBlockMove();    //有効移動成立
 private:
     color cs_color;    //色情報
     static const double r;    //半径
