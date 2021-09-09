@@ -3,7 +3,7 @@
 CircleDecision::CircleDecision()    //コンストラクタ
 :RouteDecision()
 {
-    
+	    
 }
 
 int CircleDecision::routeDecision()    //ルート決定する

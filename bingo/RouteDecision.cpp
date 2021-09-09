@@ -1,10 +1,11 @@
 #include "RouteDecision.h"
 
 #include "Scene.h"
+#include "BingoSectionManager.h"
 
 RouteDecision::RouteDecision()
 {
-    bingo_area = new BingoArea();
+	bingo_area = BingoSectionManager::bingo_area;
     bingo_manager = Scene::mBsm;
     block_list = new BlockList();
 }
@@ -42,4 +43,9 @@ bool RouteDecision::minCompare(double now_min_cost, double cost)    //最小コ�
 int RouteDecision::routeDecision()    //ルートを決定する(仮想関数)
 {
     //サブクラスのほうでそれぞれ実装
+}
+
+void RouteDecision::initList()     //移動パターンリストの初期化
+{
+	block_list->initList();
 }

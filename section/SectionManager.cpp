@@ -19,7 +19,11 @@ SectionManager::~SectionManager()
 
 bool SectionManager::run()
 {
-
+    printf("testesttesttest\n");
+    printf("testesttesttest\n");
+    printf("testesttesttest\n");
+    printf("testesttesttest\n");
+    printf("testesttesttest\n");
     if(mSection[mSectionIdx]==nullptr)
         return true;
 

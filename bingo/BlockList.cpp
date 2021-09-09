@@ -2,6 +2,35 @@
 
 BlockList::BlockList()    //コンストラクタ
 {
+
+}
+
+double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)    //コストを取得する
+{
+    for (int i = 0; i < 320; i++)    //コストを持った配列を線型探索
+    {
+        if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
+        {
+            return pass_list[i].cost;    //取得したコストをリターンする
+        }
+    }
+}
+
+void BlockList::getParam(passList *ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
+{
+    //移動パラメータを取得する
+    for (int i = 0; i < 320; i++)   //移動パラメータを持った構造体の配列を線型探索
+    {
+        if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
+        {
+            ret_pass_list = &pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
+            break;
+        }
+    }
+}
+
+void BlockList::initList()
+{
     pass_list[0] =
     {
         {0.0,0.0},{0.0,1.0},3.0,EAST,
@@ -6585,28 +6614,4 @@ BlockList::BlockList()    //コンストラクタ
             {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
         }
     };
-}
-
-double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)    //コストを取得する
-{
-    for (int i = 0; i < 320; i++)    //コストを持った配列を線型探索
-    {
-        if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
-        {
-            return pass_list[i].cost;    //取得したコストをリターンする
-        }
-    }
-}
-
-void BlockList::getParam(passList *ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
-{
-    //移動パラメータを取得する
-    for (int i = 0; i < 320; i++)   //移動パラメータを持った構造体の配列を線型探索
-    {
-        if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
-        {
-            ret_pass_list = &pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
-            break;
-        }
-    }
 }

@@ -19,9 +19,9 @@ Scene::Scene():
 
 bool Scene::run()
 {
+    //printf("%d\n", mState);
     switch(mState) {
         case UNDEFINED:
-            //printf("test");
             execUndefined();
             break;
         case START:
@@ -57,6 +57,7 @@ void Scene::execUndefined()
     ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
 
     mState=START;
+    //mState = INIT_BINGO;
 }
 void Scene::execStart()
 {
@@ -87,6 +88,7 @@ void Scene::initSpeed(){
 
 void Scene::execBingo()
 {
+    return;
     if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/)
     {
         delete mBsm;
@@ -98,6 +100,13 @@ void Scene::execBingo()
 void Scene::initBingo()
 {
     mBsm->initBingo();
+    printf("aiueoaiueoaiueo\n");
+    printf("aiueoaiueoaiueo\n");
+    printf("aiueoaiueoaiueo\n");
+    printf("aiueoaiueoaiueo\n");
+    printf("aiueoaiueoaiueo\n");
+    printf("aiueoaiueoaiueo\n");
+    printf("aiueoaiueoaiueo\n");
     mState = BINGO;
 
 }

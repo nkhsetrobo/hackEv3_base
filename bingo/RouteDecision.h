@@ -20,6 +20,7 @@ public:
     int passColor(gameCoordinates pass_coordinates);    //通過座標の色情報を問い合わせる
     bool minCompare(double now_min_cost, double cost);    //最小コストを比較
     virtual int routeDecision();    //ルートを決定する(仮想関数)
+	void initList();    //移動パターンリストの初期化
 
 protected:
     runInfo run_info;
@@ -28,9 +29,9 @@ protected:
     gameCoordinates goal_coordinates;    //目標地点座標
     passList wp[100];    //paramを含む拡張版パラメータ
     mParam p[100];    //自分たちのパラメータ
-    BingoArea *bingo_area;
     BingoSectionManager *bingo_manager;
     BlockList *block_list;
     passList pass_list;
+	BingoArea *bingo_area;
 };
 #endif
