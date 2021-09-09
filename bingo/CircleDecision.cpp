@@ -32,7 +32,7 @@ int CircleDecision::routeDecision()    //ルート決定する
         case YELLOW:
             circle_num[0] = 1;
             circle_num[1] = 5;
-            break;            
+            break;
     }
 
     for (int i = 0; i < 2; i++)
@@ -50,5 +50,6 @@ int CircleDecision::routeDecision()    //ルート決定する
 	}
 
     bsm->rdStateChange(BingoSectionManager::block_decision);
+    bingo_area->updateTransportStatus(STORAGE, num);
     return num;
 }

@@ -23,5 +23,6 @@ int BlockDetermination::routeDecision()    //ルートを決定する
 	        }
         }
 	}
+	bingo_area->updateTransportStatus(BLOCK, num);
     return num;    //取得したブロックナンバーをリターンする
 }
