@@ -18,6 +18,7 @@ bool ColorJudge::run()
     //static char buf[256];
     //sprintf(buf, " %f,%f,\n", mHsvHue->getValue(), mHsvSatu->getValue());
     //msg_log(buf);
+    //printf("color %f,%f,\n", mHsvHue->getValue(), mHsvSatu->getValue());
 
     num = hue - mHsvHue->getValue();
  

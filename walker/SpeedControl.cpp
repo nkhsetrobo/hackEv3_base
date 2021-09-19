@@ -43,11 +43,11 @@ void SpeedControl::setTargetSpeed(double speed)
 
     mPid->setTarget(speed);
 
-    mPid->setKp(0.5*bai);
-    mPid->setKi(0.2);
+    mPid->setKp(0.4*bai);
+    mPid->setKi(0.01);
         //mPid->setKd(0.03*bai);
     mPid->setKd(0.08*bai);
-    mPid->setLimit(9*bai+1);    // 9*bai+1
+    mPid->setLimit(8*bai+1);    // 9*bai+1
     //mPid->setLimit(1);    
 
 }
@@ -72,7 +72,7 @@ int SpeedControl::getPwm()
   //  syslog(LOG_NOTICE,"spd %d fwd %d op%d",(int)mCurrentSpeed,(int)mForward,(int)op);
    int pwd = (int)((op>0)?(op+0.5):(op-0.5));
     mForward += pwd; 
-    int maxFwd = fabs(mTargetSpeed)>0?fabs(mTargetSpeed)*3.0:85;
+    int maxFwd = fabs(mTargetSpeed)>0?fabs(mTargetSpeed)*2.5:85;
     if (maxFwd>85) maxFwd=85;
 
     if(mForward>maxFwd) {

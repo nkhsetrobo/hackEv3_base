@@ -83,10 +83,12 @@ float PID::getOperation(float value)
     // }
  
     float val = diff[1]*Kp + delta*Kd + integral*Ki;
-
+    static int i=0;
     if (debug) {
-        //printf("pid:(%3.1f-%3.1f), diff:%4.2f d:%4.2f i:%4.2f  op:%5.3f\n",target,value,diff[1],delta,integral,val);
-        msg_num(debug_char,diff[1],integral,delta, val);
+       // printf("pid:(%3.1f-%3.1f), diff:%4.2f d:%4.2f i:%4.2f  op:%5.3f\n",target,value,diff[1],delta,integral,val);
+        //printf("%c,%f,%f,%f,%f\n",debug_char,diff[1],integral,delta, val);
+        msg_num(debug_char,i,diff[1],integral,delta, val);
+        i++;
     }
 
     if(val>limit) 

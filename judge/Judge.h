@@ -18,7 +18,8 @@ class Judge{
     virtual void init();
 
     enum  JUDGE_MODE{ UPDATE,
-          UNUPDATE};
+          UNUPDATE,
+          UPDATEALL};
 
     protected:
     HsvHue *mHsvHue;

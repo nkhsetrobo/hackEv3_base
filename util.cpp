@@ -33,26 +33,27 @@ void msg_log(const char *str)
 {
   //syslog(LOG_NOTICE,str);
   printf(str);
-  //if(fp!=nullptr) fprintf(fp,str);
+  if(fp!=nullptr) fprintf(fp,str);
 }
-void msg_num(char c,float x,float y,float z,  float w)
+void msg_num(char c,float x,float y,float z,  float w,float p)
 {
   msg_logbuf[log_idx][0]=c;  
   msg_logbuf[log_idx][1]=x;
   msg_logbuf[log_idx][2]=y;
   msg_logbuf[log_idx][3]=z;
   msg_logbuf[log_idx][4]=w;
+  msg_logbuf[log_idx][5]=p;
   log_idx++;
   if(log_idx>=log_max) log_idx=0;
 
 }
 void msg_out()
 {
-  
+  printf("msg_out\n");
   //printf("log_out %d\n",log_idx);
   for(int i=0;i<log_idx;i++) {
     //printf("%f,%f,%f %f\n",msg_logbuf[i][0],msg_logbuf[i][1],msg_logbuf[i][2],msg_logbuf[i][3]);
-    fprintf(fp,"%c,%f,%f,%f ,%f\n",(char)msg_logbuf[i][0],msg_logbuf[i][1],msg_logbuf[i][2],msg_logbuf[i][3],msg_logbuf[i][4]);
+    fprintf(fp,"%c,%f  ,%f,%f ,%f,%f\n",(char)msg_logbuf[i][0],msg_logbuf[i][1],msg_logbuf[i][2],msg_logbuf[i][3],msg_logbuf[i][4],msg_logbuf[i][5]);
   }
   fclose(fp);
   log_idx=0;  

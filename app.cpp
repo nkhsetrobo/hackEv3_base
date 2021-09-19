@@ -32,7 +32,7 @@ using namespace ev3api;
 int log_max=30000;
 int log_idx=0;
 
-float msg_logbuf[30000][5];
+float msg_logbuf[30000][10];
 
 
 
@@ -185,6 +185,7 @@ void tracer_task(intptr_t unused) {
 */
     //printf("tracer\n");
     if (ev3_button_is_pressed(BACK_BUTTON)) {
+      printf("pressed back button\n");
       wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
     } else {
         
@@ -205,8 +206,8 @@ void tracer_task(intptr_t unused) {
     }
   //  for(int i=0;i<10;i++) 
   //   printf("tracer\n");
-/*
-  get_tim(&edtime);
+
+  /*get_tim(&edtime);
   msg_logbuf[cnt++][1]=edtime;
   if(cnt==100) {
     for(int i=0;i<100;i++) 

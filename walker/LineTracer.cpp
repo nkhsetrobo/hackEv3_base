@@ -42,6 +42,7 @@ void LineTracer::run()
    /* static char buf[256];
     sprintf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
     msg_log(buf);*/
+    // printf("LT %2.3f, %d,%d\n",brightness,mTargetSpeed,mTurn);
 
     setCommandV((int)mTargetSpeed, (int)mTurn);
 
@@ -63,7 +64,7 @@ float LineTracer::calcTurn(float val1) {
 
     float val1_turn =  mPid->getOperation(val1);
 
-  //  mPid->debug=true;
+    mPid->debug=true;
     if(mLeftEdge) val1_turn = -val1_turn;
     setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
     float turn =  val1_turn+mBias;
@@ -145,7 +146,7 @@ void LineTracer::printInfo()
 
 void LineTracer::init(){
 
-   // printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",mTargetSpeed, mPFactor,mIFactor,mDFactor);
+   //printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",mTargetSpeed, mPFactor,mIFactor,mDFactor);
     mPid->setKp(mPFactor); 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);

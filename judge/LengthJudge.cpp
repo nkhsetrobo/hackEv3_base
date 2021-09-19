@@ -2,6 +2,7 @@
 #include "util.h"
 
 extern float gStart;
+extern float gStartAngle;
 
 LengthJudge::LengthJudge()
 {
@@ -53,6 +54,10 @@ bool LengthJudge::run()
 
 void LengthJudge::init()
 {
+    if (update == Judge::UPDATEALL) {
+        gStartAngle = mTurnAngle->getValue();
+        update = Judge::UPDATE;
+    }
     if(update == Judge::UPDATE){
         gStart = mLength->getValue(); // 更新
         mStartlength=mLength->getValue();

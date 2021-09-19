@@ -1,4 +1,5 @@
 #include "BingoStateCarry.h"
+#include "BingoStateCarryData.h"
 
 BingoStateCarry::BingoStateCarry(BlockSectionManager *bsm)
     :BingoState(bsm)
@@ -89,6 +90,7 @@ void BingoStateCarry::init()
     param[cnt].flag = -1;
 
     //mBsm->setWPointer(param);
+    mBsm->reset();
     for (int cnt = 0; param[cnt].flag != -1; cnt++)
     {
 
@@ -124,7 +126,7 @@ void BingoStateCarry::init()
 int BingoStateCarry::selectCircle(int current,int idxs[], int &error)
 {
     error=0;
-    printf("selectCircle %d (%d %d)\n",current,idxs[0],idxs[1]);
+   // printf("selectCircle %d (%d %d)\n",current,idxs[0],idxs[1]);
     if(idxs[1]==-1)
         return idxs[0];
 

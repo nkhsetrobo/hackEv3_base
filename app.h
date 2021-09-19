@@ -17,8 +17,8 @@ extern "C" {
 
 
 #ifndef STACK_SIZE
-#define STACK_SIZE      4096
-#endif /* STACK_SIZE */
+#define STACK_SIZE      12288
+#endif /* STACK_SIZE 4096 */
 
 #ifndef TOPPERS_MACRO_ONLY
 

@@ -18,7 +18,7 @@ void Runner::setStart(BlockPlace *bp)
     start = bp;
 	mNext = bp;
 
-	printf("RUNNER NEXT POS %d\n",bp->getNodeid());
+	//printf("RUNNER NEXT POS %d\n",bp->getNodeid());
 }
 void Runner::setEnd(BlockPlace *bp)
 {
@@ -35,7 +35,7 @@ BlockPlace* Runner::getEnd()
 
 void Runner::setDir(DIR d)
 {
-	printf("RUNNER NEXT DIR %d\n",d);
+	//printf("RUNNER NEXT DIR %d\n",d);
     dir = d;
 }
 

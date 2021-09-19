@@ -27,6 +27,10 @@ void BingoStateMove::init()
     
     from_idx = c_abs2ref[cnv2[run_dir]][run_idx]; // 走行体位置を相対座標へ変換
     int sel_circle = selectCircle(from_idx,cc_idxs);
+    if(sel_circle==-1) {
+        error_code = BingoState::NOROTUE;
+        return;
+    }
     //to_idx = b_abs2ref[cnv2[run_dir]][sel_circle];
     to_idx = sel_circle;
     printf("Runner %d/%d dir=%d cross_circle %d %d *%d* %d->%d\n",run_node,run_idx,run_dir, cc_idxs[0],cc_idxs[1] ,sel_circle, from_idx,to_idx);
@@ -80,6 +84,7 @@ void BingoStateMove::init()
     param[cnt].flag = -1;
 
     //mBsm->setWPointer(param);
+    mBsm->reset();
     for (int cnt = 0; param[cnt].flag != -1; cnt++)
     {
 
@@ -109,17 +114,17 @@ void BingoStateMove::init()
 
 int BingoStateMove::selectCircle(int current,int idxs[])
 {
-    printf("selectCrossCircle %d (%d %d %d %d %d %d %d %d) \n",current,idxs[0],idxs[1],idxs[2],idxs[3],idxs[4],idxs[5],idxs[6],idxs[7]);
+  //  printf("selectCrossCircle %d (%d %d %d %d %d %d %d %d) \n",current,idxs[0],idxs[1],idxs[2],idxs[3],idxs[4],idxs[5],idxs[6],idxs[7]);
     int min = cost[current][idxs[0]];
     int min_idx=idxs[0];
     for (int i=1;idxs[i]!=-1;i++) {
-        printf("%d\n",cost[current][idxs[i]]);
+       // printf("%d\n",cost[current][idxs[i]]);
         if(min>cost[current][idxs[i]]) {
             min = cost[current][idxs[i]];
             min_idx = idxs[i];
         }
     }
-    printf("selectCrossCircle %d,%d\n",min_idx,min);
+   // printf("selectCrossCircle %d,%d\n",min_idx,min);
     return min_idx;
 }
 
@@ -127,6 +132,6 @@ void BingoStateMove::rotIdxs(int dir,int idxs[])
 {
     for (int i=0;idxs[i]!=-1;i++) {
         idxs[i] = c_abs2ref[cnv2[dir]][idxs[i]];
-        printf("idxs %d\n",idxs[i]);
+      //  printf("idxs %d\n",idxs[i]);
     }
 }

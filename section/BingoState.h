@@ -13,7 +13,7 @@ class BlockSectionManager;
 #define _BLUE  207
 
 #define _YELLOW_S  0.3
-#define _GREEN_S  0.3
+#define _GREEN_S  0.25
 #define _RED_S  0.25
 #define _BLUE_S  0.7
 
@@ -23,7 +23,7 @@ typedef struct __BINGO_SEC {
     Section::WALKER_NO walker;
     float w_param[20];
     Section::JUDGE_NO judge;
-    float j_param[10];
+    double j_param[10];
     Judge::JUDGE_MODE update;
 } BINGO_SEC;
 

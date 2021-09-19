@@ -25,13 +25,10 @@ bool SectionManager::run()
     if(mSection[mSectionIdx]==nullptr)
         return true;
 
-  //  if(mSectionIdx==0)
-    // msg_log("0");
-    //if(mSectionIdx==1)
-    // msg_log("1");
     if(mSection[mSectionIdx]->run()) {
        // if(mSectionIdx==23) msg_out();
         mSectionIdx++;
+       // printf("nextIdx %d\n",mSectionIdx);
     }
 
     return false;

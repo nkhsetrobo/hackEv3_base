@@ -388,7 +388,7 @@ void Area::getBlockCircles(COLOR col, int idxs[])
         if(bp[i]->getKind()==BPKIND::BLOCK) {
             if( ((BlockCircle*)bp[i])->getColor()==col) {
                 if(bp[i]->getBlock()==nullptr) {
-                    printf("THIS PLACE IS EMPTY %d\n",i);
+                   // printf("THIS PLACE IS EMPTY %d\n",i);
                     idxs[cnt++]=node2idx[i];
                 }
             }

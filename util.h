@@ -8,8 +8,8 @@ extern void msg_f(const char *str, int32_t line);
 
 extern void msg_log(const char *str);
 extern void msg_out();
-extern void msg_num(char c,float x,float y,float z,  float w);
-extern  float msg_logbuf[30000][5];
+extern void msg_num(char c,float x,float y,float z,  float w,float p);
+extern  float msg_logbuf[30000][10];
 extern  int log_max;
 extern  int log_idx;
 
