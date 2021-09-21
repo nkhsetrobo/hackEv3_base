@@ -53,7 +53,7 @@ class SectionManager {
         void setWalker(Section * sc,wsParam *wp,int cnt);
         void setJudge(Section * sc,wsParam *wp,int cnt);
         void setWPointer(wsParam *ptr);
-
+        int getError();
     protected:
         Section *mSection[500];
         int mSectionIdx;
@@ -61,6 +61,7 @@ class SectionManager {
         wsParam *wp;
         wsParam param[500];
         int n;
+        int error_code;
 
         static int msPrevWalker; 
     private:

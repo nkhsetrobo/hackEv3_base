@@ -12,6 +12,7 @@ BlockSectionManager::BlockSectionManager()
     BlockSectionManager::msCarryState = new BingoStateCarry(this);
     BlockSectionManager::msMoveState = new BingoStateMove(this);
     setState(BlockSectionManager::msCarryState);
+
 }
 
 void BlockSectionManager::init()
@@ -25,17 +26,19 @@ bool BlockSectionManager::run()
     error_code = 1;
     return true;
   }
+
+  if(SectionManager::run()) {
+      if(getError()!=0) {
+          error_code = 2;
+      }
+      return true;
+  }
   error_code=0;
-  return SectionManager::run();
+  return false;
 }
 
 void BlockSectionManager::setState(BingoState *bst)
 {
   mState = bst;
-}
-
-int BlockSectionManager::getError()
-{
-  return error_code;
 }
 

@@ -12,7 +12,7 @@ class BlockSectionManager;
 #define _RED  0
 #define _BLUE  207
 
-#define _YELLOW_S  0.3
+#define _YELLOW_S  0.4
 #define _GREEN_S  0.25
 #define _RED_S  0.25
 #define _BLUE_S  0.7

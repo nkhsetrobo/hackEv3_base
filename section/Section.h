@@ -29,6 +29,7 @@ public:
 
     Walker *selectWalker(int no);
     Judge *selectJudge(int no);
+    int getError();
 
     enum WALKER_NO
     {
@@ -58,13 +59,15 @@ public:
 protected:
     Walker *mWalker;
     Judge *mJudge;
+    Judge *mEmergencyJudge;
     bool debug;
 
 private:
     bool first;
     bool first2;
 
-
+    bool emergency;
+    int error_code;
 };
 
 #endif

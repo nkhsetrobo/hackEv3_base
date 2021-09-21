@@ -1,5 +1,7 @@
 #include "BingoStateMove.h"
 
+#include "BingoStateMoveData.h"
+
 BingoStateMove::BingoStateMove(BlockSectionManager *bsm)
     :BingoState(bsm)
 {

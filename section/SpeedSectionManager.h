@@ -683,7 +683,7 @@ wParam outer_adv2[200] = {
                     {0, Section::TRACER, Section::LENGTH, 40, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 600, 0, 0, 0, 0, 0},
 
                     {0, Section::TRACER, Section::TURNANGLE, 40, 0, 45, 15.0, 4.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, -45*sign, 0, 0, 0, 0, 0, 0},
-                    {0, Section::TRACER, Section::LENGTH, 50, 0, 45, 15.0, 3.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 70, 0, 0, 0, 0, 0},
+                    {0, Section::TRACER, Section::LENGTH, 50, 0, 30, 5.0, 2.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 80, 0, 0, 0, 0, 0},
 
                   //  {0, Section::WALKER, Section::LENGTH, 00, 0, 45, 15.0, 3.0, 0, 0 /*setparam*/, 0, 0, 00, 0, !_EDGE, Judge::UPDATE, 0, 10000, 0, 0, 0, 0, 0},
 
@@ -702,7 +702,7 @@ wParam outer_adv2[200] = {
                   // advanced センター置き
                   {0, Section::TRACER, Section::LENGTH, 10, 0,25, 3, 0.6, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 14, 0, 0, 0, 0, 0}, //下り  advanced
                 //  {0, Section::WALKER, Section::LENGTH, 00, 0,35, 10.0, 2.0, 1, 1 /*setparam*/, 0, 0, 15, 0, false, Judge::UNUPDATE, 0, 52.5, 0, 0, 0, 0, 0}, //下り  advanced
-                  {0, Section::VIRTUAL2, Section::LENGTH, 20, 0,35, 8.0, 1.0, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATEALL, 0, 52.5-14, 0, 0, 0, 0, 0}, //下り  advanced
+                  {0, Section::VIRTUAL2, Section::LENGTH, 20, 0,35, 8.0, 1.0, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATEALL, 0, 52.0-14, 0, 0, 0, 0, 0}, //下り  advanced
                   {0, Section::VIRTUAL, Section::TURNANGLE, 10, 0, 20, 10.0, 0.5, 1.0, 1.0 /*setparam*/, 0, -18*sign, 0, 0, false, Judge::UPDATE, -88*sign, 0, 0, 0, 0, 0, 0},
                   {0, Section::VIRTUAL2, Section::LENGTH, 30, 0,35, 20.0, 5.0, 1, 1 /*setparam*/, -88*sign, 0, 0, 0, false, Judge::UPDATE, 0, 45, 0, 0, 0, 0, 0}, //下り  advanced
                   {0, Section::VIRTUAL2, Section::LENGTH, 10, 0,35, 10.0, 5.0, 1, 1 /*setparam*/, -88*sign, 0, 0, 0, false, Judge::UNUPDATE, 0, 61, 0, 0, 0, 0, 0}, //下り  advanced

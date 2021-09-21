@@ -25,9 +25,9 @@ void LengthJudge::setFinLength(float finlength)
 }
 bool LengthJudge::run()
 {
-  //  printf("%f,%f\n",mFinishlength,mStartlength);
+    //printf("%f,%f\n",mFinishlength,mStartlength);
 
-    if (mFinishlength > mStartlength)
+    if (mFinishlength >= mStartlength)
     {
         if (mLength->getValue() >= mFinishlength)
         {
@@ -62,13 +62,13 @@ void LengthJudge::init()
         gStart = mLength->getValue(); // 更新
         mStartlength=mLength->getValue();
         mFinishlength = mFinishlength + gStart; // 現在地からの距離
-        printf("update: %f,%f,%f\n",gStart,mStartlength,mFinishlength);
+       // printf("update: %f,%f,%f\n",gStart,mStartlength,mFinishlength);
     }
     else{
         mStartlength=mLength->getValue();
         mFinishlength = mFinishlength + gStart; //　以前の値からの距離
         //printf("%f:%f\n",gStart,mFinishlength );
-        printf("unupdate: %f,%f,%f\n",gStart,mStartlength,mFinishlength);
+       // printf("unupdate: %f,%f,%f\n",gStart,mStartlength,mFinishlength);
     }
     // syslog(LOG_NOTICE,"LengthJudge::init %d,%d",(int)mStartlength,(int)mFinishlength);
 

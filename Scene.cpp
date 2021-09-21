@@ -2,6 +2,10 @@
 #include "util.h"
 #include "ev3api.h"
 #include "etroboc_ext.h"
+#include "Clock.h"
+
+extern Motor       *gLeftWheel;
+extern Motor       *gRightWheel;
 
 Scene::Scene() : mState(UNDEFINED)
 {
@@ -100,13 +104,19 @@ void Scene::initBingo(){
 }
 
 void Scene::execBingo()
-{
+{  
+
     if(mBsm->run()){
        // delete mBsm;
         // msg_log("Tail test");
-        if(mBsm->getError()!=0) 
+        if(mBsm->getError()!=0) {
+            gLeftWheel->setPWM(0);
+            gRightWheel->setPWM(0);
+          Clock clock;
+            ev3_led_set_color(LED_RED );
+            clock.sleep(10000);
             mState = FINISH;
-        else
+        } else
             mState = INIT_BINGO;
     }
 }

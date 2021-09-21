@@ -13,7 +13,6 @@ class BlockSectionManager : public SectionManager {
         void setState(BingoState *bst);
         void init();
         bool run();        
-        int getError();
 
         void initArea();
     
@@ -26,7 +25,6 @@ class BlockSectionManager : public SectionManager {
 
     private:
         BingoState *mState;
-        int error_code;
 
 
 };

@@ -13,24 +13,38 @@ Section::Section()
 {
     first=true;
     first2=true;
+    emergency=false;
+    mEmergencyJudge=nullptr;
 }
 
 Section::~Section()
 {
     // msg_log("destruct Section");
     delete mWalker;
+    delete mJudge;
+    if (mEmergencyJudge!=nullptr)
+        delete mEmergencyJudge;
 }
 
 
 bool Section::run()
 {
+    error_code=0;
     if(first2){
         // msg_log("3");
+        //printf("emg %d\n",emergency);
         mJudge->init();
+        if(emergency)
+            mEmergencyJudge->init();
         first2 = false;
     }
     //判定
     if(mJudge->run()){
+        return true;
+    }
+    if(emergency && mEmergencyJudge->run()){
+        error_code=1;
+        printf("Emergency Stop!!!\n");
         return true;
     }
 
@@ -77,6 +91,8 @@ Walker *Section::selectWalker(int  no)
 
 Judge *Section::selectJudge(int no)
 {
+    emergency = false;
+    mEmergencyJudge = nullptr;
     switch(no) {
         case LENGTH:
             mJudge = (Judge*)(new LengthJudge());
@@ -88,7 +104,11 @@ Judge *Section::selectJudge(int no)
             mJudge = (Judge*)(new BrightnessJudge());
             break;
         case COLOR:
+            emergency=true;
             mJudge = (Judge*)(new ColorJudge());
+            mEmergencyJudge =  (Judge*)(new LengthJudge());
+            ((LengthJudge *)mEmergencyJudge)->setFinLength(20);
+            ((LengthJudge *)mEmergencyJudge)->setupdate(Judge::UPDATE);
             break;
         case TAILANGLE:
             mJudge = (Judge*)(new TailAngleJudge());
@@ -112,4 +132,9 @@ Judge *Section::selectJudge(int no)
 void Section::init(){
 
     mWalker->init();
+}
+
+int Section::getError()
+{
+    return error_code;
 }

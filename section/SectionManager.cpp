@@ -7,7 +7,7 @@ SectionManager::SectionManager()
     // msg_log("SectionManger");
     mSectionIdx=0;
     mLastIdx=0;
- 
+    error_code=0;
 }
 
 SectionManager::~SectionManager()
@@ -21,12 +21,16 @@ SectionManager::~SectionManager()
 
 bool SectionManager::run()
 {
-
+    error_code=0;
     if(mSection[mSectionIdx]==nullptr)
         return true;
 
     if(mSection[mSectionIdx]->run()) {
-       // if(mSectionIdx==23) msg_out();
+       if(mSection[mSectionIdx]->getError()!=0) {
+           error_code=1;
+           return true;
+       } 
+
         mSectionIdx++;
        // printf("nextIdx %d\n",mSectionIdx);
     }
@@ -143,4 +147,9 @@ void SectionManager::setJudge(Section * sc,wsParam *wp2, int n)
 void SectionManager::setWPointer(wsParam *ptr)
 {
     wp = ptr;
+}
+
+int SectionManager::getError()
+{
+    return error_code;
 }
