@@ -100,13 +100,6 @@ void Scene::execBingo()
 void Scene::initBingo()
 {
     mBsm->initBingo();
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
     mState = BINGO;
 
 }
