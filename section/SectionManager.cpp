@@ -2,16 +2,12 @@
 
 SectionManager::SectionManager()
 {
-
     mSectionIdx=0;
     mLastIdx=0;
- 
 }
 
 SectionManager::~SectionManager()
 {
-
-
     for(int i=0;i<mLastIdx;i++) {
         delete mSection[i];
     }
@@ -19,11 +15,6 @@ SectionManager::~SectionManager()
 
 bool SectionManager::run()
 {
-    printf("testesttesttest\n");
-    printf("testesttesttest\n");
-    printf("testesttesttest\n");
-    printf("testesttesttest\n");
-    printf("testesttesttest\n");
     if(mSection[mSectionIdx]==nullptr)
         return true;
 
@@ -39,8 +30,6 @@ bool SectionManager::run()
 
 void SectionManager::addSection(Section *sec)
 {
-
-
     mSection[mLastIdx++]=sec;
     mSection[mLastIdx]=nullptr;
 }

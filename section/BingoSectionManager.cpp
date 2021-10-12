@@ -108,7 +108,7 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
             //s_addSection();    //区間の追加
             //StateChange(CurrentState);    //状態遷移
             //mState = pass_block;    //ブロック運搬中から運搬ブロック決定更新
-     //}
+    //}
 
 
     //return ex;

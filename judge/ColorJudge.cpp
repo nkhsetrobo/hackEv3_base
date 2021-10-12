@@ -15,7 +15,6 @@ void ColorJudge::setColor(float h, float s)
 }
 bool ColorJudge::run()
 {
-    /*奈良岡追加箇所*/
     if (fabs(hue - mHsvHue->getValue()) >= 180)
     {
         num = 360 - (fabs(hue - mHsvHue->getValue()));
@@ -31,13 +30,11 @@ bool ColorJudge::run()
         printf("%d\n", (int)num);
         if ((mHsvSatu->getValue()) >= satu)
         {
-            printf("Value = %f  satu = %f\n", (mHsvSatu->getValue()), satu);
             return true;
         }
     }
     else
     {
-        printf("%d\n", (int)num);
         return false;
     }
 
