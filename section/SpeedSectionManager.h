@@ -175,16 +175,18 @@ private:
                     //置いた後下がる
                    {0, Section::WALKER, Section::LENGTH, 0, 0, 30, 0.1, 0.5, 1, 1 /*setparam*/, 0, 0, -5, 0, true, Judge::UPDATE, 0, -5, 0, 0, 0, 0, 0},
                    //下がりながら曲がる
-                   {0, Section::VIRTUAL, Section::TURNANGLE, -5, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, 0, 4, 0, 0, true, Judge::UPDATE, -75, 0, -0.5, 0, 0, 0, 0},
+                   {0, Section::VIRTUAL, Section::TURNANGLE, -5, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, 0, 5, 0, 0, false, Judge::UPDATE, -83, 0, -0.5, 0, 0, 0, 0},
 				   //下がる
-                   {0, Section::WALKER, Section::LENGTH, 0, 0, 30, 0.1, 0.5, 1, 1 /*setparam*/, 0, 0, -15, 0, true, Judge::UPDATE, 0, -25, 0, 0, 0, 0, 0},
+                   {0, Section::WALKER, Section::LENGTH, 0, 0, 30, 0.1, 0.5, 1, 1 /*setparam*/, 0, 0, -15, 0, false, Judge::UPDATE, 0, -25, 0, 0, 0, 0, 0},
+				   //ちょっと止まる
+                   {0, Section::VIRTUAL2, Section::STOP, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 0, 0, 100},
                    //ライントレースで体制を整える
-                   {0, Section::TRACER, Section::COLOR, 3, 0, 30, 0, 0.5, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 3, 0, 0, 350, 0, 0},
+                   {0, Section::TRACER, Section::COLOR, 3, 0, 30, 0, 0.5, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 3, 0, 0, 350, 0, 0},
                    //下がる
                    //{0, Section::WALKER, Section::LENGTH, 0, 0, 30, 0.1, 0.5, 1, 1 /*setparam*/, 0, 0, -15, 0, true, Judge::UPDATE, 0, -25, 0, 0, 0, 0, 0},
 
                     //ストップ
-                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 999, 0, 0, 0, 0, 0},
+                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 999, 0, 0, 0, 0, 0},
                    {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0}};
 
       
