@@ -10,7 +10,7 @@ int CircleDecision::routeDecision()    //ルート決定する
 {
     runInfo run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
     gameCoordinates ri_coordinates = bingo_area->relativeCoordinates(run_info.rb_coordinates,run_info.rb_dir);    //相対座標に変換
-    num = bsm->getBlockNum();
+    //num = bsm->getBlockNum();
 
     color block_color = bingo_area->blockColor(num);
 
@@ -49,7 +49,7 @@ int CircleDecision::routeDecision()    //ルート決定する
         }
 	}
 
-    bsm->rdStateChange(BingoSectionManager::block_decision);
+    //bsm->rdStateChange(BingoSectionManager::block_decision);
     bingo_area->updateTransportStatus(STORAGE, num);
     return num;
 }

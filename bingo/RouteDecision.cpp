@@ -1,13 +1,13 @@
 #include "RouteDecision.h"
 
 #include "Scene.h"
-#include "BingoSectionManager.h"
+//#include "BingoSectionManager.h"
 
 RouteDecision::RouteDecision()
 {
-	bingo_area = BingoSectionManager::bingo_area;
-    bingo_manager = Scene::mBsm;
-    block_list = new BlockList();
+	// bingo_area = BingoSectionManager::bingo_area;
+    // //bingo_manager = Scene::mBsm;
+    // block_list = new BlockList();
 }
 
 void RouteDecision::passParam(mParam *p)  //移動パラメータを問い合わせる

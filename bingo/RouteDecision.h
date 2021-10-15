@@ -9,7 +9,7 @@
 //#include "Scene.h"
 
 //class BingoArea;
-class BingoSectionManager;
+//class BingoSectionManager;
 //class Scene;
 
 class RouteDecision
@@ -29,7 +29,7 @@ protected:
     gameCoordinates goal_coordinates;    //目標地点座標
     passList wp[100];    //paramを含む拡張版パラメータ
     mParam p[100];    //自分たちのパラメータ
-    BingoSectionManager *bingo_manager;
+    //BingoSectionManager *bingo_manager;
     BlockList *block_list;
     passList pass_list;
 	BingoArea *bingo_area;
