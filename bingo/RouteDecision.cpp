@@ -6,8 +6,8 @@
 
 RouteDecision::RouteDecision()
 {
-    wp=(passList*)malloc(sizeof(passList));    //paramを含む拡張版パラメータ
-    p=(mParam*)malloc(sizeof(mParam));    //自分たちのパラメータ
+    wp=(passList*)malloc(sizeof(passList)*100);    //paramを含む拡張版パラメータ
+    p=(mParam*)malloc(sizeof(mParam)*100);    //自分たちのパラメータ
 	bingo_area = BingoSectionManager::bingo_area;
     //bingo_manager = Scene::mBsm;
     block_list = new BlockList();
