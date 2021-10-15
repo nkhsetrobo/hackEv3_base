@@ -8,10 +8,10 @@ BingoArea *BingoSectionManager::bingo_area;
 BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
-    RouteDecision *r = new RouteDecision();
-    //circle_decision = new CircleDecision();
-    //block_decision = new BlockDetermination();
-    //bingo_area = new BingoArea();
+    //RouteDecision *r = new RouteDecision();
+    circle_decision = new CircleDecision();
+    block_decision = new BlockDetermination();
+    bingo_area = new BingoArea();
     rdState = block_decision;
 }
 
