@@ -8,10 +8,10 @@ BingoArea *BingoSectionManager::bingo_area;
 BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
-    //circle_decision = new CircleDecision();
-    // block_decision = new BlockDetermination();
-     bingo_area = new BingoArea();
-    // rdState = block_decision;
+    circle_decision = new CircleDecision();
+    block_decision = new BlockDetermination();
+    bingo_area = new BingoArea();
+    rdState = block_decision;
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
