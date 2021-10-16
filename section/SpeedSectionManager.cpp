@@ -69,7 +69,7 @@ void SpeedSectionManager::setJudge(Section *sc)
   }
 }
 void SpeedSectionManager::init(){
-  
+
 
     static char buf[256];
     sprintf(buf,"%d,EDGE",_EDGE);

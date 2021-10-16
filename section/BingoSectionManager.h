@@ -38,7 +38,6 @@ public:
     static RouteDecision *block_decision;
     static BingoArea *bingo_area;
 private:
-   
     wParam3 wp[100];
     mParam p[100];
     State mState = INIT;    //状態の変数

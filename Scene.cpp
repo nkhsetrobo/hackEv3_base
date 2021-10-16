@@ -19,7 +19,6 @@ Scene::Scene():
 
 bool Scene::run()
 {
-    printf("%d\n", mState);
     switch(mState) {
         case UNDEFINED:
             execUndefined();
