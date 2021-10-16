@@ -1,5 +1,10 @@
 #include "BingoArea.h"
 
+static TravelableArea *object_management_array[INTERSECTION_CIRCLE_COUNT + STORAGE_COUNT];
+static Block *block_management_array[BLOCK_COUNT];
+static int intersection_circle[INTERSECTION_CIRCLE_COUNT];
+static int storage[STORAGE_COUNT];
+
 BingoArea::BingoArea()    //コンストラクタ
 {
     run_body = new RunningBody();

@@ -44,10 +44,10 @@ public:
 
 private:
     RunningBody* run_body;
-    TravelableArea *object_management_array[INTERSECTION_CIRCLE_COUNT + STORAGE_COUNT];
-    Block *block_management_array[BLOCK_COUNT];
-    int intersection_circle[INTERSECTION_CIRCLE_COUNT];
-    int storage[STORAGE_COUNT];
+    //TravelableArea *object_management_array[INTERSECTION_CIRCLE_COUNT + STORAGE_COUNT];
+    //Block *block_management_array[BLOCK_COUNT];
+    //int intersection_circle[INTERSECTION_CIRCLE_COUNT];
+    //int storage[STORAGE_COUNT];
 };
 
 #endif

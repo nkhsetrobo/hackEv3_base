@@ -19,7 +19,6 @@ Scene::Scene():
 
 bool Scene::run()
 {
-    printf("%d\n", mState);
     switch(mState) {
         case UNDEFINED:
             execUndefined();
@@ -78,12 +77,8 @@ void Scene::execSpeed()
     }
 }
 void Scene::initSpeed(){
-
-
     mSsm->init();
     mState = SPEED;
-
-
 }
 
 void Scene::execBingo()
