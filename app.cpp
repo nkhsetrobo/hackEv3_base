@@ -161,7 +161,7 @@ void tracer_task(intptr_t unused) {
     }
     
 #endif
-
+    printf("test");
     gScene->run();
   }
 
