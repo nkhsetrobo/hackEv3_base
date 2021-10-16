@@ -78,8 +78,8 @@ static void user_system_create() {
 
   gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity,gXPosition,gYPosition,gTail,gTailAngle);
 
-  gSpeed = new SpeedControl(gOdo,gVelocity);  
-  gWalker = new SimpleWalker(gOdo,gSpeed); 
+  gSpeed = new SpeedControl(gOdo,gVelocity);
+  gWalker = new SimpleWalker(gOdo,gSpeed);
   gTracer = new LineTracer(gOdo,gSpeed);
 
 
@@ -125,7 +125,7 @@ void polling_task(intptr_t unused) {
   gPolling->run();
 
     Measure *m = gBrightness;
-    float br = m->getValue(); 
+    float br = m->getValue();
     float len = gLength->getValue();
     float turn = gTurnAngle->getValue();
     float v = gVelocity->getValue();
@@ -159,9 +159,7 @@ void tracer_task(intptr_t unused) {
       gArm->setPWM(0);
       gArm->setBrake(true);
     }
-    
 #endif
-    printf("test");
     gScene->run();
   }
 

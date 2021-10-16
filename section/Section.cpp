@@ -1,5 +1,5 @@
 #include "Section.h"
- 
+
 extern SimpleWalker *gWalker;
 extern LineTracer *gTracer;
 extern VirtualLineTracer *gVitual;
@@ -30,7 +30,6 @@ bool Section::run()
         {
             aJudge->init();
         }
-        
         first2 = false;
     }
     //判定
@@ -99,7 +98,7 @@ Judge *Section::selectJudge(int no)
         default:
             msg_log("selectJudge error!!");
     }
-    
+
     return mJudge;
 }
 
