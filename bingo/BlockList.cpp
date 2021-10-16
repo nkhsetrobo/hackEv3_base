@@ -1,5 +1,7 @@
 #include "BlockList.h"
 
+static passList pass_list[320];
+
 BlockList::BlockList()    //コンストラクタ
 {
 

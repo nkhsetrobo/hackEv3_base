@@ -88,7 +88,7 @@ void Scene::initSpeed(){
 
 void Scene::execBingo()
 {
-    return;
+    //return;
     if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/)
     {
         delete mBsm;
@@ -100,13 +100,6 @@ void Scene::execBingo()
 void Scene::initBingo()
 {
     mBsm->initBingo();
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
-    printf("aiueoaiueoaiueo\n");
     mState = BINGO;
 
 }

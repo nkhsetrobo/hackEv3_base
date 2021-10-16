@@ -8,10 +8,10 @@ BingoArea *BingoSectionManager::bingo_area;
 BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
-    //circle_decision = new CircleDecision();
-    // block_decision = new BlockDetermination();
-     bingo_area = new BingoArea();
-    // rdState = block_decision;
+    circle_decision = new CircleDecision();
+    block_decision = new BlockDetermination();
+    bingo_area = new BingoArea();
+    rdState = block_decision;
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
@@ -108,7 +108,7 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
             //s_addSection();    //区間の追加
             //StateChange(CurrentState);    //状態遷移
             //mState = pass_block;    //ブロック運搬中から運搬ブロック決定更新
-     //}
+    //}
 
 
     //return ex;
@@ -121,8 +121,11 @@ bool BingoSectionManager::run()
     switch(mState)
     {
         case INIT:
-            printf("test");
             block_num = rdState->routeDecision();
+			printf("aiueoaiueoaiueoaieu\n");
+			printf("aiueoaiueoaiueoaieu\n");
+			printf("aiueoaiueoaiueoaieu\n");
+			printf("aiueoaiueoaiueoaieu\n");
             if(block_num == 0)
             {
               ex = true;
