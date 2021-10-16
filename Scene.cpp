@@ -88,7 +88,7 @@ void Scene::initSpeed(){
 
 void Scene::execBingo()
 {
-    return;
+    //return;
     if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/)
     {
         delete mBsm;

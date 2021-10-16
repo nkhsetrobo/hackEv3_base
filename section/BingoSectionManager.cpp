@@ -121,8 +121,11 @@ bool BingoSectionManager::run()
     switch(mState)
     {
         case INIT:
-            printf("test");
             block_num = rdState->routeDecision();
+			printf("aiueoaiueoaiueoaieu\n");
+			printf("aiueoaiueoaiueoaieu\n");
+			printf("aiueoaiueoaiueoaieu\n");
+			printf("aiueoaiueoaiueoaieu\n");
             if(block_num == 0)
             {
               ex = true;
