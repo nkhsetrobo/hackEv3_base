@@ -8,9 +8,10 @@ BingoArea *BingoSectionManager::bingo_area;
 BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
+    bingo_area = new BingoArea(); // これが先にないと次が困るよね
+
     circle_decision = new CircleDecision();
     block_decision = new BlockDetermination();
-    bingo_area = new BingoArea();
     rdState = block_decision;
 }
 
