@@ -78,7 +78,7 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE1);
     
     int i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
     }else{
@@ -88,17 +88,17 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE2);
     
     i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i ==  2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
     }else{
-        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i -2]);
+        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 2]);
     }
 
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED1);
     
     i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, RED, object_management_array[2 * i - 1]);
     }else{
@@ -108,7 +108,7 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED2);
     
     i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, RED, object_management_array[2 * i - 1]);
     }else{
@@ -118,7 +118,7 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN1);
     
     i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, GREEN, object_management_array[2 * i - 1]);
     }else{
@@ -128,17 +128,17 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN2);
     
     i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, GREEN, object_management_array[2 * i - 1]);
     }else{
         block_management_array[i] = new ColorBlock(i, GREEN, object_management_array[2 * i - 2]);
     }
 
-    block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW1);
+
     
     i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, YELLOW, object_management_array[2 * i - 1]);
     }else{
@@ -148,7 +148,7 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW2);
 
     i = block_num_arr[block_c];
-    if(i == 1 || 2 || 5 || 6)
+    if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, YELLOW, object_management_array[2 * i - 1]);
     }else{

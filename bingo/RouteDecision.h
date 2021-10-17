@@ -27,6 +27,7 @@ protected:
     int num;
     double min_cost = 999;    //最小移動コスト
     gameCoordinates goal_coordinates;    //目標地点座標
+	gameCoordinates ri_coordinates;    //相対座標
     passList *wp;    //paramを含む拡張版パラメータ
     mParam *p;    //自分たちのパラメータ
     BingoSectionManager *bingo_manager;

@@ -9,7 +9,6 @@ RunningBody::RunningBody()    //コンストラクタ
 
 runInfo RunningBody::getRunInfo()    //走行体情報を取得する
 {
-	printf("test : %lf %lf\n", ri.rb_coordinates.x, ri.rb_coordinates.y);
     return ri;    //取得した走行体情報をリターンする
 }
 

@@ -8,8 +8,8 @@ CircleDecision::CircleDecision()    //コンストラクタ
 
 int CircleDecision::routeDecision()    //ルート決定する
 {
-    runInfo run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
-    gameCoordinates ri_coordinates = bingo_area->relativeCoordinates(run_info.rb_coordinates,run_info.rb_dir);    //相対座標に変換
+	run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
+    ri_coordinates = bingo_area->relativeCoordinates(run_info.rb_coordinates,run_info.rb_dir);    //相対座標に変換
     num = bsm->getBlockNum();
 
     color block_color = bingo_area->blockColor(num);
