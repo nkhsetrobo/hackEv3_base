@@ -141,7 +141,7 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
         block_management_array[i] = new ColorBlock(i, GREEN, object_management_array[2 * i - 2]);
     }
 
-
+	block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW1);
     
     i = block_num_arr[block_c];
 	printf("i = %d\n", i);
