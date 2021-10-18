@@ -22,6 +22,7 @@ void RouteDecision::passParam(mParam *p)  //移動パラメータを問い合わ
 
     p = pass_list.param;
     int i;
+    printf("p = %d\n",p[i+1].front);
     for(i = 0; p[i + 1].front != -1; i++){}
     runInfo runinfo = bingo_area->runningInformation();
     direction old_direction = runinfo.rb_dir;

@@ -39,7 +39,8 @@ void BlockList::initList()
         {/*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[1] =
@@ -52,7 +53,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[2] =
@@ -69,7 +71,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -79,7 +82,8 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[4] =
@@ -92,7 +96,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[5] =
@@ -109,7 +114,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[6] =
@@ -130,7 +136,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[7] =
@@ -143,7 +150,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[8] =
@@ -160,7 +168,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[9] =
@@ -181,7 +190,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[10] =
@@ -206,7 +216,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -224,7 +235,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -246,7 +258,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[13] =
@@ -271,7 +284,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -301,7 +315,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[15] =
@@ -310,7 +325,8 @@ void BlockList::initList()
         {/*180度旋回*/
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[16] =
@@ -319,7 +335,8 @@ void BlockList::initList()
         {/*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[17] =
@@ -332,7 +349,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[18] =
@@ -358,7 +376,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[19] =
@@ -382,7 +401,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[20] =
@@ -410,7 +430,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[21] =
@@ -423,7 +444,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[22] =
@@ -432,7 +454,8 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -446,7 +469,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[24] =
@@ -463,7 +487,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[25] =
@@ -489,7 +514,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[26] =
@@ -519,7 +545,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[27] =
@@ -536,7 +563,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[28] =
@@ -549,7 +577,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[29] =
@@ -566,7 +595,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[30] =
@@ -587,7 +617,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[31] =
@@ -617,7 +648,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[32] =
@@ -647,7 +679,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{02,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{02,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[33] =
@@ -681,7 +714,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[34] =
@@ -702,7 +736,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[35] =
@@ -719,7 +754,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[36] =
@@ -740,7 +776,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[37] =
@@ -765,7 +802,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -779,7 +817,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[39] =
@@ -788,7 +827,8 @@ void BlockList::initList()
         {/*180度旋回*/
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[40] =
@@ -797,7 +837,8 @@ void BlockList::initList()
         {/*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[41] =
@@ -827,7 +868,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[42] =
@@ -853,7 +895,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[43] =
@@ -877,7 +920,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[44] =
@@ -894,7 +938,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[45] =
@@ -907,7 +952,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[46] =
@@ -916,7 +962,8 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[47] =
@@ -929,7 +976,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[48] =
@@ -959,7 +1007,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[49] =
@@ -985,7 +1034,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[50] =
@@ -1006,7 +1056,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[51] =
@@ -1023,8 +1074,9 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
-            }
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
+        }
     };
     pass_list[52] =
     {
@@ -1036,7 +1088,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[53] =
@@ -1053,7 +1106,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[54] =
@@ -1087,7 +1141,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[55] =
@@ -1117,7 +1172,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[56] =
@@ -1147,7 +1203,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[57] =
@@ -1172,7 +1229,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[58] =
@@ -1193,7 +1251,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[59] =
@@ -1210,7 +1269,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[60] =
@@ -1231,7 +1291,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[61] =
@@ -1248,7 +1309,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[62] =
@@ -1261,7 +1323,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[63] =
@@ -1270,7 +1333,8 @@ void BlockList::initList()
         {/*180度旋回*/
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[64] =
@@ -1304,7 +1368,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[65] =
@@ -1334,7 +1399,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[66] =
@@ -1364,7 +1430,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[67] =
@@ -1385,7 +1452,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[68] =
@@ -1402,7 +1470,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[69] =
@@ -1415,7 +1484,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[70] =
@@ -1424,7 +1494,8 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[71] =
@@ -1458,7 +1529,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[72] =
@@ -1487,7 +1559,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -1513,7 +1586,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[74] =
@@ -1534,7 +1608,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[75] =
@@ -1551,7 +1626,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[76] =
@@ -1564,7 +1640,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[77] =
@@ -1602,7 +1679,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[78] =
@@ -1636,7 +1714,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[79] =
@@ -1668,7 +1747,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[80] =
@@ -1697,7 +1777,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[81] =
@@ -1722,7 +1803,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[82] =
@@ -1743,7 +1825,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[83] =
@@ -1760,7 +1843,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[84] =
@@ -1775,7 +1859,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[85] =
@@ -1785,7 +1870,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[86] =
@@ -1799,7 +1885,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[87] =
@@ -1817,7 +1904,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[88] =
@@ -1837,7 +1925,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[89] =
@@ -1859,7 +1948,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[90] =
@@ -1885,7 +1975,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[91] =
@@ -1894,7 +1985,8 @@ void BlockList::initList()
         {/*180度旋回*/
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[92] =
@@ -1903,7 +1995,8 @@ void BlockList::initList()
         {/*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[93] =
@@ -1916,7 +2009,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[94] =
@@ -1938,7 +2032,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[95] =
@@ -1964,7 +2059,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[96] =
@@ -1977,7 +2073,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[97] =
@@ -1986,7 +2083,8 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[98] =
@@ -1999,7 +2097,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[99] =
@@ -2016,7 +2115,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[100] =
@@ -2042,7 +2142,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[101] =
@@ -2068,7 +2169,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[102] =
@@ -2098,7 +2200,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[103] =
@@ -2115,7 +2218,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[104] =
@@ -2128,7 +2232,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[105] =
@@ -2145,7 +2250,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[106] =
@@ -2166,7 +2272,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[107] =
@@ -2185,7 +2292,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[108] =
@@ -2200,7 +2308,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[109] =
@@ -2210,7 +2319,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[110] =
@@ -2224,7 +2334,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[111] =
@@ -2258,7 +2369,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[112] =
@@ -2278,7 +2390,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[113] =
@@ -2300,7 +2413,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[114] =
@@ -2313,7 +2427,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[115] =
@@ -2322,7 +2437,8 @@ void BlockList::initList()
         {/*180度旋回*/
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[116] =
@@ -2331,7 +2447,8 @@ void BlockList::initList()
         {/*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[117] =
@@ -2361,7 +2478,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[118] =
@@ -2383,7 +2501,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[119] =
@@ -2400,7 +2519,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[120] =
@@ -2413,7 +2533,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[121] =
@@ -2422,7 +2543,8 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[122] =
@@ -2435,7 +2557,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[123] =
@@ -2465,7 +2588,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[124] =
@@ -2491,7 +2615,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[125] =
@@ -2517,7 +2642,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[126] =
@@ -2538,7 +2664,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[127] =
@@ -2555,7 +2682,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[128] =
@@ -2568,7 +2696,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[129] =
@@ -2585,7 +2714,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[130] =
@@ -2608,7 +2738,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[131] =
@@ -2627,7 +2758,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[132] =
@@ -2642,7 +2774,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[133] =
@@ -2652,7 +2785,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[134] =
@@ -2682,7 +2816,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[135] =
@@ -2708,7 +2843,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[136] =
@@ -2734,7 +2870,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[137] =
@@ -2751,7 +2888,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[138] =
@@ -2764,7 +2902,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[139] =
@@ -2773,7 +2912,8 @@ void BlockList::initList()
         {/*180度旋回*/
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[140] =
@@ -2803,7 +2943,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[141] =
@@ -2827,7 +2968,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[142] =
@@ -2848,7 +2990,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[143] =
@@ -2865,7 +3008,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     pass_list[144] =
@@ -2878,7 +3022,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -2898,7 +3043,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -2914,7 +3060,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -2925,7 +3072,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     },
     //4
@@ -2956,7 +3104,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -2983,7 +3132,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3010,7 +3160,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -3028,7 +3179,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3042,7 +3194,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3052,7 +3205,8 @@ void BlockList::initList()
         {/*180度旋回*/
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -3084,7 +3238,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3109,7 +3264,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -3132,7 +3288,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3150,7 +3307,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3164,7 +3322,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3174,7 +3333,8 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -3210,7 +3370,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3241,7 +3402,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3270,7 +3432,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -3296,7 +3459,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3318,7 +3482,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3336,7 +3501,8 @@ void BlockList::initList()
             //右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3350,7 +3516,8 @@ void BlockList::initList()
             /*walker*/			//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3370,7 +3537,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3385,7 +3553,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3404,7 +3573,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3427,7 +3597,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -3455,7 +3626,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3482,7 +3654,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3509,7 +3682,8 @@ void BlockList::initList()
             //まっすぐ下がる
             {Section::WALKER,-5,0,{0,0},0,0,0,0,Section::LENGTH,-11,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -3526,7 +3700,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3537,7 +3712,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3552,7 +3728,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3571,7 +3748,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -3594,7 +3772,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3620,7 +3799,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -3630,7 +3810,8 @@ void BlockList::initList()
         {
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3640,7 +3821,8 @@ void BlockList::initList()
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3654,7 +3836,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -3674,7 +3857,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3696,7 +3880,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3722,7 +3907,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -3737,7 +3923,8 @@ void BlockList::initList()
             //旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3747,7 +3934,8 @@ void BlockList::initList()
         {//旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3761,7 +3949,8 @@ void BlockList::initList()
             //旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3779,7 +3968,8 @@ void BlockList::initList()
             //旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3803,7 +3993,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3823,7 +4014,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3838,7 +4030,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3857,7 +4050,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -3889,7 +4083,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3916,7 +4111,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3943,7 +4139,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -3964,7 +4161,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3980,7 +4178,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -3991,7 +4190,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4006,7 +4206,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -4033,7 +4234,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4055,7 +4257,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -4070,7 +4273,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4080,7 +4284,8 @@ void BlockList::initList()
         {
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4090,7 +4295,8 @@ void BlockList::initList()
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -4117,7 +4323,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4137,7 +4344,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
 
     };
@@ -4160,7 +4368,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -4179,7 +4388,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4193,7 +4403,8 @@ void BlockList::initList()
             //旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4203,7 +4414,8 @@ void BlockList::initList()
         {//旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4217,7 +4429,8 @@ void BlockList::initList()
             //旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4245,7 +4458,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4269,7 +4483,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4289,7 +4504,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4304,7 +4520,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -4341,7 +4558,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4373,7 +4591,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4403,7 +4622,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
                                     //3
@@ -4427,7 +4647,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4447,7 +4668,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4463,7 +4685,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4474,7 +4697,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -4511,7 +4735,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4533,7 +4758,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -4552,7 +4778,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4566,7 +4793,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4576,7 +4804,8 @@ void BlockList::initList()
         {
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -4617,7 +4846,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4654,7 +4884,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4674,7 +4905,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -4696,7 +4928,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4714,7 +4947,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4728,7 +4962,8 @@ void BlockList::initList()
             //旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4738,7 +4973,8 @@ void BlockList::initList()
         {//旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4757,7 +4993,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4780,7 +5017,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4807,7 +5045,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4838,7 +5077,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4853,7 +5093,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4872,7 +5113,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4895,7 +5137,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4922,7 +5165,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4933,7 +5177,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4948,7 +5193,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4967,7 +5213,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -4990,7 +5237,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5000,7 +5248,8 @@ void BlockList::initList()
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5014,7 +5263,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5032,7 +5282,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5056,7 +5307,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5075,7 +5327,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5098,7 +5351,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5125,7 +5379,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -5156,7 +5411,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5187,7 +5443,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5222,7 +5479,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -5242,7 +5500,9 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
+        }
     };
 
     pass_list[259] =
@@ -5256,7 +5516,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5275,7 +5536,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5298,7 +5560,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -5325,7 +5588,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5356,7 +5620,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -5372,7 +5637,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5383,7 +5649,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5398,7 +5665,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5417,7 +5685,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -5444,7 +5713,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5469,7 +5739,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5495,7 +5766,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -5504,17 +5776,19 @@ void BlockList::initList()
         {3.0,1.0},{3.0,0.0},12.0,WEST,
             {{Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
-    pass_list[272] = 
+    pass_list[272] =
     {
         {3.0,1.0},{3.0,2.0},3.0,EAST,
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5528,7 +5802,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5556,7 +5831,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5580,7 +5856,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5599,7 +5876,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5622,7 +5900,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -5658,7 +5937,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5689,7 +5969,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5720,7 +6001,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -5744,7 +6026,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5764,7 +6047,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5779,7 +6063,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5798,7 +6083,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -5830,7 +6116,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5857,7 +6144,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -5878,7 +6166,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5894,7 +6183,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5905,7 +6195,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5920,7 +6211,8 @@ void BlockList::initList()
             //旋回
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -5952,7 +6244,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -5979,7 +6272,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6004,7 +6298,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -6017,7 +6312,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6026,7 +6322,8 @@ void BlockList::initList()
         {3.0,2.0},{3.0,1.0},12.0,WEST,
             {{Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6036,7 +6333,8 @@ void BlockList::initList()
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,3},BLUE,0.5}.
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6068,7 +6366,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6096,11 +6395,12 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
-    pass_list[299] = 
+    pass_list[299] =
     {
         {3.0,3.0},{0.0,2.0},17.0,WEST,
         {//旋回
@@ -6120,11 +6420,12 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{0,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
-    pass_list[300] = 
+    pass_list[300] =
     {
         {3.0,3.0},{0.0,3.0},11.5,NORTH,
         {//旋回
@@ -6139,11 +6440,12 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{0,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
-    pass_list[301] = 
+    pass_list[301] =
     {
         {3.0,3.0},{0.5,0.5},21.0,WEST,
         {//旋回
@@ -6179,7 +6481,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6215,7 +6518,9 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
+        }
     };
 
     pass_list[303] =
@@ -6248,7 +6553,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -6276,7 +6582,9 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5}}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
+        }
     };
 
     pass_list[305] =
@@ -6299,7 +6607,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6319,7 +6628,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{1,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6334,7 +6644,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{1,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //4
@@ -6370,7 +6681,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6400,7 +6712,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},8.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
     //3
@@ -6424,7 +6737,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6444,7 +6758,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6460,7 +6775,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6471,7 +6787,8 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},7.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
                                 //4
@@ -6507,7 +6824,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6539,7 +6857,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},18.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6571,7 +6890,8 @@ void BlockList::initList()
             //ストップ
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,-1,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},5.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6589,7 +6909,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,0},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6603,7 +6924,8 @@ void BlockList::initList()
             //サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{3,1},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 
@@ -6613,7 +6935,8 @@ void BlockList::initList()
         {
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5}
+            {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{3,2},BLUE,0.5},
+            {null,-1,null,null,null,null,null,null,null,null,null,null,null}
         }
     };
 }
