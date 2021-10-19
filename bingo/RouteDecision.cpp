@@ -1,5 +1,4 @@
 #include "RouteDecision.h"
-
 #include "Scene.h"
 #include "BingoSectionManager.h"
 #include "stdlib.h"
@@ -15,14 +14,17 @@ RouteDecision::RouteDecision()
 	block_list = new BlockList();
 }
 
-void RouteDecision::passParam(mParam *p)  //移動パラメータを問い合わせる
+void RouteDecision::passParam(mParam *&p)  //移動パラメータを問い合わせる
 {
-    block_list->getParam(&pass_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
-
-    p = pass_list.param;
+    block_list->getParam(pass_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
+	printf("dir = %d\n", pass_list->dir);
+	printf("dir = %d\n", pass_list->dir);
+	printf("dir = %d\n", pass_list->dir);
+	printf("dir = %d\n", pass_list->dir);
+    p = pass_list->param;
     runInfo runinfo = bingo_area->runningInformation();
     direction old_direction = runinfo.rb_dir;
-    bingo_area->updateRunInfo(pass_list.e_cood, pass_list.dir, old_direction);    //走行体情報を更新する
+    bingo_area->updateRunInfo(pass_list->e_cood, pass_list->dir, old_direction);    //走行体情報を更新する
 }
 
 int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる

@@ -11,7 +11,7 @@ class BlockList
 public:
     BlockList();
     double getCost(gameCoordinates rb_coordinates, gameCoordinates goal_coordinates);    //コストを取得する
-    void getParam(passList *ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates);    //移動パラメータを取得する
+    void getParam(passList *&ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates);    //移動パラメータを取得する
     void initList();    //ブロックリスト初期化
     //static passList pass_list[320];
 private:
