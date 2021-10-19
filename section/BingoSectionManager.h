@@ -39,7 +39,7 @@ public:
     static BingoArea *bingo_area;
 private:
     wParam3 wp[100];
-    mParam p[100];
+    mParam *p;
     State mState = INIT;    //状態の変数
     int n;
     int block_num;

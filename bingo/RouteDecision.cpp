@@ -10,7 +10,6 @@ RouteDecision::RouteDecision()
     //bingo_manager = Scene::mBsm;
     //block_list = new BlockList();
 	wp = (passList*)malloc(sizeof(passList) * 100);    //paramを含む拡張版パラメータ
-	p = (mParam*)malloc(sizeof(mParam) * 100);    //自分達のパラメータ
 	bingo_area = BingoSectionManager::bingo_area;
 	bingo_manager = Scene::mBsm;
 	block_list = new BlockList();
@@ -21,12 +20,9 @@ void RouteDecision::passParam(mParam *p)  //移動パラメータを問い合わ
     block_list->getParam(&pass_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
 
     p = pass_list.param;
-    int i;
-    printf("p = %d\n",p[i+1].front);
-    for(i = 0; p[i + 1].front != -1; i++){}
     runInfo runinfo = bingo_area->runningInformation();
     direction old_direction = runinfo.rb_dir;
-    bingo_area->updateRunInfo(p[i].p_coordinates, pass_list.dir, old_direction);    //走行体情報を更新する
+    bingo_area->updateRunInfo(pass_list.e_cood, pass_list.dir, old_direction);    //走行体情報を更新する
 }
 
 int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる

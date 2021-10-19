@@ -16,7 +16,7 @@ public:
     //static passList pass_list[320];
 private:
     double cost;    //移動コスト
-    passList *ret_pass_list;    //受け渡しのためのポインタ
+    passList *pass_list;    //受け渡しのためのポインタ
     mParam p[100];    //移動パラメータの配列(サイズはまだ知らない)
 
 	//{{開始座標},{終了座標},コスト,方向,{{移動パラメータ},{0,0}・・・}};
