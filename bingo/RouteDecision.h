@@ -25,14 +25,14 @@ public:
 protected:
     runInfo run_info;
     int num;
-    double min_cost = 999;    //最小移動コスト
+    double min_cost;    //最小移動コスト
     gameCoordinates goal_coordinates;    //目標地点座標
 	gameCoordinates ri_coordinates;    //相対座標
     passList *wp;    //paramを含む拡張版パラメータ
     mParam *p;    //自分たちのパラメータ
     BingoSectionManager *bingo_manager;
     BlockList *block_list;
-    passList *pass_lisj;
+    passList *pass_list;
 	BingoArea *bingo_area;
 };
 #endif

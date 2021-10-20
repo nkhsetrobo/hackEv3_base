@@ -4,7 +4,7 @@ static passList pass_list[320];
 
 BlockList::BlockList()    //コンストラクタ
 {
-
+    initList();
 }
 
 double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)    //コストを取得する
@@ -25,6 +25,7 @@ void BlockList::getParam(passList *&ret_pass_list, gameCoordinates rb_coordinate
     {
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
+			printf("pass_list[i].s_cood.x = %lf\n", pass_list[i].s_cood.x);
             ret_pass_list = &pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
             break;
         }

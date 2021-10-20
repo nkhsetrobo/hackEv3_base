@@ -17,38 +17,38 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     coordinates.x = 0.0;
     coordinates.y = 0.0;
     object_management_array[0] = new IntersectionCircle(0, RED, coordinates);    //赤
-    coordinates.y = 1.0;
-    object_management_array[1] = new IntersectionCircle(1, RED, coordinates);    //赤
-    coordinates.y = 2.0;
-    object_management_array[2] = new IntersectionCircle(2, BLUE, coordinates);    //青
-    coordinates.y = 3.0;
-    object_management_array[3] = new IntersectionCircle(3, BLUE, coordinates);    //青
     coordinates.x = 1.0;
-    coordinates.y = 0.0;
-    object_management_array[4] = new IntersectionCircle(4, RED, coordinates);    //赤
-    coordinates.y = 1.0;
-    object_management_array[5] = new IntersectionCircle(5, RED, coordinates);    //赤
-    coordinates.y = 2.0;
-    object_management_array[6] = new IntersectionCircle(6, BLUE, coordinates);    //青
-    coordinates.y = 3.0;
-    object_management_array[7] = new IntersectionCircle(7, BLUE, coordinates);    //青
+    object_management_array[1] = new IntersectionCircle(1, RED, coordinates);    //赤
     coordinates.x = 2.0;
-    coordinates.y = 0.0;
-    object_management_array[8] = new IntersectionCircle(8, YELLOW, coordinates);    //黄
-    coordinates.y = 1.0;
-    object_management_array[9] = new IntersectionCircle(9, YELLOW, coordinates);    //黄
-    coordinates.y = 2.0;
-    object_management_array[10] = new IntersectionCircle(10, GREEN, coordinates);    //緑
-    coordinates.y = 3.0;
-    object_management_array[11] = new IntersectionCircle(11, GREEN, coordinates);    //緑
+    object_management_array[2] = new IntersectionCircle(2, BLUE, coordinates);    //青
     coordinates.x = 3.0;
-    coordinates.y = 0.0;
-    object_management_array[12] = new IntersectionCircle(12, YELLOW, coordinates);    //黄
+    object_management_array[3] = new IntersectionCircle(3, BLUE, coordinates);    //青
     coordinates.y = 1.0;
-    object_management_array[13] = new IntersectionCircle(13, YELLOW, coordinates);    //黄
+    coordinates.x = 0.0;
+    object_management_array[4] = new IntersectionCircle(4, RED, coordinates);    //赤
+    coordinates.x = 1.0;
+    object_management_array[5] = new IntersectionCircle(5, RED, coordinates);    //赤
+    coordinates.x = 2.0;
+    object_management_array[6] = new IntersectionCircle(6, BLUE, coordinates);    //青
+    coordinates.x = 3.0;
+    object_management_array[7] = new IntersectionCircle(7, BLUE, coordinates);    //青
     coordinates.y = 2.0;
-    object_management_array[14] = new IntersectionCircle(14, GREEN, coordinates);    //緑
+    coordinates.x = 0.0;
+    object_management_array[8] = new IntersectionCircle(8, YELLOW, coordinates);    //黄
+    coordinates.x = 1.0;
+    object_management_array[9] = new IntersectionCircle(9, YELLOW, coordinates);    //黄
+    coordinates.x = 2.0;
+    object_management_array[10] = new IntersectionCircle(10, GREEN, coordinates);    //緑
+    coordinates.x = 3.0;
+    object_management_array[11] = new IntersectionCircle(11, GREEN, coordinates);    //緑
     coordinates.y = 3.0;
+    coordinates.x = 0.0;
+    object_management_array[12] = new IntersectionCircle(12, YELLOW, coordinates);    //黄
+    coordinates.x = 1.0;
+    object_management_array[13] = new IntersectionCircle(13, YELLOW, coordinates);    //黄
+    coordinates.x = 2.0;
+    object_management_array[14] = new IntersectionCircle(14, GREEN, coordinates);    //緑
+    coordinates.x = 3.0;
     object_management_array[15] = new IntersectionCircle(15, GREEN, coordinates);    //緑
 
     for(int i = 0; i < INTERSECTION_CIRCLE_COUNT; i++)
@@ -78,29 +78,26 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE1);
     
     int i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
-        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
-    }else{
         block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 2]);
+    }else{
+        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
     }
 
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE2);
     
     i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i ==  2 || i == 5 || i == 6)
     {
-        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
-    }else{
         block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 2]);
+    }else{
+        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
     }
 
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED1);
     
     i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, RED, object_management_array[2 * i - 1]);
@@ -111,7 +108,6 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED2);
     
     i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, RED, object_management_array[2 * i - 1]);
@@ -122,7 +118,6 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN1);
     
     i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, GREEN, object_management_array[2 * i - 1]);
@@ -133,7 +128,6 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_GREEN2);
     
     i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, GREEN, object_management_array[2 * i - 1]);
@@ -144,7 +138,6 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
 	block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW1);
     
     i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, YELLOW, object_management_array[2 * i - 1]);
@@ -155,7 +148,6 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_YELLOW2);
 
     i = block_num_arr[block_c];
-	printf("i = %d\n", i);
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
         block_management_array[i] = new ColorBlock(i, YELLOW, object_management_array[2 * i - 1]);

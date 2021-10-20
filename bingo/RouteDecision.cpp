@@ -17,11 +17,16 @@ RouteDecision::RouteDecision()
 void RouteDecision::passParam(mParam *&p)  //移動パラメータを問い合わせる
 {
     block_list->getParam(pass_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
-	printf("dir = %d\n", pass_list->dir);
-	printf("dir = %d\n", pass_list->dir);
-	printf("dir = %d\n", pass_list->dir);
-	printf("dir = %d\n", pass_list->dir);
+	printf("+++++++++++++++++++++++++++++++++++++++\n");
+	for (int i = 0; i < 100; i++) {
+    	printf("pass_list->param[i]->coordinates.x = %d p[i]->coordinates.y = %d\n", pass_list->param[i].x, pass_list->param[i].y);
+	}
+	printf("++++++++++++++++++++++++++++++++++++++++\n");
     p = pass_list->param;
+	for (int i = 0; i < 100; i++) {
+		printf("p[i]->coordinates.x = %d p[i]->coordinates.y = %d\n", p[i].coordinates.x, p[i].coordinates.y);
+	}
+	printf("+++++++++++++++++++++++++++++++++++++++\n");
     runInfo runinfo = bingo_area->runningInformation();
     direction old_direction = runinfo.rb_dir;
     bingo_area->updateRunInfo(pass_list->e_cood, pass_list->dir, old_direction);    //走行体情報を更新する
@@ -35,6 +40,7 @@ int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標
 
 bool RouteDecision::minCompare(double now_min_cost, double cost)    //最小コスト比較
 {
+	printf("now_min_cost = %lf, cost = %lf\n", now_min_cost, cost);
     if (now_min_cost > cost)
     {
         return true;
