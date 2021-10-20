@@ -32,7 +32,7 @@ protected:
     mParam *p;    //自分たちのパラメータ
     BingoSectionManager *bingo_manager;
     BlockList *block_list;
-    passList *pass_list;
+    passList *p_list;
 	BingoArea *bingo_area;
 };
 #endif

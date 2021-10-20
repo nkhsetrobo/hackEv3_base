@@ -14,22 +14,13 @@ RouteDecision::RouteDecision()
 	block_list = new BlockList();
 }
 
-void RouteDecision::passParam(mParam *&p)  //移動パラメータを問い合わせる
+void RouteDecision::passParam(mParam *&pnt)  //移動パラメータを問い合わせる
 {
-    block_list->getParam(pass_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
-	printf("+++++++++++++++++++++++++++++++++++++++\n");
-	for (int i = 0; i < 100; i++) {
-    	printf("pass_list->param[i]->coordinates.x = %d p[i]->coordinates.y = %d\n", pass_list->param[i].x, pass_list->param[i].y);
-	}
-	printf("++++++++++++++++++++++++++++++++++++++++\n");
-    p = pass_list->param;
-	for (int i = 0; i < 100; i++) {
-		printf("p[i]->coordinates.x = %d p[i]->coordinates.y = %d\n", p[i].coordinates.x, p[i].coordinates.y);
-	}
-	printf("+++++++++++++++++++++++++++++++++++++++\n");
+    block_list->getParam(p_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
     runInfo runinfo = bingo_area->runningInformation();
     direction old_direction = runinfo.rb_dir;
-    bingo_area->updateRunInfo(pass_list->e_cood, pass_list->dir, old_direction);    //走行体情報を更新する
+    bingo_area->updateRunInfo(p_list->e_cood, p_list->dir, old_direction);    //走行体情報を更新する
+	pnt = p_list->param;
 }
 
 int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる

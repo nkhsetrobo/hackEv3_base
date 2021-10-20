@@ -73,6 +73,11 @@ private:
     //Walker->setCommand(0,10)
 
  //こっから左
+
+  wParam aiueo[2] = {
+                        {0, Section::TRACER, Section::LENGTH, 1000, 0, 20, 0.1, 0.1, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0},
+                        {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0}
+  };
   
   
    wParam a2[100] = 
@@ -787,7 +792,7 @@ private:
   void setWalker(Section *sc);
   void setJudge(Section *sc);
 
-wParam *array[10]={trace,wp2};
+wParam *array[10]={aiueo,wp2};
   wParam *wp;
 };
 #endif

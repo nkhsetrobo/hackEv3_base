@@ -25,5 +25,6 @@ int BlockDetermination::routeDecision()    //ルートを決定する
         }
 	}
 	bingo_area->updateTransportStatus(BLOCK, num);
+	bingo_manager->rdStateChange(BingoSectionManager::circle_decision);
     return num;    //取得したブロックナンバーをリターンする
 }

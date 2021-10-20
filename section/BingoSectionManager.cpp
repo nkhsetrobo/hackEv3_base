@@ -220,6 +220,7 @@ void BingoSectionManager::chengeToSenpai()
 {
     for(int i = 0; p[i].front != -1; i++)
     {
+		printf("i = %d\n", i);
         wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
         switch(p[i].mwalker)
         {
