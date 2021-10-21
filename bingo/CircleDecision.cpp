@@ -1,4 +1,5 @@
 #include "CircleDecision.h"
+#include "BingoSectionManager.h"
 
 CircleDecision::CircleDecision()    //コンストラクタ
 :RouteDecision()
@@ -49,7 +50,7 @@ int CircleDecision::routeDecision()    //ルート決定する
         }
 	}
 
-    bsm->rdStateChange(BingoSectionManager::block_decision);
+    bingo_manager->rdStateChange(BingoSectionManager::block_decision);
     bingo_area->updateTransportStatus(STORAGE, num);
     return num;
 }
