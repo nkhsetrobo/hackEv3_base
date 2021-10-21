@@ -11,7 +11,7 @@ int BlockDetermination::routeDecision()    //ルートを決定する
 	num = 0;
 	min_cost = 999;
 	double cost;
-    run_info = RouteDecision::bingo_area->runningInformation();    //走行体情報を問い合わせる
+    run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
 	for (int i = 1; i < BLOCK_COUNT; i++)
 	{
         if (!bingo_area->objSuccsesPass(BLOCK, i))/*有効移動が成立しているか*/

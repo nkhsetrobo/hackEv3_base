@@ -42,7 +42,7 @@ private:
     mParam *p;
     State mState = INIT;    //状態の変数
     int n;
-    int block_num;
+    int num;
     RouteDecision *rdState;
     Section *sc;
     Walker *mWalker;

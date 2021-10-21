@@ -117,9 +117,9 @@ bool BingoSectionManager::run()
     switch(mState)
     {
         case INIT:
-            block_num = rdState->routeDecision();
-			printf("block_num = %d\n", block_num);
-            if(block_num == 0)
+            num = rdState->routeDecision();
+			printf("num = %d\n", num);
+            if(num == 0)
             {
               ex = true;
               break;
@@ -135,7 +135,6 @@ bool BingoSectionManager::run()
             {
 				rdState->finishRun();
                 mStateChange(INIT);
-				break;
             }
             ex = false;
             break;
@@ -267,7 +266,10 @@ void BingoSectionManager::chengeToSenpai()
 
 int BingoSectionManager::getBlockNum()
 {
-  return block_num;
+	printf("***********************\n");
+	printf("num = %d\n", num);
+	printf("***********************\n");
+  	return num;
 }
 
 void BingoSectionManager::initBingo()

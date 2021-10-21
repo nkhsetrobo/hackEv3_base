@@ -11,7 +11,8 @@ int CircleDecision::routeDecision()    //ルート決定する
 {
 	run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
     ri_coordinates = bingo_area->relativeCoordinates(run_info.rb_coordinates,run_info.rb_dir);    //相対座標に変換
-    num = bsm->getBlockNum();
+    num = bingo_manager->getBlockNum();
+	printf("num = %d\n", num);
 
     color block_color = bingo_area->blockColor(num);
 
