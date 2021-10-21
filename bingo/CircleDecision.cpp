@@ -50,7 +50,11 @@ int CircleDecision::routeDecision()    //ルート決定する
         }
 	}
 
-    bingo_manager->rdStateChange(BingoSectionManager::block_decision);
     bingo_area->updateTransportStatus(STORAGE, num);
     return num;
+}
+
+void CircleDecision::finishRun()
+{
+	bingo_manager->rdStateChange(BingoSectionManager::block_decision);
 }

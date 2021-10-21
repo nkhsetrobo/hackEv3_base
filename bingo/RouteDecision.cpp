@@ -51,3 +51,8 @@ void RouteDecision::initList()     //移動パターンリストの初期化
 {
 	block_list->initList();
 }
+
+void RouteDecision::finishRun()    //状態遷移
+{
+	//サブクラスのほうでそれぞれ実行
+}

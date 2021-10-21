@@ -9,10 +9,6 @@ BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
     bingo_area = new BingoArea(); // これが先にないと次が困るよね
-
-    circle_decision = new CircleDecision();
-    block_decision = new BlockDetermination();
-    rdState = block_decision;
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
@@ -118,7 +114,6 @@ void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定す
 bool BingoSectionManager::run()
 {
     bool ex=false;
-
     switch(mState)
     {
         case INIT:
@@ -130,7 +125,6 @@ bool BingoSectionManager::run()
             }
             rdState->passParam(p);
             chengeToSenpai();
-            init();
             mStateChange(RUN);
             break;
         case RUN:
@@ -138,6 +132,7 @@ bool BingoSectionManager::run()
 
             if (ex == true)
             {
+				rdState->finishRun();
                 mStateChange(INIT);
             }
             ex = false;
@@ -168,7 +163,11 @@ bool BingoSectionManager::exe_run()
 
 void BingoSectionManager::rdStateChange(RouteDecision *rd_state)    //状態遷移
 {
+	printf("rdState = %d\n",rdState);
+    printf("rd_state = %d\n", rd_state);
     rdState = rd_state;
+	printf("rdState2 = %d\n", rdState);
+    fflush(stdout);
 }
 
 void BingoSectionManager::mStateChange(State m_state)
@@ -178,16 +177,14 @@ void BingoSectionManager::mStateChange(State m_state)
 
 void BingoSectionManager::init()    //初期化
 {
-    //区間生成実行
-    /*for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
-    {
-        Section *sc = new Section();
-
-        setWalker(sc);
-        setJudge(sc);
-
-        addSection(sc);
-    }*/
+	mState = INIT;
+    circle_decision = new CircleDecision();
+    block_decision = new BlockDetermination();
+    rdState = block_decision;
+	printf("rdState = %d\n", rdState);
+	printf("block_decision = %d\n", block_decision);
+	printf("circle_decision = %d\n", circle_decision);
+    //rdState = block_decision;
 }
 
 // void BingoSectionManager::s_addSection()
@@ -275,4 +272,5 @@ int BingoSectionManager::getBlockNum()
 void BingoSectionManager::initBingo()
 {
 	bingo_area->initBingo();
+	init();
 }

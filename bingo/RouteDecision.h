@@ -21,6 +21,7 @@ public:
     bool minCompare(double now_min_cost, double cost);    //最小コストを比較
     virtual int routeDecision();    //ルートを決定する(仮想関数)
 	void initList();    //移動パターンリストの初期化
+	virtual void finishRun();     //状態遷移
 
 protected:
     runInfo run_info;

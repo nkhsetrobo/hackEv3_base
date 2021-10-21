@@ -85,8 +85,10 @@ void Scene::initSpeed(){
 void Scene::execBingo()
 {
     //return;	
+    printf("mBsm adr %d\n",mBsm);
     if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/)
     {
+        printf("1234567345678\n");
         delete mBsm;
          msg_log("test length2");
         mState = END;

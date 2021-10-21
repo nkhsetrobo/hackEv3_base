@@ -27,8 +27,6 @@ void BlockList::getParam(passList *&ret_pass_list, gameCoordinates rb_coordinate
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
             ret_pass_list = &pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
-			printf("ret_pass_list = %d\n", ret_pass_list);
-            printf("pass_list[i].s_cood.x = %lf, pass_list[i].s_cood.y = %lf, pass_list[i].e_cood.x = %lf, pass_list[i].e_cood.y = %lf \n", pass_list[i].s_cood.x, pass_list[i].s_cood.y, pass_list[i].e_cood.x, pass_list[i].e_cood.y);
             break;
         }
     }
