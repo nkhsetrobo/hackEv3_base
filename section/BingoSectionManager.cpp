@@ -118,12 +118,12 @@ bool BingoSectionManager::run()
     {
         case INIT:
             num = rdState->routeDecision();
-			printf("num = %d\n", num);
             if(num == 0)
             {
               ex = true;
               break;
             }
+			//rdSateにnumの座標どこ？って聞きたい
             rdState->passParam(p);
             chengeToSenpai();
             mStateChange(RUN);

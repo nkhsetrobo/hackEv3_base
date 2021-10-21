@@ -20,13 +20,13 @@ int BlockDetermination::routeDecision()    //ルートを決定する
 	        cost = block_list->getCost(run_info.rb_coordinates, goal_coordinates);    //コストを取得する
 	        if (minCompare(min_cost, cost))    //更新処理
             {
+				//goal_coordinates本決まりさせなきゃいけないよ
 		        min_cost = cost;
 		        num = i;
 	        }
         }
 	}
 	bingo_area->updateTransportStatus(BLOCK, num);
-	printf("bingo_manager adr %d\n",bingo_manager);
     return num;    //取得したブロックナンバーをリターンする
 }
 

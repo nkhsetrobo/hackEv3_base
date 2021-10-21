@@ -12,9 +12,22 @@ int CircleDecision::routeDecision()    //ルート決定する
 	run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
     ri_coordinates = bingo_area->relativeCoordinates(run_info.rb_coordinates,run_info.rb_dir);    //相対座標に変換
     num = bingo_manager->getBlockNum();
-	printf("num = %d\n", num);
 
     color block_color = bingo_area->blockColor(num);
+	switch (block_color) {
+		case BLUE:
+			printf("Blue\n");
+			break;
+		case RED:
+			printf("Red\n");
+			break;
+		case GREEN:
+			printf("Green\n");
+			break;
+		case YELLOW:
+			printf("Yellow\n");
+			break;
+	}
 
     int circle_num[2]; 
     switch(block_color)
@@ -37,6 +50,8 @@ int CircleDecision::routeDecision()    //ルート決定する
             break;
     }
 
+	min_cost = 999;
+
     for (int i = 0; i < 2; i++)
 	{
         if (!bingo_area->objSuccsesPass(STORAGE, circle_num[i]))/*有効移動が成立しているか*/
@@ -50,6 +65,7 @@ int CircleDecision::routeDecision()    //ルート決定する
 	        }
         }
 	}
+	printf("debug output num = %d\n", num);
 
     bingo_area->updateTransportStatus(STORAGE, num);
     return num;

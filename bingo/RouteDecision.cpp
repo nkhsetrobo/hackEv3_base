@@ -16,10 +16,17 @@ RouteDecision::RouteDecision()
 
 void RouteDecision::passParam(mParam *&pnt)  //移動パラメータを問い合わせる
 {
+	run_info = bingo_area->runningInformation();
+	printf("run_info.rb_coordinates.x = %lf, y = %lf\n", run_info.rb_coordinates.x, run_info.rb_coordinates.y);
     block_list->getParam(p_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
-    runInfo runinfo = bingo_area->runningInformation();
-    direction old_direction = runinfo.rb_dir;
+    //runInfo runinfo = bingo_area->runningInformation();
+    direction old_direction = run_info.rb_dir;
+	printf("p_list->e_cood.x = %lf, y = %lf\n", p_list->e_cood.x, p_list->e_cood.y);
     bingo_area->updateRunInfo(p_list->e_cood, p_list->dir, old_direction);    //走行体情報を更新する
+	/*+++++++++debug+++++++++++++*/
+	run_info = bingo_area->runningInformation();
+	printf("runinfo.rb_coordinates.y = %lf\n", run_info.rb_coordinates.y);
+	/*+++++++++++++++++++++++++++*/
 	pnt = p_list->param;
 }
 
