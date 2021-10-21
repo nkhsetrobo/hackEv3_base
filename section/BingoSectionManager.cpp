@@ -118,6 +118,7 @@ bool BingoSectionManager::run()
     {
         case INIT:
             block_num = rdState->routeDecision();
+			printf("block_num = %d\n", block_num);
             if(block_num == 0)
             {
               ex = true;
@@ -134,6 +135,7 @@ bool BingoSectionManager::run()
             {
 				rdState->finishRun();
                 mStateChange(INIT);
+				break;
             }
             ex = false;
             break;
@@ -217,7 +219,6 @@ void BingoSectionManager::chengeToSenpai()
 {
     for(int i = 0; p[i].front != -1; i++)
     {
-		printf("i = %d\n", i);
         wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
         switch(p[i].mwalker)
         {
