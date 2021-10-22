@@ -84,13 +84,10 @@ void Scene::initSpeed(){
 
 void Scene::execBingo()
 {
-    //return;	
-    printf("mBsm adr %d\n",mBsm);
-    if(mBsm->run()/*実行するメッセージをゲーム管理に送る*/)
+    if(mBsm->run())
     {
-        printf("1234567345678\n");
         delete mBsm;
-         msg_log("test length2");
+        msg_log("test length2");
         mState = END;
     }
 }
@@ -99,7 +96,7 @@ void Scene::initBingo()
 {
     mBsm->initBingo();
     mState = BINGO;
-
+	//加速度を切り替える	
 }
 
 void Scene::finish()

@@ -8,7 +8,7 @@ RouteDecision::RouteDecision()
 	//bingo_area = BingoSectionManager::bingo_area;
     //bingo_manager = Scene::mBsm;
     //block_list = new BlockList();
-	wp = (passList*)malloc(sizeof(passList) * 100);    //paramを含む拡張版パラメータ
+	wp = (passList *)malloc(sizeof(passList) * 100);    //paramを含む拡張版パラメータ
 	bingo_area = BingoSectionManager::bingo_area;
 	bingo_manager = Scene::mBsm;
 	block_list = new BlockList();
@@ -20,7 +20,7 @@ void RouteDecision::passParam(mParam *&pnt)  //移動パラメータを問い合
     block_list->getParam(p_list, run_info.rb_coordinates, goal_coordinates);    //移動パラメータを問い合わせる
     //runInfo runinfo = bingo_area->runningInformation();
     direction old_direction = run_info.rb_dir;
-	printf("p_list->e_cood.x = %lf, y = %lf\n", p_list->e_cood.x, p_list->e_cood.y);
+	//printf("p_list->e_cood.x = %lf, y = %lf\n", p_list->e_cood.x, p_list->e_cood.y);
     bingo_area->updateRunInfo(p_list->e_cood, p_list->dir, old_direction);    //走行体情報を更新する
 	/*+++++++++debug+++++++++++++
 	run_info = bingo_area->runningInformation();

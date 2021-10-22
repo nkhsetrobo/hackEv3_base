@@ -118,6 +118,7 @@ bool BingoSectionManager::run()
     {
         case INIT:
             num = rdState->routeDecision();
+			printf("num = %d\n", num);
             if(num == 0)
             {
               ex = true;
@@ -182,24 +183,8 @@ void BingoSectionManager::init()    //初期化
     circle_decision = new CircleDecision();
     block_decision = new BlockDetermination();
     rdState = block_decision;
-	printf("rdState = %d\n", rdState);
-	printf("block_decision = %d\n", block_decision);
-	printf("circle_decision = %d\n", circle_decision);
     //rdState = block_decision;
 }
-
-// void BingoSectionManager::s_addSection()
-// {
-//     for (n = 0; wp[n].flag != -1; n++)    //取得したパラメータを全て区間に変換し終えるまで
-//     {
-//         sc = new Section();    //クリエイトメッセージ
-//         mWalker = sc->selectWalker(n);    //走法の生成の依頼
-//         mWalker->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
-//         mJudge = sc->selectJudge(n);    //判定の生成を依頼
-//         mJudge->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);    //パラメータを設定する
-//         addSection(new Section());    //生成した区間をaddSectionへ渡す
-//     }
-// }
 
 void BingoSectionManager::running()    //実行する
 {
@@ -266,9 +251,6 @@ void BingoSectionManager::chengeToSenpai()
 
 int BingoSectionManager::getBlockNum()
 {
-	printf("***********************\n");
-	printf("num = %d\n", num);
-	printf("***********************\n");
   	return num;
 }
 

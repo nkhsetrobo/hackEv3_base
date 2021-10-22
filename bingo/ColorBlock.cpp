@@ -5,7 +5,6 @@ ColorBlock::ColorBlock(int n, color c, TravelableArea *i_circle)
 {
     b_color = c;
     circle = i_circle;
-
 }
 
 color ColorBlock::getColor()

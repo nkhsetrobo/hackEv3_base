@@ -8,6 +8,7 @@ static int storage[STORAGE_COUNT];
 BingoArea::BingoArea()    //コンストラクタ
 {
     run_body = new RunningBody();
+	//initCircleBlock();
 }
 
 void BingoArea::initCircleBlock()    //交点サークル初期化
@@ -154,6 +155,8 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     }else{
         block_management_array[i] = new ColorBlock(i, YELLOW, object_management_array[2 * i - 2]);
     }
+	
+	if (((ColorBlock *)block_management_array[5])->getColor() == YELLOW) printf("YELLOW\n");
 }
 
 void BingoArea::initStorage()    //ブロックサークル初期化
@@ -243,7 +246,7 @@ bool BingoArea::coordinatesConparison(gameCoordinates pass_coordinates, gameCoor
 
 color BingoArea::blockColor(int block_num)    //ブロックの色を問い合わせる
 {
-    return ((ColorBlock *)object_management_array[block_num])->getColor();
+    return ((ColorBlock *)block_management_array[block_num])->getColor();
 }
 
 bool BingoArea::objSuccsesPass(object object_type, int object_num)   //有効移動成立しているか問い合わせる
@@ -307,6 +310,20 @@ gameCoordinates BingoArea::absoluteCoordinates(gameCoordinates coordinates, dire
 void BingoArea::updateRunInfo(gameCoordinates new_coodiantes, direction new_direction, direction old_direction)
 {
     direction absolute_direction = convertDirection(old_direction, new_direction);
+	switch (absolute_direction) {
+		case NORTH:
+			 printf("NORTH\n");
+			 break;
+		case SOUTH:
+			 printf("SOUTH\n");
+			 break;
+		case EAST:
+			 printf("EAST\n");
+			 break;
+		case WEST:
+			 printf("WEST\n");
+			 break;
+	}
     run_body->setInfo(new_coodiantes, absolute_direction);
 }
 
