@@ -13,7 +13,6 @@ BingoSectionManager::BingoSectionManager()
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
 {
-
   Walker *walk = sc->selectWalker(wp[n].walk);
 
   switch (wp[n].walk)
@@ -165,11 +164,7 @@ bool BingoSectionManager::exe_run()
 
 void BingoSectionManager::rdStateChange(RouteDecision *rd_state)    //状態遷移
 {
-	printf("rdState = %d\n",rdState);
-    printf("rd_state = %d\n", rd_state);
     rdState = rd_state;
-	printf("rdState2 = %d\n", rdState);
-    fflush(stdout);
 }
 
 void BingoSectionManager::mStateChange(State m_state)

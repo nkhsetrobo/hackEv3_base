@@ -8,7 +8,6 @@ static int storage[STORAGE_COUNT];
 BingoArea::BingoArea()    //コンストラクタ
 {
     run_body = new RunningBody();
-	//initCircleBlock();
 }
 
 void BingoArea::initCircleBlock()    //交点サークル初期化
@@ -155,8 +154,6 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     }else{
         block_management_array[i] = new ColorBlock(i, YELLOW, object_management_array[2 * i - 2]);
     }
-	
-	if (((ColorBlock *)block_management_array[5])->getColor() == YELLOW) printf("YELLOW\n");
 }
 
 void BingoArea::initStorage()    //ブロックサークル初期化
@@ -254,9 +251,9 @@ bool BingoArea::objSuccsesPass(object object_type, int object_num)   //有効移
     switch(object_type)
     {
         case BLOCK:
-            return ((Block *)object_management_array[object_num])->getSuccsesPass();
+            return (block_management_array[object_num])->getSuccsesPass();
         case STORAGE:
-            return ((Block *)object_management_array[storage[object_num]])->getSuccsesPass();
+            return ((CircleStorage *)object_management_array[INTERSECTION_CIRCLE_COUNT + object_num])->getSuccsesPass();
     }
 }
 
@@ -266,17 +263,17 @@ gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, dire
     double y = coordinates.y;
     switch(direction)
     {
-        case NORTH:     //走行体向きが北の場合（ｘ、ｙ）→（ｙ、3-ｘ）
-             x = coordinates.y;
-             y = 3 - coordinates.x;
-             break;
-        case SOUTH:     //走行体向きが南の場合（ｘ、ｙ）→（3-ｙ、ｘ）
+        case NORTH:     //走行体向きが北の場合
             x = 3 - coordinates.y;
-            y = coordinates.x;
+            y = x;
             break;
-        case WEST:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
-            x = 3 - coordinates.y;
+        case SOUTH:     //走行体向きが南の場合
+			x = y;
             y = 3 - coordinates.x;
+            break;
+        case WEST:      //走行体向きが西の場合
+            x = 3 - coordinates.x;
+            y = 3 - coordinates.y;
             break;
     }
     coordinates.x = x;
@@ -289,17 +286,21 @@ gameCoordinates BingoArea::absoluteCoordinates(gameCoordinates coordinates, dire
     double x = coordinates.x;
     double y = coordinates.y;
     switch(direction){
-        case NORTH:     //走行体向きが北の場合（ｘ、ｙ）→（3-ｙ、ｘ）
-             x = 3 - coordinates.y;
-             y = coordinates.x;
-             break;
+        case NORTH:     //走行体向きが北の場合
+			x = y;
+			y = 3 - coordinates.x;
+            break;
         case SOUTH:     //走行体向きが南の場合（ｘ、ｙ）→（ｙ、3-ｘ）
-            x = coordinates.y;
-            y = 3 - coordinates.x;
+			printf("変換前 %lf, y = %lf\n", x, y);
+			x = 3 - coordinates.y;
+			y = x;
+			printf("変換後 x = %lf, y = %lf\n", x, y);
             break;
         case WEST:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
-            x = 3 - coordinates.y;
-            y = 3 - coordinates.x;
+            //x = 3 - coordinates.y;
+            //y = 3 - coordinates.x;
+            x = 3 - coordinates.x;
+            y = 3 - coordinates.y;
             break;
     }
     coordinates.x = x;
@@ -307,8 +308,9 @@ gameCoordinates BingoArea::absoluteCoordinates(gameCoordinates coordinates, dire
     return coordinates;
 }
 
-void BingoArea::updateRunInfo(gameCoordinates new_coodiantes, direction new_direction, direction old_direction)
+void BingoArea::updateRunInfo(gameCoordinates new_coordinates, direction new_direction, direction old_direction)
 {
+	new_coordinates = absoluteCoordinates(new_coordinates, old_direction);
     direction absolute_direction = convertDirection(old_direction, new_direction);
 	switch (absolute_direction) {
 		case NORTH:
@@ -324,7 +326,7 @@ void BingoArea::updateRunInfo(gameCoordinates new_coodiantes, direction new_dire
 			 printf("WEST\n");
 			 break;
 	}
-    run_body->setInfo(new_coodiantes, absolute_direction);
+    run_body->setInfo(new_coordinates, absolute_direction);
 }
 
 direction BingoArea::convertDirection(direction run_direction, direction relative_direction)

@@ -11,6 +11,14 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
 {
     for (int i = 0; i < 320; i++)    //コストを持った配列を線型探索
     {
+		/*printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+		printf("rb.x = %lf, rb.y = %lf\n", rb_coordinates.x, rb_coordinates.y);
+		printf("pass_list[i].s_cood.x = %lf, pass_list[i].s_cood.y = %lf\n", pass_list[i].s_cood.x, pass_list[i].s_cood.y);
+		printf("goal_coordinates.x = %lf, goal_coordinates.y = %lf\n", goal_coordinates.x, goal_coordinates.y);
+		printf("pass_list[i].e_cood.x = %lf, pass_list[i].e_cood.y = %lf\n", pass_list[i].e_cood.x, pass_list[i].e_cood.y);
+		printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");	printf("rb.x = %lf, rb.y = %lf\n" rb_coordinates.x, rb_coordinates.y);
+		printf("rb.x = %lf, rb.y = %lf\n" rb_coordinates.x, rb_coordinates.y);*/
+
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
             return pass_list[i].cost;    //取得したコストをリターンする
