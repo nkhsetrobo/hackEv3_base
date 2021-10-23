@@ -29,6 +29,11 @@ int BlockDetermination::routeDecision()    //ルートを決定する
 			goal = bingo_area->relativeCoordinates(goal, run_info.rb_dir);
 			printf("変換後 i = %d, x = %lf, y = %lf\n", i, goal.x, goal.y);
 	        cost = block_list->getCost(re_cood, goal);    //コストを取得する
+			if (cost < 0) {
+				printf("========================\n");
+				printf("i = %d\n", i);
+				printf("========================\n");
+			}
 	        if (minCompare(min_cost, cost))    //更新処理
             {
 				goal_coordinates = goal;
@@ -37,7 +42,7 @@ int BlockDetermination::routeDecision()    //ルートを決定する
 	        }
         }
 	}
-	printf("goal.x = %lf, goal.y = %lf\n", goal.x, goal.y);
+	printf("goal.x = %lf, goal.y = %lf\n", goal_coordinates.x, goal_coordinates.y);
 	bingo_area->updateTransportStatus(BLOCK, num);
     return num;    //取得したブロックナンバーをリターンする
 }
