@@ -1,5 +1,6 @@
 #include "BingoSectionManager.h"
 #include "RouteDecision.h"
+#include "stdlib.h"
 
 RouteDecision *BingoSectionManager::circle_decision;
 RouteDecision *BingoSectionManager::block_decision;
@@ -9,22 +10,25 @@ BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
     bingo_area = new BingoArea(); // これが先にないと次が困るよね
+    //wp = (wParam3 *)malloc(sizeof(wParam3) * 100);    //領域確保
+    
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
-{
-  Walker *walk = sc->selectWalker(wp[n].walk);
+{ 
+    //printf("wp[%d].walk = %d\n",n,wp[n].walk);
+    Walker *walk = sc->selectWalker(wp[n].walk);
 
-  switch (wp[n].walk)
-  {
-  case Section::VIRTUAL2:
-   // syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
+    switch (wp[n].walk)
+    {
+    case Section::VIRTUAL2:
+    // syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
     ((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
      ((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
     ((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);
 
     break;
-  case Section::WALKER:
+    case Section::WALKER:
 
     ((SimpleWalker *)walk)->setCommand(wp[n].forward, wp[n].turn);
 
@@ -145,8 +149,14 @@ bool BingoSectionManager::run()
 
 bool BingoSectionManager::exe_run()
 {
+    printf("testtesttesttesttest\n");
     if(mSection[mSectionIdx]==nullptr)
+    {
+        printf("345624567345673567\n");
         return true;
+    }else{
+        printf("000000000000000000000000000000000000\n");
+    }
     //if(mSectionIdx==0)
     // msg_log("0");
     //if(mSectionIdx==1)
@@ -197,34 +207,66 @@ void BingoSectionManager::running()    //実行する
 
 void BingoSectionManager::chengeToSenpai()
 {
-    for(int i = 0; p[i].front != -1; i++)
+    int i;
+    for(i = 0; p[i].front != -1; i++)
     {
-        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
+        //wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
+        wp[i].flag = 0;
+        wp[i].walk = p[i].mwalker;
+        wp[i].judge = p[i].mjudge;
+        wp[i].speed = p[i].speed;
+        wp[i].target = 0;
+        wp[i].kp = 30;
+        wp[i].ki = 0.1;
+        wp[i].kd = 0;
+        wp[i].angleTarget = 1;
+        wp[i].anglekp = 1;
+        wp[i].absangle = 0;
+        wp[i].round = p[i].radius;
+        wp[i].forward = p[i].front;
+        wp[i].turn = p[i].turn;
+        wp[i]._EDGE = true;
+        wp[i].jflag = Judge::UPDATE;
+        wp[i].fangle = 0;
+        wp[i].flength = 0;
+        wp[i].bright1 = 0;
+        wp[i].bright2 = 0;
+        wp[i].color1 = 0;
+        wp[i].color2 = 0.5;
+        wp[i].vangle = 0;
+        
         switch(p[i].mwalker)
         {
             case Section::WALKER:
+            printf("WALKER = %d\n",wp[i].walk);
                 wp[i].kd = 0.5;
                 break;
             case Section::TRACER:
+            printf("WALKER = %d\n",wp[i].walk);
                 wp[i].kd = 0.8;
                 break;
             case Section::VIRTUAL:
+            printf("WALKER = %d\n",wp[i].walk);
                 wp[i].kd = 0.3;
                 break;
         }
         switch(p[i].mjudge)
         {
             case Section::LENGTH:
+            printf("JUDGE = %d\n",wp[n].judge);
                 wp[i].flength = p[i].atai;
                 break;
             case Section::TURNANGLE:
+            printf("JUDGE = %d\n",wp[n].judge);
                 wp[i].fangle = p[i].atai;
                 break;
             case Section::BRIGHTNESS:
+            printf("JUDGE = %d\n",wp[n].judge);
                 wp[i].bright1 = -0.5;
                 wp[i].bright2 = 0;
                 break;
             case Section::COLOR:
+            printf("JUDGE = %d\n",wp[n].judge);
                 switch(p[i].mcolor)
                 {
                     case BLUE:
@@ -243,6 +285,32 @@ void BingoSectionManager::chengeToSenpai()
                 break;
         }
     }
+    //wp[i] = {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0};
+    wp[i].flag = -1;
+    wp[i].walk = p[i].mwalker;
+    wp[i].judge = p[i].mjudge;
+    wp[i].speed = p[i].speed;
+    wp[i].target = 0;
+    wp[i].kp = 30;
+    wp[i].ki = 0.1;
+        wp[i].kd = 0;
+        wp[i].angleTarget = 1;
+        wp[i].anglekp = 1;
+        wp[i].absangle = 0;
+        wp[i].round = p[i].radius;
+        wp[i].forward = p[i].front;
+        wp[i].turn = p[i].turn;
+        wp[i]._EDGE = true;
+        wp[i].jflag = Judge::UPDATE;
+        wp[i].fangle = 0;
+        wp[i].flength = 0;
+        wp[i].bright1 = 0;
+        wp[i].bright2 = 0;
+        wp[i].color1 = 0;
+        wp[i].color2 = 0.5;
+        wp[i].vangle = 0;
+        
+
 }
 
 int BingoSectionManager::getBlockNum()
