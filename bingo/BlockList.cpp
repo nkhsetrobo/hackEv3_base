@@ -9,21 +9,25 @@ BlockList::BlockList()    //コンストラクタ
 
 double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)    //コストを取得する
 {
+	/*printf("+---------引数-----------------------------------------------------------------+\n");
+	printf("rb_coordinates.x = %lf, rb_coordinates.y = %lf, goal_coordinates.x = %lf, goal_coordinates.y = %lf\n", rb_coordinates.x, rb_coordinates.y, goal_coordinates.x, goal_coordinates.y);
+	printf("+------------------------------------------------------------------------------+\n");*/
     for (int i = 0; i < 320; i++)    //コストを持った配列を線型探索
     {
-		/*printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
-		printf("rb.x = %lf, rb.y = %lf\n", rb_coordinates.x, rb_coordinates.y);
-		printf("pass_list[i].s_cood.x = %lf, pass_list[i].s_cood.y = %lf\n", pass_list[i].s_cood.x, pass_list[i].s_cood.y);
-		printf("goal_coordinates.x = %lf, goal_coordinates.y = %lf\n", goal_coordinates.x, goal_coordinates.y);
-		printf("pass_list[i].e_cood.x = %lf, pass_list[i].e_cood.y = %lf\n", pass_list[i].e_cood.x, pass_list[i].e_cood.y);
-		printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");	printf("rb.x = %lf, rb.y = %lf\n" rb_coordinates.x, rb_coordinates.y);
-		printf("rb.x = %lf, rb.y = %lf\n" rb_coordinates.x, rb_coordinates.y);*/
+		//*printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+		//printf("rb.x = %lf, rb.y = %lf\n", rb_coordinates.x, rb_coordinates.y);
+		//printf("pass_list[i].s_cood.x = %lf, pass_list[i].s_cood.y = %lf\n", pass_list[i].s_cood.x, pass_list[i].s_cood.y);
+		//printf("goal_coordinates.x = %lf, goal_coordinates.y = %lf\n", goal_coordinates.x, goal_coordinates.y);
+		//printf("pass_list[i].e_cood.x = %lf, pass_list[i].e_cood.y = %lf\n", pass_list[i].e_cood.x, pass_list[i].e_cood.y);
+		//printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+		//printf("rb.x = %lf, rb.y = %lf\n" rb_coordinates.x, rb_coordinates.y);*/
 
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
             return pass_list[i].cost;    //取得したコストをリターンする
         }
     }
+	return -1;
 }
 
 void BlockList::getParam(passList *&ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
@@ -31,7 +35,6 @@ void BlockList::getParam(passList *&ret_pass_list, gameCoordinates rb_coordinate
     //移動パラメータを取得する
     for (int i = 0; i < 320; i++)   //移動パラメータを持った構造体の配列を線型探索
     {
-		//printf("pass_list[i].s_cood.x = %lf\n", pass_list[i].s_cood.x);
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
             ret_pass_list = &pass_list[i];//移動パラメータのポインタを属性の移動パラメータの変数に代入
@@ -2548,7 +2551,7 @@ void BlockList::initList()
     };
     pass_list[121] =
     {
-        {1.0,2.0},{2.0,2.0},5.0,SOUTH,
+        {1.0,2.0},{2.0,2.0},5.0,EAST,
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
@@ -4127,7 +4130,7 @@ void BlockList::initList()
 
     pass_list[196] =
     {
-        {2.0,2.0},{0.5,1.5},9.5,NORTH,
+        {2.0,2.0},{0.5,2.5},9.5,NORTH,
         {//旋回
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,11,Section::TURNANGLE,60,{0,0},BLUE,0},
             {Section::VIRTUAL,0,0,{0,0},10.0,0,0,10,Section::BRIGHTNESS,-0.5,{0,0},BLUE,0},
@@ -4223,7 +4226,7 @@ void BlockList::initList()
 
     pass_list[201] =
     {
-        {2.0,2.0},{1.5,0.5},16.0,WEST,
+        {2.0,2.0},{1.5,0.5},2.0,NORTH,
         {
             {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
             /*linetrace色判定*/

@@ -80,9 +80,9 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     int i = block_num_arr[block_c];
     if(i == 1 || i == 2 || i == 5 || i == 6)
     {
-        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 2]);
-    }else{
         block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
+    }else{
+        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 2]);
     }
 
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_BLUE2);
@@ -90,9 +90,9 @@ void BingoArea::initCircleBlock()    //交点サークル初期化
     i = block_num_arr[block_c];
     if(i == 1 || i ==  2 || i == 5 || i == 6)
     {
-        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 2]);
-    }else{
         block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 1]);
+    }else{
+        block_management_array[i] = new ColorBlock(i, BLUE, object_management_array[2 * i - 2]);
     }
 
     block_c = ETRoboc_getCourceInfo(ETROBOC_COURSE_INFO_BLOCK_POS_RED1);
@@ -170,27 +170,27 @@ void BingoArea::initStorage()    //ブロックサークル初期化
     coordinates.y = 0.5;
     object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, YELLOW, coordinates);    //黄
     i++;
-    coordinates.y = 1.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, GREEN, coordinates);    //緑
-    i++;
-    coordinates.y = 2.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, RED, coordinates);    //赤
-    i++;
     coordinates.x = 1.5;
-    coordinates.y = 0.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, BLUE, coordinates);    //青
-    i++;
-    coordinates.y = 2.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, YELLOW, coordinates);    //黄
+    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, GREEN, coordinates);    //緑
     i++;
     coordinates.x = 2.5;
-    coordinates.y = 0.5;
-    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, GREEN, coordinates);    //緑
-    i++;
-    coordinates.y = 1.5;
     object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, RED, coordinates);    //赤
     i++;
+    coordinates.y = 1.5;
+    coordinates.x = 0.5;
+    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, BLUE, coordinates);    //青
+    i++;
+    coordinates.x = 2.5;
+    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, YELLOW, coordinates);    //黄
+    i++;
     coordinates.y = 2.5;
+    coordinates.x = 0.5;
+    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, GREEN, coordinates);    //緑
+    i++;
+    coordinates.x = 1.5;
+    object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, RED, coordinates);    //赤
+    i++;
+    coordinates.x = 2.5;
     object_management_array[INTERSECTION_CIRCLE_COUNT + i] = new CircleStorage(i, BLUE, coordinates);    //青
 
     int j = INTERSECTION_CIRCLE_COUNT;
@@ -291,10 +291,8 @@ gameCoordinates BingoArea::absoluteCoordinates(gameCoordinates coordinates, dire
 			y = 3 - coordinates.x;
             break;
         case SOUTH:     //走行体向きが南の場合（ｘ、ｙ）→（ｙ、3-ｘ）
-			printf("変換前 %lf, y = %lf\n", x, y);
 			x = 3 - coordinates.y;
-			y = x;
-			printf("変換後 x = %lf, y = %lf\n", x, y);
+			y = coordinates.x;
             break;
         case WEST:      //走行体向きが西の場合（ｘ、ｙ）→（3-ｙ、3-ｘ）
             //x = 3 - coordinates.y;

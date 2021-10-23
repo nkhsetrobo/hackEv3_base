@@ -35,35 +35,36 @@ int CircleDecision::routeDecision()    //ルート決定する
 			break;
 	}
 
-    int circle_num[2]; 
+    int circle_num[3]; 
     switch(block_color)
     {
         case BLUE:
-            circle_num[0] = 4;
-            circle_num[1] = 8;
+            circle_num[1] = 4;
+            circle_num[2] = 8;
             break;
         case RED:
-            circle_num[0] = 3;
-            circle_num[1] = 7;
+            circle_num[1] = 3;
+            circle_num[2] = 7;
             break;
         case GREEN:
-            circle_num[0] = 2;
-            circle_num[1] = 6;
+            circle_num[1] = 2;
+            circle_num[2] = 6;
             break;
         case YELLOW:
-            circle_num[0] = 1;
-            circle_num[1] = 5;
+            circle_num[1] = 1;
+            circle_num[2] = 5;
             break;
     }
 
 	min_cost = 999;
 	gameCoordinates goal;
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 1; i < 3; i++)
 	{
         if (!bingo_area->objSuccsesPass(STORAGE, circle_num[i]))/*有効移動が成立しているか*/
         {
 	        goal = bingo_area->objCoordinates(STORAGE, circle_num[i]);    //ブロック座標を問い合わせる
+			printf("objCoordinates: x = %lf, y = %lf\n", goal.x, goal.y);
 			goal = bingo_area->relativeCoordinates(goal, run_info.rb_dir);
 	        double cost = block_list->getCost(re_cood, goal);    //コストを取得する
 	        if (minCompare(min_cost, cost))    //更新処理
@@ -75,6 +76,7 @@ int CircleDecision::routeDecision()    //ルート決定する
         }
 	}
     bingo_area->updateTransportStatus(STORAGE, num);
+	printf("goal_coordinates x = %lf, y = %lf\n", goal_coordinates.x, goal_coordinates.y);
     return num;
 }
 
