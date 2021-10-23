@@ -27,7 +27,11 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
             return pass_list[i].cost;    //取得したコストをリターンする
         }
     }
-	return -1;
+    printf("中通っていない。");
+    printf("中通っていない。");
+    printf("中通っていない。");
+    printf("中通っていない。\n");
+	//return -1;
 }
 
 void BlockList::getParam(passList *&ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
