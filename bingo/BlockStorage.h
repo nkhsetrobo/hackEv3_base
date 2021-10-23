@@ -8,6 +8,7 @@ class BlockStorage : public TravelableArea
 public:
 	BlockStorage(int n, gameCoordinates c_coordinates);
 	bool getSuccsesPass();
+	void effectiveMovementJudgement();
 
 protected:
 	int bs_number;     //ブロック置き場ナンバー

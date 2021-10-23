@@ -11,3 +11,8 @@ bool BlockStorage::getSuccsesPass()
 {
 	return succses_pass;
 }
+
+void BlockStorage::effectiveMovementJudgement()
+{
+	succses_pass = true;
+}

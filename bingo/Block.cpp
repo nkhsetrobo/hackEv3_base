@@ -14,7 +14,7 @@ bool Block::getSuccsesPass()
     return succses_pass;    //有効移動成立を表す変数をリターン
 }
 
-void Block::effectiveMovementJudgment()    //ブロックの有効移動判定
+void Block::effectiveMovementJudgement()    //ブロックの有効移動判定
 {
     succses_pass = true;    //有効移動成立
 }

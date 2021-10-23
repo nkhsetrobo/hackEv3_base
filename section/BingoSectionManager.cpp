@@ -126,6 +126,7 @@ bool BingoSectionManager::run()
 			//rdSateにnumの座標どこ？って聞きたい
             rdState->passParam(p);
             chengeToSenpai();
+			running();
             mStateChange(RUN);
             break;
         case RUN:

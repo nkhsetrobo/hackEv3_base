@@ -792,7 +792,7 @@ private:
   void setWalker(Section *sc);
   void setJudge(Section *sc);
 
-wParam *array[10]={aiueo,wp2};
+wParam *array[10]={trace,wp2};
   wParam *wp;
 };
 #endif

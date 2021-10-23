@@ -7,7 +7,6 @@ CircleStorage::CircleStorage(int n, color c_color, gameCoordinates c_coordinates
 :BlockStorage(n, c_coordinates)    //コンストラクタ
 {
     cs_color = c_color;
-    power_block_move = false;
 }
 
 color CircleStorage::getColor()    //色を取得する
@@ -15,7 +14,3 @@ color CircleStorage::getColor()    //色を取得する
     return cs_color;    //取得した色をリターン
 }
 
-void CircleStorage::effectPowerBlockMove()
-{
-    power_block_move = true;
-}

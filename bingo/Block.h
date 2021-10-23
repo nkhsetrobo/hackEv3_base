@@ -8,7 +8,7 @@ class Block
 public:
     Block(int n);    //コンストラクタ
     bool getSuccsesPass();    //有効移動成立のゲッタ
-    void effectiveMovementJudgment();    //ブロック有効移動判定
+    void effectiveMovementJudgement();    //ブロック有効移動判定
 
 protected:
     int block_num;   //ブロックナンバー

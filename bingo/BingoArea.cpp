@@ -253,7 +253,7 @@ bool BingoArea::objSuccsesPass(object object_type, int object_num)   //有効移
         case BLOCK:
             return (block_management_array[object_num])->getSuccsesPass();
         case STORAGE:
-            return ((CircleStorage *)object_management_array[INTERSECTION_CIRCLE_COUNT + object_num])->getSuccsesPass();
+            return ((CircleStorage *)object_management_array[INTERSECTION_CIRCLE_COUNT + object_num - 1])->getSuccsesPass();
     }
 }
 
@@ -401,10 +401,11 @@ void BingoArea::updateTransportStatus(object obj, int obj_num)
     switch (obj)
     {
     case BLOCK:
-        block_management_array[obj_num]->effectiveMovementJudgment();
+        block_management_array[obj_num]->effectiveMovementJudgement();
         break;
     case STORAGE:
-        ((CircleStorage*)object_management_array[INTERSECTION_CIRCLE_COUNT + obj_num])->effectPowerBlockMove();
+        ((CircleStorage*)object_management_array[INTERSECTION_CIRCLE_COUNT + obj_num - 1])->effectiveMovementJudgement();
+		printf("obj_num = %d\n", obj_num);
         break;
     }
 }
