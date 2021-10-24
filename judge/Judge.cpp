@@ -1,4 +1,5 @@
 #include "Judge.h"
+#include "app.h"
 
 
 
@@ -17,9 +18,6 @@ Judge::Judge(){
     mLength = gLength;
     mTurnAngle = gTurnAngle;
     mTailAngle = gTailAngle;
-
-
-
 }
 
 bool Judge::run(){
@@ -27,8 +25,6 @@ bool Judge::run(){
 }
 
 void Judge::init(){
-
-    
 }
 
 

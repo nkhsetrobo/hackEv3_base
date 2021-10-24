@@ -23,13 +23,15 @@ Section::~Section()
 
 bool Section::run()
 {
-    if(first2){
-      //  msg_log("3");
+    if(first2)
+	{
+      	//  msg_log("3");
         mJudge->init();
-        if(aJudge != nullptr)
+		printf("iuiuiuiuiuiui\n");
+        /*if(aJudge != nullptr)
         {
             aJudge->init();
-        }
+        }*/
         first2 = false;
     }
     //判定
@@ -38,11 +40,11 @@ bool Section::run()
         return true;
     }
     //異常判定
-    if(aJudge != nullptr && aJudge->run())
+    /*if(aJudge != nullptr && aJudge->run())
     {
         abnormal_flag = 1;
         return true;
-    }
+    }*/
 
     //走法
     if(first){

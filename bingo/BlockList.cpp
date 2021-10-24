@@ -2559,7 +2559,7 @@ void BlockList::initList()
         {//右に90度
             {Section::VIRTUAL,0,0,{0,0},13.0,0,0,-12,Section::TURNANGLE,-75,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},BLUE,0.5},
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},YELLOW,0.5},
             {Section::TRACER,-1,0,{0,0},0,0,0,0,Section::COLOR,0,{0,0},BLUE,0}
         }
     };
