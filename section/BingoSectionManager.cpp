@@ -157,7 +157,6 @@ bool BingoSectionManager::exe_run()
     // msg_log("0");
     //if(mSectionIdx==1)
     // msg_log("1");
-	printf("aiueoaiueoaieu\n");
     if(mSection[mSectionIdx]->run())
     {
 		printf("aaaaaaaaaaaaaaaaaaaa\n");
