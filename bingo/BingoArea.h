@@ -41,6 +41,7 @@ public:
     direction convertDirection(direction run_direction, direction relative_direction);    //相対座標系における方向を絶対座標系に変換する
 	void initBingo();
     void updateTransportStatus(object obj, int obj_num);
+	color c_getColor(gameCoordinates coordinates);
 
 private:
     RunningBody* run_body;

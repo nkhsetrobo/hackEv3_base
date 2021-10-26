@@ -27,10 +27,6 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
             return pass_list[i].cost;    //取得したコストをリターンする
         }
     }
-    printf("中通っていない。");
-    printf("中通っていない。");
-    printf("中通っていない。");
-    printf("中通っていない。\n");
 	//return -1;
 }
 
@@ -2567,9 +2563,9 @@ void BlockList::initList()
     {
         {1.0,2.0},{2.0,2.0},5.0,EAST,
         {//右に90度
-            {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
+            {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE, 0},
             /*linetrace色判定*/
-            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,0,{2,2},YELLOW,0.5},
+            {Section::TRACER,0,0,{0,0},14.0,0,0,0,Section::COLOR,22,{2,2},BLUE,0.5},
             {Section::TRACER,-1,0,{0,0},0,0,0,0,Section::COLOR,0,{0,0},BLUE,0}
         }
     };
@@ -4242,8 +4238,9 @@ void BlockList::initList()
     {
         {2.0,2.0},{1.5,0.5},2.0,NORTH,
         {
-            {Section::VIRTUAL,0,0,{0,0},15,0,0,-3,Section::TURNANGLE,-145,{0,0},BLUE,0},
+			{Section::VIRTUAL,0,10,{0,0},15,0,0,5,Section::TURNANGLE,70,{0,0},BLUE,0},
             /*linetrace色判定*/
+            {Section::WALKER,15,0,{0,0},0,0,0,0,Section::LENGTH,4,{0,0},BLUE,0},
             {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
             //キャッチ
             {Section::WALKER,15,0,{0,0},0,0,0,0,Section::LENGTH,4,{0,0},BLUE,0},

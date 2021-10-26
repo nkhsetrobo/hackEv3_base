@@ -27,7 +27,6 @@ bool ColorJudge::run()
     //if (fabs(hue - num) >= sa2 && fabs(hue - num)<= sa1)
     if (num <= sa)
     {
-        printf("%d\n", (int)num);
         if ((mHsvSatu->getValue()) >= satu)
         {
             return true;

@@ -359,6 +359,7 @@ direction BingoArea::convertDirection(direction run_direction, direction relativ
                     new_direction = EAST;
                     break;
                 case EAST:
+					printf("eeeeeeeeeeeeeeeeeeeeee\n");
                     new_direction = SOUTH;
                     break;
                 case SOUTH:
@@ -408,4 +409,21 @@ void BingoArea::updateTransportStatus(object obj, int obj_num)
 		printf("obj_num = %d\n", obj_num);
         break;
     }
+}
+
+color BingoArea::c_getColor(gameCoordinates coordinates)
+{
+	runInfo run_info = runningInformation();
+	printf("BingoArea:: coordinates.x = %lf, coordinates.y = %lf, dir = %d\n", coordinates.x, coordinates.y, run_info.rb_dir);
+	coordinates = absoluteCoordinates(coordinates, run_info.rb_dir);
+	for (int i = 0; i < INTERSECTION_CIRCLE_COUNT; i++)
+	{
+		printf("BingoArea:: i = %d\n", i);
+		gameCoordinates t_coordinates = ((IntersectionCircle *)object_management_array[i])->getCoordinates();
+		printf("BingoArea:: t_coordinates.x = %lf, y = %lf\n", t_coordinates.x, t_coordinates.y);
+		if (coordinates.x == t_coordinates.x && coordinates.y == t_coordinates.y)
+		{
+			return ((IntersectionCircle *)object_management_array[i])->getColor();
+		}
+	}
 }

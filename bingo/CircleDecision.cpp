@@ -75,6 +75,7 @@ int CircleDecision::routeDecision()    //ルート決定する
 	        }
         }
 	}
+	printf("goal.x = %lf, goal.y = %lf\n", goal_coordinates.x, goal_coordinates.y);
     bingo_area->updateTransportStatus(STORAGE, circle_num[num]);
 	//printf("goal_coordinates x = %lf, y = %lf\n", goal_coordinates.x, goal_coordinates.y);
 	return num;

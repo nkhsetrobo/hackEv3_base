@@ -18,9 +18,6 @@ class TurnAngleJudge : public Judge{
     float mStartAngle;
     float mFinishAngle;
     Judge::JUDGE_MODE update;
-
-
-
 };
 
 

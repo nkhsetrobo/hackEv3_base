@@ -25,18 +25,14 @@ void RouteDecision::passParam(mParam *&pnt)  //移動パラメータを問い合
 	//printf("p_list->e_cood.x = %lf, y = %lf\n", p_list->e_cood.x, p_list->e_cood.y);
 	pnt = p_list->param;
 	int i;
-	for (i = 0; pnt[i + 1].front != -1; i++) {}
-	bingo_area->updateRunInfo(pnt[i].p_coordinates, p_list->dir, old_direction);
-	/*----------debug----------*/
-	run_info = bingo_area->runningInformation();
-	//printf("update x = %lf, y = %lf\n", run_info.rb_coordinates.x, run_info.rb_coordinates.y);
-	/*------------------------*/
-    //bingo_area->updateRunInfo(p_list->e_cood, p_list->dir, old_direction);    //走行体情報を更新する
-	/*+++++++++debug+++++++++++++
-	run_info = bingo_area->runningInformation();
-	printf("runinfo.rb_coordinates.y = %lf\n", run_info.rb_coordinates.y);
-	+++++++++++++++++++++++++++*/
-	//pnt = p_list->param;
+	for (i = 0; pnt[i].front != -1; i++)
+	{
+		if (pnt[i].mjudge == Section::COLOR)
+		{
+			 pnt[i].mcolor = bingo_area->c_getColor(pnt[i].p_coordinates);
+		}
+	}
+	bingo_area->updateRunInfo(pnt[i - 1].p_coordinates, p_list->dir, old_direction);
 }
 
 int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標の色を問い合わせる
