@@ -84,4 +84,5 @@ int CircleDecision::routeDecision()    //ルート決定する
 void CircleDecision::finishRun()
 {
 	bingo_manager->rdStateChange(BingoSectionManager::block_decision);
+	printf("CircleDecision::通ったよ！\n");
 }

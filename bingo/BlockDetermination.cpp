@@ -51,4 +51,5 @@ int BlockDetermination::routeDecision()    //ルートを決定する
 void BlockDetermination::finishRun()
 {
 	bingo_manager->rdStateChange(BingoSectionManager::circle_decision);
+	printf("BlockDetermination::通ったよ！\n");
 }

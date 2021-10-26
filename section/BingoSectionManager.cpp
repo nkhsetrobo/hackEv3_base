@@ -102,6 +102,7 @@ bool BingoSectionManager::run()
             if (ex == true)
             {
 				rdState->finishRun();
+				//rdStateChange(rdState);
                 mStateChange(INIT);
             }
             ex = false;
@@ -134,6 +135,7 @@ bool BingoSectionManager::exe_run()
 
 void BingoSectionManager::rdStateChange(RouteDecision *rd_state)    //状態遷移
 {
+	printf("BingoSectionManager:: change!!\n");
     rdState = rd_state;
 }
 
@@ -201,6 +203,9 @@ void BingoSectionManager::chengeToSenpai()
                 wp[i].bright1 = -0.5;
                 wp[i].bright2 = 0;
                 break;
+			case Section::STOP:
+				printf("STOP!!\n");
+				wp[i].count = p[i].atai;
             case Section::COLOR:
 				printf("COLOR!!\n");
                 switch(p[i].mcolor)
