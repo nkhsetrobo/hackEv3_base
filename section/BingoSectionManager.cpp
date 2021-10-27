@@ -206,6 +206,7 @@ void BingoSectionManager::chengeToSenpai()
 			case Section::STOP:
 				printf("STOP!!\n");
 				wp[i].count = p[i].atai;
+				break;
             case Section::COLOR:
 				printf("COLOR!!\n");
                 switch(p[i].mcolor)

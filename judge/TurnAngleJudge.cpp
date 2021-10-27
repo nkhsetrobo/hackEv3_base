@@ -11,8 +11,6 @@ TurnAngleJudge::TurnAngleJudge()
 
 void TurnAngleJudge::setFinishAngle(float finangle)
 {
-	printf("TurnAngleJudge::setFinishAngle!!\n");
-	printf("finangle = %f\n", finangle);
     mFinishAngle = finangle;
 }
 
@@ -23,7 +21,6 @@ bool TurnAngleJudge::run()
     sprintf(buf," %f", mTurnAngle->getValue());
     msg_log(buf);
 	*/
-	printf("mFinishAngle = %f\n", mFinishAngle);
     if (mFinishAngle >= mStartAngle)
     {
         if (mTurnAngle->getValue() >= mFinishAngle)

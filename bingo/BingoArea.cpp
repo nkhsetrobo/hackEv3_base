@@ -359,7 +359,6 @@ direction BingoArea::convertDirection(direction run_direction, direction relativ
                     new_direction = EAST;
                     break;
                 case EAST:
-					printf("eeeeeeeeeeeeeeeeeeeeee\n");
                     new_direction = SOUTH;
                     break;
                 case SOUTH:

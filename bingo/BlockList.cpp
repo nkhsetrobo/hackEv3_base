@@ -4240,22 +4240,22 @@ void BlockList::initList()
         {
 			{Section::VIRTUAL,0,10,{0,0},15,0,0,5,Section::TURNANGLE,70,{0,0},BLUE,0},
             /*linetrace色判定*/
-            {Section::WALKER,15,0,{0,0},0,0,0,0,Section::LENGTH,4,{0,0},BLUE,0},
+            {Section::WALKER,15,0,{0,0},0,0,0,0,Section::LENGTH,3,{0,0},BLUE,0},
             {Section::TRACER,0,0,{0,0},10.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
-            //キャッg
+            //キャッチ
             {Section::WALKER,15,0,{0,0},0,0,0,0,Section::LENGTH,4,{0,0},BLUE,0},
-            //右斜め前に置く
-            {Section::VIRTUAL,0,0,{0,0},18,0,0,-21,Section::LENGTH,18,{0,0},BLUE,0},
+            //左斜め前に置く
+            {Section::VIRTUAL,0,0,{0,0},18,0,0,21,Section::LENGTH,18,{0,0},BLUE,0},
             //ストップ
-            {Section::WALKER,0,0,{0,0},0,0,0,0,Section::LENGTH,1,{0,0},BLUE,0},
+            {Section::WALKER,0,0,{0,0},0,0,0,0,Section::STOP,400,{0,0},BLUE,0},
             //まっすぐ下がる
             {Section::WALKER,-20,0,{0,0},0,0,0,0,Section::LENGTH,-3,{0,0},BLUE,0},
             //元の場所に戻る
-            {Section::VIRTUAL,0,0,{0,0},-20,0,0,-15,Section::TURNANGLE,53,{0,0},BLUE,0},
+            {Section::VIRTUAL,0,0,{0,0},-20,0,0,15,Section::TURNANGLE,-53,{0,0},BLUE,0},
             //まっすぐ下がる
             {Section::WALKER,-21,0,{0,0},0,0,0,0,Section::LENGTH,-12,{0,0},BLUE,0},
             //ストップ
-            {Section::VIRTUAL,0,0,{0,0},0,0,0,0,Section::STOP,10,{0,0},BLUE,0},
+            {Section::WALKER,0,0,{0,0},0,0,0,0,Section::STOP,10,{0,0},BLUE,0},
             /*linetrace色判定*/
             {Section::TRACER,0,0,{0,0},9.0,0,0,0,Section::COLOR,0,{2,1},BLUE,0.5},
             {Section::TRACER,-1,0,{0,0},0,0,0,0,Section::COLOR,0,{0,0},BLUE,0}
