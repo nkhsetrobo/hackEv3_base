@@ -405,7 +405,7 @@ void BingoArea::updateTransportStatus(object obj, int obj_num)
         break;
     case STORAGE:
         ((CircleStorage*)object_management_array[INTERSECTION_CIRCLE_COUNT + obj_num - 1])->effectiveMovementJudgement();
-		printf("obj_num = %d\n", obj_num);
+		printf("BingoArea::obj_num = %d\n", obj_num);
         break;
     }
 }

@@ -10,24 +10,15 @@ BlockList::BlockList()    //コンストラクタ
 double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)    //コストを取得する
 {
 	/*printf("+---------引数-----------------------------------------------------------------+\n");
-	printf("rb_coordinates.x = %lf, rb_coordinates.y = %lf, goal_coordinates.x = %lf, goal_coordinates.y = %lf\n", rb_coordinates.x, rb_coordinates.y, goal_coordinates.x, goal_coordinates.y);
-	printf("+------------------------------------------------------------------------------+\n");*/
+	printf("rb_coordinates.x = %lf, rb_coordinates.y = %lf, goal_coordinates.x = %lf, goal_coordinates.y = %lf\n", rb_coordinates.x, rb_coordinates.y, goal_coordinates.x, goal_coordinates.y);*/
     for (int i = 0; i < 320; i++)    //コストを持った配列を線型探索
     {
-		//*printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
-		//printf("rb.x = %lf, rb.y = %lf\n", rb_coordinates.x, rb_coordinates.y);
-		//printf("pass_list[i].s_cood.x = %lf, pass_list[i].s_cood.y = %lf\n", pass_list[i].s_cood.x, pass_list[i].s_cood.y);
-		//printf("goal_coordinates.x = %lf, goal_coordinates.y = %lf\n", goal_coordinates.x, goal_coordinates.y);
-		//printf("pass_list[i].e_cood.x = %lf, pass_list[i].e_cood.y = %lf\n", pass_list[i].e_cood.x, pass_list[i].e_cood.y);
-		//printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
-		//printf("rb.x = %lf, rb.y = %lf\n" rb_coordinates.x, rb_coordinates.y);*/
-
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
             return pass_list[i].cost;    //取得したコストをリターンする
         }
     }
-	//return -1;
+	return 999;
 }
 
 void BlockList::getParam(passList *&ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
@@ -4314,9 +4305,10 @@ void BlockList::initList()
 
     pass_list[205] =
     {
-        {2.0,2.0},{2.0,3.0},3.0,EAST,
+        {2.0,2.0},{2.0,3.0},3.0,SOUTH,
         {//サークル突破
-            {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
+            {Section::VIRTUAL,0,0,{0,0},15,0,0,-10,Section::TURNANGLE,-70,{0,0},BLUE,0},
+            //{Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
             {Section::TRACER,0,0,{0,0},20.0,0,0,0,Section::COLOR,0,{2,3},BLUE,0.5},
             {Section::TRACER,-1,0,{0,0},0,0,0,0,Section::COLOR,0,{0,0},BLUE,0}

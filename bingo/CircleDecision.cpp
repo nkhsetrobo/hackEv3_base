@@ -10,6 +10,9 @@ CircleDecision::CircleDecision()    //コンストラクタ
 int CircleDecision::routeDecision()    //ルート決定する
 {
 	run_info = bingo_area->runningInformation();    //走行体情報を問い合わせる
+	printf("+-----変換前-------+\n");
+	printf("CircleDecision:: rb.x = %lf, rb.y = %lf\n", run_info.rb_coordinates.x, run_info.rb_coordinates.y);
+	printf("+------------------+\n");
     gameCoordinates re_cood = bingo_area->relativeCoordinates(run_info.rb_coordinates,run_info.rb_dir);    //相対座標に変換
 	/*printf("+--------------変換前-----------+\n");
 	printf("circle x = %lf, y = %lf\n", run_info.rb_coordinates.x, run_info.rb_coordinates.y);
@@ -75,6 +78,7 @@ int CircleDecision::routeDecision()    //ルート決定する
 	        }
         }
 	}
+	printf("CircleDecision:: min_cost = %lf\n", min_cost);
 	printf("goal.x = %lf, goal.y = %lf\n", goal_coordinates.x, goal_coordinates.y);
     bingo_area->updateTransportStatus(STORAGE, circle_num[num]);
 	//printf("goal_coordinates x = %lf, y = %lf\n", goal_coordinates.x, goal_coordinates.y);

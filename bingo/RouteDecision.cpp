@@ -43,7 +43,7 @@ int RouteDecision::passColor(gameCoordinates pass_coordinates)    //通過座標
 
 bool RouteDecision::minCompare(double now_min_cost, double cost)    //最小コスト比較
 {
-	//printf("now_min_cost = %lf, cost = %lf\n", now_min_cost, cost);
+	printf("RouteDecision:: now_min_cost = %lf, cost = %lf\n", now_min_cost, cost);
     if (now_min_cost > cost)
     {
         return true;
