@@ -44,6 +44,10 @@ typedef struct _mParam
     gameCoordinates p_coordinates;    //通過座標
     color mcolor;    //色
     float sat;    //彩度
+	float kp;	//pの値
+	float ki;	//iの値
+	float kd;	//dの値
+	bool edge;    //エッジ
 } mParam;
 
 typedef struct _Param2    //パラメータの構造体

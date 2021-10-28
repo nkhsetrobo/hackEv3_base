@@ -21,31 +21,31 @@ void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定�
 
     switch (wp[n].walk)
     {
-    case Section::VIRTUAL2:
-    // syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
-    ((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
-     ((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
-    ((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);
+    	case Section::VIRTUAL2:
+    		// syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
+    		((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
+     		((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
+ 		   	((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);
 
-    break;
-    case Section::WALKER:
+    		break;
+   		 case Section::WALKER:
 
-    ((SimpleWalker *)walk)->setCommand(wp[n].forward, wp[n].turn);
+    		((SimpleWalker *)walk)->setCommand(wp[n].forward, wp[n].turn);
 
-    break;
-  case Section::VIRTUAL:
-	//syslog(LOG_NOTICE,"VIRTUAL:%d",(int)wp[n].round);
-    ((VirtualLineTracer *)walk)->setRound(wp[n].round);
-    ((VirtualLineTracer *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(20,2, 0.2, 0,1,1)
+  			break;
+ 		case Section::VIRTUAL:
+			//syslog(LOG_NOTICE,"VIRTUAL:%d",(int)wp[n].round);
+    		((VirtualLineTracer *)walk)->setRound(wp[n].round);
+		    ((VirtualLineTracer *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(20,2, 0.2, 0,1,1)
 
-    break;
-  case Section::TRACER:
+		    break;
+  		case Section::TRACER:
 
-    ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd); //(30, 0 ,  30, 0.2, 0.1 )
-    ((LineTracer *)walk)->setEdgeMode(wp[n]._EDGE);
+    		((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd); //(30, 0 ,  30, 0.2, 0.1 )
+		    ((LineTracer *)walk)->setEdgeMode(wp[n]._EDGE);
 
-    break;
-  }
+    		break;
+  	}
 }
 
 void BingoSectionManager::setJudge(Section *sc)    //パラメータを設定する
@@ -171,23 +171,21 @@ void BingoSectionManager::chengeToSenpai()
     int i;
     for(i = 0; p[i].front != -1; i++)
     {
-        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, 30, 0.1, 0, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
- 
+        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, p[i].kp, p[i].ki, p[i].kd, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, p[i]._EDGE, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
+		/*-----------------デバッグ-----------------*/
         switch(p[i].mwalker)
         {
             case Section::WALKER:
 			    printf("WALKER!!\n");
-                wp[i].kd = 0.5;
                 break;
             case Section::TRACER:
 			    printf("TRACER!!\n");
-                wp[i].kd = 0.8;
                 break;
             case Section::VIRTUAL:
 			    printf("VIRTUAL!!\n");
-                wp[i].kd = 0.3;
                 break;
         }
+		/*------------------------------------------*/
         switch(p[i].mjudge)
         {
             case Section::LENGTH:
@@ -230,6 +228,7 @@ void BingoSectionManager::chengeToSenpai()
                 }
                 break;
 		}
+		/*pidの値を具体的に設定するか判定*/
 	}
    	wp[i] = {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0};
 }

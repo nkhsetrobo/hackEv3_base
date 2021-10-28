@@ -5610,7 +5610,7 @@ void BlockList::initList()
 
     pass_list[263] =
     {
-        {3.0,1.0},{1.5,2.5},12.5,NORTH,
+        {3.0,1.0},{1.5,2.5},15.5,NORTH,
         {//サークル突破
             {Section::WALKER,30,0,{0,0},0,0,0,0,Section::LENGTH,17,{0,0},BLUE,0},
             /*linetrace色判定*/
