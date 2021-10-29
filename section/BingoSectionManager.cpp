@@ -10,8 +10,7 @@ BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
     bingo_area = new BingoArea();
-    //wp = (wParam3 *)malloc(sizeof(wParam3) * 100);    //領域確保
-    
+    //wp = (wParam3 *)malloc(sizeof(wParam3) * 100);    //領域確保    
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
@@ -135,7 +134,6 @@ bool BingoSectionManager::exe_run()
 
 void BingoSectionManager::rdStateChange(RouteDecision *rd_state)    //状態遷移
 {
-	printf("BingoSectionManager:: change!!\n");
     rdState = rd_state;
 }
 
@@ -161,6 +159,8 @@ void BingoSectionManager::running()    //実行する
         sc = new Section();
         setWalker(sc);
         setJudge(sc);
+
+		sc->changeAcc(15);	//加速度変更
 
         addSection(sc);
     }

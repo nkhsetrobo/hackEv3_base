@@ -46,7 +46,7 @@ void SpeedControl::setTargetSpeed(double speed)
     mPid->setKi(0);
         //mPid->setKd(0.03*bai);
     mPid->setKd(0.1*bai);
-    mPid->setLimit(3*bai+1);    
+    mPid->setLimit(30*bai+1);    
     //mPid->setLimit(1);    
 
 }
@@ -115,4 +115,14 @@ double SpeedControl::getCurrentFwd()
 double SpeedControl::getCurrentSpeed()
 {
     return mCurrentSpeed;
+}
+
+void SpeedControl::changeAcc(float a)
+{
+	float limit = mPid->getLimit();
+	limit -= 1;
+	limit /= 30;
+	limit *=a;
+	limit += 1;
+	mPid->setLimit(limit);
 }

@@ -29,6 +29,7 @@ class Section {
         Judge *selectJudge(int no);
         Judge *createAbnormalJudge();
         int getAbnormalFlag();
+		void changeAcc(float a);    //加速度を変更する
 
         enum WALKER_NO {
             WNONE,

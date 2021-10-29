@@ -138,3 +138,7 @@ void PID::setDeltaT(float delta)
 {
     DELTAT = delta;
 }
+
+float PID::getLimit() {
+	return Limit;
+}

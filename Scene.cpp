@@ -96,7 +96,6 @@ void Scene::initBingo()
 {
     mBsm->initBingo();
     mState = BINGO;
-	//加速度を切り替える	
 }
 
 void Scene::finish()

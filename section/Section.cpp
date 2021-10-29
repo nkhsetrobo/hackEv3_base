@@ -112,8 +112,6 @@ Judge *Section::createAbnormalJudge()
     return aJudge;
 }
 
-
-
 void Section::init(){
 
     mWalker->init();
@@ -121,4 +119,10 @@ void Section::init(){
 
 int Section::getAbnormalFlag(){
     return abnormal_flag;
+}
+
+void Section::changeAcc(float a)
+{
+	//加速度を変更する
+	gSpeed->changeAcc(a);
 }
