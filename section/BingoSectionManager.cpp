@@ -171,7 +171,7 @@ void BingoSectionManager::chengeToSenpai()
     int i;
     for(i = 0; p[i].front != -1; i++)
     {
-        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, p[i].kp, p[i].ki, p[i].kd, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, p[i]._EDGE, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
+        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, p[i].kp, p[i].ki, p[i].kd, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, p[i].edge, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
 		/*-----------------デバッグ-----------------*/
         switch(p[i].mwalker)
         {
