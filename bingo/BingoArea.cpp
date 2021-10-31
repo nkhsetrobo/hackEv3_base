@@ -265,7 +265,7 @@ gameCoordinates BingoArea::relativeCoordinates(gameCoordinates coordinates, dire
     {
         case NORTH:     //走行体向きが北の場合
             x = 3 - coordinates.y;
-            y = x;
+            y = coordinates.x;
             break;
         case SOUTH:     //走行体向きが南の場合
 			x = y;

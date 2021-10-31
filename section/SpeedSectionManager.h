@@ -1956,6 +1956,7 @@ wParam wp3[100] =
    wParam bingo_test[100] = 
 	   			  {
 					 {0, Section::TRACER, Section::COLOR, 7, 0, 30, 0.1, 0.9, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 350, 0.5, 0},
+                   	 {0, Section::VIRTUAL2, Section::STOP, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 0, 0, 30},
 		             {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},
 				  };
   void setWalker(Section *sc);

@@ -67,6 +67,7 @@ int CircleDecision::routeDecision()    //ルート決定する
         if (!bingo_area->objSuccsesPass(STORAGE, circle_num[i]))/*有効移動が成立しているか*/
         {
 	        goal = bingo_area->objCoordinates(STORAGE, circle_num[i]);    //ブロック座標を問い合わせる
+			printf("CircleDecision:: goal.x = %lf, y = %lf\n", goal.x, goal.y);
 			//printf("objCoordinates: x = %lf, y = %lf\n", goal.x, goal.y);
 			goal = bingo_area->relativeCoordinates(goal, run_info.rb_dir);
 	        double cost = block_list->getCost(re_cood, goal);    //コストを取得する
