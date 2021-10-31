@@ -16,7 +16,8 @@ SpeedControl::SpeedControl(Odometry *odo,Velocity *v):
 void SpeedControl::setTargetSpeed(double speed)
 {
     static double prev_speed=0;
-    double bai =1.0;
+    //double bai =1.0;
+	bai = 1.0;
     //float bai =0.3;
     //float bai =speed/60.0;
 
@@ -119,10 +120,8 @@ double SpeedControl::getCurrentSpeed()
 
 void SpeedControl::changeAcc(float a)
 {
-	float limit = mPid->getLimit();
-	limit -= 1;
-	limit /= 30;
-	limit *=a;
-	limit += 1;
-	mPid->setLimit(limit);
+	printf("+-------------------------------------+\n");
+	printf("SpeedControl:: bai = %f\n", bai);
+	printf("+-------------------------------------+\n");
+	mPid->setLimit(a*bai + 1);
 }

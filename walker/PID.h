@@ -21,7 +21,6 @@ class PID {
         float getTarget();
 
         void setDeltaT(float delta);
-		float getLimit();
 
         bool debug = false;
         char debug_char=' ';
