@@ -204,15 +204,8 @@ wParam abbb[100] =
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 999, 0, 0, 0, 0, 0},
                   //ストップ
                   //{0, Section::VIRTUAL2, Section::STOP, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0, 10},
-                  
 
-                  //左に90°曲がる
-                   {0, Section::VIRTUAL, Section::TURNANGLE, 5, 0, 0.5, 3, 0.7, 1, 1 /*setparam*/, 0, 7.5, 0, 0, false, Judge::UPDATE, 90, 0, 0, 0, 0, 0, 0},
-                   //ライン復帰をしたい
-                   {0, Section::TRACER, Section::LENGTH, 10, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 10, 0, 0, 156, 0.3, 0},
-                   {0, Section::TRACER, Section::COLOR, 20, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 156, 0.3, 0},
-
-                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 999, 0, 0, 0, 0, 0},
+                  //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 999, 0, 0, 0, 0, 0},
                   {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0}};
                    
 wParam abb[100] = 
@@ -465,9 +458,9 @@ wParam bb[100] =
 //左に90°曲がる(色検知)
    wParam lb1[100] =
                    //黄色判定
-                   {{0, Section::TRACER, Section::COLOR, 25, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 60, 0.5, 0},
+                   {{0, Section::TRACER, Section::COLOR, 20, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 60, 0.5, 0},
                    //左に90°曲がる
-                   {0, Section::VIRTUAL, Section::TURNANGLE, 5, 0, 0.5, 3, 0.7, 1, 1 /*setparam*/, 0, 7.5, 0, 0, false, Judge::UPDATE, 90, 0, 0, 0, 0, 0, 0},
+                   {0, Section::VIRTUAL, Section::TURNANGLE, 5, 0, 20, 3, 0.7, 1, 1 /*setparam*/, 0, 7.5, 0, 0, false, Judge::UPDATE, 90, 0, 0, 0, 0, 0, 0},
                    //ライン復帰をしたい
                    {0, Section::TRACER, Section::LENGTH, 10, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 10, 0, 0, 156, 0.3, 0},
                    {0, Section::TRACER, Section::COLOR, 20, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 156, 0.3, 0},
