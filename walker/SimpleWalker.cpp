@@ -30,6 +30,20 @@ SimpleWalker::SimpleWalker(
 {
 }
 
+void SimpleWalker::init() {
+
+    static char buf[256];
+    sprintf(buf,"SimpleWalker init %f,%d",mForward,mTurn);
+    msg_log(buf);
+
+    if(mMode_flag)
+        setCommandV(mForward,mTurn);
+    else
+        setCommand(mForward,mTurn);
+
+}
+
+
 
 void SimpleWalker::run() {
     static float speed=0;
@@ -78,11 +92,14 @@ void SimpleWalker::setCommand(int forward, int turn) {
     mTurn    = turn;
     //mMode_flag = false;
     mSpeedControl->setMode(false);
-
+    mOdo->setBrake(true);
+    mMode_flag=false;
 }
 
 void SimpleWalker::setCommandV(float forward, int turn)
 {
+
+    mForward = forward;
 
     mSpeedControl->setTargetSpeed(forward);
     mSpeedControl->setBreak(false);
@@ -93,6 +110,9 @@ void SimpleWalker::setCommandV(float forward, int turn)
     }
     mTurn    = turn;
     mSpeedControl->setMode(true);
+    mOdo->setBrake(false);
+    mMode_flag=true;
+
 }
 
 void SimpleWalker::resetParam()

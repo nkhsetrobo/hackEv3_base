@@ -16,34 +16,51 @@
 #include "SimpleWalker.h"
 #include "SpeedControl.h"
 #include "LineTracer.h"
+#include "MyGyroSensor.h"
+#include "MySonarSensor.h"
+#include "TailAngle.h"
+
 
 #include "Scene.h"
 
 using namespace ev3api;
 
-Motor       *gLeftWheel = new Motor(PORT_C,false,LARGE_MOTOR);
-Motor       *gRightWheel = new Motor(PORT_B,false,LARGE_MOTOR);
-Motor       *gArm = new Motor(PORT_A,true,LARGE_MOTOR);
+Motor       *gLeftWheel;
+Motor       *gRightWheel;
+Motor       *gArm;
+Motor       *gTail;
 
 Polling *gPolling;
 MyColorSensor *gColor;
 Brightness *gBrightness;
 HsvHue *gHue;
 HsvSatu *gSatu;
+XPosition *gXPosition;
+YPosition *gYPosition;
+MyGyroSensor *gGyro;
+MySonarSensor *gSonar;
 
 Odometry *gOdo;
 Length *gLength;
 TurnAngle *gTurnAngle;
 Velocity *gVelocity;
+TailAngle *gTailAngle;
 
 SpeedControl *gSpeed;
 SimpleWalker *gWalker;
 LineTracer *gTracer;
 
 Scene *gScene;
+float gStart;
+float gStartAngle;
+
 
 
 static void user_system_create() {
+  gLeftWheel = new Motor(PORT_C,false,LARGE_MOTOR);
+  gRightWheel = new Motor(PORT_B,false,LARGE_MOTOR);
+  gArm = new Motor(PORT_A,true,LARGE_MOTOR);
+  gTail = new Motor(PORT_D,true,MEDIUM_MOTOR);
 
   gBrightness = new Brightness();
   gHue = new HsvHue();
@@ -53,15 +70,26 @@ static void user_system_create() {
   gLength = new Length();
   gTurnAngle = new TurnAngle();
   gVelocity = new Velocity();
+  gXPosition = new XPosition();
+  gYPosition = new YPosition();
+  gGyro = new MyGyroSensor(PORT_4);
+  gSonar = new MySonarSensor(PORT_3);
+  gTailAngle = new TailAngle();
 
-  gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity);
-  gSpeed = new SpeedControl(gOdo,gVelocity);  
-  gWalker = new SimpleWalker(gOdo,gSpeed); 
+  gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity,gXPosition,gYPosition,gTail,gTailAngle);
+
+  gSpeed = new SpeedControl(gOdo,gVelocity);
+  gWalker = new SimpleWalker(gOdo,gSpeed);
   gTracer = new LineTracer(gOdo,gSpeed);
 
-  gPolling = new Polling(gColor,gOdo);
+
+
+
+  gPolling = new Polling(gColor,gOdo,gGyro,gSonar);
 
   gScene = new Scene();
+
+
 
 }
 static void user_system_destroy() {
@@ -97,7 +125,7 @@ void polling_task(intptr_t unused) {
   gPolling->run();
 
     Measure *m = gBrightness;
-    float br = m->getValue(); 
+    float br = m->getValue();
     float len = gLength->getValue();
     float turn = gTurnAngle->getValue();
     float v = gVelocity->getValue();
@@ -106,8 +134,8 @@ void polling_task(intptr_t unused) {
 
     rgb_raw_t rgb = gColor->getRgb();
     static char buf[100];
-    sprintf(buf,"len , bri,H,S r,g,b, turn, v : %3.3f,  %7.4f,  %5.1f, %3.2f, %d,%d,%d  , %4.2f, %4.2f ",len,br,h,s,  rgb.r, rgb.g,rgb.b ,turn,v);
-    msg_log(buf);
+    //sprintf(buf,"len , bri,H,S r,g,b, turn, v : %3.3f,  %7.4f,  %5.1f, %3.2f, %d,%d,%d  , %4.2f, %4.2f ",len,br,h,s,  rgb.r, rgb.g,rgb.b ,turn,v);
+    //msg_log(buf);
 
   ext_tsk();
 }
@@ -120,12 +148,18 @@ void tracer_task(intptr_t unused) {
 
     // とりあえずここで、アームの固定。設計に基づいて変えるべし
     int arm_cnt = gArm->getCount();
+    //printf("%d\n",arm_cnt);
    // syslog(LOG_NOTICE,"%d",arm_cnt);
     int diff = -50 - arm_cnt;
 #if defined(MAKE_SIM)
-    gArm->setPWM(diff*4.0);
+    if(arm_cnt>-50){
+     // gArm->setPWM(diff*4.0);
+    }
+    else{
+      gArm->setPWM(0);
+      gArm->setBrake(true);
+    }
 #endif
-
     gScene->run();
   }
 

@@ -23,7 +23,39 @@ APPL_CXXOBJS += \
 	Scene.o \
 	Section.o \
 	SectionManager.o \
-	SpeedSectionManager.o
+	SpeedSectionManager.o\
+	Judge.o\
+	TurnAngleJudge.o\
+	ColorJudge.o\
+	LengthJudge.o\
+	BrightnessJudge.o\
+	XPosition.o\
+	YPosition.o\
+	MyGyroSensor.o\
+	MySonarSensor.o\
+	VirtualLineTracer.o\
+	VirtualLineTracer2.o\
+	TailWalker.o\
+	TailAngle.o\
+	TailAngleJudge.o\
+	Stop.o\
+	BingoSectionManager.o\
+	BingoArea.o\
+	BlackBlock.o\
+	Block.o\
+	BlockDetermination.o\
+	BlockList.o\
+	BlockStorage.o\
+	CenterStorage.o\
+	CircleDecision.o\
+    CircleStorage.o\
+	ColorBlock.o\
+	PassingCircle.o\
+	RouteDecision.o\
+	IntersectionCircle.o\
+	RunningBody.o\
+	TravelableArea.o\
+
 
 SRCLANG := c++
 
@@ -34,14 +66,16 @@ include $(EV3RT_SDK_LIB_DIR)/libcpp-ev3/Makefile
 
 endif
 
-APPL_DIRS += $(mkfile_path)app $(mkfile_path)unit  $(mkfile_path)device $(mkfile_path)walker $(mkfile_path)section $(mkfile_path)judge
+APPL_DIRS += $(mkfile_path)app $(mkfile_path)unit  $(mkfile_path)device $(mkfile_path)walker $(mkfile_path)section $(mkfile_path)judge $(mkfile_path)bingo
 
 INCLUDES += \
 	-I$(mkfile_path)app \
 	-I$(mkfile_path)device \
 	-I$(mkfile_path)walker \
 	-I$(mkfile_path)section \
-	-I$(mkfile_path)judge 
+	-I$(mkfile_path)judge \
+	-I$(mkfile_path)bingo \
+	-I$(ETROBO_HRP3_WORKSPACE)/etroboc_common
 
 # COPTS += -fno-use-cxa-atexit
-COPTS += -std=c++11
+COPTS += -std=c++11 -O1

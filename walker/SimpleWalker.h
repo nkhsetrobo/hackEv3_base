@@ -23,7 +23,8 @@ public:
                 );
 
     virtual void run();
-    void setCommand(int forward, int turn);
+    virtual void init();
+    void setCommand(int forward, int turn);    //パラメータを設定する
     void setCommandV(float forward, int turn);
     void resetParam();
 
