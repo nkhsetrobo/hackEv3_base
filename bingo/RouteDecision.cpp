@@ -32,7 +32,7 @@ void RouteDecision::passParam(mParam *&pnt)  //移動パラメータを問い合
 			 pnt[i].mcolor = bingo_area->c_getColor(pnt[i].p_coordinates);
 		}
 	}
-	if(i != 0){
+	if(i > 2){
 	    bingo_area->updateRunInfo(pnt[i - 1].p_coordinates, p_list->dir, old_direction);
 	}
 }
