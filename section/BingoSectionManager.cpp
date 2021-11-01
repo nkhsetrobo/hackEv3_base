@@ -10,11 +10,11 @@ BingoSectionManager::BingoSectionManager()
 :SectionManager()
 {
     bingo_area = new BingoArea();
-    //wp = (wParam3 *)malloc(sizeof(wParam3) * 100);    //領域確保    
+    //wp = (wParam3 *)malloc(sizeof(wParam3) * 100);    //領域確保
 }
 
 void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定する
-{ 
+{
     //printf("wp[%d].walk = %d\n",n,wp[n].walk);
     Walker *walk = sc->selectWalker(wp[n].walk);
 

@@ -1409,7 +1409,8 @@ void BlockList::initList()
     {
         {2.0,2.0},{2.0,2.0},0.0,EAST,
         {
-            
+            //終わり
+			{Section::VIRTUAL, -1, 0, {0, 0}, 0, 0, 0, 0, Section::LENGTH, 0, {0, 0}, BLUE, 0, 0, 0, 0, false}
         }
     };
     pass_list[160] =

@@ -3,7 +3,7 @@
 RunningBody::RunningBody()    //コンストラクタ
 {
     ri.rb_coordinates.x = 1.0;    //走行体のx座標の初期化
-    ri.rb_coordinates.y = 1.0;    //走行体のy座標の初期化
+    ri.rb_coordinates.y = 2.0;    //走行体のy座標の初期化
     ri.rb_dir = SOUTH;    //走行体の方角の初期化
 }
 
