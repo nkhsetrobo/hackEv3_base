@@ -147,7 +147,7 @@ void BingoSectionManager::init()    //初期化
 	mState = INIT;
     circle_decision = new CircleDecision();
     block_decision = new BlockDetermination();
-    rdState = block_decision;
+    rdState = circle_decision;
 }
 
 void BingoSectionManager::running()    //実行する
