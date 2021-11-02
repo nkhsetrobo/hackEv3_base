@@ -9,7 +9,24 @@ BlockList::BlockList()    //コンストラクタ
 
 double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)    //コストを取得する
 {
-    for (int i = 0; i < 288; i++)    //コストを持った配列を線型探索
+    int i;
+    int j;
+    switch ((int)rb_coordinates.x)
+    {
+    case 1:
+        i = 0;
+        j = 96;
+        break;
+    case 2:
+        i = 96;
+        j = 192;
+        break;
+    case 3:
+        i = 192;
+        j = 288;
+        break;
+    }
+    for (; i < j; i++)    //コストを持った配列を線型探索
     {
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
@@ -21,8 +38,25 @@ double BlockList::getCost(gameCoordinates rb_coordinates, gameCoordinates goal_c
 
 void BlockList::getParam(passList *&ret_pass_list, gameCoordinates rb_coordinates, gameCoordinates goal_coordinates)
 {
+    int i;
+    int j;
+    switch ((int)rb_coordinates.x)
+    {
+    case 1:
+        i = 0;
+        j = 96;
+        break;
+    case 2:
+        i = 96;
+        j = 192;
+        break;
+    case 3:
+        i = 192;
+        j = 288;
+        break;
+    }
     //移動パラメータを取得する
-    for (int i = 0; i < 288; i++)   //移動パラメータを持った構造体の配列を線型探索
+    for (; i < j; i++)   //移動パラメータを持った構造体の配列を線型探索
     {
         if (pass_list[i].s_cood.x == rb_coordinates.x && pass_list[i].s_cood.y == rb_coordinates.y && pass_list[i].e_cood.x == goal_coordinates.x && pass_list[i].e_cood.y == goal_coordinates.y)
         {
