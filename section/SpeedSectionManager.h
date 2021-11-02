@@ -147,28 +147,29 @@ wParam abbb[100] =
                   //第一コーナー
                   {0, Section::VIRTUAL, Section::TURNANGLE, 43, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, 0, 48.5, 0, 0, true, Judge::UPDATE, 87, 0, 0, 0, 0, 0, 0},
                   //第一コーナー後のストレート
-                  {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, 87, 0, 0, 0, true, Judge::UPDATE, 0, 33, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, 87, 0, 0, 0, true, Judge::UPDATE, 0, 30, 0, 0, 0, 0, 0},
                   //第二コーナー
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 0.1, 0.2, 1, 1 /*setparam*/, 0, 52, 0, 0, true, Judge::UPDATE, 80, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 0.1, 0.2, 1, 1 /*setparam*/, 0, 59, 0, 0, true, Judge::UPDATE, 78.7, 0, 0, 0, 0, 0, 0},
                   //第二直線
                   //{0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, 81, 0, 0, 0, true, Judge::UPDATE, 0, 105, 0, 0, 0, 0, 0},
                   //第三カーブ
                   //{0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 0.1, 0.2, 1, 1 /*setparam*/, 0, 53, 0, 0, true, Judge::UPDATE, 47.8, 0, 0, 0, 0, 0, 0},
                   //ロングショートカット
-                  {0, Section::WALKER, Section::LENGTH, 43, 0, 5, 0.1, 0.3, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 100, 0, 0, 0, 0, 0},
+                  {0, Section::WALKER, Section::LENGTH, 43, 0, 5, 0.1, 0.3, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 99, 0, 0, 0, 0, 0},
                   //ラストカーブ①
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -25, 0, 0, true, Judge::UPDATE, -40, 0, 0, 0, 0, 0, 0},
-                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 47, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -25, 0, 0, true, Judge::UPDATE, -44, 0, 0, 0, 0, 0, 0},
+                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 43, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::LENGTH, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -97, 0, 0, true, Judge::UPDATE, -17, 90, 0, 0, 0, 0, 0},
                   //ゴール
                   //ライン復帰
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -22, 0, 0, true, Judge::UPDATE, -17, 0, 0, 0, 0, 0, 0},
-                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 47, 0, 0, 0, 0, 0},
+                  //{0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -22, 0, 0, true, Judge::UPDATE, -17, 0, 0, 0, 0, 0, 0},
+                  //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 47, 0, 0, 0, 0, 0},
                   //本当のゴール
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -20, 0, 0, true, Judge::UPDATE, -35, 0, 0, 0, 0, 0, 0},
-                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 25, 0, 0, 0, 0, 0},
+                  //{0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -20, 0, 0, true, Judge::UPDATE, -33, 0, 0, 0, 0, 0, 0},
+                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 28, 0, 0, 0, 0, 0},
                   {0, Section::WALKER, Section::BRIGHTNESS, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 20, 0, true, Judge::UPDATE, 0, 0, -0.5, 0, 0, 0, 0},
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 20, 0, 30, 5, 0.5, 1, 1 /*setparam*/, 0, -2, 0, 0, true, Judge::UPDATE, -27, 0, 0, 0, 0, 0, 0},
-                  {0, Section::TRACER, Section::LENGTH, 10, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 7, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 20, 0, 30, 5, 0.5, 1, 1 /*setparam*/, 0, -2, 0, 0, true, Judge::UPDATE, -30, 0, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, 5, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 7, 0, 0, 0, 0, 0},
 
                   //ブロックビンゴ前
 
