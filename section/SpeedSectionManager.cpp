@@ -17,7 +17,7 @@ void SpeedSectionManager::setWalker(Section *sc)
   case Section::VIRTUAL2:
     syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
     ((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
-     ((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
+    //((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
     ((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);
 
     break;

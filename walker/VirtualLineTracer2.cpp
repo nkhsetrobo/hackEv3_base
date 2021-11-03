@@ -165,9 +165,9 @@ void VirtualLineTracer2::init(){
 
 }
 
-void VirtualLineTracer2::setvangle(bool a){
+/*void VirtualLineTracer2::setvangle(bool a){
     aflag = a;
-}
+}*/
 
 
 

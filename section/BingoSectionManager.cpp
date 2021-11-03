@@ -23,7 +23,7 @@ void BingoSectionManager::setWalker(Section *sc)    //パラメータを設定�
     	case Section::VIRTUAL2:
     		// syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
     		((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
-     		((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
+     		//((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
  		   	((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);
 
     		break;
@@ -171,7 +171,7 @@ void BingoSectionManager::chengeToSenpai()
     int i;
     for(i = 0; p[i].front != -1; i++)
     {
-        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, p[i].kp, p[i].ki, p[i].kd, 1, 1, 0, p[i].radius, p[i].front, p[i].turn, p[i].edge, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
+        wp[i] = {0, p[i].mwalker, p[i].mjudge, p[i].speed, 0, p[i].kp, p[i].ki, p[i].kd, 1, 1, p[i].radius, p[i].radius, p[i].front, p[i].turn, p[i].edge, Judge::UPDATE, 0, 0, 0, 0, 0, 0.5, 0};
 		/*-----------------デバッグ-----------------*/
         switch(p[i].mwalker)
         {
@@ -183,6 +183,9 @@ void BingoSectionManager::chengeToSenpai()
                 break;
             case Section::VIRTUAL:
 			    printf("VIRTUAL!!\n");
+                break;
+            case Section::VIRTUAL2:
+                printf("VIRTUAL2!!\n");
                 break;
         }
 		/*------------------------------------------*/
