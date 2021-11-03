@@ -160,7 +160,7 @@ void BingoSectionManager::running()    //実行する
         setWalker(sc);
         setJudge(sc);
 
-		sc->changeAcc(10);	//加速度変更
+		sc->changeAcc(5);	//加速度変更
 
         addSection(sc);
     }
