@@ -1017,7 +1017,7 @@ wParam wp4[100] =
                    //直線
                    {0, Section::VIRTUAL2, Section::LENGTH, 45, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, -87, 0, 0, 0, false, Judge::UPDATE, 0, 36, 0, 0, 0, 0, 0},
                    //第二コーナー
-                   {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 40, 0.1, 0.5, 1, 1 /*setparam*/, 0, -57.5, 0, 0, false, Judge::UPDATE, -83.5, 0, 0, 0, 0, 0, 0},
+                   {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 40, 0.1, 0.5, 1, 1 /*setparam*/, 0, -57.5, 0, 0, false, Judge::UPDATE, -83.8, 0, 0, 0, 0, 0, 0},
                    //{0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 40, 0.1, 0.5, 1, 1 /*setparam*/, 0, -48, 0, 0, false, Judge::UPDATE, -30, 0, 0, 0, 0, 0, 0},
                    //{0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 40, 0.1, 0.5, 1, 1 /*setparam*/, 0, -50, 0, 0, false, Judge::UPDATE, -5, 0, 0, 0, 0, 0, 0},
                    //ロングショートカット
