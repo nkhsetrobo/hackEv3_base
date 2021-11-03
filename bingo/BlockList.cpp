@@ -3156,7 +3156,7 @@ void BlockList::initList()
     };
     pass_list[156] =
     {
-        {2.0,2.0},{1.5,2.5},7.0,SOUTH,
+        {2.0,2.0},{1.5,2.5},12.0,SOUTH,
         {
             //lh1	左uターン(右から右)
             {Section::VIRTUAL2,0,0,{0,0},0,0,0,0,Section::STOP,30,{0,0},BLUE,0,0,0,0,true},
