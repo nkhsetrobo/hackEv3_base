@@ -446,7 +446,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 1}, BLUE, 0, 30, 0.7, 5},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -475,7 +475,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{2,2},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -766,7 +766,7 @@ void BlockList::initList()
         {
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -877,7 +877,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{2,1},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -1103,7 +1103,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -1351,7 +1351,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{2,2},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -1562,7 +1562,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{1,1},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -1586,7 +1586,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 2}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -1714,7 +1714,7 @@ void BlockList::initList()
         {
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -1868,7 +1868,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{2,3},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -2577,7 +2577,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 39, 25, 5, true},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -2815,7 +2815,7 @@ void BlockList::initList()
         {
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -3058,7 +3058,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -3188,7 +3188,7 @@ void BlockList::initList()
 			{Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 1}, BLUE, 0, 39, 25, 5, false},
 			//lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -3304,7 +3304,7 @@ void BlockList::initList()
         {
 			//lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -3572,7 +3572,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 2}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -3678,7 +3678,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{2,1},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -3830,7 +3830,7 @@ void BlockList::initList()
         {
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -4253,7 +4253,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -4402,7 +4402,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -4602,7 +4602,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 30, 0.7, 5},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -5161,7 +5161,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{1,1},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -5440,7 +5440,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 1}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -5676,7 +5676,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 30, 0.7, 5},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -5742,7 +5742,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{1, 2},BLUE,0,30,0.7,5,false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -5898,7 +5898,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
@@ -6032,7 +6032,7 @@ void BlockList::initList()
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 2}, BLUE, 0, 39, 25, 5, false},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 15, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
-			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 17.5, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
+			{Section::VIRTUAL, 0, 0, {0,0}, 15, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 15, 0.7, 5, true},
 			{Section::VIRTUAL2, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 50, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -10, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -10, 0, 0, 11, Section::TURNANGLE, -53, {0,0}, BLUE, 0, 39, 25, 5, false},
