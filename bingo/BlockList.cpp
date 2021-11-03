@@ -435,7 +435,7 @@ void BlockList::initList()
     };
     pass_list[18] =
     {
-        {1.0,0.0},{2.5,1.5},12.5,SOUTH,
+        {1.0,0.0},{2.5,1.5},11.5,SOUTH,
         {
             //lc1	色未検知、右カーブ(右から右)
             {Section::WALKER, 12, 0, {0, 0}, 0, 0, 0, 0, Section::LENGTH, 15, {0, 0}, BLUE, 0, 0, 0, 0, false},
@@ -460,7 +460,7 @@ void BlockList::initList()
     };
     pass_list[19] =
     {
-        {1.0,0.0},{2.5,2.5},15.5,SOUTH,
+        {1.0,0.0},{2.5,2.5},14.5,SOUTH,
         {
             //lc1	色未検知、右カーブ(右から右)
             {Section::WALKER, 12, 0, {0, 0}, 0, 0, 0, 0, Section::LENGTH, 15, {0, 0}, BLUE, 0, 0, 0, 0, false},
@@ -1834,7 +1834,7 @@ void BlockList::initList()
     };
     pass_list[90] =
     {
-        {1.0,3.0},{2.5,1.5},12.5,EAST,
+        {1.0,3.0},{2.5,1.5},11,EAST,
         {
             //lc1	色未検知、右カーブ(右から右)
             {Section::WALKER, 12, 0, {0, 0}, 0, 0, 0, 0, Section::LENGTH, 15, {0, 0}, BLUE, 0, 0, 0, 0, false},
@@ -2561,7 +2561,7 @@ void BlockList::initList()
     };
     pass_list[124] =
     {
-        {2.0,1.0},{0.5,0.5},16.0,NORTH,
+        {2.0,1.0},{0.5,0.5},19.5,NORTH,
         {
             //la2	色検知、右カーブ(右から左)
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -6.5, Section::TURNANGLE, -92, {0, 0}, BLUE, 0, 0.5, 0.7, 2, false},
@@ -3073,7 +3073,7 @@ void BlockList::initList()
     };
     pass_list[150] =
     {
-        {2.0,2.0},{0.5,2.5},14.0,SOUTH,
+        {2.0,2.0},{0.5,2.5},20.5,SOUTH,
         {
             //lb1	色検知、左カーブ(右から右)
 			{Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, 11.5, Section::TURNANGLE, 80, {0, 0}, BLUE, 0, 24, 25, 5, false},
@@ -4083,7 +4083,7 @@ void BlockList::initList()
     };
     pass_list[198] =
     {
-        {3.0,0.0},{0.5,2.5},20.5,SOUTH,
+        {3.0,0.0},{0.5,2.5},21.5,SOUTH,
         {
             //la2	色検知、右カーブ(右から左)
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -6.5, Section::TURNANGLE, -92, {0, 0}, BLUE, 0, 0.5, 0.7, 2, false},
@@ -4235,7 +4235,7 @@ void BlockList::initList()
     };
     pass_list[204] =
     {
-        {3.0,0.0},{1.5,2.5},17.5,SOUTH,
+        {3.0,0.0},{1.5,2.5},20,SOUTH,
         {
             //la2	色検知、右カーブ(右から左)
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -6.5, Section::TURNANGLE, -92, {0, 0}, BLUE, 0, 0.5, 0.7, 2, false},
@@ -4384,7 +4384,7 @@ void BlockList::initList()
     };
     pass_list[211] =
     {
-        {3.0,0.0},{2.5,2.5},12.0,SOUTH,
+        {3.0,0.0},{2.5,2.5},20,SOUTH,
         {
             //la2	色検知、右カーブ(右から左)
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -6.5, Section::TURNANGLE, -92, {0, 0}, BLUE, 0, 0.5, 0.7, 2, false},
@@ -4582,7 +4582,7 @@ void BlockList::initList()
     };
     pass_list[220] =
     {
-        {3.0,1.0},{0.5,0.5},18.5,NORTH,
+        {3.0,1.0},{0.5,0.5},21.5,NORTH,
         {
             //la2	色検知、右カーブ(右から左)
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -6.5, Section::TURNANGLE, -92, {0, 0}, BLUE, 0, 0.5, 0.7, 2, false},
@@ -4765,7 +4765,7 @@ void BlockList::initList()
     };
     pass_list[227] =
     {
-        {3.0,1.0},{1.5,0.5},15.5,NORTH,
+        {3.0,1.0},{1.5,0.5},19.5,NORTH,
         {
             //la2	色検知、右カーブ(右から左)
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -6.5, Section::TURNANGLE, -92, {0, 0}, BLUE, 0, 0.5, 0.7, 2, false},
@@ -5176,7 +5176,7 @@ void BlockList::initList()
     };
     pass_list[246] =
     {
-        {3.0,2.0},{0.5,2.5},17.0,SOUTH,
+        {3.0,2.0},{0.5,2.5},22.5,SOUTH,
         {
             //lb1	色検知、左カーブ(右から右)
 			{Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, 11.5, Section::TURNANGLE, 80, {0, 0}, BLUE, 0, 24, 25, 5, false},
@@ -5328,7 +5328,7 @@ void BlockList::initList()
     };
     pass_list[252] =
     {
-        {3.0,2.0},{1.5,2.5},14.0,SOUTH,
+        {3.0,2.0},{1.5,2.5},20.5,SOUTH,
         {
             //lb1	色検知、左カーブ(右から右)
 			{Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, 11.5, Section::TURNANGLE, 80, {0, 0}, BLUE, 0, 24, 25, 5, false},
@@ -5655,7 +5655,7 @@ void BlockList::initList()
     };
     pass_list[268] =
     {
-        {3.0,3.0},{0.5,0.5},21.0,NORTH,
+        {3.0,3.0},{0.5,0.5},22.5,NORTH,
         {
             //lb1	色検知、左カーブ(右から右)
 			{Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, 11.5, Section::TURNANGLE, 80, {0, 0}, BLUE, 0, 24, 25, 5, false},
@@ -5990,7 +5990,7 @@ void BlockList::initList()
     };
     pass_list[281] =
     {
-        {3.0,3.0},{2.5,0.5},13.0,NORTH,
+        {3.0,3.0},{2.5,0.5},20.0,NORTH,
         {
             //lb1	色検知、左カーブ(右から右)
 			{Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, 11.5, Section::TURNANGLE, 80, {0, 0}, BLUE, 0, 24, 25, 5, false},
