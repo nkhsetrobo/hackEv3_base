@@ -203,11 +203,11 @@ wParam abbb[100] =
                   //すすむ
                   //{0, Section::TRACER, Section::LENGTH, 10, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 5, 0, 0, 0, 0, 0},
                   {0, Section::TRACER, Section::LENGTH, 10, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0},
-                  {0, Section::WALKER, Section::COLOR, 10, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 20, 0, false, Judge::UPDATE, 0, 0, 0, 0, 60, 0.5, 0},
+                  {0, Section::WALKER, Section::COLOR, 10, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 15, 0, false, Judge::UPDATE, 0, 0, 0, 0, 60, 0.5, 0},
                   //死ぬ
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 999, 0, 0, 0, 0, 0},
                   //ストップ
-                  //{0, Section::VIRTUAL2, Section::STOP, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0, 10},
+                  {0, Section::VIRTUAL2, Section::STOP, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 0, 0, 0, 0, 0, 50},
 
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UPDATE, 0, 999, 0, 0, 0, 0, 0},
                   {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0}};
