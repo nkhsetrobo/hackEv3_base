@@ -159,17 +159,17 @@ wParam abbb[100] =
                   //ラストカーブ①
                   {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -28, 0, 0, true, Judge::UPDATE, -44.4, 0, 0, 0, 0, 0, 0},
                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 43, 0, 0, 0, 0, 0},
-                  {0, Section::VIRTUAL, Section::LENGTH, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -97, 0, 0, true, Judge::UPDATE, -17, 75, 0, 0, 0, 0, 0},
-                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::LENGTH, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -97, 0, 0, true, Judge::UPDATE, -17, 65, 0, 0, 0, 0, 0},
+                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 20, 0, 0, 0, 0, 0},
                   //ゴール
                   //ライン復帰
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -25, 0, 0, true, Judge::UPDATE, -17, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -25, 0, 0, true, Judge::UPDATE, -23, 0, 0, 0, 0, 0, 0},
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 47, 0, 0, 0, 0, 0},
                   //本当のゴール
                   //{0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -20, 0, 0, true, Judge::UPDATE, -33, 0, 0, 0, 0, 0, 0},
                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 7, 0, 0, 0, 0, 0},
                   {0, Section::WALKER, Section::BRIGHTNESS, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 25, 0, true, Judge::UPDATE, 0, 0, -0.5, 0, 0, 0, 0},
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 20, 0, 30, 5, 0.5, 1, 1 /*setparam*/, 0, -2, 0, 0, true, Judge::UPDATE, -25, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 20, 0, 30, 5, 0.5, 1, 1 /*setparam*/, 0, -2, 0, 0, true, Judge::UPDATE, -27, 0, 0, 0, 0, 0, 0},
                   {0, Section::TRACER, Section::LENGTH, 5, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 7, 0, 0, 0, 0, 0},
                   //{0, Section::TRACER, Section::LENGTH, 15, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 60, 0, 0, 0, 0, 0},
 
