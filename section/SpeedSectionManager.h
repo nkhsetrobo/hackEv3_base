@@ -163,25 +163,25 @@ wParam abbb[100] =
                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 23, 0, 0, 0, 0, 0},
                   //ゴール
                   //ライン復帰
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -30, 0, 0, true, Judge::UPDATE, -25, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -30, 0, 0, true, Judge::UPDATE, -30, 0, 0, 0, 0, 0, 0},
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 47, 0, 0, 0, 0, 0},
                   //本当のゴール
                   //{0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -20, 0, 0, true, Judge::UPDATE, -33, 0, 0, 0, 0, 0, 0},
                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 25, 0, 0, 0, 0, 0},
                   {0, Section::WALKER, Section::BRIGHTNESS, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 25, 0, true, Judge::UPDATE, 0, 0, -0.5, 0, 0, 0, 0},
                   {0, Section::VIRTUAL, Section::TURNANGLE, 20, 0, 30, 5, 0.5, 1, 1 /*setparam*/, 0, -2, 0, 0, true, Judge::UPDATE, -28, 0, 0, 0, 0, 0, 0},
-                  {0, Section::TRACER, Section::LENGTH, 7, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 7, 0, 0, 0, 0, 0},
-                  //{0, Section::TRACER, Section::LENGTH, 40, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 30, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, 7, 0, 30, 5, 10, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 7, 0, 0, 0, 0, 0},
+                  {0, Section::TRACER, Section::LENGTH, 20, 0, 30, 5, 10, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0},
 
                   //ブロックビンゴ前
 
                   //黄色サークル到達
-                  {0, Section::TRACER, Section::COLOR, 40, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 15, 0, false, Judge::UPDATE, 0, 0, 0, 0, 60, 0.5, 0},
+                  {0, Section::TRACER, Section::COLOR, 40, 0, 20, 5, 10, 1, 1 /*setparam*/, 0, 0, 15, 0, false, Judge::UPDATE, 0, 0, 0, 0, 60, 0.5, 0},
                   //黄色サークル突破
                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 40, 0, false, Judge::UPDATE, 0, 15, 0, 0, 0, 0, 0},
                   //緑サークル判定
-                  {0, Section::TRACER, Section::LENGTH, 40, 0, 20, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 40, 0, 0, 156, 0.5, 0},
-                  {0, Section::TRACER, Section::COLOR, 20, 0, 20, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 156, 0.5, 0},
+                  {0, Section::TRACER, Section::LENGTH, 40, 0, 20, 5, 10, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 40, 0, 0, 156, 0.5, 0},
+                  {0, Section::TRACER, Section::COLOR, 20, 0, 20, 5, 10, 1, 1 /*setparam*/, 0, 0, 0, 0, false, Judge::UPDATE, 0, 0, 0, 0, 156, 0.5, 0},
                   //緑曲がった後
                   {0, Section::VIRTUAL, Section::TURNANGLE, 10, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, -7, 0, 0, false, Judge::UPDATE, -65, 0, 0, 0, 0, 0, 0},
                   {0, Section::WALKER, Section::BRIGHTNESS, 0, 0, 30, 5, 0.7, 1, 1 /*setparam*/, 0, 0, 10, 0, false, Judge::UPDATE, 0, 0, -0.5, 0, 0, 0, 0},
