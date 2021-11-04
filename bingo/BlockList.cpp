@@ -5851,7 +5851,7 @@ void BlockList::initList()
     };
     pass_list[275] =
     {
-        {3.0,3.0},{1.5,0.5},18.0,NORTH,
+        {3.0,3.0},{1.5,0.5},19.0,NORTH,
         {
             //lb1	色検知、左カーブ(右から右)
 			{Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, 11, Section::TURNANGLE, 75, {0, 0}, BLUE, 0, 24, 25, 5, false},
