@@ -4678,7 +4678,7 @@ void BlockList::initList()
         {3.0,0.0},{3.0,1.0},5.0,SOUTH,
         {
             //la1	色検知、右カーブ(右から右)
-            {Section::VIRTUAL, 0, 0, {0,0}, 5, 0, 0, -7, Section::TURNANGLE, -90, {0,0}, BLUE, 0, 39, 25, 5, false},
+            {Section::VIRTUAL, 0, 0, {0,0}, 5, 0, 0, -8, Section::TURNANGLE, -90, {0,0}, BLUE, 0, 39, 25, 5, false},
             //{Section::VIRTUAL, 0, 0, {0,0}, 5, 0, 0, 3, Section::TURNANGLE, 5, {0,0}, BLUE, 0, 39, 25, 5, false},
             {Section::TRACER, 0, 0, {0,0}, 24, 0, 0, 0, Section::LENGTH, 12, {0,0}, BLUE, 0, 39, 25, 5, false },
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3,1}, BLUE, 0, 39, 25, 5, false},
