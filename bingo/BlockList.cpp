@@ -2159,8 +2159,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 1}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 39, 25, 5, true},
             //le2	右ななめ(左から右)
             {Section::WALKER, 25, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 3, {0,0}, BLUE, 0, 39, 25, 5, true}, 
@@ -2188,8 +2190,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 1}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 39, 25, 5, true},
             //lf2	左ななめ(左から右)
 			{Section::WALKER, 20, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 5, {0,0}, BLUE, 0, 39, 25, 5, true},
@@ -2682,12 +2686,16 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 2}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 1}, BLUE, 0, 39, 25, 5, true},
             //lf1	左ななめ(右から右)
 			{Section::WALKER, 20, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 5, {0,0}, BLUE, 0, 39, 25, 5, true},
@@ -2715,8 +2723,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 2}, BLUE, 0, 39, 25, 5, true},
             //lf2	左ななめ(左から右)
 			{Section::WALKER, 20, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 5, {0,0}, BLUE, 0, 39, 25, 5, true},
@@ -2744,8 +2754,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {1, 2}, BLUE, 0, 39, 25, 5, true},
             //le2	右ななめ(左から右)
             {Section::WALKER, 25, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 3, {0,0}, BLUE, 0, 39, 25, 5, true}, 
@@ -4208,8 +4220,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 1}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 1}, BLUE, 0, 39, 25, 5, true},
             //li2	サークル突破(左)
             {Section::WALKER,25,0,{0,0},0,0,0,0,Section::LENGTH,10,{0,0},BLUE,0,0,0,0,true},
@@ -4241,8 +4255,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 1}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 1}, BLUE, 0, 39, 25, 5, true},
             //li2	サークル突破(左)
             {Section::WALKER,25,0,{0,0},0,0,0,0,Section::LENGTH,10,{0,0},BLUE,0,0,0,0,true},
@@ -4407,8 +4423,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 1}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 1}, BLUE, 0, 39, 25, 5, true},
             //le2	右ななめ(左から右)
             {Section::WALKER, 25, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 3, {0,0}, BLUE, 0, 39, 25, 5, true}, 
@@ -4841,8 +4859,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 2}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, true},
             //li2	サークル突破(左)
             {Section::WALKER,25,0,{0,0},0,0,0,0,Section::LENGTH,10,{0,0},BLUE,0,0,0,0,true},
@@ -4874,8 +4894,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 2}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, true},
             //li2	サークル突破(左)
             {Section::WALKER,25,0,{0,0},0,0,0,0,Section::LENGTH,10,{0,0},BLUE,0,0,0,0,true},
@@ -5035,8 +5057,10 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 2}, BLUE, 0, 39, 25, 5, true},
             //la4	色検知、右カーブ(左から左)
-            {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -11.5, Section::TURNANGLE, -80, {0, 0}, BLUE, 0, 24, 25, 5, false},
-            {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 24, 25, 5, true},
+            {Section::WALKER, 12, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, true},
+            {Section::VIRTUAL, 0, 0, {0, 0}, 12, 0, 0, -11, Section::TURNANGLE, -83, {0, 0}, BLUE, 0, 24, 20, 3, false},
+            {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 8, {0, 0}, BLUE, 0, 39, 25, 5, true},
+            {Section::TRACER, 0, 0, {0, 0}, 15, 0, 0, 0, Section::LENGTH, 16, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {2, 2}, BLUE, 0, 39, 25, 5, true},
             //lf2	左ななめ(左から右)
 			{Section::WALKER, 20, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 5, {0,0}, BLUE, 0, 39, 25, 5, true},
