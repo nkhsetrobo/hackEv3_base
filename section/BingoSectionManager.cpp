@@ -202,7 +202,7 @@ void BingoSectionManager::chengeToSenpai()
             case Section::BRIGHTNESS:
 				printf("BRIGHTNESS!!\n");
                 wp[i].bright1 = p[i].atai;
-				printf("BingoSectionManager:: wp[%d].bright1 = %f\n", i, p[i].bright1);
+				printf("BingoSectionManager:: wp[%d].bright1 = %f\n", i, p[i].atai);
                 wp[i].bright2 = 0;
                 break;
 			case Section::STOP:
