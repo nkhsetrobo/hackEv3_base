@@ -157,7 +157,7 @@ wParam abbb[100] =
                   //ロングショートカット
                   //{0, Section::WALKER, Section::LENGTH, 43, 0, 5, 0.1, 0.3, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 96, 0, 0, 0, 0, 0},
                   //ラストカーブ①
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -24, 0, 0, true, Judge::UPDATE, -45s, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -24, 0, 0, true, Judge::UPDATE, -45, 0, 0, 0, 0, 0, 0},
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 46, 0, 0, 0, 0, 0},
                   {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 24, 3, 20, 1, 1 /*setparam*/, -44, 0, 0, 0, true, Judge::UPDATE, 0, 48, 0, 0, 0, 0, 0},
                   {0, Section::VIRTUAL, Section::LENGTH, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -69, 0, 0, true, Judge::UPDATE, 0, 36, 0, 0, 0, 0, 0},
