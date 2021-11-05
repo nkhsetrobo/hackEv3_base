@@ -5778,7 +5778,7 @@ void BlockList::initList()
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::STOP,30,{0,0},BLUE,0,0,0,0,true},
             {Section::WALKER,15,0,{0,0},0,0,0,0,Section::LENGTH,2,{0,0},BLUE,0,0,0,0,true},
             {Section::VIRTUAL,0,0,{0,0},7,0,0,-8.5,Section::TURNANGLE,-180,{0,0},BLUE,0,15,8,5,false},
-            {Section::WALKER,10,0,{0,0},0,0,0,0,Section::LENGTH,2,{0,0},BLUE,0,30,0.7,5,false},
+            {Section::WALKER,10,0,{0,0},0,0,0,0,Section::LENGTH,4,{0,0},BLUE,0,30,0.7,5,false},
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::STOP,50,{0,0},BLUE,0,0,0,0,true},
             {Section::WALKER,-10,0,{0,0},0,0,0,0,Section::LENGTH,-4,{0,0},BLUE,0,30,0.7,5,false},
             {Section::VIRTUAL,0,0,{0,0},-8,0,0,-4,Section::TURNANGLE,87,{0,0},BLUE,0,15,8,5,false},
