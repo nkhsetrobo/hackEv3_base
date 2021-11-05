@@ -149,9 +149,9 @@ wParam abbb[100] =
                   //第一コーナー後のストレート
                   {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 30, 0.1, 0.3, 1, 1 /*setparam*/, 87, 0, 0, 0, true, Judge::UPDATE, 0, 30, 0, 0, 0, 0, 0},
                   //第二コーナー
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 0.1, 0.2, 1, 1 /*setparam*/, 0, 59, 0, 0, true, Judge::UPDATE, 80.5, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 0.1, 0.2, 1, 1 /*setparam*/, 0, 59, 0, 0, true, Judge::UPDATE, 80.8, 0, 0, 0, 0, 0, 0},
                   //第二直線
-                  {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 24, 3, 20, 1, 1 /*setparam*/, 80.5, 0, 0, 0, true, Judge::UPDATE, 0, 94.5, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 24, 3, 20, 1, 1 /*setparam*/, 80.8, 0, 0, 0, true, Judge::UPDATE, 0, 94, 0, 0, 0, 0, 0},
                   //第三カーブ
                   //{0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 0.1, 0.2, 1, 1 /*setparam*/, 0, 53, 0, 0, true, Judge::UPDATE, 47.8, 0, 0, 0, 0, 0, 0},
                   //ロングショートカット
