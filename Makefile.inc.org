@@ -79,7 +79,3 @@ INCLUDES += \
 
 # COPTS += -fno-use-cxa-atexit
 COPTS += -std=c++11 -O1
-
-COPTS += -DMAKE_LEFT
-
-COPTS += -DMAKE_EV3
