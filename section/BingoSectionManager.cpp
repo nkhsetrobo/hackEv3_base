@@ -202,7 +202,7 @@ void BingoSectionManager::chengeToSenpai()
             case Section::BRIGHTNESS:
 				printf("BRIGHTNESS!!\n");
                 wp[i].bright1 = -0.5;
-                wp[i].bright2 = 0;
+                //wp[i].bright2 = 0;
                 break;
 			case Section::STOP:
 				printf("STOP!!\n");
@@ -231,7 +231,6 @@ void BingoSectionManager::chengeToSenpai()
                 }
                 break;
 		}
-		/*pidの値を具体的に設定するか判定*/
 	}
    	wp[i] = {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0};
 }
