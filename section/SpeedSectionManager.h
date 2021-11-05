@@ -159,9 +159,13 @@ wParam abbb[100] =
                   //ラストカーブ①
                   {0, Section::VIRTUAL, Section::TURNANGLE, 38, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -24, 0, 0, true, Judge::UPDATE, -43, 0, 0, 0, 0, 0, 0},
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 50, 0, true, Judge::UPDATE, 0, 46, 0, 0, 0, 0, 0},
+<<<<<<< HEAD
+                  {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 24, 3, 20, 1, 1 /*setparam*/, -43.5, 0, 0, 0, true, Judge::UPDATE, 0, 48, 0, 0, 0, 0, 0},
+=======
                   {0, Section::VIRTUAL2, Section::LENGTH, 43, 0, 24, 3, 20, 1, 1 /*setparam*/, -43, 0, 0, 0, true, Judge::UPDATE, 0, 46, 0, 0, 0, 0, 0},
+>>>>>>> 7f6c1f93a8331081ad15e6ccb79a8473d71c72a2
                   {0, Section::VIRTUAL, Section::LENGTH, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -69, 0, 0, true, Judge::UPDATE, 0, 39, 0, 0, 0, 0, 0},
-                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 34, 0, 0, 0, 0, 0},
+                  {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 31, 0, 0, 0, 0, 0},
                   //ゴール
                   //ライン復帰
                   {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -33, 0, 0, true, Judge::UPDATE, -44.5, 0, 0, 0, 0, 0, 0},
