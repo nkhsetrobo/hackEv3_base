@@ -419,7 +419,7 @@ void BlockList::initList()
     };
     pass_list[17] =
     {
-        {1.0,0.0},{2.5,0.5},7.0,SOUTH,
+        {1.0,0.0},{2.5,0.5},7.0,EAST,
         {
             //li1	サークル突破(右)
             {Section::WALKER,25,0,{0,0},0,0,0,0,Section::LENGTH,13,{0,0},BLUE,0,0,0,0,false},
@@ -4585,7 +4585,7 @@ void BlockList::initList()
             {Section::VIRTUAL,0,0,{0,0},7,0,0,-8,Section::TURNANGLE,-180,{0,0},BLUE,0,15,8,5,false},
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::STOP,50,{0,0},BLUE,0,0,0,0,true},
             {Section::WALKER,-10,0,{0,0},0,0,0,0,Section::LENGTH,-4,{0,0},BLUE,0,30,0.7,5,false},
-            {Section::VIRTUAL,0,0,{0,0},-8,0,0,-5.5,Section::TURNANGLE,75,{0,0},BLUE,0,15,8,5,false},
+            {Section::VIRTUAL,0,0,{0,0},-8,0,0,-5,Section::TURNANGLE,90,{0,0},BLUE,0,15,8,5,false},
             {Section::WALKER,0,0,{0,0},0,0,0,0,Section::STOP,30,{0,0},BLUE,0,0,0,0,true},
             {Section::TRACER, 0, 0, {0,0}, 24, 0, 0, 0, Section::LENGTH, 12, {0,0}, BLUE, 0, 39, 25, 5, false },
             {Section::WALKER, 22, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR,0,{3,1},BLUE,0,30,0.7,5,false},
