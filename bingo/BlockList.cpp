@@ -4662,9 +4662,10 @@ void BlockList::initList()
         {3.0,0.0},{3.0,1.0},5.0,SOUTH,
         {
             //la1	色検知、右カーブ(右から右)
-            {Section::VIRTUAL, 0, 0, {0,0}, 5, 0, 0, -9, Section::TURNANGLE, -87, {0,0}, BLUE, 0, 39, 25, 5, false},
+            //{Section::WALKER, 10, 0, {0, 0}, 0, 0, 0, 0, Section::LENGTH, 2, {0,0}, BLUE, 0, 39, 25, 5, false},
+            {Section::VIRTUAL, 0, 0, {0,0}, 5, 0, 0, -8, Section::TURNANGLE, -87, {0,0}, BLUE, 0, 39, 25, 5, false},
             //{Section::VIRTUAL, 0, 0, {0,0}, 5, 0, 0, 3, Section::TURNANGLE, 5, {0,0}, BLUE, 0, 39, 25, 5, false},
-            {Section::TRACER, 0, 0, {0,0}, 20, 0, 0, 0, Section::LENGTH, 12, {0,0}, BLUE, 0, 39, 25, 5, false },
+            {Section::TRACER, 0, 0, {0,0}, 10, 0, 0, 0, Section::LENGTH, 12, {0,0}, BLUE, 0, 39, 25, 5, false },
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3,1}, BLUE, 0, 39, 25, 5, false},
             //終わり
             {Section::VIRTUAL, -1, 0, {0, 0}, 0, 0, 0, 0, Section::LENGTH, 0, {0, 0}, BLUE, 0, 0, 0, 0, false}
@@ -4823,7 +4824,7 @@ void BlockList::initList()
             {Section::TRACER, 0, 0, {0, 0}, 12, 0, 0, 0, Section::LENGTH, 7, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::TRACER, 0, 0, {0, 0}, 18, 0, 0, 0, Section::LENGTH, 7, {0, 0}, BLUE, 0, 39, 25, 5, true},
             {Section::WALKER, 15, 0, {0, 0}, 0, 0, 0, 0, Section::COLOR, 0, {3, 2}, BLUE, 0, 39, 25, 5, true},
-            //色検知、右カーブ(左から右)
+            //la3   色検知、右カーブ(左から右)
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, -3, Section::TURNANGLE, -100, {0, 0}, BLUE, 0,39, 25, 5, false},
             {Section::VIRTUAL, 0, 0, {0, 0}, 13, 0, 0, 3, Section::TURNANGLE, 5, {0, 0}, BLUE, 0, 39, 25, 5, false},
             {Section::TRACER, 0, 0, {0,0}, 24, 0, 0, 0, Section::LENGTH, 12, {0,0}, BLUE, 0, 39, 25, 5, false },
