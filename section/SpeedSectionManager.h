@@ -164,7 +164,7 @@ wParam abbb[100] =
                   {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 32, 0, 0, 0, 0, 0},
                   //ゴール
                   //ライン復帰
-                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -32, 0, 0, true, Judge::UPDATE, -44, 0, 0, 0, 0, 0, 0},
+                  {0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -33, 0, 0, true, Judge::UPDATE, -43, 0, 0, 0, 0, 0, 0},
                   //{0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 45, 0, true, Judge::UPDATE, 0, 47, 0, 0, 0, 0, 0},
                   //本当のゴール
                   //{0, Section::VIRTUAL, Section::TURNANGLE, 45, 0, 30, 5, 0.3, 1, 1 /*setparam*/, 0, -20, 0, 0, true, Judge::UPDATE, -33, 0, 0, 0, 0, 0, 0},
