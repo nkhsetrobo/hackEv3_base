@@ -83,7 +83,6 @@ Walker *Section::selectWalker(int no)
 
 Judge *Section::selectJudge(int no)
 {
-    printf("no = %d\n", no);
     switch(no) {
         case LENGTH:
             mJudge = (Judge*)(new LengthJudge());
