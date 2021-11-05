@@ -3466,7 +3466,7 @@ void BlockList::initList()
 			//lf1	左ななめ(右から右)
 			{Section::WALKER, 20, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, 5, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, 16, 0, 0, 19, Section::TURNANGLE, 52, {0,0}, BLUE, 0, 30, 20, 3, true},
-			{Section::WALKER, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 100, {0,0}, BLUE, 0, 0, 0, 0, true},
+			{Section::WALKER, 0, 0, {0,0}, 0, 0, 0, 0, Section::STOP, 120, {0,0}, BLUE, 0, 0, 0, 0, true},
 			{Section::WALKER, -15, 0, {0,0}, 0, 0, 0, 0, Section::LENGTH, -6, {0,0}, BLUE, 0, 39, 25, 5, true},
 			{Section::VIRTUAL, 0, 0, {0,0}, -17, 0, 0, 11, Section::TURNANGLE, -52, {0,0}, BLUE, 0, 39, 25, 5, false},
 			{Section::VIRTUAL2, 0, 0, {0,0}, -10, 0, 0, 128, Section::LENGTH, -11, {0,0}, BLUE, 0, 39, 25, 5, true},
