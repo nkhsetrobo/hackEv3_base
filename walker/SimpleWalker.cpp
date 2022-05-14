@@ -26,7 +26,7 @@ SimpleWalker::SimpleWalker(
         mForward(0),
         mTurn(0),
         mBreake_flag(false),
-        mMode_flag(false)
+        mMode_flag(true)
 {
 }
 
@@ -41,6 +41,7 @@ void SimpleWalker::run() {
     static const int MAXPWM=85;
     int diff = 0;
     if(pwm_l>MAXPWM) {
+      //  printf("%f,%f \n",pwm_l,pwm_r);
         pwm_r = (int)((float)MAXPWM*pwm_r/pwm_l);
         pwm_l=MAXPWM;
     }
@@ -50,6 +51,10 @@ void SimpleWalker::run() {
     }
 
     if(pwm_r>MAXPWM) {
+<<<<<<< Updated upstream
+=======
+     //  printf("%f,%f \n",pwm_l,pwm_r);
+>>>>>>> Stashed changes
         pwm_l = (int)((float)MAXPWM*pwm_l/pwm_r);
         pwm_r=MAXPWM;
     }
@@ -83,7 +88,12 @@ void SimpleWalker::setCommand(int forward, int turn) {
 
 void SimpleWalker::setCommandV(float forward, int turn)
 {
+<<<<<<< Updated upstream
 
+=======
+    
+    mForward = forward;
+>>>>>>> Stashed changes
     mSpeedControl->setTargetSpeed(forward);
     mSpeedControl->setBreak(false);
     
@@ -93,6 +103,12 @@ void SimpleWalker::setCommandV(float forward, int turn)
     }
     mTurn    = turn;
     mSpeedControl->setMode(true);
+<<<<<<< Updated upstream
+=======
+    mOdo->setBrake(true);
+    mMode_flag=true;
+
+>>>>>>> Stashed changes
 }
 
 void SimpleWalker::resetParam()

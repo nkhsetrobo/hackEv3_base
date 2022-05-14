@@ -9,11 +9,23 @@ PID::PID()
     DELTAT=0.01;
 
     resetFlg=true;
+<<<<<<< Updated upstream
     
 }
 PID::PID(float delta) {
     PID();
     DELTAT=delta;
+=======
+
+    sec = 100;
+    cnt=0;
+
+    for(int i=0;i<sec;i++) 
+        last_integral[i]=0.0f;
+
+  //  printf("created %f %d\n",DELTAT,sec);
+
+>>>>>>> Stashed changes
 }
 PID::~PID() 
 {

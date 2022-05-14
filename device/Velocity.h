@@ -7,6 +7,10 @@
 
 static const int MAX_CNT=25;  // 0.25s
 static const float DELTA=0.01;
+<<<<<<< Updated upstream
+=======
+//static const float DELTA=0.016666;
+>>>>>>> Stashed changes
 
 class Velocity : public Measure
 {

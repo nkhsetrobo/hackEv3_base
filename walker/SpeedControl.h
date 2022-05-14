@@ -23,7 +23,7 @@ class SpeedControl
         Velocity *mVelo;
 
         double mTargetSpeed;
-        int mForward; //現在PWM値
+        double mForward; //現在PWM値
         double mCurrentSpeed;
 
         bool mBreake_flag;

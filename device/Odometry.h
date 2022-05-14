@@ -54,6 +54,9 @@ private:
 	double sumlen;
 
 
+	double current_lpwm;
+	double current_rpwm;
+	double pwm_rate;
 };
 
 #endif

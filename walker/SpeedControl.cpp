@@ -8,8 +8,14 @@ SpeedControl::SpeedControl(Odometry *odo,Velocity *v):
     mMode_flag(true),
     mBreake_flag(false)
 {
+<<<<<<< Updated upstream
     mPid = new PID(0.1);
     mPid->debug = false;
+=======
+    mPid = new PID(0.01*4);
+    mPid->debug = true;
+    mPid->debug_char = 'S';
+>>>>>>> Stashed changes
 
 }
 
@@ -42,11 +48,19 @@ void SpeedControl::setTargetSpeed(double speed)
 
     mPid->setTarget(speed);
 
+<<<<<<< Updated upstream
     mPid->setKp(1.1*bai);
     mPid->setKi(0);
         //mPid->setKd(0.03*bai);
     mPid->setKd(0.1*bai);
     mPid->setLimit(15*bai+1);    
+=======
+    mPid->setKp(0.4*0.1);
+    mPid->setKi(0.15);
+        //mPid->setKd(0.03*bai);
+    mPid->setKd(0.00*bai);
+    mPid->setLimit(20*bai+1);    // 9*bai+1
+>>>>>>> Stashed changes
     //mPid->setLimit(1);    
 
 }
@@ -67,12 +81,28 @@ int SpeedControl::getPwm()
     }
   if(mCnt++==8) { // 80ms毎に速度制御
     mCurrentSpeed = mVelo->getValue();
+   // printf("speed %f\n",mCurrentSpeed);
     double op = mPid->getOperation(mCurrentSpeed);
+<<<<<<< Updated upstream
   //  syslog(LOG_NOTICE,"spd %d fwd %d op%d",(int)mCurrentSpeed,(int)mForward,(int)op);
    int pwd = (int)((op>0)?(op+0.5):(op-0.5));
     mForward += pwd; 
     int maxFwd = 83;
     
+=======
+    //syslog(LOG_NOTICE,"spd %d fwd %d op%f",(int)mCurrentSpeed,(int)mForward,op);
+    //printf("spd %d fwd %d op%f",(int)mCurrentSpeed,(int)mForward,op);
+    // if(op>0 && op<1) op=1;
+    // if(op>-1 && op<0) op=-1;
+    //   int pwd;
+    // if( op>0 ) pwd = op+0.5;
+    // else if(op<0) pwd = op-0.5;
+    //printf("op %f\n",op);
+    mForward += op; 
+    int maxFwd = fabs(mTargetSpeed)>0?fabs(mTargetSpeed)*2.5:85;
+    if (maxFwd>85) maxFwd=85;
+
+>>>>>>> Stashed changes
     if(mForward>maxFwd) {
         syslog(LOG_NOTICE,"over speed");
         mForward=maxFwd;

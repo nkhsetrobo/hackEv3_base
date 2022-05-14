@@ -26,6 +26,10 @@ class PID {
     private:
        float diff[2];
        float integral;
+<<<<<<< Updated upstream
+=======
+        float last_integral[100];
+>>>>>>> Stashed changes
        float target;
        float limit; 
        float delta;
