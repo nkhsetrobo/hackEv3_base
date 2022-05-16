@@ -30,6 +30,8 @@ void SpeedControl::setTargetSpeed(double speed)
    // if(fabs(mTargetSpeed)<31) bai=0.25;
 
     if(mTargetSpeed!=speed) {
+        mPow=0;
+        mCnt=4;
         mPid->resetParam();
         if(mTargetSpeed*speed<0) { 
             bai =0.6;
@@ -43,10 +45,12 @@ void SpeedControl::setTargetSpeed(double speed)
 
     mPid->setTarget(speed);
 
-    mPid->setKp(0.4*bai);
-    mPid->setKi(0.01);
+  //  mPid->setKp(0.4*0.01);
+  //  mPid->setKi(0.15);
+    mPid->setKp(1.0);
+    mPid->setKi(0);
         //mPid->setKd(0.03*bai);
-    mPid->setKd(0.08*bai);
+    mPid->setKd(0);
     mPid->setLimit(8*bai+1);    // 9*bai+1
     //mPid->setLimit(1);    
 
@@ -54,6 +58,8 @@ void SpeedControl::setTargetSpeed(double speed)
 
 int SpeedControl::getPwm()
 {
+   
+
     // 直接制御なら
    // mMode_flag=false;
     if(!mMode_flag) {
@@ -66,22 +72,31 @@ int SpeedControl::getPwm()
         mForward=0;
         return 0;
     }
-  if(mCnt++==4) { // 80ms毎に速度制御
+  if(mCnt++==8) { // 80ms毎に速度制御
     mCurrentSpeed = mVelo->getValue();
+   // printf("speed %f\n",mCurrentSpeed);
     double op = mPid->getOperation(mCurrentSpeed);
   //  syslog(LOG_NOTICE,"spd %d fwd %d op%d",(int)mCurrentSpeed,(int)mForward,(int)op);
+    mPow  += (op>=0)?mAcc:-mAcc;
+    int maxDiff = 12;
+    mPow = (mPow>maxDiff)?maxDiff:((mPow<-maxDiff)?-maxDiff:mPow);
+   // if(mPow==10) printf("op %f , pow %f\n",op,mPow);
    int pwd = (int)((op>0)?(op+0.5):(op-0.5));
-    mForward += pwd; 
+    //mForward += pwd; 
+    mForward += mPow;
+
     int maxFwd = fabs(mTargetSpeed)>0?fabs(mTargetSpeed)*2.5:85;
     if (maxFwd>85) maxFwd=85;
 
     if(mForward>maxFwd) {
-        // syslog(LOG_NOTICE,"over speed");
+       // printf("over speed +\n");
+        mPow=0;
         mForward=maxFwd;
     }
 
     if(mForward<-maxFwd) {
-        // syslog(LOG_NOTICE,"over speed");
+//printf("over speed - \n");
+        mPow=0;
        mForward=-maxFwd;
     }
    

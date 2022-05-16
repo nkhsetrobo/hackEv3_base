@@ -29,7 +29,8 @@ class SpeedControl
         bool mBreake_flag;
         bool mMode_flag;//setComandVだとtrue、setComandだとfalse
         int mCnt=0;
-
+     double mAcc=0.5;
+     double mPow=0;
 
 };
 #endif
