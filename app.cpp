@@ -109,8 +109,8 @@ static void user_system_create() {
 
   gScene = new Scene();
 
-  gTailWalker->setPwm(0,1,0,0);
-  gArmWalker->setPwm(-50,1,0,0);
+  //gTailWalker->setPwm(0,1,0,0);
+  //gArmWalker->setPwm(-50,1,0,0);
 
   ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
   

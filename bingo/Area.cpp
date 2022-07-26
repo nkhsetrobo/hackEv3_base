@@ -5,7 +5,7 @@
 #include "BlackLine.h"
 
 #include "util.h"
-#include "etroboc_ext.h"
+//#include "etroboc_ext.h"
 
 Area::Area(int idx)
 {   
@@ -416,6 +416,7 @@ void Area::getBlockListIdxs(int node[])
 
 void Area::initBlockFromApi()
 {
+    /*
     int lookup[100];
     lookup['A'] = 0;
     lookup['B'] = 2;
@@ -463,5 +464,6 @@ void Area::initBlockFromApi()
     modifyBlockColorByNodeId(lookup[blue2],COLOR::BLUE);
     modifyBlockColorByNodeId(lookup[yellow1],COLOR::YELLOW);
     modifyBlockColorByNodeId(lookup[yellow2],COLOR::YELLOW);
+    */
     
 }

@@ -3,6 +3,7 @@ mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 APPL_COBJS +=
 
 APPL_CXXOBJS += \
+	SpeedSectionManager.o\
 	util.o \
 	Measure.o \
 	Brightness.o \
@@ -23,7 +24,6 @@ APPL_CXXOBJS += \
 	Scene.o \
 	Section.o \
 	SectionManager.o \
-	SpeedSectionManager.o\
 	Judge.o\
 	TurnAngleJudge.o\
 	ColorJudge.o\

@@ -1,7 +1,7 @@
 #include "Scene.h"
 #include "util.h"
 #include "ev3api.h"
-#include "etroboc_ext.h"
+//#include "etroboc_ext.h"
 #include "Clock.h"
 
 extern Motor       *gLeftWheel;
@@ -71,9 +71,9 @@ void Scene::execUndefined()
 void Scene::execStart()
 {
     static int cnt=0;
-    //printf("press %d",ev3_touch_sensor_is_pressed(EV3_PORT_1));
+    //printf("press %d\n",ev3_touch_sensor_is_pressed(EV3_PORT_1));
     // とりあえず動かすだけなので、設計に基づいて書き直そう
-    if (ev3_touch_sensor_is_pressed(EV3_PORT_1) == 1)
+    if(ev3_button_is_pressed(RIGHT_BUTTON))
     {       
             mState=INIT_SPEED;
     }
@@ -157,6 +157,6 @@ void Scene::execGarage()
 void Scene::execEnd()
 {
     // msg_log("finish!");
-    ETRoboc_notifyCompletedToSimulator();
+    //ETRoboc_notifyCompletedToSimulator();
 
 } 
