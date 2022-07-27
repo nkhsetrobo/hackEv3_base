@@ -91,8 +91,8 @@ wParam entry2022[100] = {
 
 float normal_spd=32;
 wParam advance2022[500] = {
-                    {0, Section::TRACER, Section::LENGTH, 20, 0,35, 30.0, 2.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0},
-                    {0, Section::TRACER, Section::LENGTH,40, 0,35, 30.0, 3.1, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 650, 0, 0, 0, 0, 0},
+                    {0, Section::TRACER, Section::LENGTH, 30, 0,35, 30.0, 2.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0},
+                    {0, Section::TRACER, Section::LENGTH, 40, 0,40, 30.0, 8.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 650, 0, 0, 0, 0, 0},
                     {0, Section::TRACER, Section::LENGTH, 20, 0,35, 30.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 665, 0, 0, 0, 0, 0},
                     {0, Section::WALKER, Section::COLOR, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 15, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 115, 0.35, 0 , 0},
                     {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 10, 0, _EDGE, Judge::UPDATE, 0, 7, 0, 0, 0, 0, 0},

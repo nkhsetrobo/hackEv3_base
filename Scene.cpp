@@ -6,6 +6,8 @@
 
 extern Motor       *gLeftWheel;
 extern Motor       *gRightWheel;
+extern MyColorSensor *gColor;
+
 
 Scene::Scene() : mState(UNDEFINED)
 {
@@ -13,6 +15,8 @@ Scene::Scene() : mState(UNDEFINED)
     mSlm = new SlalomSectionManager();
     mGsm = new GarageSectionManager();
     mBsm = new BlockSectionManager();
+
+    mColorSensor = gColor;
 }
 
 bool Scene::run()
@@ -20,6 +24,9 @@ bool Scene::run()
     switch(mState) {
         case UNDEFINED:
             execUndefined();
+            break;
+        case CALIB:
+            execCalib();
             break;
         case START:
             execStart();
@@ -59,21 +66,34 @@ bool Scene::run()
 
 void Scene::execUndefined()
 {
-    printf("Press Touch Button to start.\n");
  //   Bingo *mBingo = new Bingo();
  //     mBingo->get(); 
 //    ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
 //    tslp_tsk(1000*1000U);
   //  printf("wait end.\n");
 
-    mState = START;
+    mState = CALIB;
+}
+
+void Scene::execCalib()
+{
+    if(ev3_button_is_pressed(LEFT_BUTTON))
+    {
+        mColorSensor->calibMax();
+    }
+    if(ev3_button_is_pressed(RIGHT_BUTTON))
+    {
+        printf("Press Touch Button to start.\n");
+        mState = START;
+    }
+
 }
 void Scene::execStart()
 {
     static int cnt=0;
     //printf("press %d\n",ev3_touch_sensor_is_pressed(EV3_PORT_1));
     // とりあえず動かすだけなので、設計に基づいて書き直そう
-    if(ev3_button_is_pressed(RIGHT_BUTTON))
+    if(ev3_button_is_pressed(ENTER_BUTTON))
     {       
             mState=INIT_SPEED;
     }

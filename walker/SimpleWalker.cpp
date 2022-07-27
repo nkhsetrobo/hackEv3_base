@@ -50,7 +50,7 @@ void SimpleWalker::run() {
 
     float pwm_l = mForward + mTurn;      // <2>
     float pwm_r = mForward - mTurn;      // <2>
-    static const int MAXPWM=85;
+    static const int MAXPWM=75;
     int diff = 0;
     if(pwm_l>MAXPWM) {
         pwm_r = (int)((float)MAXPWM*pwm_r/pwm_l);

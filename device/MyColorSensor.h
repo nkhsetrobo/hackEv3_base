@@ -38,6 +38,7 @@ class MyColorSensor
         static const int COLOR;
 
         rgb_raw_t getRgb();
+        void calibMax();
 
     private:
         ePortS mPort;

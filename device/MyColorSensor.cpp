@@ -191,3 +191,16 @@ rgb_raw_t MyColorSensor::getRgb()
 {
     return raw;
 }
+
+void MyColorSensor::calibMax()
+{
+#if defined(MAKE_RASPIKE)
+    mColor->getRawColor(raw);
+
+    mMax_R  = raw.r;
+    mMax_G  = raw.g;
+    mMax_B  = raw.b;
+#endif
+    printf("calib %d,%d,%d\n",raw.r,raw.g,raw.b);
+
+}

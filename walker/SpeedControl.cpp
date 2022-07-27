@@ -8,7 +8,7 @@ SpeedControl::SpeedControl(Odometry *odo,Velocity *v):
     mMode_flag(true),
     mBreake_flag(false)
 {
-    mPid = new PID(0.0166666*4);
+    mPid = new PID(0.01*4);
     mPid->debug = false;
     mPid->debug_char = 'S';
 
@@ -47,7 +47,7 @@ void SpeedControl::setTargetSpeed(double speed)
 
   //  mPid->setKp(0.4*0.01);
   //  mPid->setKi(0.15);
-    mPid->setKp(1.0);
+    mPid->setKp(2.0);
     mPid->setKi(0);
         //mPid->setKd(0.03*bai);
     mPid->setKd(0);

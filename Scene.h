@@ -6,6 +6,8 @@
 #include "GarageSectionManager.h"
 #include "BlockSectionManager.h"
 
+#include "MyColorSensor.h"
+
 class Scene{
     public:
         Scene();
@@ -21,10 +23,12 @@ class Scene{
         void execGarage();
         void initSpeed();
         void execEnd();
-
+        void execCalib();
+ 
     private:
         enum State {
             UNDEFINED,
+            CALIB,
             START,
             INIT_SPEED,
             SPEED,
@@ -43,5 +47,8 @@ class Scene{
         SlalomSectionManager *mSlm;
         GarageSectionManager *mGsm;
         BlockSectionManager *mBsm;
+
+        MyColorSensor *mColorSensor;
+        
 };
 #endif
