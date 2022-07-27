@@ -18,8 +18,9 @@ float GyroAngle::getValue()
 
 void GyroAngle::update(float ga)
 {
-    gAngle = ga;
+    gAngle = -ga;
 
+    //printf("gyro update %f\n",ga);
     /*static char buf[256];
     sprintf(buf,"update:%f\n",gAngle);
     msg_log(buf);*/
