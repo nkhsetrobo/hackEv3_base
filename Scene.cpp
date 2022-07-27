@@ -71,6 +71,7 @@ void Scene::execUndefined()
 //    ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
 //    tslp_tsk(1000*1000U);
   //  printf("wait end.\n");
+    printf("Press Left Button to caribration.\n");
 
     mState = CALIB;
 }
