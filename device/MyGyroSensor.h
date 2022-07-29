@@ -5,6 +5,7 @@
 #include "AnglerVelocity.h"
 #include "GyroAngle.h"
 #include "Measure.h"
+#include "TurnAngle.h"
 
 using namespace ev3api;
 
@@ -21,9 +22,11 @@ class MyGyroSensor : public Measure
         GyroSensor *mGyro;
         AnglerVelocity *mAnglerVelocity;
         GyroAngle *mGyroAngle;
+        TurnAngle *mTurnAngle;
 
         float angvel;
         float gang;
+        float base_gang;
 
 };
 

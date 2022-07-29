@@ -46,6 +46,7 @@ void MyColorSensor::update()
         mNorm_bright = normBrightness(mBright, mMin_brightness, mMax_brightness);
     } else {
         mColor->getRawColor(raw);
+   //printf("RGB %d,%d,%d\n",raw.r,raw.g,raw.b);
         static int cnt=0;
     //     if (cnt%1000)
     //    // syslog(LOG_NOTICE,"%d,%d,%d",raw.r,raw.g,raw.b);
@@ -55,6 +56,8 @@ void MyColorSensor::update()
         mRgb.g = normColor(raw.g,mMin_G,mMax_G);
         mRgb.b = normColor(raw.b,mMin_B,mMax_B);
         getHSV(mRgb,mHsv);
+     //printf("rRGB  %f,%f,%f\n",mRgb.r,mRgb.g,mRgb.b);
+     //printf("HSV %f,%f,%f\n",mHsv.h,mHsv.s,mHsv.v);
         mHue->update(mHsv.h);
         mSatu->update(mHsv.s);
 

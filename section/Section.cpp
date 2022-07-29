@@ -42,11 +42,11 @@ bool Section::run()
     if(mJudge->run()){
         return true;
     }
-    if(emergency && mEmergencyJudge->run()){
+   /* if(emergency && mEmergencyJudge->run()){
         error_code=1;
         printf("Emergency Stop!!!\n");
         return true;
-    }
+    }*/
 
     //走法
     if(first){

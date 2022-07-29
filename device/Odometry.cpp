@@ -100,7 +100,9 @@ void Odometry::calc()
 	sumlen += (len_r+len_l)/2.0;
 
 	mLength->update(sumlen);
+#if defined(MAKE_SIM)
 	mTurnAngle->update(th);
+#endif
 	mXPosition->update(x);
 	mYPosition->update(y);
     static char buf[256];
