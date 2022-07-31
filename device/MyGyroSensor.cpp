@@ -23,7 +23,7 @@ void MyGyroSensor::update()
     angvel = mGyro->getAnglerVelocity();
     
 #if defined(MAKE_RASPIKE)
-    float last_gang=gang;
+    double last_gang=gang;
     gang = mGyro->getAngle();
     if(base_gang+gang - last_gang>180) {
         base_gang -= 360;
@@ -32,14 +32,14 @@ void MyGyroSensor::update()
         base_gang += 360;
     }
     gang += base_gang;
-    //printf("ANG %f: %d\n",gang,mGyro->getAngle() );
-    mTurnAngle->update(gang);
+    printf("ANG %f: %d\n",gang,mGyro->getAngle() );
+    mTurnAngle->update(-gang*3.1415/180);
 #else
     gang = mGyro->getAngle();
 #endif
 
     mAnglerVelocity->update(angvel);
-    mGyroAngle->update(gang);
+    mGyroAngle->update(-gang);
 
 }
 

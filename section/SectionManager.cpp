@@ -32,7 +32,7 @@ bool SectionManager::run()
        } 
 
         mSectionIdx++;
-       // printf("nextIdx %d\n",mSectionIdx);
+        printf("nextSection %d =============================\n",mSectionIdx);
     }
 
     return false;

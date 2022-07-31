@@ -77,7 +77,7 @@ void SimpleWalker::run() {
     if(pwm_r<-100) pwm_r=-100;
     if(pwm_l<-100) pwm_l=-100;
 
-      //  printf("* %f,%f \n",pwm_l,pwm_r);
+    printf("* %f,%f \n",pwm_l,pwm_r);
     mOdo->setPwm(pwm_l,pwm_r);
 }
 

@@ -61,7 +61,7 @@ int SpeedControl::getPwm()
    
 
     // 直接制御なら
-    mMode_flag=true;
+    mMode_flag=false;
     if(!mMode_flag) {
 	    //ev3_speaker_play_tone(NOTE_F4,50);
         mForward = mTargetSpeed;

@@ -80,6 +80,8 @@ void Scene::execCalib()
 {
     if(ev3_button_is_pressed(LEFT_BUTTON))
     {
+        int volt = ev3_battery_voltage_mV();
+        printf("battery %d\n",volt);
         mColorSensor->calibMax();
     }
     if(ev3_button_is_pressed(RIGHT_BUTTON))

@@ -24,7 +24,7 @@ bool ColorJudge::run()
  
     if (fabs(num) > 180)
     {
-        num = fabs(num)-180;
+        num = 360-fabs(num);
     }
     else
     {
@@ -33,7 +33,7 @@ bool ColorJudge::run()
 
    //printf(" %f ,%f , value %f,%f, %f\n",hue,satu, mHsvHue->getValue(), mHsvSatu->getValue(),num);
 
-    if (num >= sa2 && num <= sa1)
+    if (num <= sa1)
     {
 
         // if(fabs(satu - mHsvSatu->getValue()) >= sa4 && fabs(satu - mHsvSatu->getValue()) <= sa3)

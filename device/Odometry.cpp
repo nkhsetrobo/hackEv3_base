@@ -80,6 +80,7 @@ void Odometry::calc()
 {
 
 	static int count=0;
+	static double last_angle=0;
 
 	float rs1 = current_rs1;
 	float rs2 = current_rs2;
@@ -92,6 +93,11 @@ void Odometry::calc()
 	float len_l = drs1*M_PI*D_LEFT/360.0;
 	float len_r = drs2*M_PI*D_RIGHT/360.0;
 	float dth=(len_r-len_l)/TREAD;
+#if defined(MAKE_RASPIKE)
+	double current_angle = mTurnAngle->getValue();
+	dth = (current_angle - last_angle)*3.1415/180;
+	last_angle =  current_angle;
+#endif
 	
 	x+= (len_r+len_l)/2.0*cos(th+dth/2.0); //進行方向 X軸 0度方向
 	y+= (len_r+len_l)/2.0*sin(th+dth/2.0); //横	
