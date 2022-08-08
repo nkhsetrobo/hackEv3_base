@@ -39,7 +39,7 @@ typedef struct _Param11
   
     bool vangle;
 
-} wsParam;
+} wParam;
 
 class SectionManager {
     public:
@@ -48,18 +48,19 @@ class SectionManager {
         virtual bool run();
         void addSection(Section *);
         void reset();
-        void setWalker(Section * sc);
-        void setJudge(Section * sc);
-        void setWalker(Section * sc,wsParam *wp,int cnt);
-        void setJudge(Section * sc,wsParam *wp,int cnt);
-        void setWPointer(wsParam *ptr);
+        //void setWalker(Section * sc);
+        //void setJudge(Section * sc);
+        void setWalker(Section * sc,wParam *wp,int cnt);
+        void setJudge(Section * sc,wParam *wp,int cnt);
+        void setWPointer(wParam *ptr);
         int getError();
+        virtual void init()=0;
     protected:
         Section *mSection[500];
         int mSectionIdx;
         int mLastIdx;
-        wsParam *wp;
-        wsParam param[500];
+        wParam *wp;
+        wParam param[500];
         int n;
         int error_code;
 

@@ -3,7 +3,7 @@
 
 SpeedSectionManager::SpeedSectionManager() : SectionManager()
 {}
-
+#if 0
   void SpeedSectionManager::setWalker(Section * sc)
   {
 
@@ -82,8 +82,11 @@ SpeedSectionManager::SpeedSectionManager() : SectionManager()
       break;
     }
   }
+  #endif
+
   void SpeedSectionManager::init()
   {
+    wParam *wp;
 
     static char buf[256];
 //    sprintf(buf, "%d,EDGE", _EDGE);
@@ -95,13 +98,14 @@ SpeedSectionManager::SpeedSectionManager() : SectionManager()
       wp = array[0];
 #endif
 
-    for (n = 0; wp[n].flag != -1; n++)
+    for (int n = 0; wp[n].flag != -1; n++)
     {
+      printf("new section %d\n",n);
 
       Section *sc = new Section();
 
-      setWalker(sc);
-      setJudge(sc);
+      setWalker(sc,wp,n);
+      setJudge(sc,wp,n);
 
       addSection(sc);
     }

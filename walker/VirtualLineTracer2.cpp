@@ -83,7 +83,7 @@ float VirtualLineTracer2::calcdistance(){
     float nx2=nx;
     float ny2=ny;
 
-    float noze=3.0;
+    float noze=2.0;
 
    if(mTargetSpeed>0){
          nx2=nx2+noze*cos((mTurnAngle->getValue()/180)* M_PI);
@@ -117,8 +117,8 @@ float VirtualLineTracer2::calcdistance(){
             // msg_log(buf2);
             flag = true;
         }
-    if(len>1.0) len=1.0;
-    if(len<-1.0) len=-1.0;
+    if(len>2.0) len=2.0;
+    if(len<-2.0) len=-2.0;
     return len ;
 
 } 
@@ -129,7 +129,7 @@ float VirtualLineTracer2::calcTurn(){
         float val1_turn =  mPid->getOperation(calcdistance());
 
 
-        setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
+        //setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
         float turn =  val1_turn+mBias;
         return turn;
 }
@@ -155,17 +155,17 @@ void VirtualLineTracer2::init(){
     sy = mYPosition->getvalue();
     angle2 += gStartAngle; // 基準位置からの角度に変換
 
-    float noze=3.0;
+    float noze=100.0;
 
-    fx = noze*cos((angle2/180)*M_PI)+mXPosition->getvalue();
-    fy = noze*sin((angle2/180)*M_PI)+mYPosition->getvalue();
+    fx = noze*cos((angle2/180)*M_PI)+sx;
+    fy = noze*sin((angle2/180)*M_PI)+sy;
 
     mPid->setKp(mPFactor); 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
     mPid->resetParam();
 
-    //printf("VirtualLineTracer2::init %f,%f,%f,%f  %f,%f,%f\n",sx,sy,fx,fy ,mPFactor,mIFactor,mDFactor);
+    printf("VirtualLineTracer2::init %f,%f,%f,%f  %f,%f,%f\n",sx,sy,fx,fy ,mPFactor,mIFactor,mDFactor);
    
 }
 

@@ -7,6 +7,8 @@
 extern Motor       *gLeftWheel;
 extern Motor       *gRightWheel;
 extern MyColorSensor *gColor;
+extern MyGyroSensor *gGyro;
+extern Odometry *gOdo;
 
 
 Scene::Scene() : mState(UNDEFINED)
@@ -83,6 +85,9 @@ void Scene::execCalib()
         int volt = ev3_battery_voltage_mV();
         printf("battery %d\n",volt);
         mColorSensor->calibMax();
+        gGyro->reset();
+
+
     }
     if(ev3_button_is_pressed(RIGHT_BUTTON))
     {
@@ -98,6 +103,8 @@ void Scene::execStart()
     // とりあえず動かすだけなので、設計に基づいて書き直そう
     if(ev3_button_is_pressed(ENTER_BUTTON))
     {       
+            gGyro->reset();
+            gOdo->reset();
             mState=INIT_SPEED;
     }
 

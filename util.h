@@ -13,4 +13,6 @@ extern  float msg_logbuf[30000][10];
 extern  int log_max;
 extern  int log_idx;
 
+static FILE *fp=nullptr;
+
 #endif  // MY_UNTL_H_

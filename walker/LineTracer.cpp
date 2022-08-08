@@ -55,9 +55,9 @@ void LineTracer::run()
 float LineTracer::calcTurn(float val1) {
 
     float bai = 1.0;   //CompositeSection用？
-    if(mSpeedControl->getCurrentSpeed()<15) {  //12
+    /*if(mSpeedControl->getCurrentSpeed()<15) {  //12
         bai=0.5;
-    }
+    }*/
     mPid->setKp(mPFactor*bai); //0.376
     mPid->setKi(mIFactor*bai);
     mPid->setKd(mDFactor*bai);
@@ -66,7 +66,7 @@ float LineTracer::calcTurn(float val1) {
 
     mPid->debug=true;
     if(mLeftEdge) val1_turn = -val1_turn;
-    setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
+    //setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
     float turn =  val1_turn+mBias;
    
     return turn;
@@ -100,6 +100,7 @@ void LineTracer::setParam(float speed,float target,float kp, float ki, float kd,
     mPid->setKd(mDFactor);
    
     mCurve = angleTarget;
+    setBias(mCurve);
     mAngleKp = angleKp;
 
 

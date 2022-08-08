@@ -20,7 +20,7 @@ class SlalomSectionManager : public SectionManager
         #endif
         
         int n;
-        wsParam a[100] = {
+        wParam a[100] = {
                         // {0, Section::ARM, Section::ARMANGLE, 0, 30, 1, 0, 0, 0, 0/*setparam*/, 0, 0, 0, 0, true,Judge::UPDATE, 9.5, 0, 0, 0, 0, 0, 0},
                         // {0, Section::WALKER, Section::GYRO, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 18, 0, true,Judge::UPDATE, -10, 0, 0, 0, 0, 0, 0}, //test用
                         // {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 18, 0, true,Judge::UPDATE, -10, 15, 0, 0, 0, 0, 0},
@@ -52,7 +52,7 @@ class SlalomSectionManager : public SectionManager
                         // {0, Section::WALKER, Section::STOP, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, true,Judge::UPDATE, 0, 0, 0, 0, 0, 0, 10},
                         {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0}};
 
-        wsParam b[100] = {
+        wParam b[100] = {
                         {0, Section::ARM, Section::ARMANGLE, 0, -60, 1.5, 0, 0, 0, 0/*setparam*/, 0, 0, 0, 0, true,Judge::UPDATE, -58, 0, 0, 0, 0, 0, 0},
                         {0, Section::TRACER, Section::LENGTH, 10, 0, 0, 0.2, 0.1, 1, 1 /*setparam*/, 0, 0, 0, 0, true,Judge::UPDATE, 0, 20, 0, 0, 0, 0, 0},
                         {0, Section::WALKER, Section::LENGTH, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, -5, 0, true,Judge::UPDATE, 0, -0.5, 0, 0, 0, 0, 0},
@@ -81,10 +81,8 @@ class SlalomSectionManager : public SectionManager
                         // {0, Section::WALKER, Section::STOP, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, true,Judge::UPDATE, 0, 0, 0, 0, 0, 0, 10},
                         {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, true, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0}};
 
-        void setWalker(Section *sc);
-        void setJudge(Section *sc);
-        wsParam *array[10]={a,b};
-        wsParam *wp;
+        wParam *array[10]={a,b};
+        wParam *wp;
 
 };
 

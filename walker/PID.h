@@ -1,6 +1,10 @@
 #ifndef _PID_H_
 #define _PID_H_
 
+#include "ev3api.h"
+#include "Clock.h"
+using namespace ev3api;
+
 class PID {
     public:
         PID();
@@ -27,7 +31,7 @@ class PID {
     private:
        float diff[2];
        float integral;
-        float last_integral[40];
+        float last_integral[1000];
        float target;
        float limit; 
        float delta;
@@ -42,6 +46,10 @@ class PID {
 
         int sec;
         int cnt;
+
+        int firstCnt=0;
+
+        Clock *clk;
 
 };
 

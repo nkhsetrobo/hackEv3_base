@@ -2,7 +2,6 @@
 
 // 演習用のユーティリティ
 
-static FILE *fp=nullptr;
 
 // 初期処理用
 void init_f(const char *str) {

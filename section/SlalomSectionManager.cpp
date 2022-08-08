@@ -16,19 +16,20 @@ void SlalomSectionManager::init()
     else{
       wp = array[1];
     }
-    for (n = 0; wp[n].flag != -1; n++)
+    for (int n = 0; wp[n].flag != -1; n++)
     {
 
       Section *sc = new Section();
 
-      setWalker(sc);
-      setJudge(sc);
+      setWalker(sc,wp,n);
+      setJudge(sc,wp,n);
 
      addSection(sc);
     }
 
 }
 
+#if 0
 void SlalomSectionManager::setWalker(Section *sc)
 {
 	Walker *walk = sc->selectWalker(wp[n].walk);
@@ -65,6 +66,7 @@ void SlalomSectionManager::setWalker(Section *sc)
   }
 }
 
+
 void SlalomSectionManager::setJudge(Section *sc)
 {
 	Judge *judge = sc->selectJudge(wp[n].judge);
@@ -97,3 +99,4 @@ void SlalomSectionManager::setJudge(Section *sc)
     break;
   }
 }
+#endif

@@ -2,9 +2,10 @@
 #include "util.h"
 
 PID::PID()
-    :PID(0.01)
+    :PID(0.010)
 {
-    
+
+
 }
 
 PID::PID(float delta) {
@@ -13,15 +14,17 @@ PID::PID(float delta) {
     integral=0;
     DELTAT=delta;
 
+    firstCnt = 0;
     resetFlg=true;
 
-    sec = 30;
+    sec = 300;
     cnt=0;
 
     for(int i=0;i<sec;i++) 
         last_integral[i]=0.0f;
 
   //  printf("created %f %d\n",DELTAT,sec);
+    clk = new Clock();
 
 }
 PID::~PID() 
@@ -60,6 +63,10 @@ float PID::getOperation(float value)
     
     cnt=(cnt+1)%sec;
 
+    if (firstCnt==1) {
+        delta=0;
+        firstCnt++;
+    }
     if(resetFlg) {
         diff[0]=diff[1];
         delta=0.0f;
@@ -68,25 +75,16 @@ float PID::getOperation(float value)
             last_integral[i]=0.0f;
         cnt=0;
         resetFlg=false;
+        firstCnt++;
     }
 
-    // 積分値のオーバーを防ぐ
-    /*
-    if (integral>10.0) 
-        integral=10.0;
-    if (integral<-10.0) 
-        integral=-10.0;
-        */
-    // 積分の初期成分は使わない
-    // if(cnt++<20) {
-    //     integral=0;
-    // }
- 
-    float val = diff[1]*Kp + delta*Kd + integral*Ki;
+
+    float val = diff[1]*Kp + delta*Kd + integral*Ki; 
+
     static int i=0;
     if (debug) {
        // printf("pid:(%3.1f-%3.1f), diff:%4.2f d:%4.2f i:%4.2f  op:%5.3f\n",target,value,diff[1],delta,integral,val);
-        //printf("%c,%f,%f,%f,%f\n",debug_char,diff[1],integral,delta, val);
+        printf("%c,%d,%f,%f,%f,%f\n",debug_char,clk->now(),diff[1],integral,delta, val);
         msg_num(debug_char,i,diff[1],integral,delta, val);
         i++;
     }

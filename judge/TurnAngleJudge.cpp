@@ -48,7 +48,7 @@ bool TurnAngleJudge::run()
 void TurnAngleJudge::init()
 {
 
-    if (update == Judge::UPDATE)
+    if (update == Judge::UPDATE || update == Judge::UPDATEALL)
     {
 
         gStartAngle = mTurnAngle->getValue();

@@ -10,7 +10,7 @@ BingoStateCarry::BingoStateCarry(BlockSectionManager *bsm)
 void BingoStateCarry::init()
 {
     printf("====bingo state carry init====\n");
-    wsParam param[30];
+    wParam param[30];
     int cnt=0;
     int from_idx=10;
     int to_idx=1;

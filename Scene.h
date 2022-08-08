@@ -7,6 +7,8 @@
 #include "BlockSectionManager.h"
 
 #include "MyColorSensor.h"
+#include "MyGyroSensor.h"
+#include "Odometry.h"
 
 class Scene{
     public:

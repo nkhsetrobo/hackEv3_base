@@ -81,6 +81,8 @@ void Odometry::calc()
 
 	static int count=0;
 	static double last_angle=0;
+	static int carib_cnt=0;
+	static double tread_err=0;
 
 	float rs1 = current_rs1;
 	float rs2 = current_rs2;
@@ -92,11 +94,11 @@ void Odometry::calc()
 
 	float len_l = drs1*M_PI*D_LEFT/360.0;
 	float len_r = drs2*M_PI*D_RIGHT/360.0;
-	float dth=(len_r-len_l)/TREAD;
+	float dth=(len_r-len_l)/(TREAD+tread_err);
 #if defined(MAKE_RASPIKE)
-	double current_angle = mTurnAngle->getValue();
-	dth = (current_angle - last_angle)*3.1415/180;
-	last_angle =  current_angle;
+//	double current_angle = mTurnAngle->getValue();
+//	dth = (current_angle - last_angle)*M_PI/180;
+//	last_angle =  current_angle;
 #endif
 	
 	x+= (len_r+len_l)/2.0*cos(th+dth/2.0); //進行方向 X軸 0度方向
@@ -105,10 +107,19 @@ void Odometry::calc()
 	th+=dth; // 左旋回＋、右旋回-
 	sumlen += (len_r+len_l)/2.0;
 
+/*
+	if(++carib_cnt>100) {
+		double diff = th - current_angle*M_PI/180;
+		tread_err -= diff*1.0;
+		//th = current_angle*M_PI/180;
+		printf("tread error %f\n",tread_err);
+		carib_cnt=0;
+	}*/
+
+	//printf("odometry %f, gyro %f\n",th*180/M_PI, current_angle);
+
 	mLength->update(sumlen);
-#if defined(MAKE_SIM)
 	mTurnAngle->update(th);
-#endif
 	mXPosition->update(x);
 	mYPosition->update(y);
     static char buf[256];

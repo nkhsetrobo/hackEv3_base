@@ -52,7 +52,7 @@ void SectionManager::reset()
     mSectionIdx = 0;
     mLastIdx=0;
 }
-void SectionManager::setWalker(Section * sc,wsParam *wp,int n)
+void SectionManager::setWalker(Section * sc,wParam *wp,int n)
 {
     Walker *walk = sc->selectWalker(wp[n].walk);
 
@@ -97,7 +97,7 @@ void SectionManager::setWalker(Section * sc,wsParam *wp,int n)
     }
 }
 
-void SectionManager::setWalker(Section * sc)
+/*void SectionManager::setWalker(Section * sc)
 {
     setWalker(sc,wp,n);
 }
@@ -105,8 +105,9 @@ void SectionManager::setJudge(Section * sc)
 {
     setJudge(sc,wp,n);
 }
+*/
 
-void SectionManager::setJudge(Section * sc,wsParam *wp2, int n)
+void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
 {
     //printf("SM setJudge %d\n",wp2[n].judge);
     Judge *judge = sc->selectJudge(wp2[n].judge);
@@ -144,7 +145,7 @@ void SectionManager::setJudge(Section * sc,wsParam *wp2, int n)
     }
  }
 
-void SectionManager::setWPointer(wsParam *ptr)
+void SectionManager::setWPointer(wParam *ptr)
 {
     wp = ptr;
 }
@@ -153,3 +154,4 @@ int SectionManager::getError()
 {
     return error_code;
 }
+

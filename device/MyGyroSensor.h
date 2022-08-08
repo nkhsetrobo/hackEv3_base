@@ -7,6 +7,8 @@
 #include "Measure.h"
 #include "TurnAngle.h"
 
+#include "Clock.h"
+
 using namespace ev3api;
 
 class MyGyroSensor : public Measure
@@ -16,6 +18,7 @@ class MyGyroSensor : public Measure
                     AnglerVelocity* angv,
                     GyroAngle* ga);
         void update();
+        void reset();
 
     private:
         ePortS mPort;
@@ -27,6 +30,10 @@ class MyGyroSensor : public Measure
         float angvel;
         float gang;
         float base_gang;
+
+        double gang_v;
+
+        Clock *clk;
 
 };
 
