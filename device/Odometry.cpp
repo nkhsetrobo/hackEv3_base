@@ -155,10 +155,13 @@ void Odometry::setPwm(int left,int right)
 	if (right!=0 && no_run_count_r>force_cnt) 
 		right = right>0?force_pwm:-force_pwm;
    // printf("Left %d, Right %d",left,right);
-        int volt = ev3_battery_voltage_mV();
 
-	left*=8300.0/volt;
-	right*=8300.0/volt;	
+#if !defiend(MAKE_SIM)
+	int volt = ev3_battery_voltage_mV();
+	double rate = 8300.0/volt;
+	left*=rate;
+	right*=rate;	
+#endif
 
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);
