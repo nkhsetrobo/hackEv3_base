@@ -5,7 +5,7 @@ int BingoState::NOROTUE = 1;
 BingoState::BingoState(BlockSectionManager *bsm)
     :mBsm(bsm)
 {
-    mArea = BlockSectionManager::msArea;
+   // mArea = BlockSectionManager::msArea;
     error_code=0;
 }
 

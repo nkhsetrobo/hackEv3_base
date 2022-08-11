@@ -11,4 +11,10 @@ const float D_LEFT=10.0;
 const float TREAD=12.83;
 #endif
 //14.3
+
+#define GREEN_H 118
+#define RED_H 0
+#define YELLOW_H 62
+#define BLUE_H 225
+
 #endif

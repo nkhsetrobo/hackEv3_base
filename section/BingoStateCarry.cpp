@@ -119,7 +119,7 @@ void BingoStateCarry::init()
     to_idx = b_abs2ref[cnv[run_dir]][sel_circle];
     mArea->getBlockPlace(convSmall2BigBC(to_idx))->addBlock(move_block);
 
-    mBsm->setState(BlockSectionManager::msMoveState);
+ //   mBsm->setState(BlockSectionManager::msMoveState);
 }
 
 

@@ -144,8 +144,9 @@ Judge *Section::selectJudgePtr(int no)
             break;
         case SONERSTATUS:
             jptr = (Judge*)(new SonerStatusJudge());
-                printf("mStatusJudge %d\n",jptr);
-
+            break;
+        case COLORSTATUS:
+            jptr =new ColorStatusJudge();            
             break;
 
         default:

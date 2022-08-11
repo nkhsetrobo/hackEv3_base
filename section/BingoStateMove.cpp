@@ -109,7 +109,7 @@ void BingoStateMove::init()
     runner->setStart(mArea->getBlockPlace(convSmall2Big(next_runner)));
     runner->setDir((DIR)next_dir);
 
-    mBsm->setState(BlockSectionManager::msCarryState);
+    //mBsm->setState(BlockSectionManager::msCarryState);
 
 }
 

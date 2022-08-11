@@ -28,13 +28,13 @@ typedef struct _Param11
 
     Judge::JUDGE_MODE jflag;
 
-    float fangle;
+    float fangle;  // arm, tail
     float flength;
     float bright1;
     float bright2;
     float color1;
     float color2;
-    float count;
+    float count; //stop
     bool vangle;
 
     Section::JUDGE_NO statusjudge;

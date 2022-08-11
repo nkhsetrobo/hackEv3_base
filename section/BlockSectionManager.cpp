@@ -1,25 +1,31 @@
 #include "BlockSectionManager.h"
-#include "Section.h"
 
-BingoState *BlockSectionManager::msCarryState;
-BingoState *BlockSectionManager::msMoveState;
-Area *BlockSectionManager::msArea;
+//BingoState *BlockSectionManager::msCarryState;
+//BingoState *BlockSectionManager::msMoveState;
+//Area *BlockSectionManager::msArea;
 
 BlockSectionManager::BlockSectionManager()
   :SectionManager()
 {
-    BlockSectionManager::msArea = new Area(0);
-    BlockSectionManager::msCarryState = new BingoStateCarry(this);
-    BlockSectionManager::msMoveState = new BingoStateMove(this);
-    setState(BlockSectionManager::msCarryState);
+    //BlockSectionManager::msArea = new Area(0);
+    //BlockSectionManager::msCarryState = new BingoStateCarry(this);
+    //BlockSectionManager::msMoveState = new BingoStateMove(this);
+    //setState(BlockSectionManager::msCarryState);
 
 }
 
 void BlockSectionManager::init()
 {
-    mState->init();
+   // mState->init();
+    wParam *wp;
+
+    wp = array[0];
+
+    init(wp);
+
 }
 
+/*
 bool BlockSectionManager::run()
 {
   if(mState->getError()!=0) {
@@ -36,9 +42,12 @@ bool BlockSectionManager::run()
   error_code=0;
   return false;
 }
+*/
 
+/*
 void BlockSectionManager::setState(BingoState *bst)
 {
   mState = bst;
 }
 
+*/

@@ -32,7 +32,7 @@ private:
   //Virtual->setParam(20,2,0.2,0,1,1)
   //Walker->setCommand(0,10)
 
-#define PRIMARY
+//#define PRIMARY
 
 #if defined(PRIMARY)
   const int _PRIMARY = 1;
@@ -61,11 +61,22 @@ wParam entry2022[100] = {
 
 };
 
+#if defined(RASPIKE)
 float normal_spd=45;
 float rkp=18,rki=10,rkd=2.9;
 float rkp2=10,rki2=0.2,rkd2=1.2;
 float rvkp=15,rvki=0.5,rvkd=2.1;
-
+#elif defined(MAKE_SIM)
+float normal_spd=60;
+float rkp=35,rki=10,rkd=2.9;
+float rkp2=10,rki2=0.2,rkd2=1.2;
+float rvkp=15,rvki=0.5,rvkd=2.1;
+#else
+float normal_spd=45;
+float rkp=18,rki=10,rkd=2.9;
+float rkp2=10,rki2=0.2,rkd2=1.2;
+float rvkp=15,rvki=0.5,rvkd=2.1;
+#endif
 wParam primary2022R[500] = {
                     //{0, Section::VIRTUAL2, Section::LENGTH, 50, 0,rvkp,rvki,rvkd, 0, 0 /*setparam*/, -5, 0, 0, 0, _EDGE, Judge::UPDATE, 0,1000, 0.0, 0, 0, 0, 0 , 0},
 //                   {12, Section::VIRTUAL, Section::LENGTH, 55, 0, 10 ,1.0, 5.0, -5, 0 /*setparam*/, 0, -31, 0, 0, _EDGE, Judge::UNUPDATE, -10, 1000, 0, 0, 0, 0, 0 , 0},
@@ -128,7 +139,19 @@ wParam primary2022R[500] = {
 
 };
 
+wParam advance2022_b[500] = {
+                    {0, Section::TRACER, Section::LENGTH, 100, 0,30, 10.0, 2.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0,Section::JNONE},
+                    {1, Section::TRACER, Section::TURNANGLE, 63, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, -45, 0, 0, 0, 0, 0, 0,Section::JNONE},
+                    {2, Section::TRACER, Section::LENGTH, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 190, 0, 0, 0, 0, 0,Section::JNONE},
+                    {3, Section::TRACER, Section::TURNANGLE, 55, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 85, 0, 0, 0, 0, 0, 0,Section::JNONE},
+                    {4, Section::TRACER, Section::LENGTH, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 80, 0, 0, 0, 0, 0,Section::JNONE},
+                    {3, Section::TRACER, Section::TURNANGLE, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 70, 0, 0, 0, 0, 0, 0,Section::JNONE},
+                    {4, Section::TRACER, Section::LENGTH, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 15, 0, 0, 0, 0, 0,Section::JNONE},
 
+                   // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0},
+                   {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},
+
+};
 wParam advance2022[500] = {
                    // {0, Section::WALKER, Section::COLOR, 0, 0,50, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 0, 0, 0, 145, 0.35, 0 , 0},
                    //        {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
@@ -148,7 +171,7 @@ wParam advance2022[500] = {
                     {6, Section::WALKER, Section::COLOR, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 30, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, GREEN, 0.45, 0 , 0,Section::JNONE},
                     {7, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 30, 0, _EDGE, Judge::UPDATE, 0, 8, 0, 0, 0, 0, 0,Section::JNONE},
                    {8, Section::WALKER, Section::STOP, 0, 0, 0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 00, 0, 0, 0,0, 0,5,Section::JNONE}, 
-                    {9, Section::WALKER, Section::TURNANGLE, 6, 0,25, 5.0, 2.0, 0, 0 /*setparam*/, 0, 0, 3, -50, _EDGE, Judge::UPDATE, 90, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+                    {9, Section::WALKER, Section::TURNANGLE, 6, 0,25, 5.0, 2.0, 0, 0 /*setparam*/, 0, 0, 3, -30, _EDGE, Judge::UPDATE, 90, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
                     {10, Section::TRACER, Section::LENGTH, 35, 0,rkp2,rki2,rkd2, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UPDATEALL, 0, 13, 0, 0, 0, 0, 0,Section::JNONE},
                     {11, Section::WALKER, Section::COLOR, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 40, 0, _EDGE, Judge::UPDATEALL, 0, 0, 0, 0, RED, 0.4, 0 , 0,Section::JNONE},
                     //{9, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 20, 0, _EDGE, Judge::UPDATE, 0, 2, 0, 0, 0, 0, 0 , 0,Section::JNONE},
@@ -424,7 +447,7 @@ wParam base2022[100] = {
 #if defined(PRIMARY)
   wParam *array[10] = {primary2022R, b};
 #else
-  wParam *array[10] = {advance2022, b};
+  wParam *array[10] = {advance2022_b, b};
 #endif
 
 };

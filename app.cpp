@@ -193,13 +193,7 @@ void tracer_task(intptr_t unused) {
         
       gPolling->run();
 
-      // とりあえずここで、アームの固定。設計に基づいて変えるべし
-      int arm_cnt = gArm->getCount();
-  // syslog(LOG_NOTICE,"%d",arm_cnt);
-      int diff = -50 - arm_cnt;
-  #if defined(MAKE_SIM)
-    //  gArm->setPWM(diff*4.0);
-  #endif
+
     // しっぽ制御
       
       gTailWalker->run();

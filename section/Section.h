@@ -19,6 +19,7 @@
 #include "Stop.h"
 #include "SonerJudge.h"
 #include "SonerStatusJudge.h"
+#include "ColorStatusJudge.h"
 
 class Section
 {
@@ -61,6 +62,7 @@ public:
         STOP,
         SONER,
         SONERSTATUS,
+        COLORSTATUS,
         JEND=-1
     };
 

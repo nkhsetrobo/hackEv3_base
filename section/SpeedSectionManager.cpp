@@ -85,6 +85,7 @@ SpeedSectionManager::SpeedSectionManager() : SectionManager()
   #endif
 
 
+
   void SpeedSectionManager::init()
   {
     wParam *wp;
@@ -96,3 +97,4 @@ SpeedSectionManager::SpeedSectionManager() : SectionManager()
 #endif
     init(wp);
   }
+  

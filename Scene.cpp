@@ -9,6 +9,7 @@ extern Motor       *gRightWheel;
 extern MyColorSensor *gColor;
 extern MyGyroSensor *gGyro;
 extern Odometry *gOdo;
+extern ArmWalker *gArmWalker;
 
 
 Scene::Scene() : mState(UNDEFINED)
@@ -73,6 +74,12 @@ void Scene::execUndefined()
 //    tslp_tsk(1000*1000U);
   //  printf("wait end.\n");
 
+
+   // int diff =arm_target - arm_cnt;
+   // gArm->setPWM(diff*4.0);
+
+    gArmWalker->setPwm(0, 0,0,0);
+
 #if defined(RASPIKE)
     printf("Press Left Button to caribration.\n");
     mState = CALIB;
@@ -111,6 +118,8 @@ void Scene::execStart()
     {       
             gGyro->reset();
             gOdo->reset();
+                gArmWalker->setPwm(0, 4,0,0);
+
             mState=INIT_SPEED;
     }
 #else
@@ -118,6 +127,8 @@ void Scene::execStart()
     {       
             gGyro->reset();
             gOdo->reset();
+                gArmWalker->setPwm(0, 4,0,0);
+
             mState=INIT_SPEED;
     }
 #endif
@@ -135,10 +146,10 @@ void Scene::execSpeed()
         delete mSsm;
         // msg_log("test length");
 
-        BlockSectionManager::msArea->initBlockFromApi();
+        //BlockSectionManager::msArea->initBlockFromApi();
 
-       //mState = INIT_BINGO;
-       mState = INIT_SLALOM;
+       mState = INIT_BINGO;
+       //mState = INIT_SLALOM;
         // mState = FINISH;
     }
 }
