@@ -70,12 +70,16 @@ void Scene::execUndefined()
 {
  //   Bingo *mBingo = new Bingo();
  //     mBingo->get(); 
-//    ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
 //    tslp_tsk(1000*1000U);
   //  printf("wait end.\n");
-    printf("Press Left Button to caribration.\n");
 
+#if defined(RASPIKE)
+    printf("Press Left Button to caribration.\n");
     mState = CALIB;
+#else
+    ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
+    mState = START;
+#endif
 }
 
 void Scene::execCalib()
@@ -101,12 +105,22 @@ void Scene::execStart()
     static int cnt=0;
     //printf("press %d\n",ev3_touch_sensor_is_pressed(EV3_PORT_1));
     // とりあえず動かすだけなので、設計に基づいて書き直そう
+
+#if defined(RASPIKE)
     if(ev3_button_is_pressed(ENTER_BUTTON))
     {       
             gGyro->reset();
             gOdo->reset();
             mState=INIT_SPEED;
     }
+#else
+    if(ev3_touch_sensor_is_pressed(EV3_PORT_1) == 1)
+    {       
+            gGyro->reset();
+            gOdo->reset();
+            mState=INIT_SPEED;
+    }
+#endif
 
 }
 void Scene::execSpeed()
