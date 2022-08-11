@@ -16,6 +16,7 @@ class Judge{
     Judge();
     virtual bool run();
     virtual void init();
+    virtual float status();
 
     enum  JUDGE_MODE{ UPDATE,
           UNUPDATE,

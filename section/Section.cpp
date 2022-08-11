@@ -15,6 +15,8 @@ Section::Section()
     first2=true;
     emergency=false;
     mEmergencyJudge=nullptr;
+    mStatusJudge=nullptr;
+
 }
 
 Section::~Section()
@@ -42,6 +44,12 @@ bool Section::run()
     if(mJudge->run()){
         return true;
     }
+
+    status=0;
+    if (mStatusJudge!=nullptr)
+        status = mStatusJudge->status();
+        
+
    /* if(emergency && mEmergencyJudge->run()){
         error_code=1;
         printf("Emergency Stop!!!\n");
@@ -82,51 +90,69 @@ Walker *Section::selectWalker(int  no)
             // ((ArmWalker*)mWalker)->setFlag(1);
             break;
         default:
-            printf("selectWalker error!! %d \n",no);
+            printf("no selectWalker  %d \n",no);
     }
 
     return mWalker;
 }
 
-
 Judge *Section::selectJudge(int no)
+{
+    mJudge = selectJudgePtr(no);
+    return  mJudge;
+}
+
+Judge *Section::selectStatusJudge(int no)
+{
+    mStatusJudge = selectJudgePtr(no);
+    return  mStatusJudge;
+}
+
+Judge *Section::selectJudgePtr(int no)
 {
     emergency = false;
     mEmergencyJudge = nullptr;
+    Judge *jptr=nullptr;
     switch(no) {
         case LENGTH:
-            mJudge = (Judge*)(new LengthJudge());
+            jptr = (Judge*)(new LengthJudge());
             break;
         case TURNANGLE:
-            mJudge = (Judge*)(new TurnAngleJudge());
+            jptr = (Judge*)(new TurnAngleJudge());
             break;
         case BRIGHTNESS:
-            mJudge = (Judge*)(new BrightnessJudge());
+            jptr = (Judge*)(new BrightnessJudge());
             break;
         case COLOR:
             emergency=true;
-            mJudge = (Judge*)(new ColorJudge());
+            jptr = (Judge*)(new ColorJudge());
             mEmergencyJudge =  (Judge*)(new LengthJudge());
             ((LengthJudge *)mEmergencyJudge)->setFinLength(20);
             ((LengthJudge *)mEmergencyJudge)->setupdate(Judge::UPDATE);
             break;
         case TAILANGLE:
-            mJudge = (Judge*)(new TailAngleJudge());
+            jptr = (Judge*)(new TailAngleJudge());
             break;
         case ARMANGLE:
-            mJudge = (Judge*)(new ArmAngleJudge());
+            jptr = (Judge*)(new ArmAngleJudge());
             break;
         case STOP:
-            mJudge = (Judge*)(new Stop());
+            jptr = (Judge*)(new Stop());
             break;
         case SONER:
-            mJudge = (Judge*)(new SonerJudge());
+            jptr = (Judge*)(new SonerJudge());
             break;
+        case SONERSTATUS:
+            jptr = (Judge*)(new SonerStatusJudge());
+                printf("mStatusJudge %d\n",jptr);
+
+            break;
+
         default:
-            printf("selectJudge error!! %d\n",no);
+            printf("no selectJudge  %d\n",no);
     }
     
-    return mJudge;
+    return jptr;
 }
 
 void Section::init(){
@@ -137,4 +163,24 @@ void Section::init(){
 int Section::getError()
 {
     return error_code;
+}
+
+float Section::getStatus()
+{
+    return status;
+}
+
+void Section::setID(int i)
+{
+    id =i;
+}
+
+int Section::getID()
+{
+    return id;
+}
+
+Judge* Section::getJudge()
+{
+    return mJudge;
 }

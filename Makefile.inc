@@ -58,7 +58,8 @@ APPL_CXXOBJS += \
 	Runner.o \
 	BlackLine.o \
 	Block.o \
-	BlockCircle.o
+	BlockCircle.o \
+	SonerStatusJudge.o
 
 SRCLANG := c++
 

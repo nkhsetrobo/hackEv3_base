@@ -18,6 +18,7 @@
 #include "ArmAngleJudge.h"
 #include "Stop.h"
 #include "SonerJudge.h"
+#include "SonerStatusJudge.h"
 
 class Section
 {
@@ -29,7 +30,13 @@ public:
 
     Walker *selectWalker(int no);
     Judge *selectJudge(int no);
+    Judge *selectStatusJudge(int no);
+    Judge *selectJudgePtr(int no);
+    Judge *getJudge();
     int getError();
+    float getStatus();
+    void setID(int id);
+    int getID();
 
     enum WALKER_NO
     {
@@ -53,6 +60,7 @@ public:
         ARMANGLE,
         STOP,
         SONER,
+        SONERSTATUS,
         JEND=-1
     };
 
@@ -60,6 +68,7 @@ protected:
     Walker *mWalker;
     Judge *mJudge;
     Judge *mEmergencyJudge;
+    Judge *mStatusJudge;
     bool debug;
 
 private:
@@ -68,6 +77,9 @@ private:
 
     bool emergency;
     int error_code;
+    float status;
+
+    int id;
 };
 
 #endif

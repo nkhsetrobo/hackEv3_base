@@ -7,27 +7,7 @@ SlalomSectionManager::SlalomSectionManager():
 {
 
 }
-void SlalomSectionManager::init()
-{
-    if(_EDGE==0){
 
-      wp = array[0];
-    }
-    else{
-      wp = array[1];
-    }
-    for (int n = 0; wp[n].flag != -1; n++)
-    {
-
-      Section *sc = new Section();
-
-      setWalker(sc,wp,n);
-      setJudge(sc,wp,n);
-
-     addSection(sc);
-    }
-
-}
 
 #if 0
 void SlalomSectionManager::setWalker(Section *sc)
@@ -100,3 +80,55 @@ void SlalomSectionManager::setJudge(Section *sc)
   }
 }
 #endif
+
+
+  void SlalomSectionManager::init()
+  {
+    wParam *wp;
+
+#if defined(MAKE_RIGHT)
+      wp = array[0];
+#else
+      wp = array[0];
+#endif
+    init(wp);
+  }
+
+
+bool SlalomSectionManager::run()
+{
+    error_code=0;
+    if(mSection[mSectionIdx]==nullptr)
+        return true;
+
+    if(mSection[mSectionIdx]->run()) {
+      
+       if(mSection[mSectionIdx]->getID()==ONBOARD ) {
+          adjustLength();
+       } 
+
+        mSectionIdx++;
+        printf("nextSection %d =============================\n",mSectionIdx);
+    }
+
+    return false;
+}
+
+void SlalomSectionManager::adjustLength()
+{
+      float dist = mSection[mSectionIdx]->getStatus();
+
+      printf("adjust %f\n",dist);
+
+      LengthJudge *j = (LengthJudge*)(mSection[mSectionIdx+1]->getJudge());
+
+      float dist_adjust = 3;
+      if(dist>9) {
+        dist_adjust = 4.0;
+      } else if( dist>10) {
+        dist_adjust = 5.0;
+      }
+      j->setFinLength(dist_adjust);
+
+
+}

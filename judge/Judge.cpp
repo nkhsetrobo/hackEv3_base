@@ -31,5 +31,9 @@ void Judge::init(){
     
 }
 
+float Judge::status() {
+    return -255;
+}
+
 
 

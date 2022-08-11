@@ -75,6 +75,10 @@ private:
 	int32_t current_rs3;
 	int32_t current_rs4;
 
+
+	int no_run_count_r=0;
+	int no_run_count_l=0;
+
 };
 
 #endif

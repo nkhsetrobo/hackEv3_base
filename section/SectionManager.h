@@ -35,9 +35,9 @@ typedef struct _Param11
     float color1;
     float color2;
     float count;
-  
-  
     bool vangle;
+
+    Section::JUDGE_NO statusjudge;
 
 } wParam;
 
@@ -52,8 +52,10 @@ class SectionManager {
         //void setJudge(Section * sc);
         void setWalker(Section * sc,wParam *wp,int cnt);
         void setJudge(Section * sc,wParam *wp,int cnt);
+        void setStatusJudge(Section * sc,wParam *wp,int cnt);
         void setWPointer(wParam *ptr);
         int getError();
+        void init(wParam *ptr);
         virtual void init()=0;
     protected:
         Section *mSection[500];
@@ -65,6 +67,7 @@ class SectionManager {
         int error_code;
 
         static int msPrevWalker; 
+        wParam *array;
     private:
 };
 

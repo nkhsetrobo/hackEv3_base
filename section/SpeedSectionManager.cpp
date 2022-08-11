@@ -84,29 +84,15 @@ SpeedSectionManager::SpeedSectionManager() : SectionManager()
   }
   #endif
 
+
   void SpeedSectionManager::init()
   {
     wParam *wp;
-
-    static char buf[256];
-//    sprintf(buf, "%d,EDGE", _EDGE);
-//    msg_log(buf);
 
 #if defined(MAKE_RIGHT)
       wp = array[0];
 #else
       wp = array[0];
 #endif
-
-    for (int n = 0; wp[n].flag != -1; n++)
-    {
-      printf("new section %d\n",n);
-
-      Section *sc = new Section();
-
-      setWalker(sc,wp,n);
-      setJudge(sc,wp,n);
-
-      addSection(sc);
-    }
+    init(wp);
   }

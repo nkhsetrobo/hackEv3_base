@@ -123,7 +123,8 @@ void Scene::execSpeed()
 
         BlockSectionManager::msArea->initBlockFromApi();
 
-       mState = INIT_BINGO;
+       //mState = INIT_BINGO;
+       mState = INIT_SLALOM;
         // mState = FINISH;
     }
 }
@@ -152,6 +153,8 @@ void Scene::execBingo()
 }
 
 void Scene::initSlalom(){
+    printf("initSlalom\n");
+
     mSlm->init();
     mState=SLALOM;
 }

@@ -95,10 +95,21 @@ void Odometry::calc()
 	float len_l = drs1*M_PI*D_LEFT/360.0;
 	float len_r = drs2*M_PI*D_RIGHT/360.0;
 	float dth=(len_r-len_l)/(TREAD+tread_err);
+
+
+
 #if defined(MAKE_RASPIKE)
 //	double current_angle = mTurnAngle->getValue();
 //	dth = (current_angle - last_angle)*M_PI/180;
 //	last_angle =  current_angle;
+	if(len_l!=0) 
+		no_run_count_l=0;
+	else
+		no_run_count_l++;
+	if(len_r!=0) 
+		no_run_count_r=0;
+	else
+		no_run_count_r++;
 #endif
 	
 	x+= (len_r+len_l)/2.0*cos(th+dth/2.0); //進行方向 X軸 0度方向
@@ -137,6 +148,17 @@ void Odometry::setPwm(int left,int right)
 	/*static char buf[256];
     sprintf(buf,"Left %d, Right %d",left,right);
     msg_log(buf);*/
+	int force_pwm=50;
+	int force_cnt=50;
+	if (left!=0 && no_run_count_l>force_cnt) 
+		left = left>0?force_pwm:-force_pwm;
+	if (right!=0 && no_run_count_r>force_cnt) 
+		right = right>0?force_pwm:-force_pwm;
+   // printf("Left %d, Right %d",left,right);
+        int volt = ev3_battery_voltage_mV();
+
+	left*=8300.0/volt;
+	right*=8300.0/volt;	
 
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);

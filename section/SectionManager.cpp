@@ -109,7 +109,7 @@ void SectionManager::setJudge(Section * sc)
 
 void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
 {
-    //printf("SM setJudge %d\n",wp2[n].judge);
+    printf("SM setJudge %d\n",wp2[n].judge);
     Judge *judge = sc->selectJudge(wp2[n].judge);
     
     switch (wp2[n].judge)
@@ -145,6 +145,15 @@ void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
     }
  }
 
+void SectionManager::setStatusJudge(Section * sc,wParam *wp2, int n)
+{
+ //   printf("SM setStatusJudge %d\n",wp2[n].statusjudge);
+ //   printf("%f %f %d\n",wp2[n].fangle,wp2[n].flength,wp2[n].vangle);
+
+    Judge *judge = sc->selectStatusJudge(wp2[n].statusjudge);
+    
+}
+
 void SectionManager::setWPointer(wParam *ptr)
 {
     wp = ptr;
@@ -155,3 +164,18 @@ int SectionManager::getError()
     return error_code;
 }
 
+void SectionManager::init(wParam *wp)
+{
+
+    for (int n = 0; wp[n].flag != -1; n++)
+    {
+        Section *sc = new Section();
+        sc->setID(wp[n].flag);
+
+        setWalker(sc,wp,n);
+        setJudge(sc,wp,n);
+        setStatusJudge(sc,wp,n);
+
+        addSection(sc);
+    }
+}
