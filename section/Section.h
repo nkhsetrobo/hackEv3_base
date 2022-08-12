@@ -20,6 +20,7 @@
 #include "SonerJudge.h"
 #include "SonerStatusJudge.h"
 #include "ColorStatusJudge.h"
+#include "TurnWalker.h"
 
 class Section
 {
@@ -43,6 +44,7 @@ public:
     {
         WNONE,
         WALKER,
+        TURN,
         TRACER,
         VIRTUAL,
         VIRTUAL2,

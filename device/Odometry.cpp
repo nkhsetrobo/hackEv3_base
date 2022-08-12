@@ -102,11 +102,11 @@ void Odometry::calc()
 //	double current_angle = mTurnAngle->getValue();
 //	dth = (current_angle - last_angle)*M_PI/180;
 //	last_angle =  current_angle;
-	if(len_l!=0) 
+	if(fabs(len_l)>0.2) 
 		no_run_count_l=0;
 	else
 		no_run_count_l++;
-	if(len_r!=0) 
+	if(fabs(len_r)>0.2) 
 		no_run_count_r=0;
 	else
 		no_run_count_r++;
@@ -148,8 +148,8 @@ void Odometry::setPwm(int left,int right)
 	/*static char buf[256];
     sprintf(buf,"Left %d, Right %d",left,right);
     msg_log(buf);*/
-	int force_pwm=50;
-	int force_cnt=50;
+	int force_pwm=60;
+	int force_cnt=30;
 	if (left!=0 && no_run_count_l>force_cnt) 
 		left = left>0?force_pwm:-force_pwm;
 	if (right!=0 && no_run_count_r>force_cnt) 
@@ -158,7 +158,7 @@ void Odometry::setPwm(int left,int right)
 
 #if !defined(MAKE_SIM)
 	int volt = ev3_battery_voltage_mV();
-	double rate = 8300.0/volt;
+	double rate = 8343.0/volt;
 	left*=rate;
 	right*=rate;	
 #endif

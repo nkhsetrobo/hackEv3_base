@@ -75,6 +75,9 @@ Walker *Section::selectWalker(int  no)
         case TRACER:
             mWalker = (Walker*)(new LineTracer(gOdo,gSpeed));
            break;
+        case TURN:
+            mWalker = (Walker*)(new TurnWalker(gOdo,gSpeed));
+           break;
         case VIRTUAL:
             mWalker = (Walker*)(new VirtualLineTracer(gOdo,gSpeed));
             break;

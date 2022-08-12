@@ -80,7 +80,7 @@ void Scene::execUndefined()
 
     gArmWalker->setPwm(0, 0,0,0);
 
-#if defined(RASPIKE)
+#if defined(MAKE_RASPIKE)
     printf("Press Left Button to caribration.\n");
     mState = CALIB;
 #else
@@ -113,7 +113,7 @@ void Scene::execStart()
     //printf("press %d\n",ev3_touch_sensor_is_pressed(EV3_PORT_1));
     // とりあえず動かすだけなので、設計に基づいて書き直そう
 
-#if defined(RASPIKE)
+#if defined(MAKE_RASPIKE)
     if(ev3_button_is_pressed(ENTER_BUTTON))
     {       
             gGyro->reset();
@@ -148,8 +148,8 @@ void Scene::execSpeed()
 
         //BlockSectionManager::msArea->initBlockFromApi();
 
-       mState = INIT_BINGO;
-       //mState = INIT_SLALOM;
+       //mState = INIT_BINGO;
+       mState = INIT_SLALOM;
         // mState = FINISH;
     }
 }

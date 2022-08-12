@@ -71,6 +71,11 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         ((SimpleWalker *)walk)->setCommandV(wp[n].forward, wp[n].turn);
 
         break;
+
+    case Section::TURN:
+        ((TurnWalker *)walk)->setParam(wp[n].turn);
+    break;
+    
     case Section::VIRTUAL:
      //   printf("create VIRTUAL \n");
 
