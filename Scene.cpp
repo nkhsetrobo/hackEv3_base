@@ -78,11 +78,12 @@ void Scene::execUndefined()
    // int diff =arm_target - arm_cnt;
    // gArm->setPWM(diff*4.0);
 
-    gArmWalker->setPwm(0, 0,0,0);
+    gArmWalker->setPwm(0, 0,0,0); // シミュレータ対策
 
 #if defined(MAKE_RASPIKE)
     printf("Press Left Button to caribration.\n");
     mState = CALIB;
+    gArmWalker->setPwm(0, 4,0,0);
 #else
     ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
     mState = START;
@@ -118,7 +119,6 @@ void Scene::execStart()
     {       
             gGyro->reset();
             gOdo->reset();
-                gArmWalker->setPwm(0, 4,0,0);
 
             mState=INIT_SPEED;
     }
@@ -127,7 +127,7 @@ void Scene::execStart()
     {       
             gGyro->reset();
             gOdo->reset();
-                gArmWalker->setPwm(0, 4,0,0);
+                //gArmWalker->setPwm(0, 4,0,0);
 
             mState=INIT_SPEED;
     }

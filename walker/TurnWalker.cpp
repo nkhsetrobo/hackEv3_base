@@ -10,9 +10,9 @@ TurnWalker::TurnWalker(Odometry *odo,
     mPid->debug=true;
     mPid->debug_char = '%';
 
-    mPFactor = 25;
-    mIFactor = 0;
-    mDFactor = 0.4;
+    mPFactor = 50;
+    mIFactor = 5;
+    mDFactor = 1.0;
 }
 
 void TurnWalker::setParam(float turn)

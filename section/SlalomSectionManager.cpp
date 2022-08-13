@@ -130,7 +130,7 @@ void SlalomSectionManager::adjustLength()
 
       LengthJudge *j = (LengthJudge*)(mSection[mSectionIdx+1]->getJudge());
 
-      float offset=2.0;
+      float offset=2.5;
       float dist_adjust = 1.0;
       if( dist>17) {
         dist_adjust = 10.0;

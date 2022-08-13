@@ -33,7 +33,7 @@ void ArmWalker::setPwm(float target, float kp, float ki, float kd)
     int base_angle=0;
 #endif
 
-    mPid->setLimit(50);
+    mPid->setLimit(20);
     mPid->setTarget(base_angle+mTarget);
     mPid->setKp(mPFactor);
     mPid->setKi(mIFactor);
@@ -43,7 +43,7 @@ void ArmWalker::setPwm(float target, float kp, float ki, float kd)
 void ArmWalker::run()
 {
     if(stop_flag == 0){
-        //printf("arm target %f\n",mTarget);
+       // printf("arm target %f\n",mTarget);
         ap = (int)mPid->getOperation(mArmAngle->getValue());
         mOdo->setArmpwm(ap);
     }

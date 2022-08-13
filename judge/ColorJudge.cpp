@@ -31,7 +31,7 @@ bool ColorJudge::run()
         num = fabs(num);
     }
 
-   //printf(" %f ,%f , value %f,%f, %f\n",hue,satu, mHsvHue->getValue(), mHsvSatu->getValue(),num);
+   printf(" %f ,%f , value %f,%f, %f\n",hue,satu, mHsvHue->getValue(), mHsvSatu->getValue(),num);
 
     if (num <= sa1)
     {

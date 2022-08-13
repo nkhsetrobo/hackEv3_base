@@ -9,32 +9,32 @@ typedef struct _Param11
     int flag;
     Section::WALKER_NO walk;
     Section::JUDGE_NO judge;
-    float speed;
-    float target;
-    float kp;
-    float ki;
-    float kd;
-    float angleTarget;
-    float anglekp;
+    double speed;
+    double target;
+    double kp;
+    double ki;
+    double kd;
+    double angleTarget;
+    double anglekp;
 
-    float absangle;
-    float round;
+    double absangle;
+    double round;
 
-    float forward;
-    float turn;
+    double forward;
+    double turn;
 
-    bool edge; //true=left,false=right
+    int edge; //true=left,false=right
 
 
     Judge::JUDGE_MODE jflag;
 
-    float fangle;  // arm, tail
-    float flength;
-    float bright1;
-    float bright2;
-    float color1;
-    float color2;
-    float count; //stop
+    double fangle;  // arm, tail
+    double flength;
+    double bright1;
+    double bright2;
+    double color1;
+    double color2;
+    double count; //stop
     bool vangle;
 
     Section::JUDGE_NO statusjudge;
