@@ -24,6 +24,8 @@ class TurnWalker : public SimpleWalker{
 
         float mStartPos;
 
+        float offset;
+
 
 };
 

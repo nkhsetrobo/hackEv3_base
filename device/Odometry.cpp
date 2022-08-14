@@ -162,7 +162,8 @@ void Odometry::setPwm(int left,int right)
 	left*=rate;
 	right*=rate;	
 #endif
-
+	left = accel_L(left);
+	right = accel_R(right);
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);
 }
@@ -181,4 +182,49 @@ void Odometry::setTailpwm(int tail)
 void Odometry::setArmpwm(int arm)
 {
 	mArmMotor->setPWM(arm);
+}
+
+static double acc=0.01;
+int Odometry::accel_L(int target)
+{
+    static float spd=0;
+    if (target==0 || spd*target<0 ) {
+        spd=0;
+        return (int)spd;
+    }
+    if(target>spd) {
+        spd+=acc;
+    } else {
+        spd-=acc;
+    }
+    if(target>0 && spd>target) {
+        spd=target;
+    } 
+     if(target<0 && spd<target) {
+        spd=target;
+    } 
+ 
+    return (int)spd;
+}
+
+int Odometry::accel_R(int target)
+{
+    static float spd=0;
+    if (target==0 || spd*target<0 ) {
+        spd=0;
+        return (int)spd;
+    }
+    if(target>spd) {
+        spd+=acc;
+    } else {
+        spd-=acc;
+    }
+    if(target>0 && spd>target) {
+        spd=target;
+    } 
+     if(target<0 && spd<target) {
+        spd=target;
+    } 
+ 
+    return (int)spd;
 }

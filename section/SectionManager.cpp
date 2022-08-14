@@ -64,7 +64,7 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         ((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
         ((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
         ((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);
-
+         ((VirtualLineTracer2 *)walk)->setInitMode(wp[n].round);
         break;
     case Section::WALKER:
       //  printf("create WALKER \n");

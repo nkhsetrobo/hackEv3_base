@@ -13,6 +13,15 @@ TurnWalker::TurnWalker(Odometry *odo,
     mPFactor = 50;
     mIFactor = 5;
     mDFactor = 1.0;
+    offset= -20;
+#if defined(MAKE_SIM)
+    mPFactor = 80;
+    mIFactor = 5;
+    mDFactor = 2.0;
+
+#else
+#endif
+
 }
 
 void TurnWalker::setParam(float turn)
@@ -47,8 +56,8 @@ void TurnWalker::run(){
     float len = gLength->getValue();
 
     float op = mPid->getOperation(len-mStartPos);
-    printf("len %f op %f turn %f\n",len-mStartPos,op,mTurn);
+   // printf("len %f op %f turn %f\n",len-mStartPos,op,mTurn);
 
-    setCommandV((int)op, (int)mTurn);
+    setCommandV((int)(op+offset), (int)mTurn);
     SimpleWalker::run();
 }

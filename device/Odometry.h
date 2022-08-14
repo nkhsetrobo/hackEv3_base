@@ -40,6 +40,11 @@ public:
 	void setArmpwm(int arm);
 
 private:
+
+	int accel_L(int target);
+	int accel_R(int target);
+
+
 	Motor *mLeftMotor;
 	Motor *mRightMotor;
 	Length *mLength;

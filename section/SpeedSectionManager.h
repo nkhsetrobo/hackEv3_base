@@ -145,13 +145,16 @@ wParam primary2022R[500] = {
 };
 
 wParam advance2022_b[500] = {
+                    {0, Section::TURN, Section::LENGTH, 100, 0,30, 10.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 40, _EDGE, Judge::UPDATE, 0, 10000, 0, 0, 0, 0, 0,Section::JNONE},
+
+
                     {0, Section::TRACER, Section::LENGTH, 100, 0,30, 10.0, 2.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0,Section::JNONE},
                     {1, Section::TRACER, Section::TURNANGLE, 63, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, -45, 0, 0, 0, 0, 0, 0,Section::JNONE},
                     {2, Section::TRACER, Section::LENGTH, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 190, 0, 0, 0, 0, 0,Section::JNONE},
                     {3, Section::TRACER, Section::TURNANGLE, 55, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 85, 0, 0, 0, 0, 0, 0,Section::JNONE},
                     {4, Section::TRACER, Section::LENGTH, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 80, 0, 0, 0, 0, 0,Section::JNONE},
                     {3, Section::TRACER, Section::TURNANGLE, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 70, 0, 0, 0, 0, 0, 0,Section::JNONE},
-                    {4, Section::TRACER, Section::LENGTH, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 15, 0, 0, 0, 0, 0,Section::JNONE},
+                    {4, Section::TRACER, Section::LENGTH, 72, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 13, 0, 0, 0, 0, 0,Section::JNONE},
 
                    // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0},
                    {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},

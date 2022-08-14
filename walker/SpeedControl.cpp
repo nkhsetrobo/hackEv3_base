@@ -56,16 +56,38 @@ void SpeedControl::setTargetSpeed(double speed)
 
 }
 
+int SpeedControl::accel(int target)
+{
+    static float spd=0;
+    if (target==0 || spd*target<0 ) {
+        spd=0;
+        return (int)spd;
+    }
+    if(target>spd) {
+        spd+=0.1;
+    } else {
+        spd-=0.1;
+    }
+    if(target>0 && spd>target) {
+        spd=target;
+    } 
+     if(target<0 && spd<target) {
+        spd=target;
+    } 
+ 
+    return (int)spd;
+}
 int SpeedControl::getPwm()
 {
    
 
-    // 直接制御なら
+    // 直接制御なら false
     mMode_flag=false;
     if(!mMode_flag) {
 	    //ev3_speaker_play_tone(NOTE_F4,50);
+       // mForward = accel(mTargetSpeed);
         mForward = mTargetSpeed;
-        return mTargetSpeed;
+        return mForward;
     }
     //停止モード
     if(mBreake_flag) {

@@ -16,6 +16,7 @@ class SpeedControl
         void setBreak(bool brk);
         double getCurrentFwd();
         double getCurrentSpeed();
+        int accel(int target);
 
     private:
         PID *mPid;

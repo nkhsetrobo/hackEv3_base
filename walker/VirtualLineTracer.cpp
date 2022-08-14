@@ -109,7 +109,7 @@ float VirtualLineTracer::calcDistance()
     else{
         dist = sqrt((ax+co-cx)*(ax+co-cx)+(ay+si-cy)*(ay+si-cy));
     }
-   printf("VTcalc %f,%f,%f,%f, %f,%f, %f,%f\n", ax,ay,co,si,cx,cy,dist,angle);
+   //printf("VTcalc %f,%f,%f,%f, %f,%f, %f,%f\n", ax,ay,co,si,cx,cy,dist,angle);
         
     return dist;
 }

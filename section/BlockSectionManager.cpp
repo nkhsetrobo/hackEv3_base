@@ -5,7 +5,8 @@
 //Area *BlockSectionManager::msArea;
 
 BlockSectionManager::BlockSectionManager()
-  :SectionManager()
+  :SectionManager(),
+  mState(UNDEFINED)
 {
     //BlockSectionManager::msArea = new Area(0);
     //BlockSectionManager::msCarryState = new BingoStateCarry(this);
@@ -25,6 +26,73 @@ void BlockSectionManager::init()
 
 }
 
+bool BlockSectionManager::run()
+{
+  switch(mState) {
+    case UNDEFINED:
+      mState = AREASEARCH;
+    break;
+    case AREASEARCH:
+      execAreaSearch();
+    break;
+    case INITCOLOR:
+      initColor();
+    break;
+    case COLOR:
+      execColor();
+    break;
+    case INITCARRY:
+      initCarry();
+    break;
+    case CARRY:
+      execCarry();
+    break;
+    case INITMOVE:
+    break;
+    case MOVE:
+    break;
+  }
+  return false;
+
+}
+
+
+
+
+void BlockSectionManager::execAreaSearch()
+{
+  if(SectionManager::run()) {
+    mState = INITCOLOR;
+  }
+}
+
+void BlockSectionManager::initColor()
+{
+    reset();
+    init(c_search);
+    mState =COLOR;
+}
+
+void BlockSectionManager::execColor()
+{
+  if(SectionManager::run()) {
+    mState = INITCARRY;
+  }
+}
+
+void BlockSectionManager::initCarry()
+{
+    reset();
+    init(c_0_1);
+    mState = CARRY;
+}
+
+void BlockSectionManager::execCarry()
+{
+  if(SectionManager::run()) {
+    mState = INITMOVE;
+  }
+}
 /*
 bool BlockSectionManager::run()
 {

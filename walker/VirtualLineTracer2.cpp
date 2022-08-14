@@ -4,6 +4,11 @@
 
 extern float gStartAngle;
 
+float VirtualLineTracer2::SX = 0;
+float VirtualLineTracer2::SY = 0;
+float VirtualLineTracer2::FX = 0;
+float VirtualLineTracer2::FY = 0;
+
 VirtualLineTracer2::VirtualLineTracer2(Odometry *odo,
                         SpeedControl *scon)
                          : SimpleWalker(odo,scon) {
@@ -20,6 +25,8 @@ VirtualLineTracer2::VirtualLineTracer2(Odometry *odo,
     mIFactor=0;
     mDFactor=0;
     mLimit = 100;
+
+    initMode=0;
 
     mPid->resetParam();
 
@@ -77,6 +84,11 @@ void    VirtualLineTracer2::setnPosition(){
 
 }
 
+void VirtualLineTracer2::setInitMode(int mode) {
+
+    initMode = mode;
+}
+
 float VirtualLineTracer2::calcdistance(){
 
 
@@ -84,26 +96,26 @@ float VirtualLineTracer2::calcdistance(){
     float ny2=ny;
 
     float noze=2.0;
-
+    double angle = mTurnAngle->getValue();
    if(mTargetSpeed>0){
-         nx2=nx2+noze*cos((mTurnAngle->getValue()/180)* M_PI);
-         ny2=ny2+noze*sin((mTurnAngle->getValue()/180)* M_PI);
+         nx2=nx2+noze*cos((angle/180)* M_PI);
+         ny2=ny2+noze*sin((angle/180)* M_PI);
     }
     else{
-         nx2=nx2-noze*cos((mTurnAngle->getValue()/180)* M_PI);
-         ny2=ny2-noze*sin((mTurnAngle->getValue()/180)* M_PI);
+         nx2=nx2-noze*cos((angle/180)* M_PI);
+         ny2=ny2-noze*sin((angle/180)* M_PI);
 
      }
 
 
 
-     double a1=(fy-sy)*nx2;
-     double b1=(fx-sx)*ny2; 
+     double a1=(FY-SY)*nx2;
+     double b1=(FX-SX)*ny2; 
       
-    float a=(fy-sy)*nx2;
-    float b=(fx-sx)*ny2; 
-    float c=fx*sy;
-    float d=fy*sx;
+    float a=(FY-SY)*nx2;
+    float b=(FX-SX)*ny2; 
+    float c=FX*SY;
+    float d=FY*SX;
       static char buf[256];
       static char buf2[256];
           float ans = (a-b)+(c-d);
@@ -117,6 +129,8 @@ float VirtualLineTracer2::calcdistance(){
             // msg_log(buf2);
             flag = true;
         }
+       // printf("VT2 %f,%f<-%f,%f, %f,%f, %f,%f,%f,%f\n",nx2,ny2,nx,ny,  sx,sy,fx,fy);
+
     if(len>2.0) len=2.0;
     if(len<-2.0) len=-2.0;
     return len ;
@@ -160,12 +174,19 @@ void VirtualLineTracer2::init(){
     fx = noze*cos((angle2/180)*M_PI)+sx;
     fy = noze*sin((angle2/180)*M_PI)+sy;
 
+    if( initMode==0 ) {
+        SX=sx;
+        SY=sy;
+        FX=fx;
+        FY=fy;
+    }
+
     mPid->setKp(mPFactor); 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
     mPid->resetParam();
 
-    printf("VirtualLineTracer2::init %f,%f,%f,%f  %f,%f,%f\n",sx,sy,fx,fy ,mPFactor,mIFactor,mDFactor);
+    printf("VirtualLineTracer2::init %f,%f,%f,%f  %f,%f,%f\n",SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
    
 }
 

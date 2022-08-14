@@ -15,7 +15,7 @@ float ColorStatusJudge::status()
     float hue = mHsvHue->getValue();
     float sat = mHsvSatu->getValue();
 
-    if (sat>0.4) {
+    if (sat>0.15) {
         if(subhue(hue,GREEN_H)<30) {
             color[1]++;
         } 
