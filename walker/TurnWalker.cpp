@@ -15,10 +15,10 @@ TurnWalker::TurnWalker(Odometry *odo,
     mDFactor = 0.1;
     mOffset= -10;
 #if defined(MAKE_SIM)
-    mPFactor = 80;
+    mPFactor = 40;
     mIFactor = 5;
-    mDFactor = 2.0;
-    mOffset= -20;
+    mDFactor = 0.5;
+    mOffset= 0;
 
 #else
 #endif

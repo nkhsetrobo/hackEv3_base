@@ -186,7 +186,7 @@ void Odometry::setArmpwm(int arm)
 	mArmMotor->setPWM(arm);
 }
 
-static double acc=1.0;
+static double acc=0.1;
 int Odometry::accel_L(int target)
 {
     static float spd=0;
