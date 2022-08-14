@@ -136,7 +136,7 @@ void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
         ((ColorJudge *)judge)->setColor(wp2[n].color1, wp2[n].color2);
         break;
     case Section::STOP:
-        ((Stop *)judge)->setCount(wp2[n].count);
+        ((Stop *)judge)->setParam(wp2[n].count,wp2[n].jflag);
         break;
     case Section::ARMANGLE:
         ((ArmAngleJudge *)judge)->setFinAngle(wp2[n].fangle);

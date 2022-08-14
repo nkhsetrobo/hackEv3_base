@@ -32,8 +32,8 @@ private:
   //Virtual->setParam(20,2,0.2,0,1,1)
   //Walker->setCommand(0,10)
 
-#define PRIMARY
-#define MAKE_RIGHT
+//#define PRIMARY
+//#define MAKE_RIGHT
 
 #if defined(PRIMARY)
   const int _PRIMARY = 1;

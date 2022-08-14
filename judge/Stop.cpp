@@ -1,6 +1,10 @@
 #include "Stop.h"
 #include "util.h"
 
+
+extern float gStart;
+extern float gStartAngle;
+
 bool Stop::run()
 {
 
@@ -16,7 +20,18 @@ bool Stop::run()
 
 }
 
-void  Stop::setCount(int count)
+void  Stop::setParam(int count,int update)
 {
     mCount=count;
+    mUpdate = update;
+
+}
+
+void Stop::init()
+{
+    if (mUpdate == Judge::UPDATEALL) {
+        gStartAngle = mTurnAngle->getValue();
+        gStart = mLength->getValue(); // 更新
+    }
+    
 }

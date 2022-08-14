@@ -8,10 +8,12 @@ class Stop : public Judge
     public :
 
         bool  run();
-        void  setCount(int count);
+        void  setParam(int count,int update);
+        void init();
 
     private : 
         int mCount;
+        int mUpdate;
         
 };
 
