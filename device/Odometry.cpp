@@ -102,11 +102,11 @@ void Odometry::calc()
 //	double current_angle = mTurnAngle->getValue();
 //	dth = (current_angle - last_angle)*M_PI/180;
 //	last_angle =  current_angle;
-	if(fabs(len_l)>0.3) 
+	if(fabs(len_l)>0.1) 
 		no_run_count_l=0;
 	else
 		no_run_count_l++;
-	if(fabs(len_r)>0.3) 
+	if(fabs(len_r)>0.1) 
 		no_run_count_r=0;
 	else
 		no_run_count_r++;
@@ -148,8 +148,8 @@ void Odometry::setPwm(int left,int right)
 	/*static char buf[256];
     sprintf(buf,"Left %d, Right %d",left,right);
     msg_log(buf);*/
-	int force_pwm=55;
-	int force_cnt=20;
+	int force_pwm=40;
+	int force_cnt=50;
 	if (left!=0 && no_run_count_l>force_cnt) 
 		left = left>0?force_pwm:-force_pwm;
 	if (right!=0 && no_run_count_r>force_cnt) 
@@ -162,8 +162,10 @@ void Odometry::setPwm(int left,int right)
 	left*=rate;
 	right*=rate;	
 #endif
+#if !defined(MAKE_RASPIKE)
 	left = accel_L(left);
 	right = accel_R(right);
+#endif
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);
 }
@@ -184,7 +186,7 @@ void Odometry::setArmpwm(int arm)
 	mArmMotor->setPWM(arm);
 }
 
-static double acc=0.01;
+static double acc=1.0;
 int Odometry::accel_L(int target)
 {
     static float spd=0;

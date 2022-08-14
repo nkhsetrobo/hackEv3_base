@@ -145,8 +145,6 @@ wParam primary2022R[500] = {
 };
 
 wParam advance2022_b[500] = {
-                    {0, Section::TURN, Section::LENGTH, 100, 0,30, 10.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 40, _EDGE, Judge::UPDATE, 0, 10000, 0, 0, 0, 0, 0,Section::JNONE},
-
 
                     {0, Section::TRACER, Section::LENGTH, 100, 0,30, 10.0, 2.0, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE, Judge::UPDATE, 0, 10, 0, 0, 0, 0, 0,Section::JNONE},
                     {1, Section::TRACER, Section::TURNANGLE, 63, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, -45, 0, 0, 0, 0, 0, 0,Section::JNONE},
@@ -446,6 +444,25 @@ wParam base2022[100] = {
                       {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, false, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0,0,false}};
 
 
+wParam test[500] = {
+                   //{7, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 5, -50, _EDGE, Judge::UPDATE, 0, 80, 0, 0, 0, 0, 0,Section::JNONE},
+                  //  {0, Section::TURN, Section::LENGTH, 100, 0,30, 10.0, 2.0, 0, 0 /*setparam*/, 0, 0, -5, 30, _EDGE, Judge::UPDATE, 0, 10000, 0, 0, 0, 0, 0,Section::JNONE},
+                  //  {7, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 40, 0, _EDGE, Judge::UPDATE, 0, 80, 0, 0, 0, 0, 0,Section::JNONE},
+                     {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, -20, 0, 0, _EDGE, Judge::UPDATE, -90, 0.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+                     {0, Section::VIRTUAL2, Section::LENGTH, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, -90, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 10.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+                     {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, -20, 0, 0, _EDGE, Judge::UNUPDATE, -180, 0.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+                     {0, Section::VIRTUAL2, Section::LENGTH, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, -180, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 10.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+                     {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, -20, 0, 0, _EDGE, Judge::UNUPDATE, -270, 0.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+                     {0, Section::VIRTUAL2, Section::LENGTH, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, -270, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 10.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+                     {0, Section::VIRTUAL, Section::TURNANGLE, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, -20, 0, 0, _EDGE, Judge::UNUPDATE, -360, 0.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+                     {0, Section::VIRTUAL2, Section::LENGTH, 30, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, -360, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 10.0, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+
+                    {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
+
+                   // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0},
+                   {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},
+
+};
 //  wParam *array[10] = {base, b};  // Lコース　S字スキップ
 //  wParam *array[10] = {base_sc2_r, b};  // Rコース　ショートカットテスト
 //  wParam *array[10] = {base_sc3_r, b};  // Rコース 全速ショートカット

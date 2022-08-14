@@ -12,7 +12,7 @@ class TurnWalker : public SimpleWalker{
 
     void run();
     void init();
-    void setParam(float turn);
+    void setParam(float turn,float offset);
 
 
     private:
@@ -24,7 +24,7 @@ class TurnWalker : public SimpleWalker{
 
         float mStartPos;
 
-        float offset;
+        float mOffset;
 
 
 };

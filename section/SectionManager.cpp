@@ -73,7 +73,7 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         break;
 
     case Section::TURN:
-        ((TurnWalker *)walk)->setParam(wp[n].turn);
+        ((TurnWalker *)walk)->setParam(wp[n].turn,wp[n].forward);
     break;
     
     case Section::VIRTUAL:
