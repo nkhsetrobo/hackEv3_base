@@ -16,17 +16,8 @@ void GarageSectionManager::init()
   else{
     wp = array[1];
   }
-  for (n = 0; wp[n].flag != -1; n++)
-  {
 
-    Section *sc = new Section();
-
-    setWalker(sc);
-    setJudge(sc);
-
-    addSection(sc);
-  }
-
+  init(wp);
 }
 
 void GarageSectionManager::setWalker(Section *sc)
@@ -68,6 +59,7 @@ void GarageSectionManager::setWalker(Section *sc)
   }
 }
 
+/*
 void GarageSectionManager::setJudge(Section *sc)
 {
 	Judge *judge = sc->selectJudge(wp[n].judge);
@@ -98,4 +90,4 @@ void GarageSectionManager::setJudge(Section *sc)
     ((Stop *)judge)->setCount(wp[n].count);
     break;
   }
-}
+}*/

@@ -16,7 +16,7 @@ Scene::Scene() : mState(UNDEFINED)
 {
     mSsm = new SpeedSectionManager();
     mSlm = new SlalomSectionManager();
-    mGsm = new GarageSectionManager();
+    //mGsm = new GarageSectionManager();
     mBsm = new BlockSectionManager();
 
     mColorSensor = gColor;
@@ -148,8 +148,8 @@ void Scene::execSpeed()
 
         //BlockSectionManager::msArea->initBlockFromApi();
 
-       //mState = INIT_BINGO;
-       mState = INIT_SLALOM;
+       mState = INIT_BINGO;
+       //mState = INIT_SLALOM;
         // mState = FINISH;
     }
 }
@@ -206,11 +206,6 @@ void Scene::initGarage()
 }
 void Scene::execGarage()
 {
-    if(mGsm->run()){
-        delete mGsm;
-        mState = INIT_SLALOM;
-        // mState = FINISH;
-    }
 }
 void Scene::execEnd()
 {

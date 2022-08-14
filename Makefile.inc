@@ -44,7 +44,6 @@ APPL_CXXOBJS += \
 	ArmAngleJudge.o\
 	AnglerVelocity.o\
 	GyroAngle.o\
-	GarageSectionManager.o\
 	Stop.o\
 	GyroJudge.o \
 	SonerJudge.o \
