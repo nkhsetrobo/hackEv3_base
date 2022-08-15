@@ -10,9 +10,9 @@ TurnWalker::TurnWalker(Odometry *odo,
     mPid->debug=true;
     mPid->debug_char = '%';
 
-    mPFactor = 28;
+    mPFactor = 30;
     mIFactor = 10;
-    mDFactor = 0.1;
+    mDFactor = 0.2;
     mOffset= -10;
 #if defined(MAKE_SIM)
     mPFactor = 40;

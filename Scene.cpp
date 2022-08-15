@@ -3,6 +3,7 @@
 #include "ev3api.h"
 //#include "etroboc_ext.h"
 #include "Clock.h"
+#include "HackEv3.h"
 
 extern Motor       *gLeftWheel;
 extern Motor       *gRightWheel;
@@ -148,8 +149,11 @@ void Scene::execSpeed()
 
         //BlockSectionManager::msArea->initBlockFromApi();
 
-       mState = INIT_BINGO;
-       //mState = INIT_SLALOM;
+#if defined(PRIMARY)    
+    mState = INIT_SLALOM;
+#else
+    mState = INIT_BINGO;
+#endif
         // mState = FINISH;
     }
 }
