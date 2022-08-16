@@ -9,8 +9,7 @@ bool Stop::run()
 {
 
    // printf("stop %d\n",mCount);
-    mCount=mCount-1;
-    if(mCount!=0){
+    if(mCount--!=0){
         return false;
     }
     else{

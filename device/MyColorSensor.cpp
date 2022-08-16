@@ -108,6 +108,19 @@ void MyColorSensor::getHSV(rgb_f_t rgb, hsv_t& hsv)
     float b = rgb.b;
                
     float h=0, s=0, v=0;
+
+    r -= mMax_R/4.0;
+    g -= mMax_G/4.0;
+    b -= mMax_B/4.0;
+
+    float max=r;
+    if(max<g) max=g;
+    if(max<b) max=b;
+    float diff=100-max;
+    r+=diff;
+    g+=diff;
+    b+=diff;
+
     
     if (r >= g && g >= b) { 
         

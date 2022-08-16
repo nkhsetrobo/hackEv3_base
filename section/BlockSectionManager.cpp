@@ -83,7 +83,7 @@ void BlockSectionManager::execColor()
 void BlockSectionManager::initCarry()
 {
     reset();
-    init(c_0_1);
+   // init(c_0_1);
     mState = CARRY;
 }
 

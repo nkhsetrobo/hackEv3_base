@@ -197,7 +197,9 @@ void tracer_task(intptr_t unused) {
     // しっぽ制御
       
       gTailWalker->run();
-      gArmWalker->run();
+#if !defined(MAKE_RASPIKE)
+    gArmWalker->run();
+#endif
       gScene->run();
     }
   //  for(int i=0;i<10;i++) 

@@ -44,7 +44,11 @@ void ArmWalker::run()
 {
     if(stop_flag == 0){
        // printf("arm target %f\n",mTarget);
+#if defined(MAKE_RASPIKE)
+        ap= -mPFactor;
+#else
         ap = (int)mPid->getOperation(mArmAngle->getValue());
+#endif
         mOdo->setArmpwm(ap);
     }
 }
