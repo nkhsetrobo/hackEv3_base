@@ -25,10 +25,10 @@ LineTracer::LineTracer( Odometry *odo,
     : SimpleWalker(odo,scon),
       mSpeed(0),
       mLeftEdge(true),
-      mLimit(100),
+      mLimit(50),
       mBias(0)
 {
-    mPid->debug = false;
+    mPid->debug = true;
     mPid->debug_char='t';
 }
  
@@ -55,7 +55,8 @@ void LineTracer::run()
 float LineTracer::calcTurn(float val1) {
 
     float bai = 1.0;   //CompositeSection用？
-    /*if(mSpeedControl->getCurrentSpeed()<15) {  //12
+   /* if(mSpeedControl->getCurrentSpeed()<15) {  //12
+        msg_num('s',mSpeedControl->getCurrentSpeed(),0,0,0,0);
         bai=0.5;
     }*/
     mPid->setKp(mPFactor*bai); //0.376
@@ -64,7 +65,6 @@ float LineTracer::calcTurn(float val1) {
 
     float val1_turn =  mPid->getOperation(val1);
 
-    mPid->debug=true;
     if(mLeftEdge) val1_turn = -val1_turn;
     //setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
     float turn =  val1_turn+mBias;
@@ -98,6 +98,7 @@ void LineTracer::setParam(float speed,float target,float kp, float ki, float kd,
     mPid->setKp(mPFactor); 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
+    mPid->setLimit(mLimit);
    
     mCurve = angleTarget;
     setBias(mCurve);

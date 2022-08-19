@@ -36,7 +36,7 @@ void MyGyroSensor::reset()
 void MyGyroSensor::update()
 {
 
-    angvel = mGyro->getAnglerVelocity();
+    //angvel = mGyro->getAnglerVelocity();
 
     
 #if defined(MAKE_RASPIKE)
@@ -59,7 +59,7 @@ void MyGyroSensor::update()
     gang = mGyro->getAngle();
 #endif
 
-    mAnglerVelocity->update(angvel);
+  //  mAnglerVelocity->update(angvel);
     mGyroAngle->update(-gang);
 
 }

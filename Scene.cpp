@@ -12,6 +12,8 @@ extern MyGyroSensor *gGyro;
 extern Odometry *gOdo;
 extern ArmWalker *gArmWalker;
 
+extern float gKp;
+extern float gKd;
 
 Scene::Scene() : mState(UNDEFINED)
 {
@@ -81,8 +83,8 @@ void Scene::execUndefined()
 
     gArmWalker->setPwm(0, 0,0,0); // シミュレータ対策
 
-#if defined(MAKE_RASPIKE)
-    printf("Press Left Button to caribration.\n");
+#if !defined(MAKE_SIM)
+    msg_log("Press Left Button to caribration.\n");
     mState = CALIB;
     gArmWalker->setPwm(0, 4,0,0);
 #else
@@ -114,7 +116,26 @@ void Scene::execStart()
     static int cnt=0;
     //printf("press %d\n",ev3_touch_sensor_is_pressed(EV3_PORT_1));
     // とりあえず動かすだけなので、設計に基づいて書き直そう
+    if(ev3_button_is_pressed(LEFT_BUTTON))
+    {
+        gKp -= 0.05;
+    }
+    if(ev3_button_is_pressed(RIGHT_BUTTON))
+    {
+        gKp += 0.05;
 
+    }
+    if(ev3_button_is_pressed(UP_BUTTON))
+    {
+        gKd += 0.005;
+    }
+    if(ev3_button_is_pressed(DOWN_BUTTON))
+    {
+        gKd-=0.005;
+    }
+    static char buf[256];
+    sprintf(buf,"KP %f, Kd%f",gKp,gKd);
+    msg_log_l(buf,5);
 #if defined(MAKE_RASPIKE)
     if(ev3_button_is_pressed(ENTER_BUTTON))
     {       

@@ -2,7 +2,11 @@
 #include "util.h"
 
 PID::PID()
-    :PID(0.010)
+#if defined(MAKE_SIM) || defined(MAKE_RASPIKE)
+   :PID(0.010)
+#else
+   :PID(0.004)
+#endif 
 {
 
 
@@ -17,7 +21,7 @@ PID::PID(float delta) {
     firstCnt = 0;
     resetFlg=true;
 
-    sec = 50;
+    sec = 200;
     cnt=0;
 
     for(int i=0;i<sec;i++) 
@@ -84,8 +88,8 @@ float PID::getOperation(float value)
     static int i=0;
     if (debug) {
        // printf("pid:(%3.1f-%3.1f), diff:%4.2f d:%4.2f i:%4.2f  op:%5.3f\n",target,value,diff[1],delta,integral,val);
-        printf("%c,%d,%f,%f,%f,%f\n",debug_char,clk->now(),diff[1],integral,delta, val);
-        msg_num(debug_char,i,diff[1],integral,delta, val);
+       // printf("%c,%d,%f,%f,%f,%f\n",debug_char,clk->now(),diff[1],integral,delta, val);
+        msg_num(debug_char,clk->now(),diff[1],integral,delta, val);
         i++;
     }
 

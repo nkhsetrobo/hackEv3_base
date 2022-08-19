@@ -34,6 +34,7 @@ int log_idx=0;
 
 float msg_logbuf[30000][10];
 
+Clock *gClk;
 
 Motor       *gLeftWheel;
 Motor       *gRightWheel;
@@ -69,6 +70,10 @@ ArmWalker *gArmWalker;
 Scene *gScene;
 float gStart;
 float gStartAngle;
+
+//forvdebug
+float gKp=6;
+float gKd=0.25;
 
 
 static void user_system_create() {
@@ -108,6 +113,7 @@ static void user_system_create() {
 
   gScene = new Scene();
 
+  gClk=new Clock();
   //gTailWalker->setPwm(0,1,0,0);
   //gArmWalker->setPwm(-50,1,0,0);
 
@@ -213,36 +219,7 @@ void tracer_task(intptr_t unused) {
   }
   if(cnt>1000)cnt=0;
 */
+
   ext_tsk();
 
 }
-
-/*
-void mainloop()
-{
-    if (ev3_button_is_pressed(BACK_BUTTON)) {
-      wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
-    } else {
-  
-      
-      gPolling->run();
-
-
-      // とりあえずここで、アームの固定。設計に基づいて変えるべし
-      int arm_cnt = gArm->getCount();
-  // syslog(LOG_NOTICE,"%d",arm_cnt);
-      int diff = -50 - arm_cnt;
-  #if defined(MAKE_SIM)
-      gArm->setPWM(diff*4.0);
-  #endif
-    // しっぽ制御
-      
-      gTailWalker->run();
-      gArmWalker->run();
-      gScene->run();
-    }
-
-    tslp_tsk(10*1000);
-
-}
-*/

@@ -1,7 +1,7 @@
 #include "MyColorSensor.h"
 
 #include "util.h"
-
+#include "math.h"
  const int MyColorSensor::BRIGHT = false;
  const int MyColorSensor::COLOR = true;
 
@@ -29,11 +29,11 @@ MyColorSensor::MyColorSensor(ePortS port,
     mMin_B  = 8;
 #else
     mMax_R  = 255;
-    mMin_R  = 12;
+    mMin_R  = 2;
     mMax_G  = 255;
-    mMin_G  = 12;
+    mMin_G  = 3;
     mMax_B  = 255;
-    mMin_B  = 12;  
+    mMin_B  = 8;  
 #endif 
 }
 
@@ -88,6 +88,8 @@ float MyColorSensor::normBrightness(float br,float min, float max)
     float rate = (br-grayLevel)/(max-grayLevel);
     if(rate>1.0) rate=1.0;
     if(rate<-1.0) rate=-1.0;
+   // if(rate>0) rate=sqrt(rate);
+   // if(rate<0) rate=-sqrt(-rate);
     
     return rate;
 }
@@ -97,6 +99,8 @@ float MyColorSensor::normColor(float br,float min, float max)
     float rate = (br-min)/(max-min);
     if(rate>1.0) rate=1.0;
     if(rate<0) rate=0;
+
+
 
     return rate*100;
 }
@@ -210,13 +214,13 @@ rgb_raw_t MyColorSensor::getRgb()
 
 void MyColorSensor::calibMax()
 {
-#if defined(MAKE_RASPIKE)
     mColor->getRawColor(raw);
 
     mMax_R  = raw.r;
     mMax_G  = raw.g;
     mMax_B  = raw.b;
-#endif
-    printf("calib %d,%d,%d\n",raw.r,raw.g,raw.b);
+    static char buf[256];
+    sprintf(buf,"calib %d,%d,%d",raw.r,raw.g,raw.b);
+    msg_log_l(buf,3);
 
 }

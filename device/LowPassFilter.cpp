@@ -3,7 +3,7 @@
 LowPassFilter::LowPassFilter()
 {
     prev=0.0;
-    mRate = 0.4;
+    mRate = 0.8;
 }
 LowPassFilter::~LowPassFilter()
 {
@@ -22,4 +22,14 @@ float LowPassFilter::getFillteredValue()
 void LowPassFilter::setRate(float rate)
 {
     mRate = rate;
+}
+
+void LowPassFilter::reset()
+{
+    reset(0.0);
+}
+
+void LowPassFilter::reset(float ini)
+{
+    prev=ini;
 }

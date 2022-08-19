@@ -1,4 +1,6 @@
 #include "SectionManager.h"
+extern float gKp;
+extern float gKd;
 
 int SectionManager::msPrevWalker=0;
 
@@ -33,6 +35,7 @@ bool SectionManager::run()
 
         mSectionIdx++;
         printf("nextSection %d =============================\n",mSectionIdx);
+        msg_num('@',0,0,0,0,0);
     }
 
     return false;
@@ -86,6 +89,7 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
     case Section::TRACER:
       //   printf("create TRACER \n");
        ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(30, 0 ,  30, 0.2, 0.1 )
+      // ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, gKp,0, gKd, wp[n].angleTarget, wp[n].anglekp); //(30, 0 ,  30, 0.2, 0.1 )
         ((LineTracer *)walk)->setEdgeMode(wp[n].edge);
 
         break;

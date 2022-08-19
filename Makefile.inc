@@ -47,9 +47,6 @@ APPL_CXXOBJS += \
 	Stop.o\
 	GyroJudge.o \
 	SonerJudge.o \
-	BingoState.o \
-	BingoStateCarry.o \
-	BingoStateMove.o \
 	BlockSectionManager.o \
 	Area.o \
 	BlockPlace.o \

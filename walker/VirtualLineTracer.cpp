@@ -23,6 +23,7 @@ VirtualLineTracer::VirtualLineTracer(Odometry *odo,
 
     mPid->debug=true;
     mPid->debug_char = 'V';
+    mLPF = new LowPassFilter();
 
 }
 
@@ -70,6 +71,11 @@ void VirtualLineTracer::init()
     mPid->setKd(mDFactor);
     mPid->resetParam();
 
+    setBaseDistance();
+    mLPF->reset(basedistance);
+    //mLPF->setRate(0.2);
+
+
     printf("Vinit %f,%f,%f,  %f,%f,%f\n", sx,sy, ang, cx,cy,mround );
 }
 
@@ -109,15 +115,18 @@ float VirtualLineTracer::calcDistance()
     else{
         dist = sqrt((ax+co-cx)*(ax+co-cx)+(ay+si-cy)*(ay+si-cy));
     }
-   //printf("VTcalc %f,%f,%f,%f, %f,%f, %f,%f\n", ax,ay,co,si,cx,cy,dist,angle);
-        
+   printf("VTcalc %f,%f,%f,%f, %f,%f, %f,%f\n", ax,ay,co,si,cx,cy,dist,angle);
+
     return dist;
 }
 
 float VirtualLineTracer::calcTurn()
 {
 
-    float val1_turn = mPid->getOperation(basedistance);
+    mLPF->addValue(basedistance);
+    float dist = mLPF->getFillteredValue();
+
+    float val1_turn = mPid->getOperation(dist);
     float turn = val1_turn;
     return turn;
 }

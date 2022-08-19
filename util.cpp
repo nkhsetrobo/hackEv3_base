@@ -6,7 +6,7 @@
 // 初期処理用
 void init_f(const char *str) {
   // フォントの設定と0行目の表示
-  ev3_lcd_set_font(EV3_FONT_MEDIUM);
+  ev3_lcd_set_font(EV3_FONT_SMALL);
   ev3_lcd_draw_string(str, 0, 0);
   
   tslp_tsk(50*1000U);
@@ -27,12 +27,22 @@ void msg_f(const char *str, int32_t line) {
   ev3_lcd_draw_string(str, 0, line * line_height);
 }
 
-
 void msg_log(const char *str)
 {
+  msg_log_l(str,0);
+}
+
+void msg_log_l(const char *str,int32_t line)
+{
   //syslog(LOG_NOTICE,str);
+#if defined(MAKE_SIM) || defined(MAKE_RASPIKE)
   printf(str);
   if(fp!=nullptr) fprintf(fp,str);
+#else
+  msg_f(str,line);
+#endif
+
+
 }
 void msg_num(char c,float x,float y,float z,  float w,float p)
 {

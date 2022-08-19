@@ -5,6 +5,7 @@
 #include "Odometry.h"
 #include "Velocity.h"
 
+#include "Clock.h"
 class SpeedControl
 {
     public:
@@ -32,6 +33,8 @@ class SpeedControl
         int mCnt=0;
      double mAcc=0.5;
      double mPow=0;
+
+     Clock *mClock;
 
 };
 #endif

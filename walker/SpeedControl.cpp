@@ -8,10 +8,11 @@ SpeedControl::SpeedControl(Odometry *odo,Velocity *v):
     mMode_flag(true),
     mBreake_flag(false)
 {
-    mPid = new PID(0.01*4);
+    mPid = new PID(0.001*4);
     mPid->debug = false;
     mPid->debug_char = 'S';
 
+    mClock= new Clock();
 }
 
 void SpeedControl::setTargetSpeed(double speed)
@@ -47,7 +48,8 @@ void SpeedControl::setTargetSpeed(double speed)
 
   //  mPid->setKp(0.4*0.01);
   //  mPid->setKi(0.15);
-    mPid->setKp(2.0);
+    //mPid->setKp(2.0);
+    mPid->setKp(0.5);
     mPid->setKi(0);
         //mPid->setKd(0.03*bai);
     mPid->setKd(0);
@@ -108,7 +110,7 @@ int SpeedControl::getPwm()
     mForward += mPow;
 
     int maxFwd = fabs(mTargetSpeed)>0?fabs(mTargetSpeed)*2.5:85;
-    if (maxFwd>85) maxFwd=85;
+    if (maxFwd>75) maxFwd=75;
 
     if(mForward>maxFwd) {
        // printf("over speed +\n");
@@ -123,10 +125,11 @@ int SpeedControl::getPwm()
     }
    
     mCnt=0;  
-  //  static char buf[256];
- //   sprintf(buf,"op%3.1f fwd%2.1d v:%2.1f",op,mForward,mOdo->getVelocity());
-//    msg_f(buf,12);
+    //static char buf[256];
+    //sprintf(buf,"op%3.1f fwd%2.1d v:%2.1f",op,mForward,mOdo->getVelocity());
+    //msg_f(buf,12);
     }
+    msg_num('s',mClock->now(),mCurrentSpeed,mForward,0,0);
     return mForward;
 }
 

@@ -6,6 +6,7 @@
 extern void init_f(const char *str);
 extern void msg_f(const char *str, int32_t line);
 
+extern void msg_log_l(const char *str, int32_t line);
 extern void msg_log(const char *str);
 extern void msg_out();
 extern void msg_num(char c,float x,float y,float z,  float w,float p);

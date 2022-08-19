@@ -6,8 +6,11 @@
 #define M_PI 3.14159265358979323846
 
 static const int MAX_CNT=25;  // 0.25s
+#if defined(MAKE_RASPIKE) 
 static const float DELTA=0.01;
-//static const float DELTA=0.016666;
+#else
+static const float DELTA=0.004;
+#endif
 
 class Velocity : public Measure
 {

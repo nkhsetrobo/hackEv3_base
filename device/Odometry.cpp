@@ -148,6 +148,7 @@ void Odometry::setPwm(int left,int right)
 	/*static char buf[256];
     sprintf(buf,"Left %d, Right %d",left,right);
     msg_log(buf);*/
+#if defined(MAKE_RASPIKE)
 	int force_pwm=55;
 	int force_cnt=200;
 	if (left!=0 && no_run_count_l>force_cnt) {
@@ -159,12 +160,13 @@ void Odometry::setPwm(int left,int right)
 		printf("pulse R\n");
 	}
    // printf("Left %d, Right %d",left,right);
+#endif
 
 #if !defined(MAKE_SIM)
 	int volt = ev3_battery_voltage_mV();
 	double rate = 8343.0/volt;
-	left*=rate;
-	right*=rate;	
+//	left*=rate;
+//	right*=rate;	
 #endif
 #if !defined(MAKE_RASPIKE)
 	left = accel_L(left);
@@ -190,7 +192,11 @@ void Odometry::setArmpwm(int arm)
 	mArmMotor->setPWM(arm);
 }
 
+#if defined(MAKE_SIM) 
 static double acc=0.1;
+#else
+static double acc=2.0;
+#endif
 int Odometry::accel_L(int target)
 {
     static float spd=0;
