@@ -61,7 +61,7 @@ wParam entry2022[100] = {
 
 #if defined(MAKE_RASPIKE)
 float normal_spd=45;
-float rkp=20,rki=8,rkd=2.9;
+float rkp=22,rki=10,rkd=3.0;
 float rkp2=10,rki2=0.2,rkd2=1.2;
 float rvkp=45,rvki=0.0,rvkd=5.3;
 #elif defined(MAKE_SIM)
@@ -95,12 +95,12 @@ wParam primary2022R[200] = {
                      //     {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
 
                     {0, Section::TRACER, Section::LENGTH, 58, 0,rkp,rki,rkd, 0, 0       /*setparam*/, 0, 0, 00, 0, _EDGE,   Judge::UPDATE, 0, 22, 0, 0, 0, 0, 0,false,Section::JNONE},
-                    {0, Section::TRACER, Section::TURNANGLE, 48, 0,rkp,rki,rkd, -18, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 85, 0, 0, 0, 0, 0, 0, false,Section::JNONE},
+                    {0, Section::TRACER, Section::TURNANGLE, 48, 0,rkp,rki,rkd, -20, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 85, 0, 0, 0, 0, 0, 0, false,Section::JNONE},
                          // {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
                     {0, Section::TRACER, Section::LENGTH, 58, 0,rkp,rki,rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 30, 0, 0, 0, 0, 0, false,Section::JNONE},
-                    {0, Section::TRACER, Section::TURNANGLE, 48, 0,rkp,rki,rkd, -18, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 170, 0, 0, 0, 0, 0, 0,false,Section::JNONE},
+                    {0, Section::TRACER, Section::TURNANGLE, 48, 0,rkp,rki,rkd, -20, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 170, 0, 0, 0, 0, 0, 0,false,Section::JNONE},
                     {0, Section::TRACER, Section::TURNANGLE, 55, 0,rkp,rki,rkd, +12, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 15, 0, 0, 0, 0, 0, 0,false, Section::JNONE},
-                     //    {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0, Section::JNONE},
+                         //{0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0, Section::JNONE},
                     {12, Section::VIRTUAL, Section::TURNANGLE, 60, 0,  rkp2 ,rki2, rkd2, +10, 0 /*setparam*/, 0, -32, 0, 0, _EDGE, Judge::UNUPDATE, -3, 0, 0, 0, 0, 0, 0 ,false,Section::JNONE},
                      //    {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
                     //{0, Section::TRACER, Section::TURNANGLE,50, 0,rkp*0.5,rki*0,rkd*0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, -5,0, 0, 0, 0, 0, 0},
@@ -110,7 +110,7 @@ wParam primary2022R[200] = {
                     //{0, Section::TRACER, Section::TURNANGLE, 60, 0,rkp,rki,rkd, -10, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 355, 0, 0, 0, 0, 0, 0, false,Section::JNONE},
                     {0, Section::TRACER, Section::LENGTH, 60, 0,rkp,rki,rkd, -12, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0,265 , 0, 0, 0, 0, 0, false,Section::JNONE},
                     {12, Section::VIRTUAL, Section::LENGTH, 55, 0,  rkp2 ,rki2, rkd2, 8, 0 /*setparam*/, 0, -36, 0, 0, _EDGE, Judge::UPDATE, 330, 8, 0, 0, 0, 0, 0 , false, Section::JNONE},
-                   //      {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
+                         {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
                     {12, Section::WALKER, Section::BRIGHTNESS, 0, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, 0, 45, 2, _EDGE, Judge::UNUPDATE, 0, 0,  0.5, 0, 0, 0, 0 , false, Section::JNONE},
 
                         //{0, Section::VIRTUAL2, Section::LENGTH, 55, 0, rvkp ,rvki, rvkd, 0, 0 /*setparam*/, 305, 0, 0, 0, _EDGE, Judge::UPDATE, 0,50, 0.0, 0, 0, 0, 0 , 0},

@@ -17,9 +17,10 @@ const float TREAD=12.83;
 #define YELLOW_H 62
 #define BLUE_H 225
 
+#define PRIMARY
+
 #if defined(MAKE_RASPIKE)
-//#define PRIMARY
-//#define MAKE_RIGHT
+#define MAKE_RIGHT
 #endif
 
 #endif
