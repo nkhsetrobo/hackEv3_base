@@ -61,7 +61,7 @@ wParam entry2022[100] = {
 
 #if defined(MAKE_RASPIKE)
 float normal_spd=45;
-float rkp=20,rki=8,rkd=2.9;
+float rkp=22,rki=10,rkd=3.0;
 float rkp2=10,rki2=0.2,rkd2=1.2;
 float rvkp=45,rvki=0.0,rvkd=5.3;
 #elif defined(MAKE_SIM)
@@ -166,7 +166,7 @@ wParam primary2022R[200] = {
                     {0, Section::TRACER, Section::LENGTH, 52, 0,rkp,rki,rkd, -15, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0,266 , 0, 0, 0, 0, 0, false,Section::JNONE},
                     {12, Section::VIRTUAL, Section::LENGTH, 52, 0,  rkp2 ,rki2, rkd2, 15, 0 /*setparam*/, 0, -35, 0, 0, _EDGE, Judge::UPDATE, 0, 13, 0, 0, 0, 0, 0 , false, Section::JNONE},
                    //      {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
-                    {12, Section::WALKER, Section::BRIGHTNESS, 0, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, 0, 52, 3, _EDGE, Judge::UNUPDATE, 0, 0,  +0.5, 0, 0, 0, 0 , false, Section::JNONE},
+                    {12, Section::WALKER, Section::BRIGHTNESS, 0, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, 0, 45, 2, _EDGE, Judge::UNUPDATE, 0, 0,  0.5, 0, 0, 0, 0 , false, Section::JNONE},
 
                     {0, Section::TRACER, Section::LENGTH,  48, 0,rkp,rki,rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 30, 0, 0, 0, 0, 0 , false, Section::JNONE},
                     {0, Section::TRACER, Section::LENGTH,  45, 0,rkp*1.5,rki,rkd*1.5, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 100, 0, 0, 0, 0, 0 , false,Section::JNONE},
