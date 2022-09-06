@@ -88,7 +88,7 @@ void Scene::execUndefined()
     mState = CALIB;
     gArmWalker->setPwm(0, 4,0,0);
 #else
-    ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
+   // ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
     mState = START;
 #endif
 }

@@ -153,9 +153,9 @@ void main_task(intptr_t unused) {
 
   msg_out();
 
+  user_system_destroy();
   ext_tsk();
 
-  user_system_destroy();
 }
 // end::main_task[]
 
