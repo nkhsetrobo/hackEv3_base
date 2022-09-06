@@ -134,7 +134,7 @@ void SlalomSectionManager::adjustLength()
       float offset=2.5;
       float dist_adjust = 1.0;
       if( dist>17) {
-        dist_adjust = 10.0;
+        dist_adjust = 9.5;
       }else if( dist>16) {
         dist_adjust = 9.0;
       } else if(dist>15) {

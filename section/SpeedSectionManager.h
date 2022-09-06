@@ -76,9 +76,9 @@ float rkp2=10,rki2=0.2,rkd2=1.2;
 float rvkp=15,rvki=0.5,rvkd=2.1;
 #endif
 wParam primary2022R[200] = {
-                       //  {0, Section::WALKER, Section::TURNANGLE, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, -80, _EDGE, Judge::UPDATEALL, 360*5, 00, 0, 0, 0, 0, 0 , 0},
+                        // {0, Section::WALKER, Section::TURNANGLE, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, -10, _EDGE, Judge::UPDATEALL, 360*5, 00, 0, 0, 0, 0, 0 , 0},
                        //  {0, Section::WALKER, Section::TURNANGLE, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, +80, _EDGE, Judge::UPDATEALL, -360*5, 00, 0, 0, 0, 0, 0 , 0},
-//                    {0, Section::TURN, Section::LENGTH, 50, 0,rvkp,rvki,rvkd, 0, 0 /*setparam*/, -5, 0, 0, 50, _EDGE, Judge::UPDATE, 0,1000, 0.0, 0, 0, 0, 0 , 0},
+                   // {0, Section::TURN, Section::LENGTH, 50, 0,5,5,0.1, 0, 0 /*setparam*/, 0, 0, 0, 45, _EDGE, Judge::UPDATE, 0,1000, 0.0, 0, 0, 0, 0 , 0},
                   //  {0, Section::TRACER, Section::LENGTH, 58, 0,rkp,rki,rkd, 0, 0       /*setparam*/, 0, 0, 00, 0, _EDGE,   Judge::UPDATE, 0, 200, 0, 0, 0, 0, 0,false,Section::JNONE},
 
                   //  {0, Section::VIRTUAL2, Section::LENGTH, 50, 0,rvkp,rvki,rvkd, 0, 0 /*setparam*/, -5, 0, 0, 0, _EDGE, Judge::UPDATE, 0,1000, 0.0, 0, 0, 0, 0 , 0},
@@ -94,7 +94,7 @@ wParam primary2022R[200] = {
                    // {0, Section::VIRTUAL2, Section::LENGTH, 65, 0,rvkp,rvki,rvkd, 0, 0 /*setparam*/, 0, 5, 0, 0, _EDGE, Judge::UPDATE, 0,300, -0, 0, 0, 0, 0 , 0},
                    // {12, Section::VIRTUAL, Section::TURNANGLE, 60, 0, rkp, rki, 15.0, 0, 0 /*setparam*/, 0, -95, 0, 0, _EDGE, Judge::UNUPDATE, 310, 0, 0, 0, 0, 0, 0 , 0},
 
-                        //  {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
+                       //  {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
 
                     {0, Section::TRACER, Section::LENGTH, 58, 0,rkp,rki,rkd, 0, 0       /*setparam*/, 0, 0, 00, 0, _EDGE,   Judge::UPDATE, 0, 22, 0, 0, 0, 0, 0,false,Section::JNONE},
                     {0, Section::TRACER, Section::TURNANGLE, 48, 0,rkp,rki,rkd, -20, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 85, 0, 0, 0, 0, 0, 0, false,Section::JNONE},

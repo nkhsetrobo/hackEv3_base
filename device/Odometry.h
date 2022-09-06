@@ -41,8 +41,8 @@ public:
 
 private:
 
-	int accel_L(int target);
-	int accel_R(int target);
+	int accel_L(int target,int err);
+	int accel_R(int target,int err);
 
 
 	Motor *mLeftMotor;

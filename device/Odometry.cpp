@@ -148,14 +148,19 @@ void Odometry::setPwm(int left,int right)
 	/*static char buf[256];
     sprintf(buf,"Left %d, Right %d",left,right);
     msg_log(buf);*/
+	int left_err=0;
+	int right_err=0;
+
 	int force_pwm=65;
 	int force_cnt=250;
 	if (left!=0 && no_run_count_l>force_cnt) {
 		left = left>0?force_pwm:-force_pwm;
+		left_err=1;
 		printf("pulse L\n");
 	}
 	if (right!=0 && no_run_count_r>force_cnt) {
 		right = right>0?force_pwm:-force_pwm;
+		right_err=1;
 		printf("pulse R\n");
 	}
    // printf("Left %d, Right %d",left,right);
@@ -167,8 +172,8 @@ void Odometry::setPwm(int left,int right)
 	right*=rate;	
 #endif
 #if !defined(MAKE_RASPIKE)
-	left = accel_L(left);
-	right = accel_R(right);
+	left = accel_L(left,left_err);
+	right = accel_R(right,right_err);
 #endif
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);
@@ -191,46 +196,72 @@ void Odometry::setArmpwm(int arm)
 }
 
 static double acc=0.1;
-int Odometry::accel_L(int target)
+int Odometry::accel_L(int target,int err)
 {
     static float spd=0;
     if (target==0 || spd*target<0 ) {
         spd=0;
         return (int)spd;
     }
-    if(target>spd) {
-        spd+=acc;
-    } else {
-        spd-=acc;
-    }
-    if(target>0 && spd>target) {
-        spd=target;
-    } 
-     if(target<0 && spd<target) {
-        spd=target;
-    } 
+	if(err==0) {
+		if(target>spd) {
+			spd+=acc;
+		} else {
+			spd-=acc;
+		}
+		if(target>0 && spd>target) {
+			spd-=acc;
+			//spd=target;
+		} 
+		if(target<0 && spd<target) {
+			spd+=acc;
+			//spd=target;
+		} 
+	} else {
+		if(target>0) {
+			spd+=acc;
+		} else {
+			spd-=acc;
+		}
+				
+	}
+	printf("Lspd %f\n",spd);
  
     return (int)spd;
 }
 
-int Odometry::accel_R(int target)
+int Odometry::accel_R(int target,int err)
 {
     static float spd=0;
     if (target==0 || spd*target<0 ) {
         spd=0;
         return (int)spd;
     }
-    if(target>spd) {
-        spd+=acc;
-    } else {
-        spd-=acc;
-    }
-    if(target>0 && spd>target) {
-        spd=target;
-    } 
-     if(target<0 && spd<target) {
-        spd=target;
-    } 
- 
+	if(err==0) {
+
+		if(target>spd) {
+			spd+=acc;
+		} else {
+			spd-=acc;
+		}
+
+		if(target>0 && spd>target) {
+			spd-=acc;
+//			spd=target;
+		} 
+		if(target<0 && spd<target) {
+			spd+=acc;
+			//spd=target;
+		} 
+	} else {
+		if(target>0) {
+			spd+=acc;
+		} else {
+			spd-=acc;
+		}
+		
+	}
+ 		printf("Rspd %f\n",spd);
+
     return (int)spd;
 }
