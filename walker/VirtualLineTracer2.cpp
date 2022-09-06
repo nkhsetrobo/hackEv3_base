@@ -169,7 +169,7 @@ void VirtualLineTracer2::init(){
     sy = mYPosition->getvalue();
     angle2 += gStartAngle; // 基準位置からの角度に変換
 
-    float noze=100.0;
+    float noze=5.0;
 
     fx = noze*cos((angle2/180)*M_PI)+sx;
     fy = noze*sin((angle2/180)*M_PI)+sy;

@@ -148,8 +148,8 @@ void Odometry::setPwm(int left,int right)
 	/*static char buf[256];
     sprintf(buf,"Left %d, Right %d",left,right);
     msg_log(buf);*/
-	int force_pwm=55;
-	int force_cnt=200;
+	int force_pwm=65;
+	int force_cnt=250;
 	if (left!=0 && no_run_count_l>force_cnt) {
 		left = left>0?force_pwm:-force_pwm;
 		printf("pulse L\n");

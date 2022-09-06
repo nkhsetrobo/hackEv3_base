@@ -38,10 +38,15 @@ void MyGyroSensor::reset()
 void MyGyroSensor::update()
 {
 
-    angvel = mGyro->getAnglerVelocity();
 
     
 #if defined(MAKE_RASPIKE)
+    double hosei=1.0;
+    static float angvel[2];
+    angvel[0]=angvel[1];
+    angvel[1] = mGyro->getAnglerVelocity();
+    gang -= (angvel[1]+angvel[0])*0.01/2;
+  /*  
     double last_gang=gang;
     double hosei=0.95;
 
@@ -53,7 +58,8 @@ void MyGyroSensor::update()
         base_gang += 360;
     }
     gang += base_gang;
-   printf("ANG %f: %d,%f\n",gang*hosei,mGyro->getAngle(),angvel );
+    */
+   //printf("ANG %f: %d,%f\n",gang*hosei,mGyro->getAngle(),angvel[1] );
     //mTurnAngle->update(-gang*3.141592/180* hosei);
 
     //gang_v += angvel*0.01;
@@ -62,7 +68,7 @@ void MyGyroSensor::update()
     gang = mGyro->getAngle();
 #endif
 
-    mAnglerVelocity->update(angvel);
+    mAnglerVelocity->update(angvel[1]);
     mGyroAngle->update(-gang);
 
 }

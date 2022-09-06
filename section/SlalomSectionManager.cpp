@@ -122,6 +122,7 @@ bool SlalomSectionManager::run()
     return false;
 }
 
+
 void SlalomSectionManager::adjustLength()
 {
       float dist = mSection[mSectionIdx]->getStatus();
@@ -139,7 +140,7 @@ void SlalomSectionManager::adjustLength()
       } else if(dist>15) {
         dist_adjust = 8.0;
       }else if( dist>14) {
-        dist_adjust = 7.0;
+        dist_adjust = 7.5;
       }else if( dist>13) {
         dist_adjust = 6.5;
       } else if( dist>12) {
@@ -160,3 +161,26 @@ void SlalomSectionManager::adjustLength()
 
 
 }
+
+/*
+void SlalomSectionManager::adjustLength()
+{
+      float dist = mSection[mSectionIdx]->getStatus();
+
+      printf("adjust %f\n",dist);
+
+      LengthJudge *j = (LengthJudge*)(mSection[mSectionIdx+1]->getJudge());
+
+      float offset=2.5;
+      float dist_adjust = 1.0;
+      if( dist>20) {
+        dist_adjust = 5.0;
+      }else if( dist>18) {
+        dist_adjust = 4.0;
+      } 
+
+      j->setFinLength(dist_adjust+offset);
+
+
+}
+*/

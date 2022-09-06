@@ -76,6 +76,8 @@ float rkp2=10,rki2=0.2,rkd2=1.2;
 float rvkp=15,rvki=0.5,rvkd=2.1;
 #endif
 wParam primary2022R[200] = {
+                       //  {0, Section::WALKER, Section::TURNANGLE, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, -80, _EDGE, Judge::UPDATEALL, 360*5, 00, 0, 0, 0, 0, 0 , 0},
+                       //  {0, Section::WALKER, Section::TURNANGLE, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 20, +80, _EDGE, Judge::UPDATEALL, -360*5, 00, 0, 0, 0, 0, 0 , 0},
 //                    {0, Section::TURN, Section::LENGTH, 50, 0,rvkp,rvki,rvkd, 0, 0 /*setparam*/, -5, 0, 0, 50, _EDGE, Judge::UPDATE, 0,1000, 0.0, 0, 0, 0, 0 , 0},
                   //  {0, Section::TRACER, Section::LENGTH, 58, 0,rkp,rki,rkd, 0, 0       /*setparam*/, 0, 0, 00, 0, _EDGE,   Judge::UPDATE, 0, 200, 0, 0, 0, 0, 0,false,Section::JNONE},
 
@@ -92,7 +94,7 @@ wParam primary2022R[200] = {
                    // {0, Section::VIRTUAL2, Section::LENGTH, 65, 0,rvkp,rvki,rvkd, 0, 0 /*setparam*/, 0, 5, 0, 0, _EDGE, Judge::UPDATE, 0,300, -0, 0, 0, 0, 0 , 0},
                    // {12, Section::VIRTUAL, Section::TURNANGLE, 60, 0, rkp, rki, 15.0, 0, 0 /*setparam*/, 0, -95, 0, 0, _EDGE, Judge::UNUPDATE, 310, 0, 0, 0, 0, 0, 0 , 0},
 
-                     //     {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
+                        //  {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
 
                     {0, Section::TRACER, Section::LENGTH, 58, 0,rkp,rki,rkd, 0, 0       /*setparam*/, 0, 0, 00, 0, _EDGE,   Judge::UPDATE, 0, 22, 0, 0, 0, 0, 0,false,Section::JNONE},
                     {0, Section::TRACER, Section::TURNANGLE, 48, 0,rkp,rki,rkd, -20, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 85, 0, 0, 0, 0, 0, 0, false,Section::JNONE},
@@ -110,7 +112,7 @@ wParam primary2022R[200] = {
                     //{0, Section::TRACER, Section::TURNANGLE, 60, 0,rkp,rki,rkd, -10, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 355, 0, 0, 0, 0, 0, 0, false,Section::JNONE},
                     {0, Section::TRACER, Section::LENGTH, 60, 0,rkp,rki,rkd, -12, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0,265 , 0, 0, 0, 0, 0, false,Section::JNONE},
                     {12, Section::VIRTUAL, Section::LENGTH, 55, 0,  rkp2 ,rki2, rkd2, 8, 0 /*setparam*/, 0, -36, 0, 0, _EDGE, Judge::UPDATE, 330, 8, 0, 0, 0, 0, 0 , false, Section::JNONE},
-                         {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
+                     //    {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
                     {12, Section::WALKER, Section::BRIGHTNESS, 0, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, 0, 45, 2, _EDGE, Judge::UNUPDATE, 0, 0,  0.5, 0, 0, 0, 0 , false, Section::JNONE},
 
                         //{0, Section::VIRTUAL2, Section::LENGTH, 55, 0, rvkp ,rvki, rvkd, 0, 0 /*setparam*/, 305, 0, 0, 0, _EDGE, Judge::UPDATE, 0,50, 0.0, 0, 0, 0, 0 , 0},
@@ -132,7 +134,7 @@ wParam primary2022R[200] = {
                     {0, Section::TRACER, Section::LENGTH,  55, 0.1,rkp,rki,rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 150, 0, 0, 0, 0, 0 ,false, Section::JNONE},
   //finish
                     {0, Section::TRACER, Section::TURNANGLE,  50, -0.2,rkp,rki,rkd*0.8, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, -30, 0, 0, 0, 0,0, 0 , false, Section::JNONE},
-                    {0, Section::TRACER, Section::COLOR,  40, -0.2,rkp,rki,rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 0, 0, 0, BLUE, 0.30, 0 , false, Section::JNONE},
+                    {0, Section::TRACER, Section::COLOR,  40, -0.2,rkp,rki,rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 0, 0, 0, BLUE, 0.08, 0 , false, Section::JNONE},
 
 
                        //   {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
@@ -159,6 +161,9 @@ wParam advance2022_b[50] = {
 
 #if defined(MAKE_RASPIKE)
 wParam advance2022_b[50] = {
+       //{0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, normal_spd, 0, _EDGE, Judge::UPDATEALL, 0, 5, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+      {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, 5, normal_spd, 0, _EDGE, Judge::UPDATE, 0, 1000, 0, 0, 0, 0.40, 1 , 0,Section::JNONE},
+      {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
                      // {0, Section::ARM, Section::ARMANGLE, 0, 0, 40, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
                      // {0, Section::ARM, Section::STOP, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
                      // {0, Section::ARM, Section::ARMANGLE, 0, 0, -40, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, -50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
@@ -172,7 +177,7 @@ wParam advance2022_b[50] = {
                     {3, Section::TRACER, Section::TURNANGLE, 65, 0,rkp, rki, rkd, -20, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 85, 0, 0, 0, 0, 0, 0,false,Section::JNONE},
                     {4, Section::TRACER, Section::LENGTH, 65, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 80, 0, 0, 0, 0, 0,false,Section::JNONE},
                     {5, Section::TRACER, Section::TURNANGLE, 65, 0,rkp, rki, rkd, -13, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 70, 0, 0, 0, 0, 0, 0,false,Section::JNONE},
-                    {6, Section::TRACER, Section::COLOR, 35, -0.2,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 0, 0, 0, BLUE, 0.09, 0,false,Section::JNONE},
+                    {6, Section::TRACER, Section::COLOR, 35, -0.2,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 0, 0, 0, BLUE, 0.07, 0,false,Section::JNONE},
                     {6, Section::WALKER, Section::STOP, 40, -0.2,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 0, 0, 0, 0, 0.0, 1,false,Section::JNONE},
 
                    // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0},
