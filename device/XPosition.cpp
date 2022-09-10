@@ -7,6 +7,7 @@ XPosition::XPosition()
 
 float XPosition::getvalue()
 {
+
     return mXPosition;
 }
 

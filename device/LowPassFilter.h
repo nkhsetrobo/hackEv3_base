@@ -8,6 +8,7 @@ class LowPassFilter {
         void addValue(float );
         float getFillteredValue();
         void setRate(float rate);
+        void reset(float base);
 
     private:
         float mRate;

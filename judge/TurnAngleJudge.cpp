@@ -57,6 +57,8 @@ void TurnAngleJudge::init()
         gStartAngle = mTurnAngle->getValue();
         mStartAngle = gStartAngle;
         mFinishAngle = mFinishAngle + gStartAngle;
+        VirtualLineTracer::SX = mXPosition->getValue();
+        VirtualLineTracer::SY = mYPosition->getValue();
     }
     else{
         mStartAngle=mTurnAngle->getValue();

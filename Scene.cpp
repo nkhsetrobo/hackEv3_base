@@ -16,9 +16,12 @@ extern ArmWalker *gArmWalker;
 Scene::Scene() : mState(UNDEFINED)
 {
     mSsm = new SpeedSectionManager();
+#if defined(PRIMARY)
     mSlm = new SlalomSectionManager();
-    //mGsm = new GarageSectionManager();
+    mGsm = new GarageSectionManager();
+#else
     mBsm = new BlockSectionManager();
+#endif
 
     mColorSensor = gColor;
 }
@@ -200,7 +203,7 @@ void Scene::execSlalom()
         delete mSlm;
         // msg_log("Tail test");
         
-        mState = FINISH;
+        mState = INIT_GARAGE;
     }
 }
 void Scene::initGarage()
@@ -210,6 +213,12 @@ void Scene::initGarage()
 }
 void Scene::execGarage()
 {
+    if(mGsm->run()){
+        delete mGsm;
+
+        mState = FINISH;
+    }
+
 }
 void Scene::execEnd()
 {

@@ -81,7 +81,8 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
 
         ((VirtualLineTracer *)walk)->setRound(wp[n].round);
         ((VirtualLineTracer *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(20,2, 0.2, 0,1,1)
-
+        ((VirtualLineTracer *)walk)->setMode(wp[n].absangle);  // １つ目の要素をモードに使用
+        ((VirtualLineTracer *)walk)->setCenter(wp[n].forward,wp[n].turn); //walker用のパラメータを座標に使用
         break;
     case Section::TRACER:
       //   printf("create TRACER \n");

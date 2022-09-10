@@ -23,3 +23,8 @@ void LowPassFilter::setRate(float rate)
 {
     mRate = rate;
 }
+
+void LowPassFilter::reset(float base)
+{
+    prev=base;
+}

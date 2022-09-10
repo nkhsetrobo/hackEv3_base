@@ -10,6 +10,9 @@
 #include "ArmAngle.h"
 #include "GyroAngle.h"
 #include "MySonarSensor.h"
+#include "XPosition.h"
+#include "YPosition.h"
+#include "VirtualLineTracer.h"
 
 class Judge{
     public:
@@ -32,6 +35,9 @@ class Judge{
     ArmAngle *mArmAngle;
     GyroAngle *mGyroAngle;
     MySonarSensor *mSoner;
+    XPosition *mXPosition;
+    YPosition *mYPosition;
+
 };
 
 

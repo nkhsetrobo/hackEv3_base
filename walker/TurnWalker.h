@@ -3,6 +3,7 @@
 
 #include "SimpleWalker.h"
 #include "PID.h"
+#include "LowPassFilter.h"
 
 
 class TurnWalker : public SimpleWalker{
@@ -25,6 +26,7 @@ class TurnWalker : public SimpleWalker{
         float mStartPos;
 
         float mOffset;
+        LowPassFilter *mLpf;
 
 
 };

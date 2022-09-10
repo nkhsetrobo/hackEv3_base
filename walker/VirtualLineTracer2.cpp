@@ -33,6 +33,9 @@ VirtualLineTracer2::VirtualLineTracer2(Odometry *odo,
     mPid->debug=true;
     mPid->debug_char = 'L';
 
+    mLpf = new LowPassFilter();
+    mLpf->setRate(0.85);
+
 }
 
 void VirtualLineTracer2::setParam(float speed,float kp, float ki, float kd,float angleTarget,float angleKp){
@@ -109,17 +112,18 @@ float VirtualLineTracer2::calcdistance(){
 
 
 
-     double a1=(FY-SY)*nx2;
-     double b1=(FX-SX)*ny2; 
-      
-    float a=(FY-SY)*nx2;
-    float b=(FX-SX)*ny2; 
-    float c=FX*SY;
-    float d=FY*SX;
-      static char buf[256];
-      static char buf2[256];
-          float ans = (a-b)+(c-d);
-        float len =  ans/100;
+        double a1=(FY-SY)*nx2;
+        double b1=(FX-SX)*ny2; 
+
+        double a=(FY-SY)*nx2;
+        double b=(FX-SX)*ny2; 
+        double c=FX*SY;
+        double d=FY*SX;
+        static char buf[256];
+        static char buf2[256];
+        double ans = (a-b)+(c-d);
+        double len =  ans/1.0;
+
         if(!flag) 
         {
             //   sprintf(buf,"%f,%f, %f,%f, %f,%f, %f,  %f,%f,%f,%f",nx2,ny2,sx,sy,fx,fy,(a-b+c-d),a,b,c,d);
@@ -139,8 +143,10 @@ float VirtualLineTracer2::calcdistance(){
 
 float VirtualLineTracer2::calcTurn(){
         
-
-        float val1_turn =  mPid->getOperation(calcdistance());
+    float dist = calcdistance();
+    mLpf->addValue(dist);
+    dist = mLpf->getFillteredValue();
+        float val1_turn =  mPid->getOperation(dist);
 
 
         //setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
@@ -167,14 +173,19 @@ void VirtualLineTracer2::init(){
 
     sx = mXPosition->getvalue();
     sy = mYPosition->getvalue();
+    // 現在の方向に向かうモード
     angle2 += gStartAngle; // 基準位置からの角度に変換
+    if(initMode==2) {
+        angle2 = mTurnAngle->getValue();
+    }
 
-    float noze=5.0;
+    float noze=1.0;
 
     fx = noze*cos((angle2/180)*M_PI)+sx;
     fy = noze*sin((angle2/180)*M_PI)+sy;
 
-    if( initMode==0 ) {
+    // Mode0 Mode2 でグローバル変数に格納 Mode1 でそのまま継続
+    if( initMode==0 || initMode==2) {
         SX=sx;
         SY=sy;
         FX=fx;
@@ -185,6 +196,9 @@ void VirtualLineTracer2::init(){
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
     mPid->resetParam();
+
+    float dist = calcdistance();
+    mLpf->reset(dist);
 
     printf("VirtualLineTracer2::init %f,%f,%f,%f  %f,%f,%f\n",SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
    

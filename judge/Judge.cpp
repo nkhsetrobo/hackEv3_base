@@ -9,7 +9,8 @@ extern TailAngle *gTailAngle;
 extern ArmAngle *gArmAngle;
 extern GyroAngle *gGyroAngle;
 extern MySonarSensor *gSonar;
-
+extern XPosition *gXPosition;
+extern YPosition *gYPosition;
 Judge::Judge(){
     mHsvHue = gHue;
     mHsvSatu = gSatu;
@@ -20,6 +21,9 @@ Judge::Judge(){
     mArmAngle = gArmAngle;
     mGyroAngle =  gGyroAngle;
     mSoner = gSonar;
+    mXPosition = gXPosition;
+    mYPosition = gYPosition;
+
 }
 
 bool Judge::run(){

@@ -56,6 +56,8 @@ void LengthJudge::init()
 {
     if (update == Judge::UPDATEALL) {
         gStartAngle = mTurnAngle->getValue();
+        VirtualLineTracer::SX = mXPosition->getValue();
+        VirtualLineTracer::SY = mYPosition->getValue();
         update = Judge::UPDATE;
     }
     if(update == Judge::UPDATE){

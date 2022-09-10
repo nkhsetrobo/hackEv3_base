@@ -3,7 +3,7 @@
 
 #include "SimpleWalker.h"
 #include "PID.h"
-
+#include "LowPassFilter.h"
 
 class VirtualLineTracer2 : public SimpleWalker{
     public:
@@ -63,6 +63,8 @@ class VirtualLineTracer2 : public SimpleWalker{
 
 
     bool debug;
+
+    LowPassFilter *mLpf;
 
 };
 

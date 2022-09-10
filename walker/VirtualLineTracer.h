@@ -17,13 +17,18 @@ class VirtualLineTracer : public SimpleWalker{
     void setLupdate(bool a);
 
     void setBias(float curve);
-
+    void setCenter(float x, float y);
+    void setMode(int mode);
     void run();
-
+    static float SX;
+    static float SY;
+    
     private:
     void setBaseDistance();
     float calcDistance();
     float calcTurn();
+
+ 
 
 
     float cx;
@@ -47,6 +52,14 @@ class VirtualLineTracer : public SimpleWalker{
         float mBias;
     double co;
     double si;
+
+    double mCx;
+    double mCy;
+
+    int mMode;
+    LowPassFilter *mLpf;
+
+
 };
 
 

@@ -2,6 +2,10 @@
 #include "math.h"
 #define M_PI 3.14159265358979323846
 
+extern float gStartAngle;
+
+float VirtualLineTracer::SX=0;
+float VirtualLineTracer::SY=0;
 VirtualLineTracer::VirtualLineTracer(Odometry *odo,
                                      SpeedControl *scon)
     : SimpleWalker(odo, scon)
@@ -23,6 +27,8 @@ VirtualLineTracer::VirtualLineTracer(Odometry *odo,
 
     mPid->debug=true;
     mPid->debug_char = 'V';
+    mLpf = new LowPassFilter();
+    mLpf->setRate(0.85);
 
 }
 
@@ -55,6 +61,18 @@ void VirtualLineTracer::setRound(float round)
     mround = round;
 }
 
+void VirtualLineTracer::setCenter(float x, float y)
+{   
+    mCx = x;
+    mCy = y;
+}
+
+// mode設定 0 通常, 1 中心座標指定
+void VirtualLineTracer::setMode(int mode)
+{
+    mMode = mode;
+}
+
 void VirtualLineTracer::init()
 {
 
@@ -62,13 +80,25 @@ void VirtualLineTracer::init()
     float sy = mYPosition->getvalue();
     float ang = mTurnAngle->getValue();
 
-    cx = sx - mround * sin((ang / 180) * M_PI);
-    cy = sy + mround * cos((ang / 180) * M_PI);
+    if (mMode==0) {
+        cx = sx - mround * sin((ang / 180) * M_PI);
+        cy = sy + mround * cos((ang / 180) * M_PI);
+    } else if(mMode==1) {
+        printf("Mode %d\n",mMode);
+        sx = VirtualLineTracer::SX;
+        sy = VirtualLineTracer::SY;
+        ang = gStartAngle*M_PI/180;
+        cx =  sx + mCx*cos(ang)-mCy*sin(ang);
+        cy =  sy + mCx*sin(ang)+mCy*cos(ang);  
+    }
 
     mPid->setKp(mPFactor); 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
     mPid->resetParam();
+
+    mLpf->reset(fabs(mround));
+
 
     printf("Vinit %f,%f,%f,  %f,%f,%f\n", sx,sy, ang, cx,cy,mround );
 }
@@ -116,8 +146,9 @@ float VirtualLineTracer::calcDistance()
 
 float VirtualLineTracer::calcTurn()
 {
-
-    float val1_turn = mPid->getOperation(basedistance);
+    mLpf->addValue(basedistance);
+    float filter_value = mLpf->getFillteredValue();
+    float val1_turn = mPid->getOperation(filter_value);
     float turn = val1_turn;
     return turn;
 }
