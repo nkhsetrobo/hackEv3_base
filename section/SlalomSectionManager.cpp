@@ -19,7 +19,7 @@ SlalomSectionManager::SlalomSectionManager():
     wParam *wp;
 
 #if defined(MAKE_RIGHT)
-      wp = array[0];
+      wp = array[1];
 #else
       wp = array[0];
 #endif
@@ -39,11 +39,15 @@ bool SlalomSectionManager::run()
           adjustLength();
        } 
        if(mSection[mSectionIdx]->getID()==CALIB ) {
-            gColor->calibMax();
+            gColor->calibBright();
        } 
        if(mSection[mSectionIdx]->getID()==RESET_ANG ) {
             gOdo->reset();
        } 
+       if(mSection[mSectionIdx]->getID()==SEL_COLOR ) {
+            color = (int)mSection[mSectionIdx]->getStatus();
+       } 
+
        
         mSectionIdx++;
         printf("nextSection %d =============================\n",mSectionIdx);
@@ -61,14 +65,14 @@ void SlalomSectionManager::adjustLength()
 
       LengthJudge *j = (LengthJudge*)(mSection[mSectionIdx+1]->getJudge());
 
-      float offset=3.0;
+      float offset=2.0;
       float dist_adjust = 1.0;
       if( dist>17) {
         dist_adjust = 9.5;
       }else if( dist>16) {
         dist_adjust = 9.0;
       } else if(dist>15) {
-        dist_adjust = 8.0;
+        dist_adjust = 8.5;
       }else if( dist>14) {
         dist_adjust = 7.5;
       }else if( dist>13) {
@@ -80,11 +84,11 @@ void SlalomSectionManager::adjustLength()
       } else if( dist>10) {
         dist_adjust = 3.5;
       } else if(dist>9) {
-        dist_adjust = 3.0;
-      } else if(dist>8) {
         dist_adjust = 2.5;
-      }else if(dist>7) {
+      } else if(dist>8) {
         dist_adjust = 2.0;
+      }else if(dist>7) {
+        dist_adjust = 1.0;
       }
 
       j->setFinLength(dist_adjust+offset);

@@ -200,6 +200,8 @@ void Scene::initSpeed(){
 void Scene::execSlalom()
 {
     if(mSlm->run()){
+        int col = mSlm->color;
+        mGsm->setColor(col);
         delete mSlm;
         // msg_log("Tail test");
         

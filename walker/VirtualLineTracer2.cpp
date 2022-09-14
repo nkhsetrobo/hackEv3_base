@@ -34,7 +34,7 @@ VirtualLineTracer2::VirtualLineTracer2(Odometry *odo,
     mPid->debug_char = 'L';
 
     mLpf = new LowPassFilter();
-    mLpf->setRate(0.85);
+    mLpf->setRate(0.8);
 
 }
 
@@ -197,6 +197,7 @@ void VirtualLineTracer2::init(){
     mPid->setKd(mDFactor);
     mPid->resetParam();
 
+    setnPosition();
     float dist = calcdistance();
     mLpf->reset(dist);
 

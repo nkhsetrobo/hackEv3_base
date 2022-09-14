@@ -5,7 +5,7 @@
 GarageSectionManager::GarageSectionManager():
   SectionManager()
 {
-
+  color=0;
 }
 
 void GarageSectionManager::init()
@@ -13,10 +13,16 @@ void GarageSectionManager::init()
     wParam *wp;
 
 #if defined(MAKE_RIGHT)
-      wp = array[0];
+      wp = array[color];
 #else
-      wp = array[0];
+      wp = array[color];
 #endif
     init(wp);
   }
+
+void GarageSectionManager::setColor(int col)
+{
+  if (col<0 || col>4) col=0;
+  color = col;
+}
   

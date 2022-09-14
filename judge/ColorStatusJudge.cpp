@@ -12,24 +12,34 @@ ColorStatusJudge::ColorStatusJudge()
 float ColorStatusJudge::status()
 {
 
+    double r,g,b,y;
+#if defined(PRIMARY)
+    r = SLALOM_RED_H;
+    g = SLALOM_GREEN_H;
+    b = SLALOM_BLUE_H;
+    y = SLALOM_YELLOW_H;
+#else
+    r = RED_H;
+    g = GREEN_H;
+    b = BLUE_H;
+    y = YELLOW_H;
+#endif
     float hue = mHsvHue->getValue();
     float sat = mHsvSatu->getValue();
 
-    if (sat>0.15) {
-        if(subhue(hue,GREEN_H)<30) {
+        if(subhue(hue,g)<30 && sat>0.1) {
             color[1]++;
         } 
-        if(subhue(hue,RED_H)<30) {
+        if(subhue(hue,r)<30 && sat>0.3) {
             color[0]++;
         } 
-         if(subhue(hue,BLUE_H)<30) {
+         if(subhue(hue,b)<30 && sat>0.1) {
             color[2]++;
         } 
-         if(subhue(hue,YELLOW_H)<30) {
+         if(subhue(hue,y)<30 && sat>0.1) {
             color[3]++;
         }         
 
-    }
     color_id=-1;
     int max_col=0;
     for(int i=0;i<4;i++) {

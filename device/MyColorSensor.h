@@ -39,6 +39,7 @@ class MyColorSensor
 
         rgb_raw_t getRgb();
         void calibMax();
+        void calibBright();
 
     private:
         ePortS mPort;
@@ -68,6 +69,7 @@ class MyColorSensor
         hsv_t mHsv;
 
         rgb_raw_t  raw;
+
 
 };
 

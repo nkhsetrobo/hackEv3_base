@@ -85,9 +85,9 @@ void VirtualLineTracer::init()
         cy = sy + mround * cos((ang / 180) * M_PI);
     } else if(mMode==1) {
         printf("Mode %d\n",mMode);
-        sx = VirtualLineTracer::SX;
-        sy = VirtualLineTracer::SY;
-        ang = gStartAngle*M_PI/180;
+        float sx = VirtualLineTracer::SX;
+        float sy = VirtualLineTracer::SY;
+        float ang = gStartAngle*M_PI/180;
         cx =  sx + mCx*cos(ang)-mCy*sin(ang);
         cy =  sy + mCx*sin(ang)+mCy*cos(ang);  
     }
@@ -150,6 +150,7 @@ float VirtualLineTracer::calcTurn()
     float filter_value = mLpf->getFillteredValue();
     float val1_turn = mPid->getOperation(filter_value);
     float turn = val1_turn;
+   // printf("VT %f,%f\n",basedistance,filter_value);
     return turn;
 }
 void VirtualLineTracer::setLimit(float limit)
