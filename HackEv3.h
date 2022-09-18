@@ -22,8 +22,8 @@ const float TREAD=12.83;
 #define SLALOM_YELLOW_H 51
 #define SLALOM_BLUE_H 222
 
-#define PRIMARY
-#define LPAT 1
+//#define PRIMARY
+#define LPAT 2
 #define RPAT 1
 
 

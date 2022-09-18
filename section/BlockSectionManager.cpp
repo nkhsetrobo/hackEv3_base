@@ -1,4 +1,5 @@
 #include "BlockSectionManager.h"
+#include "Scene.h"
 
 //BingoState *BlockSectionManager::msCarryState;
 //BingoState *BlockSectionManager::msMoveState;
@@ -19,8 +20,10 @@ void BlockSectionManager::init()
 {
    // mState->init();
     wParam *wp;
-
-    wp = array[0];
+    if(Scene::COURSE==0)
+      wp = array[0];
+    else
+      wp = array[1];
 
     init(wp);
 

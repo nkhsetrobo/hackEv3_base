@@ -12,19 +12,6 @@ SlalomSectionManager::SlalomSectionManager():
   SectionManager()
 {
   mIdx=0;
-  #if defined(MAKE_RIGHT) && defined(PAT1)
-      printf("@@@@@@@@@@@@@@@@@@@@@@@@@@ PRIMARY RIGHT PAT1\n");
-      mIdx=0;
-#elif defined(MAKE_RIGHT) && defined(PAT2)
-      printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@ PRIMARY RIGHT PAT2\n");
-      mIdx=1;
-#elif !defined(MAKE_RIGHT) && defined(PAT1)
-      printf("############################ PRIMARY LEFT PAT1\n");
-      mIdx=2;
-#else
-      printf("############################ PRIMARY LEFT PAT2\n");
-      mIdx=3;
-#endif
 
 }
 
