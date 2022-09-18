@@ -16,7 +16,7 @@ void SonerJudge::setLength(float len,int d)
 bool SonerJudge::run()
 {
    // static char buf[256];
-   // printf(" %f\n",mSoner->getValue());
+   printf("Soner Judge  %f\n",mSoner->getValue());
    // msg_log(buf);
 
     float len = mSoner->getValue();

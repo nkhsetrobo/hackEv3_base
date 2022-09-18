@@ -84,12 +84,12 @@ void VirtualLineTracer::init()
         cx = sx - mround * sin((ang / 180) * M_PI);
         cy = sy + mround * cos((ang / 180) * M_PI);
     } else if(mMode==1) {
-        printf("Mode %d\n",mMode);
         float sx = VirtualLineTracer::SX;
         float sy = VirtualLineTracer::SY;
         float ang = gStartAngle*M_PI/180;
         cx =  sx + mCx*cos(ang)-mCy*sin(ang);
         cy =  sy + mCx*sin(ang)+mCy*cos(ang);  
+        printf("Mode %d  %f,%f ,%f\n",mMode,sx,sy,gStartAngle);
     }
 
     mPid->setKp(mPFactor); 

@@ -27,6 +27,7 @@ class Scene{
         void execEnd();
         void execCalib();
  
+        static int COURSE;
     private:
         enum State {
             UNDEFINED,

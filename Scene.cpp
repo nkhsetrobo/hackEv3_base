@@ -12,9 +12,11 @@ extern MyGyroSensor *gGyro;
 extern Odometry *gOdo;
 extern ArmWalker *gArmWalker;
 
+int Scene::COURSE = 0;
 
 Scene::Scene() : mState(UNDEFINED)
 {
+    printf("SCENE\n");
     mSsm = new SpeedSectionManager();
 #if defined(PRIMARY)
     mSlm = new SlalomSectionManager();
@@ -96,20 +98,38 @@ void Scene::execUndefined()
 
 void Scene::execCalib()
 {
+    int volt = ev3_battery_voltage_mV();
+
     if(ev3_button_is_pressed(LEFT_BUTTON))
     {
-        int volt = ev3_battery_voltage_mV();
         printf("battery %d\n",volt);
+        printf("LEFT COUSE");
         mColorSensor->calibMax();
         gGyro->reset();
-
+        COURSE=0;
 
     }
     if(ev3_button_is_pressed(RIGHT_BUTTON))
     {
-        printf("Press Touch Button to start.\n");
-        mState = START;
+        printf("battery %d\n",volt);
+        printf("RIGHT COUSE");
+        mColorSensor->calibMax();
+        gGyro->reset();
+        COURSE=1;
     }
+
+
+    if(ev3_button_is_pressed(ENTER_BUTTON))
+    {       
+            gGyro->reset();
+            gOdo->reset();
+#if defined(MAKE_RASPIKE)
+            mState=INIT_SPEED;
+#else
+            mState=START;
+#endif
+    }
+
 
 }
 void Scene::execStart()

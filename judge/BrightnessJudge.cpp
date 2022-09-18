@@ -12,6 +12,7 @@ void BrightnessJudge::setBrightness(float x, int i){
 
 bool BrightnessJudge::run(){
     //色の判定
+    printf("Brightness %f:%f\n",mBrightness->getValue(),brightness);
     if(flag == 1){
         if(mBrightness->getValue() >= brightness){
             return true;

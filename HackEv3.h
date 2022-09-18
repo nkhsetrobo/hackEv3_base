@@ -17,16 +17,18 @@ const float TREAD=12.83;
 #define YELLOW_H 62
 #define BLUE_H 210
 
-#define SLALOM_GREEN_H 90
+#define SLALOM_GREEN_H 159
 #define SLALOM_RED_H 0
 #define SLALOM_YELLOW_H 51
 #define SLALOM_BLUE_H 222
 
 #define PRIMARY
-#define PAT2
+#define LPAT 1
+#define RPAT 1
+
 
 #if defined(MAKE_RASPIKE)
-#define MAKE_RIGHT
+//#define MAKE_LEFT
 #endif
 
 #endif

@@ -2,6 +2,8 @@
 #include "Section.h"
 #include "MyColorSensor.h"
 #include "util.h"
+#include "Scene.h"
+#include "HackEv3.h"
 
 extern MyColorSensor *gColor;
 extern Odometry *gOdo;
@@ -9,6 +11,20 @@ extern Odometry *gOdo;
 SlalomSectionManager::SlalomSectionManager():
   SectionManager()
 {
+  mIdx=0;
+  #if defined(MAKE_RIGHT) && defined(PAT1)
+      printf("@@@@@@@@@@@@@@@@@@@@@@@@@@ PRIMARY RIGHT PAT1\n");
+      mIdx=0;
+#elif defined(MAKE_RIGHT) && defined(PAT2)
+      printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@ PRIMARY RIGHT PAT2\n");
+      mIdx=1;
+#elif !defined(MAKE_RIGHT) && defined(PAT1)
+      printf("############################ PRIMARY LEFT PAT1\n");
+      mIdx=2;
+#else
+      printf("############################ PRIMARY LEFT PAT2\n");
+      mIdx=3;
+#endif
 
 }
 
@@ -17,12 +33,18 @@ SlalomSectionManager::SlalomSectionManager():
   void SlalomSectionManager::init()
   {
     wParam *wp;
+    // 0: LEFT PAT1, 1: LEFT,PAT2
+    //3:RIGHT,PAT1.  4:RIGHT,PAT2
+    if(Scene::COURSE==0) {
+      mIdx=LPAT-1;      
+      printf("############################ PRIMARY PAT %d\n",mIdx);
+    }
+    else {
+      mIdx=RPAT+1;   
+      printf("############################ PRIMARY PAT %d\n",mIdx);
+    }
 
-#if defined(MAKE_RIGHT)
-      wp = array[1];
-#else
-      wp = array[0];
-#endif
+    wp = array[mIdx];
     init(wp);
   }
 
@@ -39,7 +61,8 @@ bool SlalomSectionManager::run()
           adjustLength();
        } 
        if(mSection[mSectionIdx]->getID()==CALIB ) {
-            gColor->calibBright();
+            gColor->calibMax();
+            //gColor->calibBright();
        } 
        if(mSection[mSectionIdx]->getID()==RESET_ANG ) {
             gOdo->reset();
