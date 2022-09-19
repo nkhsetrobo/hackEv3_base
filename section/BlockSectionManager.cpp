@@ -38,6 +38,12 @@ bool BlockSectionManager::run()
     case AREASEARCH:
       execAreaSearch();
     break;
+    case INITBONUSMOVE:
+      initBonusMove();
+    break;
+    case BONUSMOVE:
+      execBonusMove();
+    break;
     case INITCOLOR:
       initColor();
     break;
@@ -64,10 +70,29 @@ bool BlockSectionManager::run()
 
 void BlockSectionManager::execAreaSearch()
 {
+  if(run_section()) {
+    mState = INITBONUSMOVE;
+  }
+}
+
+void  BlockSectionManager::initBonusMove()
+{
+  int area = getBonusArea(bonus_col);
+  printf("initBonusMove col %d -> area %d\n",bonus_col,area);
+  wParam *bonus_param[] = {carry_bonus_3,carry_bonus_3,carry_bonus_2,carry_bonus_3};
+    reset();
+    init(bonus_param[area]);  
+    mState = BONUSMOVE;
+
+}
+
+void  BlockSectionManager::execBonusMove()
+{
   if(SectionManager::run()) {
     mState = INITCOLOR;
   }
 }
+ 
 
 void BlockSectionManager::initColor()
 {
@@ -96,6 +121,64 @@ void BlockSectionManager::execCarry()
     mState = INITMOVE;
   }
 }
+
+
+void BlockSectionManager::changeBonusBlock(int area,BkCol col)
+{ 
+  if(bonus_area[area]==col) 
+    return;
+  int idx=0;
+  for(;idx<4;idx++) {
+    if(bonus_area[idx]==col) 
+      break;
+  }
+  BkCol tmp = bonus_area[idx];
+  bonus_area[idx] = bonus_area[area];
+  bonus_area[area]=tmp;
+
+  printf("BONUS AREA [%d,%d,%d,%d]\n",bonus_area[0],bonus_area[1],bonus_area[2],bonus_area[3]);
+}
+
+int BlockSectionManager::getBonusArea(BkCol col)
+{
+  for(int i=0;i<4;i++) {
+    if( bonus_area[i]==col) return i;
+  }
+  return 0;
+}
+
+bool BlockSectionManager::run_section()
+{
+  int color;
+    if(mSection[mSectionIdx]==nullptr)
+        return true;
+
+    if(mSection[mSectionIdx]->run()) {
+      
+       if(mSection[mSectionIdx]->getID()==AREA0 ) {
+            color = (int)mSection[mSectionIdx]->getStatus();
+            changeBonusBlock(0,(BkCol)color);
+       } 
+       if(mSection[mSectionIdx]->getID()==AREA1 ) {
+            color = (int)mSection[mSectionIdx]->getStatus();
+            changeBonusBlock(1,(BkCol)color);
+       } 
+       if(mSection[mSectionIdx]->getID()==AREA2 ) {
+            color = (int)mSection[mSectionIdx]->getStatus();
+            changeBonusBlock(2,(BkCol)color);
+       } 
+       if(mSection[mSectionIdx]->getID()==BONUSBLOCK ) {
+            color = (int)mSection[mSectionIdx]->getStatus();
+            bonus_col = (BkCol)color;
+       }        
+        mSectionIdx++;
+        printf("nextSection %d =============================\n",mSectionIdx);
+    }
+
+    return false;
+}
+
+
 /*
 bool BlockSectionManager::run()
 {
