@@ -33,7 +33,7 @@ void ArmWalker::setPwm(float target, float kp, float ki, float kd)
     int base_angle=0;
 #endif
 
-    mPid->setLimit(20);
+    mPid->setLimit(60);
     mPid->setTarget(base_angle+mTarget);
     mPid->setKp(mPFactor);
     mPid->setKi(mIFactor);

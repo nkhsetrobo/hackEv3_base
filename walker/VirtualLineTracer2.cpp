@@ -100,7 +100,7 @@ float VirtualLineTracer2::calcdistance(){
 
     float noze=2.0;
     double angle = mTurnAngle->getValue();
-   if(mTargetSpeed>0){
+   if(mTargetSpeed>=0){
          nx2=nx2+noze*cos((angle/180)* M_PI);
          ny2=ny2+noze*sin((angle/180)* M_PI);
     }
@@ -177,6 +177,7 @@ void VirtualLineTracer2::init(){
     angle2 += gStartAngle; // 基準位置からの角度に変換
     if(initMode==2) {
         angle2 = mTurnAngle->getValue();
+        if(mTargetSpeed<0) angle2 += 180;
     }
 
     float noze=1.0;

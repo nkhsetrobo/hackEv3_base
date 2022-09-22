@@ -145,7 +145,7 @@ void main_task(intptr_t unused) {
  gLeftWheel->setPWM(0);
  gRightWheel->setPWM(0);
 
-  msg_out();
+  //msg_out();
 
   ext_tsk();
 
@@ -200,7 +200,10 @@ void tracer_task(intptr_t unused) {
 #if !defined(MAKE_RASPIKE)
     gArmWalker->run();
 #endif
-      gScene->run();
+      bool fin = gScene->run();
+      if(fin) {
+          wup_tsk(MAIN_TASK);  // 終了でメインを起こす
+      }
     }
   //  for(int i=0;i<10;i++) 
   //   printf("tracer\n");
@@ -216,33 +219,3 @@ void tracer_task(intptr_t unused) {
   ext_tsk();
 
 }
-
-/*
-void mainloop()
-{
-    if (ev3_button_is_pressed(BACK_BUTTON)) {
-      wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
-    } else {
-  
-      
-      gPolling->run();
-
-
-      // とりあえずここで、アームの固定。設計に基づいて変えるべし
-      int arm_cnt = gArm->getCount();
-  // syslog(LOG_NOTICE,"%d",arm_cnt);
-      int diff = -50 - arm_cnt;
-  #if defined(MAKE_SIM)
-      gArm->setPWM(diff*4.0);
-  #endif
-    // しっぽ制御
-      
-      gTailWalker->run();
-      gArmWalker->run();
-      gScene->run();
-    }
-
-    tslp_tsk(10*1000);
-
-}
-*/

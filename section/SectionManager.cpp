@@ -54,6 +54,7 @@ void SectionManager::reset()
 }
 void SectionManager::setWalker(Section * sc,wParam *wp,int n)
 {
+    bool edge;
     Walker *walk = sc->selectWalker(wp[n].walk);
 
     switch (wp[n].walk)
@@ -61,33 +62,35 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
     case Section::VIRTUAL2:
       //  printf("create VIRTUAL2 \n");
         // syslog(LOG_NOTICE,"VIRTUAL2:%d %d",(int)wp[n].speed,(int)wp[n].kp);
-        ((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle);
+        ((VirtualLineTracer2 *)walk)->setAbsTurnAngle(wp[n].absangle*mReverse); 
         ((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
-        ((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp);
+        ((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp*mReverse);
          ((VirtualLineTracer2 *)walk)->setInitMode(wp[n].round);
         break;
     case Section::WALKER:
       //  printf("create WALKER \n");
-        ((SimpleWalker *)walk)->setCommandV(wp[n].forward, wp[n].turn);
+        ((SimpleWalker *)walk)->setCommandV(wp[n].forward, wp[n].turn*mReverse);
 
         break;
 
     case Section::TURN:
-        ((TurnWalker *)walk)->setParam(wp[n].turn,wp[n].forward);
+        ((TurnWalker *)walk)->setParam(wp[n].turn*mReverse,wp[n].forward);
     break;
     
     case Section::VIRTUAL:
      //   printf("create VIRTUAL \n");
 
-        ((VirtualLineTracer *)walk)->setRound(wp[n].round);
-        ((VirtualLineTracer *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(20,2, 0.2, 0,1,1)
+        ((VirtualLineTracer *)walk)->setRound(wp[n].round*mReverse);
+        ((VirtualLineTracer *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp*mReverse); //(20,2, 0.2, 0,1,1)
         ((VirtualLineTracer *)walk)->setMode(wp[n].absangle);  // １つ目の要素をモードに使用
-        ((VirtualLineTracer *)walk)->setCenter(wp[n].forward,wp[n].turn); //walker用のパラメータを座標に使用
+        ((VirtualLineTracer *)walk)->setCenter(wp[n].forward,wp[n].turn*mReverse); //walker用のパラメータを座標に使用
         break;
     case Section::TRACER:
       //   printf("create TRACER \n");
-       ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp); //(30, 0 ,  30, 0.2, 0.1 )
-        ((LineTracer *)walk)->setEdgeMode(wp[n].edge);
+       ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp*mReverse); //(30, 0 ,  30, 0.2, 0.1 )
+        edge = wp[n].edge;
+        if(mReverse==-1) edge = !edge;
+        ((LineTracer *)walk)->setEdgeMode(edge);
 
         break;
     case Section::ARM:
@@ -115,7 +118,7 @@ void SectionManager::setJudge(Section * sc)
 
 void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
 {
-    printf("SM setJudge %d\n",wp2[n].judge);
+    //printf("SM setJudge %d\n",wp2[n].judge);
     Judge *judge = sc->selectJudge(wp2[n].judge);
     
     switch (wp2[n].judge)
@@ -123,7 +126,7 @@ void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
     case Section::TURNANGLE:
       //  printf("create turn angle judge\n");
         ((TurnAngleJudge *)judge)->setupdate(wp2[n].jflag);
-        ((TurnAngleJudge *)judge)->setFinishAngle(wp2[n].fangle);
+        ((TurnAngleJudge *)judge)->setFinishAngle(wp2[n].fangle*mReverse);
         break;
     case Section::LENGTH:
       //  printf("create length judge\n");
@@ -170,6 +173,10 @@ int SectionManager::getError()
     return error_code;
 }
 
+void SectionManager::setReverse(int mode)
+{
+    mReverse = mode;
+}
 void SectionManager::init(wParam *wp)
 {
 

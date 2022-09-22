@@ -66,7 +66,7 @@ bool Scene::run()
             break;
         case FINISH:
             execEnd();
-            break;
+            return true;
         default:
             return true;
     }
@@ -83,17 +83,27 @@ void Scene::execUndefined()
 
    // int diff =arm_target - arm_cnt;
    // gArm->setPWM(diff*4.0);
+#if defined(PRIMARY)
+    printf("PRIMARY build\n");
+#else
+    printf("ADVANCED build\n");
+#endif
+#if defined(DEBUG_NOMOVE)
+    printf(":::::WARNIG:::::\n  debug no move \n:::::WARNIG:::::\n");
+#endif
 
     gArmWalker->setPwm(0, 0,0,0); // シミュレータ対策
 
 #if defined(MAKE_RASPIKE)
-    printf("Press Left Button to caribration.\n");
+    printf("Press Left/Right Button to caribration.\n");
     mState = CALIB;
     gArmWalker->setPwm(0, 4,0,0);
 #else
     ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
     mState = START;
 #endif
+
+
 }
 
 void Scene::execCalib()
@@ -103,7 +113,15 @@ void Scene::execCalib()
     if(ev3_button_is_pressed(LEFT_BUTTON))
     {
         printf("battery %d\n",volt);
-        printf("LEFT COUSE");
+#if defined(PRIMARY)
+#if LPAT==1
+        printf("LEFT COUSE : PATTERN 1\n");
+#else
+        printf("LEFT COUSE : PATTERN 2\n");
+#endif
+#else
+        printf("LEFT COUSE\n");
+#endif
         mColorSensor->calibMax();
         gGyro->reset();
         COURSE=0;
@@ -112,7 +130,15 @@ void Scene::execCalib()
     if(ev3_button_is_pressed(RIGHT_BUTTON))
     {
         printf("battery %d\n",volt);
-        printf("RIGHT COUSE");
+#if defined(PRIMARY)
+#if RPAT==1
+        printf("RIGHT COUSE : PATTERN 1\n");
+#else
+        printf("RIGHT COUSE : PATTERN 2\n");
+#endif
+#else
+        printf("RIGHT COUSE\n");
+#endif
         mColorSensor->calibMax();
         gGyro->reset();
         COURSE=1;
@@ -200,7 +226,7 @@ void Scene::execBingo()
             clock.sleep(10000);
             mState = FINISH;
         } else
-            mState = INIT_BINGO;
+            mState = FINISH;
     }
 }
 
@@ -244,7 +270,11 @@ void Scene::execGarage()
 }
 void Scene::execEnd()
 {
+            printf("FIN\n");
+
     // msg_log("finish!");
     //ETRoboc_notifyCompletedToSimulator();
+    gLeftWheel->setPWM(0);
+    gRightWheel->setPWM(0);
 
 } 

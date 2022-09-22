@@ -17,8 +17,8 @@ typedef struct _Param11
     double angleTarget;
     double anglekp;
 
-    double absangle;
-    double round;
+    double absangle; // VirtualLine2
+    double round; // VirtualLine
 
     double forward;
     double turn;
@@ -56,6 +56,7 @@ class SectionManager {
         void setWPointer(wParam *ptr);
         int getError();
         void init(wParam *ptr);
+        void setReverse(int mode);
         virtual void init()=0;
     protected:
         Section *mSection[500];
@@ -68,6 +69,7 @@ class SectionManager {
 
         static int msPrevWalker; 
         wParam *array;
+        int mReverse=1;
     private:
 };
 

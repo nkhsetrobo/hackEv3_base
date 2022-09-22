@@ -13,7 +13,7 @@ const float TREAD=12.83;
 //14.3
 
 #define GREEN_H 150
-#define RED_H 0
+#define RED_H 350
 #define YELLOW_H 62
 #define BLUE_H 210
 
@@ -26,6 +26,7 @@ const float TREAD=12.83;
 #define LPAT 2
 #define RPAT 1
 
+#define DEBUG_NOMOVE
 
 #if defined(MAKE_RASPIKE)
 //#define MAKE_LEFT

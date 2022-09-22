@@ -1,5 +1,6 @@
 #include "Section.h"
- 
+#include "HackEv3.h"
+
 extern SimpleWalker *gWalker;
 extern LineTracer *gTracer;
 extern VirtualLineTracer *gVitual;
@@ -32,16 +33,21 @@ Section::~Section()
 bool Section::run()
 {
     error_code=0;
-    if(first2){
-        // msg_log("3");
-        //printf("emg %d\n",emergency);
-        mJudge->init();
-        if(emergency)
-            mEmergencyJudge->init();
-        first2 = false;
-    }
-    //判定
-    if(mJudge->run()){
+
+    if(mJudge!=nullptr) {
+        if(first2){
+            // msg_log("3");
+            //printf("emg %d\n",emergency);
+            mJudge->init();
+            if(emergency)
+                mEmergencyJudge->init();
+            first2 = false;
+        }
+        //判定
+        if(mJudge->run()){
+            return true;
+        }
+    } else {
         return true;
     }
 
@@ -49,19 +55,23 @@ bool Section::run()
     if (mStatusJudge!=nullptr)
         status = mStatusJudge->status();
         
-
+#if defined(DEBUG_NOMOVE)
+    return true;
+#endif
    /* if(emergency && mEmergencyJudge->run()){
         error_code=1;
         printf("Emergency Stop!!!\n");
         return true;
     }*/
 
-    //走法
-    if(first){
-        mWalker->init();
-        first = false;
+    if( mWalker!=nullptr) {
+        //走法
+        if(first){
+            mWalker->init();
+            first = false;
+        }
+        mWalker->run();
     }
-    mWalker->run();
     
     return false;
 }
