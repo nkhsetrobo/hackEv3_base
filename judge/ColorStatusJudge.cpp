@@ -19,7 +19,7 @@ float ColorStatusJudge::status()
     g = SLALOM_GREEN_H;
     b = SLALOM_BLUE_H;
     y = SLALOM_YELLOW_H;
-    ouble base_sat=0.1;
+    base_sat=0.1;
 
 #else
     r = RED_H;

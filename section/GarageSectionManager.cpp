@@ -6,7 +6,7 @@
 GarageSectionManager::GarageSectionManager():
   SectionManager()
 {
-  color=0;
+  color=2;
 }
 
 void GarageSectionManager::init()

@@ -77,6 +77,7 @@ void BlockSectionManager::execAreaSearch()
 {
   if(run_section()) {
     mState = INITBONUSMOVE;
+   // mState = INITMOVE;
   }
 }
 
@@ -85,7 +86,7 @@ void  BlockSectionManager::initBonusMove()
   int area = getBonusArea(bonus_col);
   wParam *bonus_param[] = {carry_bonus_3,carry_bonus_3,carry_bonus_2,carry_bonus_3};
   int endpt[] = {13,13,7,13}; // 走行体現在位置
-  cur_no = endpt[area];
+  cur_no = next_pos = endpt[area];
   printf("initBonusMove col %d -> area %d  robot %d\n",bonus_col,area,cur_no);
     reset();
     init(bonus_param[area]);  
@@ -137,11 +138,12 @@ void BlockSectionManager::initMove()
     for(int cnt=0;cnt<4;cnt++) {
       int to_block_node = to_block_list[cur_no][cnt];
       if (block_list_in_area[node_to_block[to_block_node]]==1) {     // ブロックが未処理である   
-        printf("MOVE %d -> %d\n",cur_no,to_block_node);
+        printf("================ MOVE %d -> %d\n",cur_no,to_block_node);
         block_list_in_area[node_to_block[to_block_node]]=0; // ブロックを処理済みへ
         if(move_list[cur_no][to_block_node]!=nullptr) {
           init(move_list[cur_no][to_block_node]);
-          cur_no = to_block_node; // 次の走行体位置更新
+        //  cur_no = to_block_node; // 次の走行体位置更新
+         // cur_no=next_pos;  // 次の走行体位置更新
           mState = MOVE;
         } else {
           printf("move route NOT found\n");
@@ -181,10 +183,26 @@ void BlockSectionManager::execColor()
 void BlockSectionManager::initCarry()
 {
     reset();
+#if defined(DEBUG_NOMOVE)
+    //debug
+      static BkCol c_list[] = {BKBLUE,BKRED,BKYELLOW,BKGREEN, BKBLUE,BKRED,BKYELLOW,BKGREEN};
+      static int c_list_cnt=0;
+
+      carry_block = c_list[c_list_cnt++];
+      printf("DEBUG carry block %d\n",carry_block);
+    //debug
+#endif
+
     int dist_areano = getBonusArea(carry_block);
-    printf("carry block %d -> %d\n",cur_no,dist_areano);
+
+
+    printf("############# carry block %d -> area %d\n",cur_no,dist_areano);
     if(carry_list[cur_no][dist_areano]!=nullptr) {
         init(carry_list[cur_no][dist_areano]);
+       //printf("prev cur_no %d %d\n",cur_no,dist_areano);
+       // printf("DEBUG %d %d %d %d\n",arry_endpt[cur_no][0],arry_endpt[cur_no][1],arry_endpt[cur_no][2],arry_endpt[cur_no][3]);
+        cur_no = arry_endpt[cur_no][dist_areano]; // 新しい走行体位置
+        printf("cur_no %d \n",cur_no);
       // init(c_13_3);
         mState = CARRY;
     } else {

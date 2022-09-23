@@ -151,6 +151,8 @@ void Scene::execCalib()
             gOdo->reset();
 #if defined(MAKE_RASPIKE)
             mState=INIT_SPEED;
+            //mState=INIT_GARAGE;
+
 #else
             mState=START;
 #endif
@@ -191,6 +193,11 @@ void Scene::execSpeed()
     //     cnt++;
     //     return;
     // }
+
+#if defined(SKIP_SPEED)
+    mState = INIT_BINGO;
+    return;
+#endif
     if (mSsm->run())
     {
         delete mSsm;

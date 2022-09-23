@@ -31,7 +31,15 @@ SlalomSectionManager::SlalomSectionManager():
       printf("############################ PRIMARY PAT %d\n",mIdx);
     }
 
+/*
+    if( Scene::COURSE==1) {
+      mIdx = RPAT-1;
+      setReverse(-1);
+    }
+*/
     wp = array[mIdx];
+    
+
     init(wp);
   }
 

@@ -26,7 +26,9 @@ const float TREAD=12.83;
 #define LPAT 2
 #define RPAT 1
 
-#define DEBUG_NOMOVE
+//#define DEBUG_NOMOVE
+//#define SKIP_SPEED
+//#define SKIP_BONUS
 
 #if defined(MAKE_RASPIKE)
 //#define MAKE_LEFT
