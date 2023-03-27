@@ -37,7 +37,7 @@ class SlalomSectionManager : public SectionManager
 
     int mIdx;
 float normal_spd=31+2;
-float turn_spd=45;
+float turn_spd=52;
 float angle_offset=+0;
 float rkp0=20,rki0=12,rkd0=3.4;
 //float rkp=50,rki=10,rkd=6.5;

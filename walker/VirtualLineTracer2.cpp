@@ -30,7 +30,7 @@ VirtualLineTracer2::VirtualLineTracer2(Odometry *odo,
 
     mPid->resetParam();
 
-    mPid->debug=true;
+    mPid->debug=false;
     mPid->debug_char = 'L';
 
     mLpf = new LowPassFilter();
@@ -171,6 +171,7 @@ void VirtualLineTracer2::run(){
 
 void VirtualLineTracer2::init(){
 
+
     sx = mXPosition->getvalue();
     sy = mYPosition->getvalue();
     // 現在の方向に向かうモード
@@ -202,7 +203,7 @@ void VirtualLineTracer2::init(){
     float dist = calcdistance();
     mLpf->reset(dist);
 
-    printf("VirtualLineTracer2::init %f,%f,%f,%f  %f,%f,%f\n",SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
+    printf("****VirtualLineTracer 2****::init %f,%f,%f,%f  %f,%f,%f\n",SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
    
 }
 

@@ -25,7 +25,7 @@ VirtualLineTracer::VirtualLineTracer(Odometry *odo,
     co=0;
     si=0;
 
-    mPid->debug=true;
+    mPid->debug=false;
     mPid->debug_char = 'V';
     mLpf = new LowPassFilter();
     mLpf->setRate(0.85);
@@ -100,7 +100,7 @@ void VirtualLineTracer::init()
     mLpf->reset(fabs(mround));
 
 
-    printf("Vinit %f,%f,%f,  %f,%f,%f\n", sx,sy, ang, cx,cy,mround );
+    printf("****VirtualLineTracer**** %f,%f,%f,  %f,%f,%f\n", sx,sy, ang, cx,cy,mround );
 }
 
 void VirtualLineTracer::setCenterPosition(float centerx, float centery)

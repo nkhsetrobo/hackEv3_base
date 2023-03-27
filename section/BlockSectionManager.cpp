@@ -84,8 +84,8 @@ void BlockSectionManager::execAreaSearch()
 void  BlockSectionManager::initBonusMove()
 {
   int area = getBonusArea(bonus_col);
-  wParam *bonus_param[] = {carry_bonus_3,carry_bonus_3,carry_bonus_2,carry_bonus_3};
-  int endpt[] = {13,13,7,13}; // 走行体現在位置
+  wParam *bonus_param[] = {carry_bonus_0,carry_bonus_1,carry_bonus_2,carry_bonus_3};
+  int endpt[] = {4,1,7,13}; // 走行体現在位置
   cur_no = next_pos = endpt[area];
   printf("initBonusMove col %d -> area %d  robot %d\n",bonus_col,area,cur_no);
     reset();

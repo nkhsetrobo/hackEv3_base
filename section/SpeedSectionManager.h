@@ -278,6 +278,7 @@ wParam advance2022_b[50] = {
 
 #if defined(MAKE_RASPIKE)
 wParam advance2022_L[50] = {
+                   // {6, Section::WALKER, Section::COLOR, 40, -0.2,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_L, Judge::UPDATE, 0, 0, 0, 0, 0, 1.0, 1,false,Section::JNONE},
 
                     {0, Section::TRACER, Section::LENGTH, 100, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE_L, Judge::UPDATE, 0, 20, 0, 0, 0, 0, 0, false,Section::JNONE},
                     {0, Section::TRACER, Section::LENGTH, 60, 0,rkp, rki, rkd, 0, 0 /*setparam*/, 0, 0, 00, 0, _EDGE_L, Judge::UPDATE, 0, 100, 0, 0, 0, 0, 0,false,Section::JNONE},
