@@ -25,6 +25,7 @@ extern "C" {
 extern void main_task(intptr_t exinf);
 extern void polling_task(intptr_t exinf);
 extern void tracer_task(intptr_t exinf);
+extern void recieve_task(intptr_t unused);
 
 static void user_system_create();
 static void user_system_destroy();

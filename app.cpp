@@ -24,6 +24,7 @@
 #include "ArmAngle.h"
 #include "AnglerVelocity.h"
 #include "GyroAngle.h"
+#include "TouchSensor.h"
 
 #include "Scene.h"
 
@@ -70,6 +71,7 @@ Scene *gScene;
 float gStart;
 float gStartAngle;
 
+FILE *pipe;
 
 static void user_system_create() {
   gLeftWheel = new Motor(PORT_C,false,LARGE_MOTOR);
@@ -130,6 +132,7 @@ void main_task(intptr_t unused) {
 
  // sta_cyc(POLLING_CYC);
   sta_cyc(TRACER_CYC);
+  //act_tsk(RCV_TASK);
   // 周期タスクを使わないなら
   /*
   while(true) {
@@ -177,7 +180,20 @@ void polling_task(intptr_t unused) {
    //fprintf(fp,"len , bri,H,S r,g,b, turn, v : %3.3f,  %7.4f,  %5.1f, %3.2f, %d,%d,%d  , %4.2f, %4.2f \n",len,br,h,s,  rgb.r, rgb.g,rgb.b ,turn,v);
 
 }
+void recieve_task(intptr_t unused) {
 
+  pipe = fopen("pipe","r+");
+        printf("recieve\n");  
+
+  while (1) {
+
+      char c =fgetc(pipe);
+      printf("%c",c);  
+  }
+
+  ext_tsk();
+
+}
 
 void tracer_task(intptr_t unused) {
 /*    static int cnt=0;
@@ -186,11 +202,10 @@ void tracer_task(intptr_t unused) {
     msg_logbuf[cnt][0]=sttime;
 */
     //printf("tracer\n");
-    if (ev3_button_is_pressed(BACK_BUTTON)) {
+    if (ev3_touch_sensor_is_pressed(EV3_PORT_1)) {
       printf("pressed back button\n");
       wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
     } else {
-        
       gPolling->run();
 
 
