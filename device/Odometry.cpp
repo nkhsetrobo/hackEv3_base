@@ -172,6 +172,7 @@ void Odometry::setPwm(int left,int right)
 	left = accel_L(left);
 	right = accel_R(right);
 #endif
+	//printf("%d,%d\n",left,right);
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);
 }

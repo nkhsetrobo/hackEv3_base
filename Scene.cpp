@@ -133,9 +133,9 @@ void Scene::execStart()
     {
         gKd-=0.005;
     }
-    static char buf[256];
-    sprintf(buf,"KP %f, Kd%f",gKp,gKd);
-    msg_log_l(buf,5);
+    //static char buf[256];
+    //sprintf(buf,"KP %f, Kd%f",gKp,gKd);
+    //msg_log_l(buf,5);
 #if defined(MAKE_RASPIKE)
     if(ev3_button_is_pressed(ENTER_BUTTON))
     {       
