@@ -1,4 +1,8 @@
 // tag::walker_def[]
+
+#include "fcntl.h"
+#include "unistd.h"
+
 #include "app.h"
 #include "util.h"
 
@@ -71,7 +75,7 @@ Scene *gScene;
 float gStart;
 float gStartAngle;
 
-FILE *pipe;
+int pipe_id;
 
 static void user_system_create() {
   gLeftWheel = new Motor(PORT_C,false,LARGE_MOTOR);
@@ -132,7 +136,7 @@ void main_task(intptr_t unused) {
 
  // sta_cyc(POLLING_CYC);
   sta_cyc(TRACER_CYC);
-  //act_tsk(RCV_TASK);
+  act_tsk(RCV_TASK);
   // 周期タスクを使わないなら
   /*
   while(true) {
@@ -182,12 +186,15 @@ void polling_task(intptr_t unused) {
 }
 void recieve_task(intptr_t unused) {
 
-  pipe = fopen("pipe","r+");
-        printf("recieve\n");  
-
+  //pipe_id = open("pipe",O_RDWR | O_NONBLOCK);
+  printf("recieve pipe id %d\n",pipe_id);  
+  FILE *fp = fopen("pipe","r+");
+  fprintf(fp,"@a");
   while (1) {
-
-      char c =fgetc(pipe);
+      char c;
+      c=fgetc(fp);
+      //int err = read(pipe_id,&c,1);
+      //if(err<0) continue;
       printf("%c",c);  
   }
 

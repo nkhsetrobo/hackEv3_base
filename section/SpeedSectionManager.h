@@ -73,7 +73,7 @@ wParam entry2022[100] = {
 
 #if defined(MAKE_RASPIKE)
 float normal_spd=45;
-float rkp=14,rki=15,rkd=3.2;
+float rkp=22,rki=40,rkd=3.6;
 float ckp=25,cki=25,ckd=4.5;
 //float rkp2=10,rki2=0.2,rkd2=1.2;
 float rkp2=30,rki2=10,rkd2=10.0;  // lowpass 0.85
@@ -699,6 +699,17 @@ wParam test[80] = {
                    {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},
 
 };
+
+wParam test2019[80] = {
+                {0, Section::TRACER, Section::LENGTH, 75, 0, rkp,rki,rkd, 0, 1 /*setparam*/, 0, 0, 0, 30, _EDGE_R, Judge::UPDATE, 0, 5, 0, 0, 0, 0,0,false},
+                {0, Section::TRACER, Section::LENGTH, 73, 0, rkp,rki,rkd, 0,1 /*setparam*/, 0, 0, 0, 30, _EDGE_R, Judge::UPDATE, 0, 1200, 0, 0, 0, 0,0,false},
+                    {0, Section::VIRTUAL2, Section::COLOR,  55, 0,rkp2,rki2,rkd2, +0, 0 /*setparam*/, 0, 2, 0, 0, _EDGE_R, Judge::UPDATE, 0, 0, 0, 0, YELLOW_H, 0.15, 0 , false, Section::JNONE},
+                        {0, Section::TURN, Section::TURNANGLE, 0, -0.0, 10, 5, 0.1, 0, 0 /*setparam*/, 0, 0, 0, 85, false,Judge::UNUPDATE, -170, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
+                   
+                {0, Section::WALKER, Section::LENGTH, 0, 0,0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATE, 0, 100000, 0, 0, 0, 0, 0 , 0},
+                {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0},
+
+};
 #endif
 //  wParam *array[10] = {base, b};  // Lコース　S字スキップ
 //  wParam *array[10] = {base_sc2_r, b};  // Rコース　ショートカットテスト
@@ -708,7 +719,7 @@ wParam test[80] = {
 //  wParam *array[10] = {outer, b};
 // right = 0 , left=1
 #if defined(PRIMARY)
-  wParam *array[10] = {test, test};
+  wParam *array[10] = {test2019, test2019};
   //wParam *array[10] = {fin_Pri_R, fin_Pri_L};
 #else
   wParam *array[10] = {advance2022_R, advance2022_L};
