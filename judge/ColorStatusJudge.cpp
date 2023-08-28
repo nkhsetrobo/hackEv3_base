@@ -14,6 +14,12 @@ float ColorStatusJudge::status()
 
     double r,g,b,y;
     double base_sat=0.1;
+    r = RED_H;
+    g = GREEN_H;
+    b = BLUE_H;
+    y = YELLOW_H;
+    base_sat=0.01;
+/*
 #if defined(PRIMARY)
     r = SLALOM_RED_H;
     g = SLALOM_GREEN_H;
@@ -27,8 +33,8 @@ float ColorStatusJudge::status()
     b = BLUE_H;
     y = YELLOW_H;
     base_sat=0.01;
-
 #endif
+*/
     float hue = mHsvHue->getValue();
     float sat = mHsvSatu->getValue();
 
@@ -51,10 +57,10 @@ float ColorStatusJudge::status()
             color[2]++;
         } 
          if(subhue(hue,y)<35 && sat>base_sat*2) {
-            color[3]++;
+           // color[3]++;
         }         
          if(subhue(hue,y)<35 && sat>base_sat) {
-            color[3]++;
+           // color[3]++;
         }         
     color_id=-1;
     int max_col=0;

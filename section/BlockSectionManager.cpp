@@ -18,7 +18,7 @@ BlockSectionManager::BlockSectionManager()
 
 void BlockSectionManager::init()
 {
-  
+  printf("block");
    // mState->init();
     wParam *wp;
     if(Scene::COURSE==0) {
@@ -27,14 +27,14 @@ void BlockSectionManager::init()
     } else
       wp = array[1];
 
-    init(wp);
+    //init(wp);
 }
 
 bool BlockSectionManager::run()
 {
   switch(mState) {
     case UNDEFINED:
-      mState = AREASEARCH;
+      mState = INITENTER;
     break;
     case AREASEARCH:
       execAreaSearch();
@@ -50,6 +50,15 @@ bool BlockSectionManager::run()
     break;
     case MOVE:
       execMove();
+    break;
+    case EXITMOVE:
+        exitMove();
+    break;
+    case INITENTER:
+      initEnter();
+    break;
+    case ENTER:
+      execEnter();
     break;
     case INITCOLOR:
       initColor();
@@ -94,6 +103,21 @@ void  BlockSectionManager::initBonusMove()
 
 }
 
+void  BlockSectionManager::initEnter()
+{
+    init(enter);
+    mState = ENTER;
+}
+
+void  BlockSectionManager::execEnter()
+{
+  if(run_section()) {
+    mState = INITMOVE;
+  }
+}
+
+
+
 void  BlockSectionManager::execBonusMove()
 {
   if(run_section()) {
@@ -135,6 +159,74 @@ void BlockSectionManager::initMove()
         init(m_13_13);
     }
     */
+    //max_curno = 2;
+    if (block_phase==0) {
+      init(movePhase1[cur_no++]);
+      if (movePhase1[cur_no]==nullptr) {
+          block_phase=1;
+          cur_no=0;
+      }
+
+    } else if (block_phase==1) { //１つ目
+        int idx=0;
+        if(color==0) { //赤ならすべて確定
+          idx=1;
+          block_fix=true;
+        } 
+        init(carryPhase1[idx]); 
+        block_phase=2;
+        cur_no=0;
+    }
+    else if (block_phase==2) { //１つ目の処理
+      init(movePhase2[cur_no++]);
+      if (block_fix && cur_no==1) { //確定なら色チェックをスキップ
+          block_phase=3;
+          cur_no=0;
+      }
+      if (movePhase2[cur_no]==nullptr) {
+          block_phase=3;
+          cur_no=0;
+      }
+    } else if (block_phase==3) {// ２つ目
+        int idx=0;
+        printf("2nd Block color %d\n",color);
+        if (!block_fix) { //１つ目が青で確定していない
+          if(color==0) {
+            block_color[0]=1;
+            block_color[1]=0; //赤確定
+            block_color[2]=1;
+
+          } else  {
+            block_color[0]=1;
+            block_color[1]=1;
+            block_color[2]=0; //赤確定
+          }
+        }
+        block_fix=true; //ここで必ず確定する
+        if(block_color[1]==0) {
+          idx=1;
+        }
+        init(carryPhase2[idx]);
+        block_phase=4;
+        cur_no=0;
+    } else if (block_phase==4) {
+        init(movePhase3[0]);
+        block_phase=5;
+        cur_no=0;
+    }else if (block_phase==5) {  
+        int idx=0;
+        if (block_color[2]==0) {
+          idx=1;
+        }
+        init(carryPhase3[idx]);
+        block_phase=6;
+
+    } else if (block_phase==6) {  
+      init(exitPhase[0]);
+    }
+    mState = MOVE;
+    return;
+#if 0
     for(int cnt=0;cnt<4;cnt++) {
       int to_block_node = to_block_list[cur_no][cnt];
       if (block_list_in_area[node_to_block[to_block_node]]==1) {     // ブロックが未処理である   
@@ -154,13 +246,20 @@ void BlockSectionManager::initMove()
     }
     printf("NO move block \n");
     mState = END;
+#endif
 }
 
 void BlockSectionManager::execMove()
 {
   if(run_section()) {
-    mState = INITCOLOR;
+   //mState = INITCOLOR;
+    mState = INITMOVE;
   }
+}
+
+void BlockSectionManager::exitMove()
+{
+     mState = EXITMOVE;
 }
 
 
@@ -248,6 +347,21 @@ int BlockSectionManager::getBonusArea(BkCol col)
 
 bool BlockSectionManager::run_section()
 {
+    if(mSection[mSectionIdx]==nullptr)
+        return true;
+    //color=-1;
+    if(mSection[mSectionIdx]->run()) {
+        if(mSection[mSectionIdx]->getID()==100 ) {
+            color = (int)mSection[mSectionIdx]->getStatus();
+       } 
+        mSectionIdx++;
+    }
+
+    return false;
+}
+/*
+bool BlockSectionManager::run_section()
+{
   int color;
     if(mSection[mSectionIdx]==nullptr)
         return true;
@@ -288,7 +402,7 @@ bool BlockSectionManager::run_section()
 
     return false;
 }
-
+*/
 
 /*
 bool BlockSectionManager::run()

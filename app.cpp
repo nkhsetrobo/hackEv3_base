@@ -188,15 +188,15 @@ void recieve_task(intptr_t unused) {
 
   //pipe_id = open("pipe",O_RDWR | O_NONBLOCK);
   printf("recieve pipe id %d\n",pipe_id);  
-  FILE *fp = fopen("pipe","r+");
-  fprintf(fp,"@a");
-  while (1) {
+  FILE *fp = fopen("pipe","r");
+  //fprintf(fp,"@a");
+//  while (1) {
       char c;
       c=fgetc(fp);
       //int err = read(pipe_id,&c,1);
       //if(err<0) continue;
-      printf("%c",c);  
-  }
+      printf("%c\n",c);  
+  //}
 
   ext_tsk();
 

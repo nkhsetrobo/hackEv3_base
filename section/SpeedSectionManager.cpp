@@ -18,10 +18,11 @@ SpeedSectionManager::SpeedSectionManager() : SectionManager()
     wParam *wp;
  
  
-    if(Scene::COURSE==0) 
-      mIdx=1;    
-    else 
-      mIdx=0;    
+    if(Scene::COURSE==0)  {
+      mIdx=1;    // LEFT
+    } else {
+      mIdx=0;    //RIGHT
+    }
 
     wp = array[mIdx];
     init(wp);

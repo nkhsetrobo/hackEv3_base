@@ -179,7 +179,7 @@ void SectionManager::setReverse(int mode)
 }
 void SectionManager::init(wParam *wp)
 {
-
+    ev3_speaker_play_tone(NOTE_F4,1000);
     for (int n = 0; wp[n].flag != -1; n++)
     {
         Section *sc = new Section();

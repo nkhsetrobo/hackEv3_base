@@ -5,6 +5,7 @@
 #include "Clock.h"
 #include "HackEv3.h"
 
+#include "app.h"
 extern Motor       *gLeftWheel;
 extern Motor       *gRightWheel;
 extern MyColorSensor *gColor;
@@ -20,7 +21,8 @@ Scene::Scene() : mState(UNDEFINED)
     mSsm = new SpeedSectionManager();
 #if defined(PRIMARY)
     mSlm = new SlalomSectionManager();
-    mGsm = new GarageSectionManager();
+ //   mGsm = new GarageSectionManager();
+    mBsm = new BlockSectionManager();
 #else
     mBsm = new BlockSectionManager();
 #endif
@@ -206,7 +208,7 @@ void Scene::execSpeed()
         //BlockSectionManager::msArea->initBlockFromApi();
 
 #if defined(PRIMARY)    
-    mState = INIT_SLALOM;
+    mState = INIT_BINGO;
 #else
     mState = INIT_BINGO;
 #endif
