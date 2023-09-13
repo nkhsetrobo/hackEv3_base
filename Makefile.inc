@@ -47,17 +47,7 @@ APPL_CXXOBJS += \
 	Stop.o\
 	GyroJudge.o \
 	SonerJudge.o \
-	BingoState.o \
-	BingoStateCarry.o \
-	BingoStateMove.o \
 	BlockSectionManager.o \
-	Area.o \
-	BlockPlace.o \
-	CrossCircle.o \
-	Runner.o \
-	BlackLine.o \
-	Block.o \
-	BlockCircle.o \
 	SonerStatusJudge.o \
 	ColorStatusJudge.o \
 	TurnWalker.o \

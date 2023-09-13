@@ -40,6 +40,7 @@ bool SectionManager::run()
 
 void SectionManager::addSection(Section *sec)
 {
+    printf("LASTIdx %d\n",mLastIdx);
     mSection[mLastIdx++]=sec;
     mSection[mLastIdx]=nullptr;
 }

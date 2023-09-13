@@ -152,8 +152,8 @@ void Odometry::setPwm(int left,int right)
 	int right_err=0;
 
 	int force_pwm=70;
-	int force_pwm_l=80;
-	int force_cnt=120;
+	int force_pwm_l=70;
+	int force_cnt=150;
 	if (left!=0 && no_run_count_l>force_cnt) {
 		left = left>0?force_pwm_l:-force_pwm_l;
 		left_err=1;

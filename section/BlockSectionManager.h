@@ -7,12 +7,79 @@
 //#include "Area.h"
 #include "HackEv3.h"
 
+enum COMMAND{
+    SL2BR,
+    SL2BL,
+    SL2GR,
+
+    L2BR,
+    L2BL,
+    L2GR,
+    L2GL,
+    L2RR,
+    L2RL,
+    L2YR,
+    L2YL,
+
+    TL1,
+    TL2,
+    TL3,
+    TR1,
+    TR2,
+    TR3,
+    
+    TL0,
+    TR0,
+
+    GO,
+
+    PUSH_RR,
+    PUSH_GR,
+    PUSH_BR,
+    PUSH_YR,
+    PUSH_RL,
+    PUSH_GL,
+    PUSH_BL,
+    PUSH_YL,
+
+    ROT_RR,
+    ROT_RL,
+    ROT_GR,
+    ROT_GL,
+    ROT_BR,
+    ROT_BL,
+    ROT_YR,
+    ROT_YL,
+
+    PUSH_LINE_L,
+    PUSH_LINE_R,
+
+    BACK_R,
+    BACK_G,
+    BACK_B,
+    BACK_Y,
+
+    EXIT1,
+    EXIT2,
+    EXIT2b,
+    EXIT3,
+    EXIT4,
+
+    COLOR,
+
+    CMDEND
+};
+
+
+
+namespace BSM {
 class BlockSectionManager : public SectionManager {
     public:
         BlockSectionManager();
 
        // void setState(BingoState *bst);
         void init();
+        void multiinit(COMMAND cmd[]);
       using SectionManager::init;
        bool run();        
 
@@ -76,9 +143,9 @@ class BlockSectionManager : public SectionManager {
 #endif
 
 
-const int _EDGE_L = LineTracer::LEFTEDGE;
-const int _EDGE_R = LineTracer::RIGHTEDGE;
-const float sign=-1;
+const static int _EDGE_L;
+const static int _EDGE_R;
+const static float sign;
 
 const int AREA0=100;
 const int AREA1=101;
@@ -97,23 +164,23 @@ int armdir = 1;
 double arm_angle=50;
 double block_out_len=17;
 #else
-float kp=19,ki=20+2,kd=4.5;
+static float kp,ki,kd;
 //float rvkp=60,rvki=20.0,rvkd=9.0;
 //loat rvkp=15,rvki=0.5,rvkd=2.1;
-float rvkp=45,rvki=50,rvkd=12.0;  // lowpass 0.85
-float lvkp=17,lvki=13.0+2,lvkd=9.2; // lowpass 0.85
-float rkp0=20,rki0=12,rkd0=3.4;
+static float rvkp,rvki,rvkd;  // lowpass 0.85
+static float lvkp,lvki,lvkd; // lowpass 0.85
+static float rkp0,rki0,rkd0;
 
-float rkp2=30,rki2=10,rkd2=34.0;  // lowpass 0.85
+static float rkp2,rki2,rkd2;  // lowpass 0.85
 
 
-double normal_spd=46-2;
-double turn_spd=50+9;
-int armdir = -1;
-double arm_agnle=60;
-double block_out_len=16.5;
+static double normal_spd;
+static double turn_spd;
+static int armdir;
+static double arm_agnle;
+static double block_out_len;
 
-double turnoffs=0;
+static double turnoffs;
 #endif
 const double OUTER_TURN_ANGLE=38.0;
 
@@ -1475,28 +1542,31 @@ wParam m_13_4[20] = {
 
 wParam enter[10] = {
 
-        {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, +turn_spd*sign, _EDGE_R, Judge::UPDATEALL, -70*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
-        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -70*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 55, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
-        {0, Section::VIRTUAL2, Section::BRIGHTNESS, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -70*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 0, -0.5, 0,0, 0.0, 0 , 0,Section::JNONE},
-        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -70*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 3, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
+        {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, +turn_spd*sign, _EDGE_R, Judge::UPDATEALL, -72*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -72*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 55, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
+        {0, Section::VIRTUAL2, Section::BRIGHTNESS, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -74*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 0, -0.5, 0,0, 0.0, 0 , 0,Section::JNONE},
+        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -72*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 3, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
         {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, -turn_spd*sign, _EDGE_R, Judge::UNUPDATE, -0*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
       //{0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
       {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
 
 };
 
-//色チェック
-wParam color_check[20] = {
+wParam enter2[10] = {
 
-    {0, Section::ARM, Section::ARMANGLE, 0, 0, 40, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
-    {0, Section::ARM, Section::STOP, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
-       // {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, 0, normal_spd, 0, _EDGE, Judge::UPDATE, 0, block_out_len, 0, 0, 0, 0.40, 1 , 0,Section::COLORSTATUS},
-    {100, Section::WALKER, Section::STOP, 0, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 10 , 0,Section::COLORSTATUS},
-    {0, Section::ARM, Section::ARMANGLE, 0, 0, -40, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, -50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
-    {0, Section::ARM, Section::STOP, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE, Judge::UNUPDATE, 50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
+        {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, +turn_spd*sign, _EDGE_R, Judge::UPDATEALL, -60*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -58*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 55, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
+        {0, Section::VIRTUAL2, Section::BRIGHTNESS, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -58*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 0, -0.5, 0,0, 0.0, 0 , 0,Section::JNONE},
+        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -58*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 3, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
+        {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, +turn_spd*sign, _EDGE_R, Judge::UNUPDATE, -180*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+   //   {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
       {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
 
 };
+
+
+//色チェック
+static wParam color_check[];
 
 // @@@@@@@@@@@@@@@@@@@@@@@ パターン１ @@@@@@@@@@@@@@@@@@@@@@@@@@
 // １つ目へ移動
@@ -1689,8 +1759,6 @@ wParam exit1b[20] = {
  //  {0, Section::VIRTUAL, Section::TURNANGLE, normal_spd*0.8, 0,rvkp, rvki, rvkd, +20*sign, 0 /*setparam*/, 0, -11*sign, 0, 0, _EDGE, Judge::UPDATEALL, -88*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
       {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
       {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
-
-
 };
 
 // ３つ目回収後ゴールへ
@@ -1716,6 +1784,22 @@ wParam exit1a[20] = {
 
 };
 
+// @@@@@@@@@@@@@@@@@@@@@@@ パターン3 @@@@@@@@@@@@@@@@@@@@@@@@@@
+// １つ目へ移動
+wParam pat2_1[20] = {
+    {0, Section::TRACER, Section::LENGTH, normal_spd, 0,kp, ki, kd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL,0,12, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+    {0, Section::VIRTUAL2, Section::COLOR, normal_spd, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, 2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,BLUE_H, 0.15, 0 , 0,Section::JNONE},
+    {0, Section::VIRTUAL2, Section::LENGTH, normal_spd*1.2, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, 2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 10, 0, 0,0,0, 0 , 0,Section::JNONE},
+    {0, Section::TRACER, Section::LENGTH, normal_spd, 0,kp, ki, kd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL,0,15, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+    {0, Section::VIRTUAL2, Section::COLOR, normal_spd*0.8, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, 2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,RED_H, 0.15, 0 , 0,Section::JNONE},
+     {0, Section::VIRTUAL2, Section::LENGTH, normal_spd*1.2, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, 2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 10, 0, 0,0,0, 0 , 0,Section::JNONE},
+    {0, Section::TRACER, Section::LENGTH, normal_spd, 0,kp, ki, kd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL,0,15, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+    {0, Section::VIRTUAL2, Section::COLOR, normal_spd*0.8, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, 2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,RED_H, 0.15, 0 , 0,Section::JNONE},
+
+      {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+     {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
+};
+
 
 
 
@@ -1725,7 +1809,14 @@ wParam *moveList[10] = {
   //pat1_1, pat1_1a, pat1_2, pat1_2a, pat1_3,exit1,nullptr //青青赤
 };
 
-wParam *movePhase1[10] = {pat1_1, color_check,nullptr};
+// wParam *movePhase1[10] = {pat1_1, color_check,nullptr};
+// wParam *carryPhase1[10] = {pat1_1a,pat1_1b,nullptr};
+// wParam *movePhase2[10] = {pat1_2, color_check,nullptr};
+// wParam *carryPhase2[10] = {pat1_2a,pat1_2b,nullptr};
+// wParam *movePhase3[10] = {pat1_3,nullptr};
+// wParam *carryPhase3[10] = {pat1_3a,exit1b,nullptr};
+// wParam *exitPhase[10] = {exit1a,nullptr};
+wParam *movePhase1[10] = {pat2_1, color_check,nullptr};
 wParam *carryPhase1[10] = {pat1_1a,pat1_1b,nullptr};
 wParam *movePhase2[10] = {pat1_2, color_check,nullptr};
 wParam *carryPhase2[10] = {pat1_2a,pat1_2b,nullptr};
@@ -1733,6 +1824,65 @@ wParam *movePhase3[10] = {pat1_3,nullptr};
 wParam *carryPhase3[10] = {pat1_3a,exit1b,nullptr};
 wParam *exitPhase[10] = {exit1a,nullptr};
 
+static wParam shortline2blue_r[];
+static wParam shortline2blue_l[];
+static wParam shortline2green_r[];
+
+static wParam line2blue_r[];
+static wParam line2blue_l[];
+static wParam line2green_r[];
+static wParam line2green_l[];
+static wParam line2red_r[];
+static wParam line2red_l[];
+static wParam line2yellow_r[];
+static wParam line2yellow_l[];
+
+static wParam turn_right1[];
+static wParam turn_right2[];
+static wParam turn_right3[];
+static wParam turn_left1[];
+static wParam turn_left2[];
+static wParam turn_left3[];
+
+static wParam turn_left0[];
+static wParam turn_right0[];
+
+
+static wParam go_straight[];
+
+static wParam push_red_right[];
+static wParam push_green_right[];
+static wParam push_blue_right[];
+static wParam push_yellow_right[];
+static wParam push_red_left[];
+static wParam push_green_left[];
+static wParam push_blue_left[];
+static wParam push_yellow_left[];
+
+static wParam rot_red_right[];
+static wParam rot_red_left[];
+static wParam rot_green_right[];
+static wParam rot_green_left[];
+static wParam rot_blue_right[];
+static wParam rot_blue_left[];
+static wParam rot_yellow_right[];
+static wParam rot_yellow_left[];
+
+static wParam push_line_l[];
+static wParam push_line_r[];
+
+static wParam back_red[];
+static wParam back_green[];
+static wParam back_blue[];
+static wParam back_yellow[];
+
+static wParam exit1[];
+static wParam exit2[];
+static wParam exit2b[];
+static wParam exit3[];
+static wParam exit4[];
+
+static wParam *pat[];
 
 wParam *array[10] = {search_area_L,search_area_R};
 
@@ -1817,6 +1967,9 @@ int block_fix=0;
 int color=0;
 int block_color[3] = {0,1,1};
 
+int pattern = 1; //プライマリブロックパターン
+
 };
+}; //namespace
 
 #endif

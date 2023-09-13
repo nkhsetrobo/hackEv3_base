@@ -15,12 +15,14 @@ extern ArmWalker *gArmWalker;
 
 int Scene::COURSE = 0;
 
+
+
 Scene::Scene() : mState(UNDEFINED)
 {
     printf("SCENE\n");
     mSsm = new SpeedSectionManager();
 #if defined(PRIMARY)
-    mSlm = new SlalomSectionManager();
+    //mSlm = new SlalomSectionManager();
  //   mGsm = new GarageSectionManager();
     mBsm = new BlockSectionManager();
 #else
@@ -154,6 +156,7 @@ void Scene::execCalib()
 #if defined(MAKE_RASPIKE)
             mState=INIT_SPEED;
             //mState=INIT_GARAGE;
+         //mState=INIT_BINGO;
 
 #else
             mState=START;

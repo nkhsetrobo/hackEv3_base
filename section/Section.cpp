@@ -78,6 +78,7 @@ bool Section::run()
 
 Walker *Section::selectWalker(int  no)
 {
+    printf("select Walker %d\n",no);
     switch(no) {
         case WALKER:
             mWalker = (Walker*)(new SimpleWalker(gOdo,gSpeed));

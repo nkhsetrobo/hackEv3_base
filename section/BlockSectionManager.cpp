@@ -1,5 +1,6 @@
 #include "BlockSectionManager.h"
 #include "Scene.h"
+#include "BlockSectionDataPat1.h"
 
 //BingoState *BlockSectionManager::msCarryState;
 //BingoState *BlockSectionManager::msMoveState;
@@ -18,15 +19,34 @@ BlockSectionManager::BlockSectionManager()
 
 void BlockSectionManager::init()
 {
-  printf("block");
+  int lpat=1,rpat=1;
    // mState->init();
+   FILE *fp = fopen("pat.txt","r");
+   char buf[256];
+   if( fp!=NULL ) {
+    for(int i=0;i<=1;i++) {
+      fgets(buf,256,fp);
+      printf(buf);
+      if(buf[0]=='L') 
+        lpat=buf[2]-'0';
+      if(buf[0]=='R') 
+        rpat=buf[2]-'0';
+    }
+      fclose(fp);
+   }
+
     wParam *wp;
     if(Scene::COURSE==0) {
       wp = array[1];
+      //pattern = LPAT-1; //プライマリブロックパターン
+      pattern = lpat-1; //プライマリブロックパターン
       setReverse(-1);
-    } else
+    } else {
       wp = array[1];
-
+//      pattern = RPAT-1; 
+      pattern = rpat-1; //プライマリブロックパターン
+    }
+    printf("PATTERN %d\n",pattern);
     //init(wp);
 }
 
@@ -105,7 +125,11 @@ void  BlockSectionManager::initBonusMove()
 
 void  BlockSectionManager::initEnter()
 {
-    init(enter);
+
+    if(pattern!=1)
+      init(enter);
+    else
+      init(enter2);
     mState = ENTER;
 }
 
@@ -161,11 +185,15 @@ void BlockSectionManager::initMove()
     */
     //max_curno = 2;
     if (block_phase==0) {
-      init(movePhase1[cur_no++]);
-      if (movePhase1[cur_no]==nullptr) {
-          block_phase=1;
-          cur_no=0;
-      }
+      // init(movePhase1[cur_no++]);
+      // if (movePhase1[cur_no]==nullptr) {
+      //     block_phase=1;
+      //     cur_no=0;
+      // }
+      multiinit(block1cmd[pattern]);
+      multiinit(colorcmd);
+      block_phase=1;
+
 
     } else if (block_phase==1) { //１つ目
         int idx=0;
@@ -173,11 +201,18 @@ void BlockSectionManager::initMove()
           idx=1;
           block_fix=true;
         } 
-        init(carryPhase1[idx]); 
+        // init(carryPhase1[idx]); 
+        if (idx==0) 
+          multiinit(block1pushcmd[pattern]);
+        else
+          multiinit(block1swapcmd[pattern]);
+
+
         block_phase=2;
         cur_no=0;
     }
     else if (block_phase==2) { //１つ目の処理
+    /*
       init(movePhase2[cur_no++]);
       if (block_fix && cur_no==1) { //確定なら色チェックをスキップ
           block_phase=3;
@@ -187,9 +222,16 @@ void BlockSectionManager::initMove()
           block_phase=3;
           cur_no=0;
       }
+      */
+      multiinit(block2cmd[pattern]);
+      if (!block_fix) { //確定なら色チェックをスキップ
+        multiinit(colorcmd);
+      }
+      block_phase=3;
+
     } else if (block_phase==3) {// ２つ目
         int idx=0;
-        printf("2nd Block color %d\n",color);
+        printf("block_fixed %d  2nd Block color %d\n",block_fix,color);
         if (!block_fix) { //１つ目が青で確定していない
           if(color==0) {
             block_color[0]=1;
@@ -206,11 +248,18 @@ void BlockSectionManager::initMove()
         if(block_color[1]==0) {
           idx=1;
         }
-        init(carryPhase2[idx]);
+        if (idx==0) 
+          multiinit(block2pushcmd[pattern]);
+        else
+          multiinit(block2swapcmd[pattern]);
+
+        //init(carryPhase2[idx]);
         block_phase=4;
         cur_no=0;
     } else if (block_phase==4) {
-        init(movePhase3[0]);
+        //init(movePhase3[0]);
+        multiinit(block3cmd[pattern]);
+
         block_phase=5;
         cur_no=0;
     }else if (block_phase==5) {  
@@ -218,7 +267,11 @@ void BlockSectionManager::initMove()
         if (block_color[2]==0) {
           idx=1;
         }
-        init(carryPhase3[idx]);
+        //(carryPhase3[idx]);
+        if (idx==0) 
+          multiinit(exitbcmd[pattern]);
+        else
+          multiinit(exitacmd[pattern]);
         block_phase=6;
 
     } else if (block_phase==6) {  
@@ -353,12 +406,22 @@ bool BlockSectionManager::run_section()
     if(mSection[mSectionIdx]->run()) {
         if(mSection[mSectionIdx]->getID()==100 ) {
             color = (int)mSection[mSectionIdx]->getStatus();
+            printf("COLOR %d\n",color);
        } 
         mSectionIdx++;
     }
 
     return false;
 }
+
+void BlockSectionManager::multiinit(COMMAND cmd[])
+{
+  for (int i=0;cmd[i]!=CMDEND;i++) {
+    printf("CMD idx %d cmd[i] %d\n",i,cmd[i]);
+      init(pat[cmd[i]]);
+  }
+}
+
 /*
 bool BlockSectionManager::run_section()
 {

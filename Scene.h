@@ -10,6 +10,8 @@
 #include "MyGyroSensor.h"
 #include "Odometry.h"
 
+using BSM::BlockSectionManager;
+
 class Scene{
     public:
         Scene();
