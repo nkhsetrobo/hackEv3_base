@@ -47,7 +47,7 @@ void SimpleWalker::run() {
     static float speed=0;
 
     mForward = mSpeedControl->getPwm();
-   static const int MAXPWM=80;
+   static const int MAXPWM=100;
     if (mTurn>MAXPWM) mTurn = MAXPWM;
     if (mTurn<-MAXPWM) mTurn = -MAXPWM;
     int diff = 0;

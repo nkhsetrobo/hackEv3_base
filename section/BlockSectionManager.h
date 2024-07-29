@@ -1542,8 +1542,8 @@ wParam m_13_4[20] = {
 
 wParam enter[10] = {
 
-        {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, +turn_spd*sign, _EDGE_R, Judge::UPDATEALL, -72*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
-        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -72*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 55, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
+        {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, +turn_spd*sign, _EDGE_R, Judge::UPDATEALL, -73*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+        {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -73*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 55, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
         {0, Section::VIRTUAL2, Section::BRIGHTNESS, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -74*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 0, -0.5, 0,0, 0.0, 0 , 0,Section::JNONE},
         {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,rkp2, rki2, rkd2, 0, 0 /*setparam*/, -72*sign, 0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 3, 0, 0,0, 0.0, 0 , 0,Section::JNONE},
         {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 10, -turn_spd*sign, _EDGE_R, Judge::UNUPDATE, -0*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
