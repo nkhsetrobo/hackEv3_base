@@ -5,7 +5,7 @@
  const int MyColorSensor::BRIGHT = false;
  const int MyColorSensor::COLOR = true;
 
-MyColorSensor::MyColorSensor(ePortS port,
+MyColorSensor::MyColorSensor(pbio_port_id_t  port,
                             Brightness *br,
                             HsvHue *h,
                             HsvSatu *s):
@@ -16,7 +16,9 @@ MyColorSensor::MyColorSensor(ePortS port,
     mSatu(s),
     mNorm(true)
 {
-    mColor = new ColorSensor(mPort);
+    //mColor = new ColorSensor(mPort);
+    mColor = pup_color_sensor_get_device(mPort);	
+    
 
     mMax_brightness = 100;  //36
     mMin_brightness = 0;
@@ -43,10 +45,10 @@ void MyColorSensor::update()
    // ColorSensor col(PORT_2);
 
     if(mColorMode==BRIGHT) {
-        mBright = mColor->getBrightness();
+        mBright = pup_color_sensor_reflection(mColor);
         mNorm_bright = normBrightness(mBright, mMin_brightness, mMax_brightness);
     } else {
-        mColor->getRawColor(raw);
+        raw = pup_color_sensor_rgb (mColor);
    //printf("RGB %d,%d,%d\n",raw.r,raw.g,raw.b);
         static int cnt=0;
     //     if (cnt%1000)
@@ -204,7 +206,7 @@ void MyColorSensor::getHSV(rgb_f_t rgb, hsv_t& hsv)
 }
 
 // debug用
-rgb_raw_t MyColorSensor::getRgb()
+pup_color_rgb_t MyColorSensor::getRgb()
 {
     return raw;
 }
@@ -212,7 +214,7 @@ rgb_raw_t MyColorSensor::getRgb()
 void MyColorSensor::calibMax()
 {
 #if defined(MAKE_RASPIKE)
-    mColor->getRawColor(raw);
+    raw = pup_color_sensor_rgb (mColor);
 
     mMax_R  = raw.r;
     mMax_G  = raw.g;
@@ -224,10 +226,10 @@ void MyColorSensor::calibMax()
 
 void MyColorSensor::calibBright()
 {
-    mColor->getRawColor(raw);
-        double r = normColor(raw.r,mMin_R,mMax_R);
-        double g = normColor(raw.g,mMin_G,mMax_G);
-        double b = normColor(raw.b,mMin_B,mMax_B);
+    raw = pup_color_sensor_rgb (mColor);
+    double r = normColor(raw.r,mMin_R,mMax_R);
+    double g = normColor(raw.g,mMin_G,mMax_G);
+    double b = normColor(raw.b,mMin_B,mMax_B);
            
     mMax_brightness =  0.298912 * r + 0.586611 * g+ 0.114478 *b;
     printf("calib Bright %f\n",mMax_brightness);

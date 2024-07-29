@@ -1,4 +1,8 @@
+USE_RASPIKE_ART=1
+
 mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
+
+APPL_LIBS += -lm
 
 APPL_COBJS +=
 
@@ -47,7 +51,6 @@ APPL_CXXOBJS += \
 	Stop.o\
 	GyroJudge.o \
 	SonerJudge.o \
-	BlockSectionManager.o \
 	SonerStatusJudge.o \
 	ColorStatusJudge.o \
 	TurnWalker.o \

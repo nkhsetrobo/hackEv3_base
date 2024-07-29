@@ -15,7 +15,7 @@ Polling::Polling(MyColorSensor *col,
 void Polling::run()
 {
     mColor->update();
-    mGyro->update();
-    mOdo->update();
-    mSonar->update();    
+   // mGyro->update();
+    //mOdo->update();
+    //mSonar->update();    
 }

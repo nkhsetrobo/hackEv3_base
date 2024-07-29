@@ -3,7 +3,10 @@
 #include "fcntl.h"
 #include "unistd.h"
 
+#include "spike.h"
+
 #include "app.h"
+
 #include "util.h"
 
 #include "Motor.h"
@@ -89,7 +92,7 @@ static void user_system_create() {
   gAnglerVelocity = new AnglerVelocity();
   gGyroAngle = new GyroAngle();
 
-  gColor = new MyColorSensor(PORT_2,gBrightness,gHue,gSatu);
+  gColor = new MyColorSensor(PBIO_PORT_ID_C,gBrightness,gHue,gSatu);
   gLength = new Length();
   gTurnAngle = new TurnAngle();
   gVelocity = new Velocity();
@@ -117,7 +120,6 @@ static void user_system_create() {
   //gTailWalker->setPwm(0,1,0,0);
   //gArmWalker->setPwm(-50,1,0,0);
 
-  ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
   
   init_f("hackEv3_base");
   
@@ -173,8 +175,7 @@ void polling_task(intptr_t unused) {
     float h = gHue->getValue();
     float s = gSatu->getValue();
 
-    rgb_raw_t rgb = gColor->getRgb();
-
+    pup_color_rgb_t rgb = gColor->getRgb();
     
     //printf("polling %f,%f,%f \n",br);
     //static char buf[100];
@@ -209,18 +210,18 @@ void tracer_task(intptr_t unused) {
     msg_logbuf[cnt][0]=sttime;
 */
     //printf("tracer\n");
-    if (ev3_touch_sensor_is_pressed(EV3_PORT_1)) {
-      printf("pressed back button\n");
+    hub_button_t mask;
+    hub_button_is_pressed(&mask);
+
+    if (mask&HUB_BUTTON_BT) {
+      printf("pressed BT button\n");
       wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
     } else {
-      gPolling->run();
+    gPolling->run();
 
 
-    // しっぽ制御
-      
-      gTailWalker->run();
 #if !defined(MAKE_RASPIKE)
-    gArmWalker->run();
+    //gArmWalker->run();
 #endif
       bool fin = gScene->run();
       if(fin) {

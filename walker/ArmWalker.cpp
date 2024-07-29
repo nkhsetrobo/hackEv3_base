@@ -25,7 +25,7 @@ void ArmWalker::setPwm(float target, float kp, float ki, float kd)
     mPFactor = kp;
     mIFactor = ki;
     mDFactor = kd;
-   // printf("set arm pwm %f\n",target);
+    printf("set arm pwm %f\n",target);
 
 #if defined(MAKE_SIM)
     int base_angle=-50;

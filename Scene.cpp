@@ -6,6 +6,8 @@
 #include "HackEv3.h"
 
 #include "app.h"
+#include "spike.h"
+
 extern Motor       *gLeftWheel;
 extern Motor       *gRightWheel;
 extern MyColorSensor *gColor;
@@ -24,9 +26,9 @@ Scene::Scene() : mState(UNDEFINED)
 #if defined(PRIMARY)
     //mSlm = new SlalomSectionManager();
  //   mGsm = new GarageSectionManager();
-    mBsm = new BlockSectionManager();
+   // mBsm = new BlockSectionManager();
 #else
-    mBsm = new BlockSectionManager();
+  //  mBsm = new BlockSectionManager();
 #endif
 
     mColorSensor = gColor;
@@ -42,6 +44,7 @@ bool Scene::run()
             execCalib();
             break;
         case START:
+            printf("START\n");
             execStart();
             break;
         case INIT_SPEED:
@@ -84,7 +87,6 @@ void Scene::execUndefined()
 //    tslp_tsk(1000*1000U);
   //  printf("wait end.\n");
 
-
    // int diff =arm_target - arm_cnt;
    // gArm->setPWM(diff*4.0);
 #if defined(PRIMARY)
@@ -104,6 +106,7 @@ void Scene::execUndefined()
     gArmWalker->setPwm(0, 4,0,0);
 #else
     ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
+
     mState = START;
 #endif
 
@@ -112,9 +115,10 @@ void Scene::execUndefined()
 
 void Scene::execCalib()
 {
-    int volt = ev3_battery_voltage_mV();
-
-    if(ev3_button_is_pressed(LEFT_BUTTON))
+    int volt = hub_battery_get_voltage();
+    hub_button_t mask;
+    hub_button_is_pressed(&mask);
+    if(mask&HUB_BUTTON_LEFT)
     {
         printf("battery %d\n",volt);
 #if defined(PRIMARY)
@@ -131,7 +135,7 @@ void Scene::execCalib()
         COURSE=0;
 
     }
-    if(ev3_button_is_pressed(RIGHT_BUTTON))
+    if(mask&HUB_BUTTON_RIGHT)
     {
         printf("battery %d\n",volt);
 #if defined(PRIMARY)
@@ -149,7 +153,7 @@ void Scene::execCalib()
     }
 
 
-    if(ev3_button_is_pressed(ENTER_BUTTON))
+    if(mask&HUB_BUTTON_CENTER)
     {       
             gGyro->reset();
             gOdo->reset();
@@ -168,7 +172,7 @@ void Scene::execCalib()
 void Scene::execStart()
 {
     static int cnt=0;
-    //printf("press %d\n",ev3_touch_sensor_is_pressed(EV3_PORT_1));
+    printf("press %d\n",ev3_touch_sensor_is_pressed(EV3_PORT_1));
     // とりあえず動かすだけなので、設計に基づいて書き直そう
 
 #if defined(MAKE_RASPIKE)
@@ -220,13 +224,14 @@ void Scene::execSpeed()
 }
 
 void Scene::initBingo(){
-    mBsm->init();
+    //mBsm->init();
     mState=BINGO;
 }
 
 void Scene::execBingo()
 {  
 
+/*
     if(mBsm->run()){
        // delete mBsm;
         // msg_log("Tail test");
@@ -240,6 +245,7 @@ void Scene::execBingo()
         } else
             mState = FINISH;
     }
+    */
 }
 
 void Scene::initSlalom(){

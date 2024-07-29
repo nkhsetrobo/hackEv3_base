@@ -1,13 +1,11 @@
 #ifndef __MYCOLORSENSOR_H__
 #define __MYCOLORSENSOR_H__
 
-
-#include "ColorSensor.h"
+#include "spike.h"
+//#include "ColorSensor.h"
 #include "Brightness.h"
 #include "HsvHue.h"
 #include "HsvSatu.h"
-
-using namespace ev3api;
 
 typedef struct hsv_t {
     float h;
@@ -24,7 +22,7 @@ typedef struct rgb_f_t {
 class MyColorSensor 
 {
     public:
-        MyColorSensor(ePortS port,
+        MyColorSensor(pbio_port_id_t  port,
                     Brightness *br,
                     HsvHue *h,
                     HsvSatu *s);
@@ -37,14 +35,15 @@ class MyColorSensor
         static const int BRIGHT;
         static const int COLOR;
 
-        rgb_raw_t getRgb();
+        pup_color_rgb_t getRgb();
         void calibMax();
         void calibBright();
 
     private:
-        ePortS mPort;
+        pbio_port_id_t  mPort;
         Brightness *mBrightness;
-        ColorSensor *mColor;
+        //ColorSensor *mColor;
+        pup_device_t *mColor;
 
         HsvHue *mHue;
         HsvSatu *mSatu;
@@ -68,7 +67,7 @@ class MyColorSensor
         rgb_f_t mRgb;
         hsv_t mHsv;
 
-        rgb_raw_t  raw;
+        pup_color_rgb_t  raw;
 
 
 };
