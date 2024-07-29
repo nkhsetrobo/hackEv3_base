@@ -40,7 +40,6 @@ APPL_CXXOBJS += \
 	VirtualLineTracer.o\
 	VirtualLineTracer2.o\
 	SlalomSectionManager.o\
-	TailWalker.o\
 	TailAngle.o\
 	TailAngleJudge.o\
 	ArmWalker.o\

@@ -8,15 +8,13 @@
 #define M_PI 3.14159265358979323846
 
 
-Odometry::Odometry(Motor *left, Motor *right,
+Odometry::Odometry(pup_motor_t *left, pup_motor_t *right,
 					Length *len,
 					TurnAngle *angle,
 					Velocity *velo,
 					XPosition *xposition,
 					YPosition *yposition,
-					Motor *tail,
-					TailAngle *tailangle,
-					Motor *arm,
+					pup_motor_t *arm,
 					ArmAngle *armangle):
 	mLeftMotor(left),
 	mRightMotor(right),
@@ -25,15 +23,12 @@ Odometry::Odometry(Motor *left, Motor *right,
 	mVelocity(velo),
 	mXPosition(xposition),
 	mYPosition(yposition),
-	mTailMotor(tail),
-	mTailAngle(tailangle),
 	mArmMotor(arm),
 	mArmAngle(armangle)
 {
-	mLeftMotor->reset();
-	mRightMotor->reset();
-	mTailMotor->reset();
-	mArmMotor->reset();
+	pup_motor_reset_count(mLeftMotor);
+	pup_motor_reset_count(mRightMotor);
+	pup_motor_reset_count(mArmMotor);
 
 	x=y=th=0.0;
 	sumlen=0;
@@ -62,11 +57,9 @@ void Odometry::resetAngle()
 
 void Odometry::update()
 {
-	current_rs1 = mLeftMotor->getCount();
-	current_rs2 = mRightMotor->getCount();
-	current_rs3 = mTailMotor->getCount();
-	current_rs4 = mArmMotor->getCount();
-	mTailAngle->update(current_rs3);
+	current_rs1 = pup_motor_get_count(mLeftMotor);
+	current_rs2 = pup_motor_get_count(mRightMotor);
+	current_rs4 = pup_motor_get_count(mArmMotor);
 	mArmAngle->update(current_rs4);
 
 	calc();
@@ -176,24 +169,19 @@ void Odometry::setPwm(int left,int right)
 	left = accel_L(left,left_err);
 	right = accel_R(right,right_err);
 #endif
-	mLeftMotor->setPWM(left);
-	mRightMotor->setPWM(right);
+	pup_motor_set_power(mLeftMotor,left);
+	pup_motor_set_power(mRightMotor,left);
 }
 
 void Odometry::setBrake(bool brake)
 {
-	mLeftMotor->setBrake(brake);
-	mRightMotor->setBrake(brake);
-}
-
-void Odometry::setTailpwm(int tail)
-{
-	mTailMotor->setPWM(tail);
+	// mLeftMotor->setBrake(brake);
+	// mRightMotor->setBrake(brake);
 }
 
 void Odometry::setArmpwm(int arm)
 {
-	mArmMotor->setPWM(arm);
+	pup_motor_set_power(mArmMotor,arm);
 }
 
 static double acc=0.1;

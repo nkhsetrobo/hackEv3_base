@@ -4,7 +4,8 @@
 #include <math.h>
 #include "util.h"
 
-#include "Motor.h"
+#include "spike.h"
+
 #include "Length.h"
 #include "TurnAngle.h"
 #include "Velocity.h"
@@ -13,21 +14,18 @@
 #include "TailAngle.h"
 #include "ArmAngle.h"
 
-using namespace ev3api;
 
 class Odometry
 {
 public:
-	Odometry(Motor *left,
-			Motor *right,
+	Odometry(pup_motor_t *left,
+			pup_motor_t *right,
 			Length *len,
 			TurnAngle *angle,
 			Velocity *velo,
 			XPosition *xposition,
 			YPosition *yposition,
-			Motor *tail,
-			TailAngle *tailangle,
-			Motor *arm,
+			pup_motor_t *arm,
 			ArmAngle *armangle);
 	void update();
 	void calc();
@@ -36,7 +34,6 @@ public:
 	void resetAngle();
 	void setPwm(int left,int right);
 	void setBrake(bool brake);
-	void setTailpwm(int tail);
 	void setArmpwm(int arm);
 
 private:
@@ -45,16 +42,14 @@ private:
 	int accel_R(int target,int err);
 
 
-	Motor *mLeftMotor;
-	Motor *mRightMotor;
+	pup_motor_t *mLeftMotor;
+	pup_motor_t *mRightMotor;
 	Length *mLength;
 	TurnAngle *mTurnAngle;
 	Velocity *mVelocity;
 	XPosition *mXPosition;
 	YPosition *mYPosition;
-	Motor *mTailMotor;
-	TailAngle *mTailAngle;
-	Motor *mArmMotor;
+	pup_motor_t *mArmMotor;
 	ArmAngle *mArmAngle;
 
 	int32_t current_rs1;

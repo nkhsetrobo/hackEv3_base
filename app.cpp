@@ -25,7 +25,6 @@
 #include "LineTracer.h"
 #include "MyGyroSensor.h"
 #include "MySonarSensor.h"
-#include "TailWalker.h"
 #include "TailAngle.h"
 #include "ArmWalker.h"
 #include "ArmAngle.h"
@@ -43,9 +42,10 @@ int log_idx=0;
 float msg_logbuf[30000][10];
 
 
-Motor       *gLeftWheel;
-Motor       *gRightWheel;
-Motor       *gArm;
+pup_motor_t * gLeftWheel;
+pup_motor_t * gRightWheel;
+
+pup_motor_t  *gArm;
 Motor       *gTail;
 
 Polling *gPolling;
@@ -71,7 +71,6 @@ GyroAngle *gGyroAngle;
 SpeedControl *gSpeed;
 SimpleWalker *gWalker;
 LineTracer *gTracer;
-TailWalker *gTailWalker;
 ArmWalker *gArmWalker;
 
 Scene *gScene;
@@ -81,10 +80,14 @@ float gStartAngle;
 int pipe_id;
 
 static void user_system_create() {
-  gLeftWheel = new Motor(PORT_C,false,LARGE_MOTOR);
-  gRightWheel = new Motor(PORT_B,false,LARGE_MOTOR);
-  gArm = new Motor(PORT_A,true,LARGE_MOTOR);
-  gTail = new Motor(PORT_D,true,MEDIUM_MOTOR);
+  // gLeftWheel = new Motor(PORT_C,false,LARGE_MOTOR);
+  // gRightWheel = new Motor(PORT_B,false,LARGE_MOTOR);
+  gLeftWheel = pup_motor_get_device(PBIO_PORT_ID_E);
+  gRightWheel = pup_motor_get_device(PBIO_PORT_ID_B);
+  gArm = pup_motor_get_device(PBIO_PORT_ID_A);
+  pup_motor_setup(gLeftWheel,PUP_DIRECTION_COUNTERCLOCKWISE,true);
+  pup_motor_setup(gRightWheel,PUP_DIRECTION_CLOCKWISE,true);  
+  pup_motor_setup(gArm,PUP_DIRECTION_CLOCKWISE,true);  
 
   gBrightness = new Brightness();
   gHue = new HsvHue();
@@ -103,12 +106,11 @@ static void user_system_create() {
   gArmAngle = new ArmAngle();
   gGyro = new MyGyroSensor(gAnglerVelocity,gGyroAngle);
 
-  gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity,gXPosition,gYPosition,gTail,gTailAngle,gArm,gArmAngle);
+  gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity,gXPosition,gYPosition,gArm,gArmAngle);
 
   gSpeed = new SpeedControl(gOdo,gVelocity);  
   gWalker = new SimpleWalker(gOdo,gSpeed); 
   gTracer = new LineTracer(gOdo,gSpeed);
-  gTailWalker = new TailWalker(gOdo,gSpeed);
   gArmWalker = new ArmWalker(gOdo,gSpeed);
 
 
@@ -117,7 +119,6 @@ static void user_system_create() {
 
   gScene = new Scene();
 
-  //gTailWalker->setPwm(0,1,0,0);
   //gArmWalker->setPwm(-50,1,0,0);
 
   
@@ -151,8 +152,8 @@ void main_task(intptr_t unused) {
 //  stp_cyc(POLLING_CYC);
   stp_cyc(TRACER_CYC);
 
- gLeftWheel->setPWM(0);
- gRightWheel->setPWM(0);
+ pup_motor_set_power(gLeftWheel,0);
+ pup_motor_set_power(gRightWheel,0);
 
   //msg_out();
 

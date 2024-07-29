@@ -6,7 +6,6 @@ extern LineTracer *gTracer;
 extern VirtualLineTracer *gVitual;
 extern Odometry *gOdo;
 extern SpeedControl *gSpeed;
-extern TailWalker *gTailWalker;
 
 
 
@@ -95,10 +94,6 @@ Walker *Section::selectWalker(int  no)
         case VIRTUAL2:
             mWalker = (Walker*)(new VirtualLineTracer2(gOdo,gSpeed));
             break;
-        case TAIL:
-            mWalker = (Walker*)(new TailWalker(gOdo,gSpeed));
-            // ((TailWalker*)mWalker)->setFlag(1);
-            break;
         case ARM:
             mWalker = (Walker*)(new ArmWalker(gOdo,gSpeed));
             // ((ArmWalker*)mWalker)->setFlag(1);
@@ -143,9 +138,6 @@ Judge *Section::selectJudgePtr(int no)
             mEmergencyJudge =  (Judge*)(new LengthJudge());
             ((LengthJudge *)mEmergencyJudge)->setFinLength(20);
             ((LengthJudge *)mEmergencyJudge)->setupdate(Judge::UPDATE);
-            break;
-        case TAILANGLE:
-            jptr = (Judge*)(new TailAngleJudge());
             break;
         case ARMANGLE:
             jptr = (Judge*)(new ArmAngleJudge());

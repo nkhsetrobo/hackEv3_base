@@ -99,11 +99,6 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         ((ArmWalker *)walk)->setPwm(wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd);
 
         break;
-    case Section::TAIL:
-        /*sprintf(buf[n],"Section %f,%f,%f,%f",wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd);
-        msg_log(buf[n]);*/
-        ((TailWalker *)walk)->setPwm(wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd);
-        break;
     }
 }
 
