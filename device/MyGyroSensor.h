@@ -9,20 +9,19 @@
 
 #include "Clock.h"
 
+#include "spike.h"
+
 using namespace ev3api;
 
 class MyGyroSensor : public Measure
 {
     public:
-        MyGyroSensor(ePortS port,
-                    AnglerVelocity* angv,
+        MyGyroSensor(AnglerVelocity* angv,
                     GyroAngle* ga);
         void update();
         void reset();
 
     private:
-        ePortS mPort;
-        GyroSensor *mGyro;
         AnglerVelocity *mAnglerVelocity;
         GyroAngle *mGyroAngle;
         TurnAngle *mTurnAngle;

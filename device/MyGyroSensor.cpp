@@ -2,29 +2,24 @@
 
 extern TurnAngle *gTurnAngle;
 
-MyGyroSensor::MyGyroSensor(ePortS port,
-                            AnglerVelocity* angv,
+MyGyroSensor::MyGyroSensor( AnglerVelocity* angv,
                             GyroAngle* ga):
-    mPort(port),
     mAnglerVelocity(angv),
     mGyroAngle(ga),
     mTurnAngle(gTurnAngle)
     
 {
-    mGyro = new GyroSensor(mPort);
     angvel = 0.0;
     gang = 0.0;
-    base_gang=-mGyro->getAngle();
+   // base_gang=-mGyro->getAngle();
 
     gang_v =0;
 
-    clk = new Clock();
 }
 
 void MyGyroSensor::reset()
 {
-    mGyro = new GyroSensor(mPort);
-    mGyro->reset();
+    hub_imu_init();
     //mGyro->setOffset(0);
     gang = 0;
     //base_gang=-mGyro->getAngle();
@@ -44,7 +39,9 @@ void MyGyroSensor::update()
     double hosei=1.0;
     static float angvel[2];
     angvel[0]=angvel[1];
-    angvel[1] = mGyro->getAnglerVelocity();
+    float imu[3];
+    hub_imu_get_angular_velocity(imu);
+    angvel[1]=imu[0]; //仮です
     gang -= (angvel[1]+angvel[0])*0.01/2;
   /*  
     double last_gang=gang;

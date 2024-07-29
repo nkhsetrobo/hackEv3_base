@@ -101,7 +101,7 @@ static void user_system_create() {
   gSonar = new MySonarSensor(PORT_3);
   gTailAngle = new TailAngle();
   gArmAngle = new ArmAngle();
-  gGyro = new MyGyroSensor(PORT_4,gAnglerVelocity,gGyroAngle);
+  gGyro = new MyGyroSensor(gAnglerVelocity,gGyroAngle);
 
   gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity,gXPosition,gYPosition,gTail,gTailAngle,gArm,gArmAngle);
 
