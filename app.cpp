@@ -137,7 +137,7 @@ void mainloop();
 void main_task(intptr_t unused) {
   user_system_create();
 
- // sta_cyc(POLLING_CYC);
+  sta_cyc(POLLING_CYC);
   sta_cyc(TRACER_CYC);
   act_tsk(RCV_TASK);
   // 周期タスクを使わないなら
@@ -205,20 +205,27 @@ void recieve_task(intptr_t unused) {
 }
 
 void tracer_task(intptr_t unused) {
-/*    static int cnt=0;
+    static int cnt=0;
+    static SYSTIM lasttime;
     SYSTIM sttime,edtime;
     get_tim(&sttime);
+    // printf("%d\n",(int)sttime);
     msg_logbuf[cnt][0]=sttime;
-*/
+    if(sttime-lasttime>11000) {
+       printf("delay time TRACER_TAASK %d-%d %d\n",(int)lasttime,(int)sttime,(int)(sttime-lasttime));
+    }
+    
+
+
     //printf("tracer\n");
     hub_button_t mask;
     hub_button_is_pressed(&mask);
 
     if (mask&HUB_BUTTON_BT) {
-      printf("pressed BT button\n");
+     printf("pressed BT button\n");
       wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
     } else {
-    gPolling->run();
+    //gPolling->run();
 
 
 #if !defined(MAKE_RASPIKE)
@@ -240,6 +247,12 @@ void tracer_task(intptr_t unused) {
   }
   if(cnt>1000)cnt=0;
 */
+    get_tim(&edtime);
+    lasttime=edtime;
+    if(edtime-sttime>10000) {
+       printf("over time TRACER_TAASK %d-%d %d\n",(int)sttime,(int)edtime,(int)(edtime-sttime));
+    }
+    
   ext_tsk();
 
 }

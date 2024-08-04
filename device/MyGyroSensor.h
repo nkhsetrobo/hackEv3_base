@@ -20,6 +20,9 @@ class MyGyroSensor : public Measure
                     GyroAngle* ga);
         void update();
         void reset();
+        void execInit();
+        void execUpdate();
+        
 
     private:
         AnglerVelocity *mAnglerVelocity;
@@ -31,6 +34,17 @@ class MyGyroSensor : public Measure
         float base_gang;
 
         double gang_v;
+        double ang_v[3];
+        double offset[3];
+
+        enum State {
+            UNDEFINED,
+            INIT,
+            RUNNING
+        };
+
+        State mState;
+        int init_cnt;
 
         Clock *clk;
 

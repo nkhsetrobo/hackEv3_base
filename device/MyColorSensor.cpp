@@ -32,13 +32,15 @@ MyColorSensor::MyColorSensor(pbio_port_id_t  port,
     mMin_B  = 8;
 #else
     mMax_R  = 255;
-    mMin_R  = 12;
+    mMin_R  = 40;
     mMax_G  = 255;
-    mMin_G  = 12;
+    mMin_G  = 40;
     mMax_B  = 255;
-    mMin_B  = 12;  
+    mMin_B  = 50;  
 #endif 
 }
+
+#define ADJUST 1
 
 void MyColorSensor::update()
 {
@@ -95,14 +97,30 @@ float MyColorSensor::normBrightness(float br,float min, float max)
     return rate;
 }
 
-float MyColorSensor::normColor(float br,float min, float max)
+double MyColorSensor::normColor(float br,float min, float max)
 {
-    float rate = (br-min)/(max-min);
+    double rate = (br-min)/(max-min);
+
+#if ADJUST==1
+    rate = adjust(rate);
+#endif
     if(rate>1.0) rate=1.0;
     if(rate<0) rate=0;
 
     return rate*100;
 }
+
+double MyColorSensor::adjust(double val) {
+    double val2=val*val;
+    double val3=val2*val;
+    double val4=val2*val2;
+    double val5=val2*val3;
+
+    double adj = 2.43169E-01*val5 - 2.84993E-14*val4 - 8.29451E-02*val3 + 1.66475E-14*val2 + 8.10963E-01*val;
+
+    return adj;
+}
+
 
 void MyColorSensor::getHSV(rgb_f_t rgb, hsv_t& hsv)
 {

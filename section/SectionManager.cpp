@@ -87,7 +87,8 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         ((VirtualLineTracer *)walk)->setCenter(wp[n].forward,wp[n].turn*mReverse); //walker用のパラメータを座標に使用
         break;
     case Section::TRACER:
-      //   printf("create TRACER \n");
+       printf("create TRACER ");
+        printf("Lintracer setParam %2.1f,%2.1f,  %3.1f,%3.1f,%3.1f\n",wp[n].speed,  wp[n].target ,wp[n].kp, wp[n].ki, wp[n].kd);
        ((LineTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp*mReverse); //(30, 0 ,  30, 0.2, 0.1 )
         edge = wp[n].edge;
         if(mReverse==-1) edge = !edge;

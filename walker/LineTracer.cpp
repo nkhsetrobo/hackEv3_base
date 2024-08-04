@@ -28,7 +28,7 @@ LineTracer::LineTracer( Odometry *odo,
       mLimit(100),
       mBias(0)
 {
-    mPid->debug = false;
+    mPid->debug = true;
     mPid->debug_char='t';
 }
  
@@ -42,7 +42,7 @@ void LineTracer::run()
    /* static char buf[256];
     sprintf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
     msg_log(buf);*/
-    // printf("LT %2.3f, %d,%d\n",brightness,mTargetSpeed,mTurn);
+//    printf("LT %2.3f, %d,%d\n",brightness,mTargetSpeed,mTurn);
 
     setCommandV((int)mTargetSpeed, (int)mTurn);
 
@@ -84,7 +84,7 @@ void LineTracer::setParam(float speed,float target,float kp, float ki, float kd,
                         float angleTarget,float angleKp) 
 {
 
-   // printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",speed,target, kp,ki,kd, angleTarget,angleKp);
+    printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",speed,target, kp,ki,kd, angleTarget,angleKp);
   
     mTargetSpeed = speed;
     mTarget= target;
@@ -146,7 +146,7 @@ void LineTracer::printInfo()
 
 void LineTracer::init(){
 
-    printf("Lintracer setParam %2.1f,%3.1f,  %3.1f,%3.1f,%3.1f,  %2.1f, %2.1f\n",mTargetSpeed, mPFactor,mIFactor,mDFactor);
+    printf("Lintracer execParam %d,  %3.1f,%3.1f,%3.1f\n",mTargetSpeed, mPFactor,mIFactor,mDFactor);
     mPid->setKp(mPFactor); 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);

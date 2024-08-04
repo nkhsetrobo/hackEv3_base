@@ -288,7 +288,7 @@ void Scene::execGarage()
 }
 void Scene::execEnd()
 {
-            printf("FIN\n");
+    printf("FIN\n");
 
     // msg_log("finish!");
     //ETRoboc_notifyCompletedToSimulator();

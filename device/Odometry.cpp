@@ -80,7 +80,7 @@ void Odometry::calc()
 	float rs1 = current_rs1;
 	float rs2 = current_rs2;
 
-	//syslog(LOG_NOTICE,"rs1,rs2 = %d,%d <- %d,%d",(int)rs1,(int)rs2, prev_rs1,prev_rs2);
+	//("rs1,rs2 = %d,%d <- %d,%d\n",(int)rs1,(int)rs2, prev_rs1,prev_rs2);
 
 	float drs1=rs1-prev_rs1;
 	float drs2=rs2-prev_rs2;
@@ -147,21 +147,21 @@ void Odometry::setPwm(int left,int right)
 	int force_pwm=70;
 	int force_pwm_l=70;
 	int force_cnt=150;
-	if (left!=0 && no_run_count_l>force_cnt) {
-		left = left>0?force_pwm_l:-force_pwm_l;
-		left_err=1;
-		printf("pulse L\n");
-	}
-	if (right!=0 && no_run_count_r>force_cnt) {
-		right = right>0?force_pwm:-force_pwm;
-		right_err=1;
-		printf("pulse R\n");
-	}
-   // printf("Left %d, Right %d",left,right);
+	// if (left!=0 && no_run_count_l>force_cnt) {
+	// 	left = left>0?force_pwm_l:-force_pwm_l;
+	// 	left_err=1;
+	// 	printf("pulse L\n");
+	// }
+	// if (right!=0 && no_run_count_r>force_cnt) {
+	// 	right = right>0?force_pwm:-force_pwm;
+	// 	right_err=1;
+	// 	printf("pulse R\n");
+	// }
+    //printf("Left %d, Right %d\n",left,right);
 
 #if !defined(MAKE_SIM)
-	int volt = ev3_battery_voltage_mV();
-	double rate = 8343.0/volt;
+	int volt = hub_battery_get_voltage();
+	double rate = 8350.0/volt;
 	left*=rate;
 	right*=rate;	
 #endif
@@ -170,7 +170,7 @@ void Odometry::setPwm(int left,int right)
 	right = accel_R(right,right_err);
 #endif
 	pup_motor_set_power(mLeftMotor,left);
-	pup_motor_set_power(mRightMotor,left);
+	pup_motor_set_power(mRightMotor,right);
 }
 
 void Odometry::setBrake(bool brake)
