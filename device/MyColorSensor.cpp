@@ -91,6 +91,11 @@ float MyColorSensor::normBrightness(float br,float min, float max)
     float grayLevel = (max+min)/2.0;
 
     float rate = (br-grayLevel)/(max-grayLevel);
+
+#if ADJUST==1
+    rate = adjust(rate);
+#endif
+
     if(rate>1.0) rate=1.0;
     if(rate<-1.0) rate=-1.0;
     
@@ -101,9 +106,6 @@ double MyColorSensor::normColor(float br,float min, float max)
 {
     double rate = (br-min)/(max-min);
 
-#if ADJUST==1
-    rate = adjust(rate);
-#endif
     if(rate>1.0) rate=1.0;
     if(rate<0) rate=0;
 
