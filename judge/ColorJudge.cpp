@@ -2,6 +2,8 @@
 #include <cmath>
 #include "util.h"
 
+#include "spike.h"
+
 ColorJudge::ColorJudge()
 {
     hue = 0.0;
@@ -44,7 +46,7 @@ bool ColorJudge::run()
 
         if ((mHsvSatu->getValue()) >= satu)
         {
-
+           // hub_speaker_play_tone(NOTE_F5  ,1000);
             return true;
         }
     }

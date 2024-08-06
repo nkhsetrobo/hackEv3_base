@@ -31,6 +31,7 @@
 #include "AnglerVelocity.h"
 #include "GyroAngle.h"
 #include "TouchSensor.h"
+#include "thread_main.h"
 
 #include "Scene.h"
 
@@ -137,19 +138,17 @@ void mainloop();
 void main_task(intptr_t unused) {
   user_system_create();
 
+
   sta_cyc(POLLING_CYC);
   sta_cyc(TRACER_CYC);
   act_tsk(RCV_TASK);
-  // 周期タスクを使わないなら
-  /*
-  while(true) {
-    mainloop();
-  }
-  */
+ // act_tsk(THREAD_TASK);
+  // thread_main();
+  // printf("thread start\n");
 
   slp_tsk();
 
-//  stp_cyc(POLLING_CYC);
+  stp_cyc(POLLING_CYC);
   stp_cyc(TRACER_CYC);
 
  pup_motor_set_power(gLeftWheel,0);
@@ -255,4 +254,14 @@ void tracer_task(intptr_t unused) {
     
   ext_tsk();
 
+}
+
+void thread_task(intptr_t unused) {
+  //   printf("start thread\n");
+  //   // while(1) {
+  //   //     printf("exec thread\n");
+  //   //     usleep(10*1000);
+  //   // }
+  // thread_main();
+  ext_tsk();
 }

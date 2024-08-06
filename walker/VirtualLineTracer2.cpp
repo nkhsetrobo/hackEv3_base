@@ -30,11 +30,11 @@ VirtualLineTracer2::VirtualLineTracer2(Odometry *odo,
 
     mPid->resetParam();
 
-    mPid->debug=false;
+    mPid->debug=true;
     mPid->debug_char = 'L';
 
     mLpf = new LowPassFilter();
-    mLpf->setRate(0.8);
+    mLpf->setRate(0.4);
 
 }
 
@@ -146,12 +146,12 @@ float VirtualLineTracer2::calcTurn(){
     float dist = calcdistance();
     mLpf->addValue(dist);
     dist = mLpf->getFillteredValue();
-        float val1_turn =  mPid->getOperation(dist);
+    float val1_turn =  mPid->getOperation(dist);
 
 
-        //setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
-        float turn =  val1_turn+mBias;
-        return turn;
+    //setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
+    float turn =  val1_turn+mBias;
+    return turn;
 }
 
 void VirtualLineTracer2::setBias(float curve){
@@ -175,10 +175,12 @@ void VirtualLineTracer2::init(){
     sx = mXPosition->getvalue();
     sy = mYPosition->getvalue();
     // 現在の方向に向かうモード
-    angle2 += gStartAngle; // 基準位置からの角度に変換
     if(initMode==2) {
-        angle2 = mTurnAngle->getValue();
+        angle2 += mTurnAngle->getValue();
+
         if(mTargetSpeed<0) angle2 += 180;
+    } else {
+        angle2 += gStartAngle; // 基準位置からの角度に変換
     }
 
     float noze=1.0;
@@ -203,7 +205,7 @@ void VirtualLineTracer2::init(){
     float dist = calcdistance();
     mLpf->reset(dist);
 
-    printf("****VirtualLineTracer 2****::init %f,%f,%f,%f  %f,%f,%f\n",SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
+    printf("****VirtualLineTracer 2****::init(%d) %f,%f,%f,%f  %f,%f,%f\n",initMode,SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
    
 }
 

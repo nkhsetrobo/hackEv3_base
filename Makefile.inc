@@ -2,9 +2,15 @@ USE_RASPIKE_ART=1
 
 mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
-APPL_LIBS += -lm
+LDFLAGS += -L/usr/lib/arm-linux-gnueabihf
 
-APPL_COBJS +=
+LIBS += -l opencv_core \
+		-l opencv_videoio \
+		-l opencv_imgcodecs \
+
+APPL_LIBS +=
+
+APPL_COBJS += 
 
 APPL_CXXOBJS += \
 	SpeedSectionManager.o\
@@ -53,7 +59,8 @@ APPL_CXXOBJS += \
 	SonerStatusJudge.o \
 	ColorStatusJudge.o \
 	TurnWalker.o \
-	GarageSectionManager.o
+	GarageSectionManager.o \
+	thread_main.o
 
 SRCLANG := c++
 
@@ -64,7 +71,7 @@ include $(EV3RT_SDK_LIB_DIR)/libcpp-ev3/Makefile
 
 endif
 
-APPL_DIRS += $(mkfile_path)app $(mkfile_path)unit  $(mkfile_path)device $(mkfile_path)walker $(mkfile_path)section $(mkfile_path)judge $(mkfile_path)bingo
+APPL_DIRS += $(mkfile_path)app $(mkfile_path)unit  $(mkfile_path)device $(mkfile_path)walker $(mkfile_path)section $(mkfile_path)judge $(mkfile_path)bingo 
 
 INCLUDES += \
 	-I$(mkfile_path)app \
@@ -73,7 +80,8 @@ INCLUDES += \
 	-I$(mkfile_path)section \
 	-I$(mkfile_path)judge \
 	-I$(mkfile_path)bingo \
-	-I$(ETROBO_HRP3_WORKSPACE)/etroboc_common
+	-I$(ETROBO_HRP3_WORKSPACE)/etroboc_common \
+	-I/usr/include/opencv4
 
 # COPTS += -fno-use-cxa-atexit
-COPTS += -std=c++11
+COPTS += -std=c++11 -pthread
