@@ -50,6 +50,15 @@ bool TurnAngleJudge::run()
 
 void TurnAngleJudge::init()
 {
+    if (update == Judge::UPDATE_RESET) {
+        printf("RESET ANGLE!!\n");
+        gStartAngle=0;
+        mOdo->resetAngle();
+        mTurnAngle->reset();
+        mLength->reset();
+
+        update = Judge::UPDATEALL;
+    }
 
     if (update == Judge::UPDATE || update == Judge::UPDATEALL)
     {

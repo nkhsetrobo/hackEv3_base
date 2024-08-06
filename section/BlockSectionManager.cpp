@@ -1,6 +1,6 @@
 #include "BlockSectionManager.h"
 #include "Scene.h"
-//#include "BlockSectionDataPat1.h"
+#include "BlockSectionDataPat1.h"
 
 //BingoState *BlockSectionManager::msCarryState;
 //BingoState *BlockSectionManager::msMoveState;
@@ -113,7 +113,7 @@ void BlockSectionManager::execAreaSearch()
 void  BlockSectionManager::initBonusMove()
 {
   int area = getBonusArea(bonus_col);
-  wParam *bonus_param[] = {carry_bonus_0,carry_bonus_1,carry_bonus_2,carry_bonus_3};
+  wParam *bonus_param[] = {nullptr,nullptr,nullptr,nullptr};
   int endpt[] = {4,1,7,13}; // 走行体現在位置
   cur_no = next_pos = endpt[area];
   printf("initBonusMove col %d -> area %d  robot %d\n",bonus_col,area,cur_no);

@@ -50,9 +50,21 @@ void Odometry::resetLength()
 }
 void Odometry::resetAngle()
 {
-	th=0.0;
-	x=y=0;
-	deg = 0.0;
+	printf("Odometry reset!!!\n");
+	pup_motor_reset_count(mLeftMotor);
+	pup_motor_reset_count(mRightMotor);
+	pup_motor_reset_count(mArmMotor);
+
+	x=y=th=0.0;
+	sumlen=0;
+	prev_rs1=current_rs1=0;
+	prev_rs2=current_rs2=0;
+
+	mLength->update(sumlen);
+	mTurnAngle->update(th);
+	mXPosition->update(x);
+	mYPosition->update(y);
+
 }
 
 void Odometry::update()

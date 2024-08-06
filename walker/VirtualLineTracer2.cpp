@@ -88,13 +88,14 @@ void    VirtualLineTracer2::setnPosition(){
 }
 
 void VirtualLineTracer2::setInitMode(int mode) {
-
+    // mode 0 通常:絶対角度方向
+    // mode 1 始点座標継続
+    // mode 2 現在方向から相対方向
+    // mode 3 現在位置から終点座標
     initMode = mode;
 }
 
 float VirtualLineTracer2::calcdistance(){
-
-
     float nx2=nx;
     float ny2=ny;
 
@@ -123,6 +124,7 @@ float VirtualLineTracer2::calcdistance(){
         static char buf2[256];
         double ans = (a-b)+(c-d);
         double len =  ans/1.0;
+        if (initMode==3) len/=mTargetLen;
 
         if(!flag) 
         {
@@ -179,7 +181,9 @@ void VirtualLineTracer2::init(){
         angle2 += mTurnAngle->getValue();
 
         if(mTargetSpeed<0) angle2 += 180;
-    } else {
+    } else if(initMode==3){ // 座標へ向かうモード
+        mTargetLen = sqrt((sx-mTargetX)*(sx-mTargetX)+(sy-mTargetY)*(sy-mTargetY));
+    }else {
         angle2 += gStartAngle; // 基準位置からの角度に変換
     }
 
@@ -188,8 +192,13 @@ void VirtualLineTracer2::init(){
     fx = noze*cos((angle2/180)*M_PI)+sx;
     fy = noze*sin((angle2/180)*M_PI)+sy;
 
+    if(initMode==3) {
+        fx = mTargetX;
+        fy = mTargetY;
+    }
+
     // Mode0 Mode2 でグローバル変数に格納 Mode1 でそのまま継続
-    if( initMode==0 || initMode==2) {
+    if( initMode==0 || initMode==2 || initMode==3) {
         SX=sx;
         SY=sy;
         FX=fx;
@@ -213,3 +222,8 @@ void VirtualLineTracer2::setvangle(bool a){
     aflag = a;
 }
 
+void VirtualLineTracer2::setTargetPos(float x, float y)
+{
+    mTargetX=x;
+    mTargetY=y;
+}

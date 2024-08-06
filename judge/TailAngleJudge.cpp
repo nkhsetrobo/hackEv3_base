@@ -22,6 +22,7 @@ bool TailAngleJudge::run()
     /*static char buf[256];
     sprintf(buf," %f,%f,%f",mStartAngle,mFinAngle,mTailAngle->getValue());
     msg_log(buf);*/
+    printf(" %f,%f,%f\n",mStartAngle,mFinAngle,mTailAngle->getValue());
     if(mFinAngle >= mStartAngle)
     {
         if(mFinAngle <= mTailAngle->getValue())

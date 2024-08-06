@@ -34,4 +34,15 @@ const float TREAD=12.83;
 //#define MAKE_LEFT
 #endif
 
+#define  mode0 (0) // 通常モード
+#define  mode1 (1) // 継続モード
+#define  mode2 (2) // 現在の方向へ進むモード
+#define  mode3 (3) // 座標へ進むモード
+
+#define BLEN (28)
+#define CLEN (7)
+#define CLEN_CENT (4)
+
+#define CSPD (45)
+
 #endif

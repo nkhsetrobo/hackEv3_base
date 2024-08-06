@@ -8,6 +8,7 @@ class Length : public Measure
         Length();
         float getValue();
         void update(float len);
+        void reset();
 
     private:
         float mLength;

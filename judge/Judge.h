@@ -23,7 +23,8 @@ class Judge{
 
     enum  JUDGE_MODE{ UPDATE,
           UNUPDATE,
-          UPDATEALL};
+          UPDATEALL,
+          UPDATE_RESET};
 
     protected:
     HsvHue *mHsvHue;
@@ -37,6 +38,7 @@ class Judge{
     MySonarSensor *mSoner;
     XPosition *mXPosition;
     YPosition *mYPosition;
+    Odometry *mOdo;
 
 };
 

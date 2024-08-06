@@ -54,6 +54,16 @@ bool LengthJudge::run()
 
 void LengthJudge::init()
 {
+    if (update == Judge::UPDATE_RESET) {
+        gStartAngle=0;
+        mStartlength=0;
+        mOdo->resetAngle();
+        mTurnAngle->reset();
+        mLength->reset();
+
+        update = Judge::UPDATEALL;
+    }
+
     if (update == Judge::UPDATEALL) {
         gStartAngle = mTurnAngle->getValue();
         VirtualLineTracer::SX = mXPosition->getValue();

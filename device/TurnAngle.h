@@ -10,6 +10,7 @@ class TurnAngle : public Measure
         TurnAngle();
         float getValue();
         void update(float angle);
+        void reset();
 
     private:
         float mAngle;

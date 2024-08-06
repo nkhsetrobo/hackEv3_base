@@ -1,5 +1,7 @@
 #include "Judge.h"
 
+#include "Odometry.h"
+
 extern HsvHue *gHue;
 extern HsvSatu *gSatu;
 extern Brightness *gBrightness;
@@ -11,6 +13,9 @@ extern GyroAngle *gGyroAngle;
 extern MySonarSensor *gSonar;
 extern XPosition *gXPosition;
 extern YPosition *gYPosition;
+
+extern Odometry *gOdo;
+
 Judge::Judge(){
     mHsvHue = gHue;
     mHsvSatu = gSatu;
@@ -23,7 +28,7 @@ Judge::Judge(){
     mSoner = gSonar;
     mXPosition = gXPosition;
     mYPosition = gYPosition;
-
+    mOdo=gOdo;
 }
 
 bool Judge::run(){

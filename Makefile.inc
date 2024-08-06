@@ -59,7 +59,7 @@ APPL_CXXOBJS += \
 	SonerStatusJudge.o \
 	ColorStatusJudge.o \
 	TurnWalker.o \
-	GarageSectionManager.o \
+	BlockSectionManager.o \
 	thread_main.o
 
 SRCLANG := c++

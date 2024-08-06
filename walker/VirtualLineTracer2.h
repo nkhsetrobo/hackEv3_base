@@ -18,6 +18,7 @@ class VirtualLineTracer2 : public SimpleWalker{
     void setvangle(bool a);
     void setBias(float curve);
     void setInitMode(int mode);
+    void setTargetPos(float x, float y);
 
 
     void init();
@@ -61,7 +62,10 @@ class VirtualLineTracer2 : public SimpleWalker{
     static float FX;
     static float FY;
 
+    double mTargetX;
+    double mTargetY;
 
+    double mTargetLen;
     bool debug;
 
     LowPassFilter *mLpf;

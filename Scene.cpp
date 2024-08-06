@@ -265,7 +265,7 @@ void Scene::execSlalom()
 {
     if(mSlm->run()){
         int col = mSlm->color;
-        mGsm->setColor(col);
+        //mGsm->setColor(col);
         delete mSlm;
         // msg_log("Tail test");
         
@@ -279,11 +279,11 @@ void Scene::initGarage()
 }
 void Scene::execGarage()
 {
-    if(mGsm->run()){
-        delete mGsm;
+    // if(mGsm->run()){
+    //     delete mGsm;
 
-        mState = FINISH;
-    }
+    //     mState = FINISH;
+    // }
 
 }
 void Scene::execEnd()

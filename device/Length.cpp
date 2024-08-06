@@ -15,3 +15,8 @@ void Length::update(float len)
 {
     mLength = len;
 }
+
+void Length::reset()
+{
+    mLength=0;
+}
