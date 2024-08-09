@@ -20,6 +20,7 @@
 #include "SonerJudge.h"
 #include "SonerStatusJudge.h"
 #include "ColorStatusJudge.h"
+#include "ColorStatus_RJudge.h"
 #include "TurnWalker.h"
 
 class Section
@@ -65,6 +66,7 @@ public:
         SONER,
         SONERSTATUS,
         COLORSTATUS,
+        COLORSTATUS_R,
         JEND=-1
     };
 

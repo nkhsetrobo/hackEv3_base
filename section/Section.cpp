@@ -154,6 +154,9 @@ Judge *Section::selectJudgePtr(int no)
         case COLORSTATUS:
             jptr =new ColorStatusJudge();            
             break;
+        case COLORSTATUS_R:
+            jptr =new ColorStatus_RJudge();            
+            break;
 
         default:
             printf("no selectJudge  %d\n",no);

@@ -8,10 +8,10 @@ class ColorStatusJudge : public Judge
 {
     public:
         ColorStatusJudge();
-        float status();
+        virtual float status();
         float subhue(float h1, float h2);
 
-    private:
+    protected:
         int color[4];
         int color_id;
 

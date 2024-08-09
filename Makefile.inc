@@ -60,6 +60,7 @@ APPL_CXXOBJS += \
 	ColorStatusJudge.o \
 	TurnWalker.o \
 	BlockSectionManager.o \
+	ColorStatus_RJudge.o \
 	thread_main.o
 
 SRCLANG := c++

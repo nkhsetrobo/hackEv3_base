@@ -14,7 +14,7 @@ float TurnAngle::getValue()
 void TurnAngle::update(float angle)
 {
     mAngle = angle;
-    //printf("TurnAngle angle %f\n",mAngle*180/M_PI);
+   // printf("TurnAngle angle %f\n",mAngle*180/M_PI);
 }
 
 void TurnAngle::reset()

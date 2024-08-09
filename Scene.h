@@ -51,7 +51,7 @@ class Scene{
         SpeedSectionManager *mSsm;
         SlalomSectionManager *mSlm;
         GarageSectionManager *mGsm;
-     //   BlockSectionManager *mBsm;
+        BlockSectionManager *mBsm;
 
         MyColorSensor *mColorSensor;
         

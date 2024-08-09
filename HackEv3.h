@@ -8,7 +8,8 @@ const float TREAD=13.8;
 #else
 const float D_RIGHT=10.00;
 const float D_LEFT=10.0;
-const float TREAD=12.83;
+//const float TREAD=12.83;
+const float TREAD=12.7;
 #endif
 //14.3
 
@@ -23,11 +24,11 @@ const float TREAD=12.83;
 #define SLALOM_BLUE_H 222
 
 #define PRIMARY
-#define LPAT 1
-#define RPAT 1
+#define LPAT 0  //pat.txtに移行につき未使用
+#define RPAT 0
 
 //#define DEBUG_NOMOVE
-//#define SKIP_SPEED
+#define SKIP_SPEED
 //#define SKIP_BONUS
 
 #if defined(MAKE_RASPIKE)
@@ -41,8 +42,8 @@ const float TREAD=12.83;
 
 #define BLEN (28)
 #define CLEN (7)
-#define CLEN_CENT (4)
+#define CLEN_CENT (3)
 
-#define CSPD (45)
+#define CSPD (46)
 
 #endif

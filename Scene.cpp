@@ -26,9 +26,9 @@ Scene::Scene() : mState(UNDEFINED)
 #if defined(PRIMARY)
     //mSlm = new SlalomSectionManager();
  //   mGsm = new GarageSectionManager();
-   // mBsm = new BlockSectionManager();
+    mBsm = new BlockSectionManager();
 #else
-  //  mBsm = new BlockSectionManager();
+    mBsm = new BlockSectionManager();
 #endif
 
     mColorSensor = gColor;
@@ -224,14 +224,14 @@ void Scene::execSpeed()
 }
 
 void Scene::initBingo(){
-    //mBsm->init();
+    mBsm->init();
     mState=BINGO;
 }
 
 void Scene::execBingo()
 {  
 
-/*
+
     if(mBsm->run()){
        // delete mBsm;
         // msg_log("Tail test");
@@ -245,7 +245,7 @@ void Scene::execBingo()
         } else
             mState = FINISH;
     }
-    */
+    
 }
 
 void Scene::initSlalom(){

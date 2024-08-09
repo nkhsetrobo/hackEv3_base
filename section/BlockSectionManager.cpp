@@ -31,9 +31,11 @@ void BlockSectionManager::init()
         lpat=buf[2]-'0';
       if(buf[0]=='R') 
         rpat=buf[2]-'0';
-    }
+    } 
       fclose(fp);
-   }
+   }else {
+      printf("file read error!\n");
+    }
 
     wParam *wp;
     if(Scene::COURSE==0) {
@@ -46,7 +48,7 @@ void BlockSectionManager::init()
 //      pattern = RPAT-1; 
       pattern = rpat-1; //プライマリブロックパターン
     }
-    printf("PATTERN %d\n",pattern);
+    printf("PATTERN from file %d\n",pattern);
     //init(wp);
 }
 
@@ -126,10 +128,11 @@ void  BlockSectionManager::initBonusMove()
 void  BlockSectionManager::initEnter()
 {
 
-    if(pattern!=1)
-      init(enter);
-    else
-      init(enter2);
+    // if(pattern!=1)
+    //   init(enter);
+    // else
+    //   init(enter2);
+    init(enter);
     mState = ENTER;
 }
 
@@ -184,6 +187,7 @@ void BlockSectionManager::initMove()
     }
     */
     //max_curno = 2;
+    printf("**MOVE** pattern %d\n",pattern);
     if (block_phase==0) {
       // init(movePhase1[cur_no++]);
       // if (movePhase1[cur_no]==nullptr) {
@@ -197,19 +201,22 @@ void BlockSectionManager::initMove()
 
     } else if (block_phase==1) { //１つ目
         int idx=0;
-        if(color==0) { //赤ならすべて確定
+        if(color==0) {
+          printf("赤\n");  
           idx=1;
-          block_fix=true;
+         // block_fix=true; //赤ならすべて確定
         } 
         // init(carryPhase1[idx]); 
         if (idx==0) 
-          multiinit(block1pushcmd[pattern]);
+          multiinit(block1pushcmd[pattern]); // 排除用
         else
-          multiinit(block1swapcmd[pattern]);
+          multiinit(block1swapcmd[pattern]); // 回避用
 
 
         block_phase=2;
         cur_no=0;
+
+
     }
     else if (block_phase==2) { //１つ目の処理
     /*
@@ -244,7 +251,7 @@ void BlockSectionManager::initMove()
             block_color[2]=0; //赤確定
           }
         }
-        block_fix=true; //ここで必ず確定する
+        //block_fix=true; //ここで必ず確定する
         if(block_color[1]==0) {
           idx=1;
         }
@@ -256,27 +263,54 @@ void BlockSectionManager::initMove()
         //init(carryPhase2[idx]);
         block_phase=4;
         cur_no=0;
-    } else if (block_phase==4) {
+
+
+    } else if (block_phase==4) { // ３つ目へ移動
         //init(movePhase3[0]);
         multiinit(block3cmd[pattern]);
+        multiinit(colorcmd); //暫定　必ず色チェック
 
         block_phase=5;
         cur_no=0;
-    }else if (block_phase==5) {  
+    } else if (block_phase==5) { //３つ目を処理
         int idx=0;
-        if (block_color[2]==0) {
-          idx=1;
-        }
+      
+        if (idx==0) 
+          multiinit(block3pushcmd[pattern]);
+        else
+          multiinit(block3swapcmd[pattern]);
+
+
+          block_phase=6;
+
+    }else if (block_phase==6) {
+        multiinit(block4cmd[pattern]);
+
+        block_phase=7;
+    } else if (block_phase==7) {
+        int idx=0;
+      
+        if (idx==0) 
+          multiinit(block4pushcmd[pattern]);
+        else
+          multiinit(block4swapcmd[pattern]);
+        block_phase=8;
+    } else if (block_phase==8) {  
+        int idx=0;
+        // if (block_color[2]==0) {
+        //   idx=1;
+        // }
         //(carryPhase3[idx]);
         if (idx==0) 
-          multiinit(exitbcmd[pattern]);
+          multiinit(exit1cmd[pattern]);
         else
           multiinit(exitacmd[pattern]);
-        block_phase=6;
+        block_phase=9;
 
-    } else if (block_phase==6) {  
+    } else if (block_phase==9) {  
       init(exitPhase[0]);
     }
+
     mState = MOVE;
     return;
 #if 0
@@ -334,6 +368,8 @@ void BlockSectionManager::execColor()
 // 色検出前の位置からブロック運搬
 void BlockSectionManager::initCarry()
 {
+      printf("**CARRY**\n");
+
     reset();
 #if defined(DEBUG_NOMOVE)
     //debug

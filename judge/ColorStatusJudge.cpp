@@ -13,12 +13,12 @@ float ColorStatusJudge::status()
 {
 
     double r,g,b,y;
-    double base_sat=0.1;
+    double base_sat=0.05;
     r = RED_H;
     g = GREEN_H;
     b = BLUE_H;
     y = YELLOW_H;
-    base_sat=0.01;
+    base_sat=0.005;
 /*
 #if defined(PRIMARY)
     r = SLALOM_RED_H;

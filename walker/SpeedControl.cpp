@@ -5,7 +5,7 @@ SpeedControl::SpeedControl(Odometry *odo,Velocity *v):
     mVelo(v),
     mForward(0),
     mCurrentSpeed(0.0),
-    mMode_flag(true),
+    mMode_flag(false),
     mBreake_flag(false)
 {
     mPid = new PID(0.01*4);

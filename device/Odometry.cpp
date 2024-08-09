@@ -159,16 +159,16 @@ void Odometry::setPwm(int left,int right)
 	int force_pwm=70;
 	int force_pwm_l=70;
 	int force_cnt=150;
-	// if (left!=0 && no_run_count_l>force_cnt) {
-	// 	left = left>0?force_pwm_l:-force_pwm_l;
-	// 	left_err=1;
-	// 	printf("pulse L\n");
-	// }
-	// if (right!=0 && no_run_count_r>force_cnt) {
-	// 	right = right>0?force_pwm:-force_pwm;
-	// 	right_err=1;
-	// 	printf("pulse R\n");
-	// }
+	if (left!=0 && no_run_count_l>force_cnt) {
+		left = left>0?force_pwm_l:-force_pwm_l;
+		left_err=1;
+		printf("pulse L\n");
+	}
+	if (right!=0 && no_run_count_r>force_cnt) {
+		right = right>0?force_pwm:-force_pwm;
+		right_err=1;
+		printf("pulse R\n");
+	}
     //printf("Left %d, Right %d\n",left,right);
 
 #if !defined(MAKE_SIM)

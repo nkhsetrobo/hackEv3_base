@@ -213,8 +213,9 @@ void VirtualLineTracer2::init(){
     setnPosition();
     float dist = calcdistance();
     mLpf->reset(dist);
+    //mSpeedControl->setTargetSpeed(mTargetSpeed);
 
-    printf("****VirtualLineTracer 2****::init(%d) %f,%f,%f,%f  %f,%f,%f\n",initMode,SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
+    printf("****VirtualLineTracer 2****::init(%d) spd %f %f,%f,%f,%f  %f,%f,%f\n",initMode,mTargetSpeed,SX,SY,FX,FY ,mPFactor,mIFactor,mDFactor);
    
 }
 
