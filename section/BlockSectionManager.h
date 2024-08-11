@@ -50,6 +50,14 @@ enum COMMAND{
     PUSH_BL,
     PUSH_YL,
 
+    PUSH_RR2,
+    PUSH_YR2,
+    PUSH_RL2,
+    PUSH_YL2,
+
+    PUSH_RTR,
+    PUSH_RTL,
+
     ROT_RR,
     ROT_RL,
     ROT_GR,
@@ -58,6 +66,9 @@ enum COMMAND{
     ROT_BL,
     ROT_YR,
     ROT_YL,
+
+    ROT180_GR,
+    ROT180_GL,
 
     PUSH_LINE_L,
     PUSH_LINE_R,
@@ -1207,7 +1218,7 @@ wParam m_13_4[20] = {
 wParam enter[10] = {
 
   {0, Section::VIRTUAL2, Section::COLOR, CSPD, 0,rkp2 ,rki2, rkd2 , 0,1 /*setparam*/, 0, mode2, 0, 30, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  BLUE_H, 0.10,0,false},
-  {12, Section::VIRTUAL2, Section::LENGTH, 50, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATE, 0, CLEN, 0, 0, 0, 0, 0 ,false,Section::JNONE},
+  // {12, Section::VIRTUAL2, Section::LENGTH, 50, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATE, 0, CLEN, 0, 0, 0, 0, 0 ,false,Section::JNONE},
       {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
 
 };
@@ -1540,6 +1551,14 @@ static wParam push_green_left[];
 static wParam push_blue_left[];
 static wParam push_yellow_left[];
 
+static wParam push_red_right2[];
+static wParam push_red_left2[];
+static wParam push_yellow_right2[];
+static wParam push_yellow_left2[];
+
+static wParam push_red_turn_right[];
+static wParam push_red_turn_left[];
+
 static wParam rot_red_right[];
 static wParam rot_red_left[];
 static wParam rot_green_right[];
@@ -1548,6 +1567,9 @@ static wParam rot_blue_right[];
 static wParam rot_blue_left[];
 static wParam rot_yellow_right[];
 static wParam rot_yellow_left[];
+
+static wParam rot180_green_right[];
+static wParam rot180_green_left[];
 
 static wParam push_line_l[];
 static wParam push_line_r[];

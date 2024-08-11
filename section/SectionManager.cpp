@@ -149,6 +149,10 @@ void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
     case Section::SONER:
         ((SonerJudge *)judge)->setLength(wp2[n].flength,1);
         break;
+    case Section::POSITION:
+        ((PositionJudge *)judge)->setParam(wp2[n].bright1,wp2[n].bright2,wp2[n].flength);
+            // bright1 x座標、bright2 y座標, flength 目標距離
+
     }
  }
 
