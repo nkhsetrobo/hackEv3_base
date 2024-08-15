@@ -157,6 +157,13 @@ Judge *Section::selectJudgePtr(int no)
         case COLORSTATUS_R:
             jptr =new ColorStatus_RJudge();            
             break;
+        case CAMERACOLOR:
+            jptr =new CameraColorJudge();            
+            break;
+        case CAMERACOLORSTATUS:
+            jptr =new CameraColorStatusJudge();            
+            break;
+
         case POSITION:
             jptr =new PositionJudge();            
             break;

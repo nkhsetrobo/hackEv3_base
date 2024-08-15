@@ -64,6 +64,8 @@ APPL_CXXOBJS += \
 	BlockSectionManager.o \
 	ColorStatus_RJudge.o \
 	PositionJudge.o\
+	CameraColorJudge.o\
+	CameraColorStatusJudge.o\
 	thread_main.o
 
 SRCLANG := c++

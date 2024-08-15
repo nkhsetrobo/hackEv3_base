@@ -188,7 +188,7 @@ void BlockSectionManager::initMove()
     */
     //max_curno = 2;
     printf("**MOVE** pattern %d\n",pattern);
-    if (block_phase==0) {
+    if (block_phase==0) { //１つ目のブロックまで移動
       // init(movePhase1[cur_no++]);
       // if (movePhase1[cur_no]==nullptr) {
       //     block_phase=1;
@@ -199,62 +199,49 @@ void BlockSectionManager::initMove()
       block_phase=1;
 
 
-    } else if (block_phase==1) { //１つ目
+    } else if (block_phase==1) { //１つ目の処理
         int idx=0;
         if(color==0) {
           printf("赤\n");  
-          idx=1;
+          idx=1; // 回避フラグ
          // block_fix=true; //赤ならすべて確定
-        } 
+        } else {
+          //青ならブロック位置を交換
+          block_color[0] = 1; // 青
+          block_color[2] = 0; // 赤
+        }
         // init(carryPhase1[idx]); 
         if (idx==0) 
           multiinit(block1pushcmd[pattern]); // 排除用
         else
           multiinit(block1swapcmd[pattern]); // 回避用
 
-
         block_phase=2;
         cur_no=0;
 
 
     }
-    else if (block_phase==2) { //１つ目の処理
-    /*
-      init(movePhase2[cur_no++]);
-      if (block_fix && cur_no==1) { //確定なら色チェックをスキップ
-          block_phase=3;
-          cur_no=0;
-      }
-      if (movePhase2[cur_no]==nullptr) {
-          block_phase=3;
-          cur_no=0;
-      }
-      */
+    else if (block_phase==2) { //２つ目のブロックまで移動
+
       multiinit(block2cmd[pattern]);
-      if (!block_fix) { //確定なら色チェックをスキップ
-        multiinit(colorcmd);
-      }
+      multiinit(colorcmd);
       block_phase=3;
 
-    } else if (block_phase==3) {// ２つ目
+    } else if (block_phase==3) {// ２つ目の処理
         int idx=0;
         printf("block_fixed %d  2nd Block color %d\n",block_fix,color);
-        if (!block_fix) { //１つ目が青で確定していない
-          if(color==0) {
-            block_color[0]=1;
-            block_color[1]=0; //赤確定
-            block_color[2]=1;
+        if(color==0) { //２つ目が赤
+          idx==1; //回避
+        } else  {
+          //青ならブロック位置を交換
+          block_color[1] = 1; // 青
+          block_color[3] = 0; // 赤
+        }
+        if (block_color[0]==0 && block_color[1]==0 )
+            block_fix=true; // 両方赤ならここで確定
+        if (block_color[0]==1 && block_color[1]==1 )
+            block_fix=true; // 両方青ならここで確定
 
-          } else  {
-            block_color[0]=1;
-            block_color[1]=1;
-            block_color[2]=0; //赤確定
-          }
-        }
-        //block_fix=true; //ここで必ず確定する
-        if(block_color[1]==0) {
-          idx=1;
-        }
         if (idx==0) 
           multiinit(block2pushcmd[pattern]);
         else
@@ -268,13 +255,26 @@ void BlockSectionManager::initMove()
     } else if (block_phase==4) { // ３つ目へ移動
         //init(movePhase3[0]);
         multiinit(block3cmd[pattern]);
-        multiinit(colorcmd); //暫定　必ず色チェック
+        if(!block_fix) //赤が２つ出現、青が２つ出現なら色確定
+          multiinit(colorcmd); 
 
         block_phase=5;
         cur_no=0;
     } else if (block_phase==5) { //３つ目を処理
         int idx=0;
-      
+        if(!block_fix) { //未確定の場合は、センサー値を書き込み
+          if(color==0) {
+            block_color[2]=0; 
+            block_color[2]=1; //最後は青で確定
+          } else {
+            block_color[2]=1;
+            block_color[2]=0; //最後は赤で確定
+          }
+        }
+        if(block_color[2]==0) {
+          idx=1; //回避
+        }
+        block_fix=true; //ここですべて確定
         if (idx==0) 
           multiinit(block3pushcmd[pattern]);
         else
@@ -283,12 +283,15 @@ void BlockSectionManager::initMove()
 
           block_phase=6;
 
-    }else if (block_phase==6) {
+    }else if (block_phase==6) { // ４つ目へ移動
         multiinit(block4cmd[pattern]);
 
         block_phase=7;
     } else if (block_phase==7) {
         int idx=0;
+        if(block_color[4]==0) {
+          idx=1; //回避
+        }
       
         if (idx==0) 
           multiinit(block4pushcmd[pattern]);

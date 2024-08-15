@@ -51,7 +51,10 @@ COMMAND cmd[] = {SL2BR,GO,L2RR,GO,L2RR,TL1,
 //最初のブロックへ移動
 COMMAND block1cmd[5][50]=
 {
-    //pat 1
+       //pat 1
+    // {   
+    //     CMDEND },
+   //pat 1
     {   GO,L2BR,GO,L2RR,GO,SLR,
        //  TL1, SL2RR,GO, L2YR,GO,L2YR, 
         CMDEND },
@@ -74,7 +77,8 @@ COMMAND block1cmd[5][50]=
 };
 COMMAND colorcmd[] = 
 {
-    COLOR,
+    //COLOR,
+    CAMERA,
     CMDEND
 };
 //排除用
@@ -814,6 +818,7 @@ wParam BlockSectionManager::color_check[20] = {
     {0, Section::ARM, Section::ARMANGLE, 0, 0, 60, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE_R, Judge::UNUPDATE, 40, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
     {0, Section::ARM, Section::STOP, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE_R, Judge::UNUPDATE, 50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
        // {0, Section::VIRTUAL2, Section::LENGTH, normal_spd, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, 0, normal_spd, 0, _EDGE, Judge::UPDATE, 0, block_out_len, 0, 0, 0, 0.40, 1 , 0,Section::COLORSTATUS},
+    // ID 100指定で色のステータスゲット
     {100, Section::WALKER, Section::STOP, 0, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 100 , 0,Section::COLORSTATUS},
     {0, Section::ARM, Section::ARMANGLE, 0, 0, -90, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE_R, Judge::UNUPDATE, -40, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
     {0, Section::ARM, Section::STOP, 0, 0, 0, 0, 0, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE_R, Judge::UNUPDATE, 50, 0, 0, 0, 0, 0, 2 , 0,Section::JNONE},
@@ -824,7 +829,7 @@ wParam BlockSectionManager::color_check[20] = {
 //カメラ利用の色チェック
 wParam BlockSectionManager::camera_check[20] = {
 
-    {100, Section::WALKER, Section::STOP, 0, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 100 , 0,Section::COLORSTATUS},
+    {100, Section::WALKER, Section::CAMERACOLOR, 0, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 100 , 0,Section::CAMERACOLORSTATUS},
       {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
 
 };

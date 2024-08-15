@@ -23,6 +23,8 @@
 #include "ColorStatus_RJudge.h"
 #include "PositionJudge.h"
 #include "TurnWalker.h"
+#include "CameraColorJudge.h"
+#include "CameraColorStatusJudge.h"
 
 class Section
 {
@@ -68,6 +70,8 @@ public:
         SONERSTATUS,
         COLORSTATUS,
         COLORSTATUS_R,
+        CAMERACOLOR,
+        CAMERACOLORSTATUS,
         POSITION,
         JEND=-1
     };

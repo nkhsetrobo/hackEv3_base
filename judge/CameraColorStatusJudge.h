@@ -10,10 +10,5 @@ class CameraColorStatusJudge : public Judge
         virtual float status();
 
     protected:
-        int color[4];
-        int color_id;
-
-        bool first;
-
 };
 #endif

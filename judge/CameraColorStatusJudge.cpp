@@ -1,16 +1,16 @@
 #include "CameraColorStatusJudge.h"
+extern char rcv_data;
 
 CameraColorStatusJudge::CameraColorStatusJudge()
 {
-    first=true;
-    color_id=-1;
+
 }
 
 float CameraColorStatusJudge::status()
 {
-    if(first) {
-          act_tsk(SEND_TASK);
-    }
-    act_tsk(RCV_TASK);
-    return color_id;
+    printf("color %c\n",rcv_data);
+    if(rcv_data=='r')
+        return 0;
+    else 
+        return 1;
 }

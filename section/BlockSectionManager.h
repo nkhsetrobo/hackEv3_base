@@ -1670,7 +1670,7 @@ int next_pos;
 int block_phase=0;
 int block_fix=0;
 int color=0;
-int block_color[3] = {0,1,1};
+int block_color[4] = {0,0,1,1};
 
 int pattern = 1; //プライマリブロックパターン
 
