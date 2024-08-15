@@ -78,6 +78,11 @@ Scene *gScene;
 float gStart;
 float gStartAngle;
 
+char gRecive=-1;
+FILE *rcv_pipe_fp=nullptr;
+FILE *send_pipe_fp=nullptr;
+char rcv_data;
+
 int pipe_id;
 
 static void user_system_create() {
@@ -122,7 +127,14 @@ static void user_system_create() {
 
   //gArmWalker->setPwm(-50,1,0,0);
 
-  
+//   printf("rcv pipe open\n");
+//  rcv_pipe_fp = fopen("cam2run","rw");
+//   // rcv_pipe_fp = open("cam2run",);
+//   printf("send pipe open\n");
+//   send_pipe_fp = fopen("run2cam","w");
+
+//   printf("pipe opened\n");
+
   init_f("hackEv3_base");
   
 }
@@ -141,8 +153,10 @@ void main_task(intptr_t unused) {
 
   sta_cyc(POLLING_CYC);
   sta_cyc(TRACER_CYC);
-  act_tsk(RCV_TASK);
+  // act_tsk(RCV_TASK);
+  // act_tsk(SEND_TASK);
  // act_tsk(THREAD_TASK);
+  act_tsk(PIPE_OPEN_TASK);
   // thread_main();
   // printf("thread start\n");
 
@@ -185,22 +199,84 @@ void polling_task(intptr_t unused) {
    //fprintf(fp,"len , bri,H,S r,g,b, turn, v : %3.3f,  %7.4f,  %5.1f, %3.2f, %d,%d,%d  , %4.2f, %4.2f \n",len,br,h,s,  rgb.r, rgb.g,rgb.b ,turn,v);
 
 }
+
+void pipe_open_task(intptr_t unused){
+  printf("rcv pipe open\n");
+  rcv_pipe_fp = fopen("cam2run","rw");
+  printf("send pipe open\n");
+  send_pipe_fp = fopen("run2cam","w");
+  printf("pipe opened\n");
+  
+  ext_tsk();
+
+}
+
 void recieve_task(intptr_t unused) {
+  printf("recieve_task start\n");  
 
   //pipe_id = open("pipe",O_RDWR | O_NONBLOCK);
+  //FILE *fp = fopen("cam2run","r+");
+  FILE *fp = rcv_pipe_fp;
   printf("recieve pipe id %d\n",pipe_id);  
-  FILE *fp = fopen("pipe","r");
-  //fprintf(fp,"@a");
-//  while (1) {
-      char c;
-      c=fgetc(fp);
-      //int err = read(pipe_id,&c,1);
-      //if(err<0) continue;
-      printf("%c\n",c);  
-  //}
+  if(fp!=nullptr)  {
+    //fprintf(fp,"@a");
+    //while (1) {
+     //   printf("recv loop\n");
+        char c;
+        c=fgetc(fp);
+        //int err = read(pipe_id,&c,1);
+        //if(err<0) continue;
+        switch (c) {
+          case 'r':
+          case 'b':
+          case 'x':
+            gRecive=c;
+        }
+        printf("RECV:%c\n",gRecive);
+        // tslp_tsk(10000);
+   // }
+  } else {
+    printf("recieve pipe open error..\n");
+  }
+  printf("recieve_task end\n");  
 
   ext_tsk();
 
+}
+
+void send_task(intptr_t unused) {
+
+  printf("send task\n");  
+  // FILE *fp = fopen("run2cam","w");
+  FILE *fp = send_pipe_fp;
+  fprintf(fp,"c\n");
+  fflush(fp);
+  // fclose(fp);
+  printf("send task end\n");  
+  ext_tsk();
+}
+
+void send_rcv_task(intptr_t unused)
+{
+    printf("send rcv task\n");
+    rcv_data='\0';
+    if (send_pipe_fp!=nullptr) {
+      fprintf(send_pipe_fp,"c\n");
+      fflush(send_pipe_fp);
+    }
+    if (rcv_pipe_fp!=nullptr) {
+      rcv_data=fgetc(rcv_pipe_fp);
+      fgetc(rcv_pipe_fp); // return skip
+      printf("RECV:%c %d\n",rcv_data,rcv_data);
+    }
+
+    printf("send rcv task end\n");  
+    ext_tsk();
+}
+
+static char get_rcv_data()
+{
+  return rcv_data;
 }
 
 void tracer_task(intptr_t unused) {
@@ -256,8 +332,12 @@ void tracer_task(intptr_t unused) {
 
 }
 
+
+
+
 void thread_task(intptr_t unused) {
-  //   printf("start thread\n");
+  printf("start thread\n");
+  // cv::Mat frame; //取得したフレーム
   //   // while(1) {
   //   //     printf("exec thread\n");
   //   //     usleep(10*1000);

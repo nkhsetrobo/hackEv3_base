@@ -133,7 +133,11 @@ void Scene::execCalib()
         mColorSensor->calibMax();
         gGyro->reset();
         COURSE=0;
-
+        // printf("RCV_TASK start\n");
+        //   act_tsk(RCV_TASK);
+        // printf("SEND_TASK start\n");
+        //   act_tsk(SEND_TASK);
+        act_tsk(SEND_RCV_TASK);
     }
     if(mask&HUB_BUTTON_RIGHT)
     {

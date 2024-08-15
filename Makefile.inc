@@ -4,13 +4,15 @@ mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 LDFLAGS += -L/usr/lib/arm-linux-gnueabihf
 
-LIBS += -l opencv_core \
+LIBS += \
+		-l opencv_core \
 		-l opencv_videoio \
 		-l opencv_imgcodecs \
 
 APPL_LIBS +=
 
-APPL_COBJS += 
+APPL_COBJS += \
+
 
 APPL_CXXOBJS += \
 	SpeedSectionManager.o\

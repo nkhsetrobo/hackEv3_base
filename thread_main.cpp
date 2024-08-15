@@ -6,7 +6,7 @@
 
 #include "thread_main.h"
 
-#include "opencv2/opencv.hpp"
+#include <opencv2/opencv.hpp>
 
 void *thread_func(void *param);
 // int thread_main(void) {
@@ -30,10 +30,12 @@ int thread_main(void) {
     pthread_t thread;
     int ret = 0;
 
-        printf("thread_main 1\n");
+    printf("thread_main 1\n");
 
     disable_interrupt(&current_sigset);
-        printf("thread_main 2\n");
+    printf("thread_main 2\n");
+        // cv::Mat frame; //取得したフレーム
+        // frame = cv::imread("sample.png",1);
 
     // スレッドの作成
     // int pthread_create(pthread_t * thread, pthread_attr_t * attr,
@@ -93,7 +95,11 @@ void *thread_func(void *param)
     //     cv::imwrite("img.png", frame);
     // }
 
-  return (void*)0;
+        // cv::Mat frame; //取得したフレーム
+        // frame = cv::imread("sample.png",1);
+        // cv::imwrite("img.png", frame);
+
+     return (void*)0;
 }
 
 void disable_interrupt(sigset_t *old)

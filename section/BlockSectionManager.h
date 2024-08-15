@@ -85,6 +85,7 @@ enum COMMAND{
     EXIT4,
 
     COLOR,
+    CAMERA,
 
     CMDEND
 };
@@ -1236,6 +1237,7 @@ wParam enter2[10] = {
 
 //色チェック
 static wParam color_check[];
+static wParam camera_check[];
 
 // @@@@@@@@@@@@@@@@@@@@@@@ パターン１ @@@@@@@@@@@@@@@@@@@@@@@@@@
 // １つ目へ移動

@@ -608,6 +608,7 @@ wParam *BlockSectionManager::pat[] = {
     exit4,
 
     color_check,
+    camera_check,
 
 };
 
@@ -820,6 +821,13 @@ wParam BlockSectionManager::color_check[20] = {
 
 };
 
+//カメラ利用の色チェック
+wParam BlockSectionManager::camera_check[20] = {
+
+    {100, Section::WALKER, Section::STOP, 0, 0,rvkp, rvki, rvkd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 100 , 0,Section::COLORSTATUS},
+      {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
+
+};
 // 押したあとに元のサークルへ前進
 wParam BlockSectionManager::push_red_right[] = {
     {0, Section::VIRTUAL2, Section::LENGTH, CSPD, 0,rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 9, 0, 0,0,0, 0 , 0,Section::JNONE},
