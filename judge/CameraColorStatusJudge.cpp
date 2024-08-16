@@ -1,15 +1,16 @@
 #include "CameraColorStatusJudge.h"
-extern char rcv_data;
+extern PipeComm *gPcomm;
 
 CameraColorStatusJudge::CameraColorStatusJudge()
 {
-
+    mPcomm  = gPcomm;
 }
 
 float CameraColorStatusJudge::status()
 {
-    printf("color %c\n",rcv_data);
-    if(rcv_data=='r')
+    unsigned char res=mPcomm->getResponse();
+    printf("color %c\n",mPcomm->getResponse());
+    if(res=='r')
         return 0;
     else 
         return 1;

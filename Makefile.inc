@@ -66,6 +66,7 @@ APPL_CXXOBJS += \
 	PositionJudge.o\
 	CameraColorJudge.o\
 	CameraColorStatusJudge.o\
+	PipeComm.o\
 	thread_main.o
 
 SRCLANG := c++

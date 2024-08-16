@@ -31,6 +31,7 @@
 #include "AnglerVelocity.h"
 #include "GyroAngle.h"
 #include "TouchSensor.h"
+#include "PipeComm.h"
 #include "thread_main.h"
 
 #include "Scene.h"
@@ -75,8 +76,12 @@ LineTracer *gTracer;
 ArmWalker *gArmWalker;
 
 Scene *gScene;
+
+PipeComm *gPcomm;
+
 float gStart;
 float gStartAngle;
+
 
 char gRecive=-1;
 FILE *rcv_pipe_fp=nullptr;
@@ -124,6 +129,7 @@ static void user_system_create() {
   gPolling = new Polling(gColor,gOdo,gGyro,gSonar);
 
   gScene = new Scene();
+  gPcomm = new PipeComm("run2cam","cam2run");
 
   //gArmWalker->setPwm(-50,1,0,0);
 
@@ -201,12 +207,8 @@ void polling_task(intptr_t unused) {
 }
 
 void pipe_open_task(intptr_t unused){
-  printf("rcv pipe open\n");
-  rcv_pipe_fp = fopen("cam2run","rw");
-  printf("send pipe open\n");
-  send_pipe_fp = fopen("run2cam","w");
-  printf("pipe opened\n");
-  
+
+  gPcomm->open();
   ext_tsk();
 
 }
@@ -259,18 +261,8 @@ void send_task(intptr_t unused) {
 void send_rcv_task(intptr_t unused)
 {
     printf("send rcv task\n");
-    rcv_data='\0';
-    if (send_pipe_fp!=nullptr) {
-      fprintf(send_pipe_fp,"c\n");
-      fflush(send_pipe_fp);
-    }
-    if (rcv_pipe_fp!=nullptr) {
-      rcv_data=fgetc(rcv_pipe_fp);
-      fgetc(rcv_pipe_fp); // return skip
-      printf("RECV:%c %d\n",rcv_data,rcv_data);
-    }
-
-    printf("send rcv task end\n");  
+    unsigned char res = gPcomm->request();
+    printf("send rcv task end %c\n",res);  
     ext_tsk();
 }
 
