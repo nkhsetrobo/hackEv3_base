@@ -32,7 +32,10 @@ Section::~Section()
 bool Section::run()
 {
     error_code=0;
-
+    status=0;
+    if (mStatusJudge!=nullptr)
+        status = mStatusJudge->status();
+    
     if(mJudge!=nullptr) {
         if(first2){
             // msg_log("3");
@@ -50,9 +53,7 @@ bool Section::run()
         return true;
     }
 
-    status=0;
-    if (mStatusJudge!=nullptr)
-        status = mStatusJudge->status();
+
         
 #if defined(DEBUG_NOMOVE)
     return true;

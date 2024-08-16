@@ -26,12 +26,12 @@ def send_to_pipe(val):
 def getColor():
     ret_col='r'
 
-    LOW_COLOR1 = np.array([0, 50, 0]) # 各最小値を指定
+    LOW_COLOR1 = np.array([0, 80, 20]) # 各最小値を指定
     HIGH_COLOR1 = np.array([8, 255, 255]) # 各最大値を指定
-    LOW_COLOR2 = np.array([171, 50, 0]) # 各最小値を指定
+    LOW_COLOR2 = np.array([171, 80, 20]) # 各最小値を指定
     HIGH_COLOR2 = np.array([179, 255, 255]) # 各最大値を指定
 
-    LOW_COLOR3 = np.array([100, 50, 0]) # 各最小値を指定
+    LOW_COLOR3 = np.array([100, 80, 20]) # 各最小値を指定
     HIGH_COLOR3 = np.array([140, 255, 255]) # 各最大値を指定
 
     print("capture!")
@@ -63,7 +63,9 @@ def getColor():
     area_b = contourarea(mask_b)
 
     print(("R",area_r,"B",area_b))
-    if area_r>area_b: 
+    if area_r==0 and area_b==0:
+        ret_col='x'
+    elif area_r>area_b: 
         ret_col='r'
     else:
         ret_col='b'

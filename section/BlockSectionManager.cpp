@@ -289,7 +289,7 @@ void BlockSectionManager::initMove()
         block_phase=7;
     } else if (block_phase==7) {
         int idx=0;
-        if(block_color[4]==0) {
+        if(block_color[3]==0) {
           idx=1; //回避
         }
       

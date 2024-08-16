@@ -13,12 +13,18 @@ void CameraColorJudge::setColor(int col_num)
 }
 void CameraColorJudge::init()
 {
-    act_tsk(SEND_RCV_TASK);
+    // act_tsk(SEND_RCV_TASK);
+    rcv_data='\0';
+    sta_cyc(SEND_RCV_CYC);
 }
 bool CameraColorJudge::run()
 {
-    if (rcv_data!='\0')
+   // printf("CameraColorJudge %c\n",rcv_data);
+    if (rcv_data!='\0' &&  rcv_data!='x') {
+        stp_cyc(SEND_RCV_CYC);
         return true;
+    }
 
+   // act_tsk(SEND_RCV_TASK);
     return false;
 }
