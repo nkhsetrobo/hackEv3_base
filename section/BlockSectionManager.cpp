@@ -320,6 +320,8 @@ void BlockSectionManager::initMove()
 
     } else if (block_phase==9) {  
       init(exitPhase[0]);
+        block_phase=10;
+
     }
     mState = MOVE;
 
@@ -330,7 +332,7 @@ void BlockSectionManager::execMove()
 {
   if(run_section()) {
    //mState = INITCOLOR;
-   if (block_phase==9) 
+   if (block_phase==10) 
       mState=INITCARRY;
     else
       mState = INITMOVE;
@@ -364,14 +366,19 @@ void BlockSectionManager::execColor()
 // キャリー補正に使用
 void BlockSectionManager::initCarry()
 {
-    printf("**CARRY** %d\n",color);
+    printf("**CARRY** %d\n",color); // colorに青マーカーが見えている座標が入っている
     reset();
-    if(fabs(color)<10) {
+    if(fabs(color)<100) { // 中心近くにある場合は補正無し
         mState = INITEXIT;
+        return;
     } else if (color>0) {
-      init(carry_adjust_r);
-    } else {
+      carry_adjust_l[0].fangle = (color-100);
+          printf("adjust_l %f\n",carry_adjust_l[0].fangle);
       init(carry_adjust_l);
+    } else {
+      carry_adjust_r[0].fangle = (color+100);
+          printf("adjust_r %f\n",carry_adjust_r[0].fangle);
+      init(carry_adjust_r);
     }
     mState = CARRY;
 }
@@ -379,7 +386,7 @@ void BlockSectionManager::initCarry()
 void BlockSectionManager::execCarry()
 {
   if(run_section()) {
-    mState = INITMOVE;
+    mState = INITEXIT;
   }
 }
 

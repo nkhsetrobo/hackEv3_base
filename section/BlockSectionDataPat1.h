@@ -1053,7 +1053,7 @@ wParam BlockSectionManager::rot_green_left[] = {
 wParam BlockSectionManager::rot180_green_left[] = {
      {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 0, +60*sign, _EDGE_R, Judge::UPDATEALL, -180*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
 
-    {0, Section::TRACER, Section::LENGTH, normal_spd, 0,kp, ki, kd, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE_R, Judge::UPDATEALL,0,10, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+    {0, Section::TRACER, Section::LENGTH, normal_spd, 0,rkpf2, rkif2, rkdf2, 0, 0 /*setparam*/, 0, 0, 0, 0, !_EDGE_R, Judge::UPDATEALL,0,10, 0, 0, 0, 0, 0 , 0,Section::JNONE},
     {0, Section::VIRTUAL2, Section::COLOR, CSPD, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, mode2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,GREEN_H, 0.10, 0 , 0,Section::JNONE},
 
 
@@ -1063,7 +1063,7 @@ wParam BlockSectionManager::rot180_green_left[] = {
 wParam BlockSectionManager::rot180_green_right[] = {
      {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 0, -60*sign, _EDGE_R, Judge::UPDATEALL, +180*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
 
-    {0, Section::TRACER, Section::LENGTH, normal_spd, 0,kp, ki, kd, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL,0,10, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+    {0, Section::TRACER, Section::LENGTH, normal_spd, 0,rkpf2, rkif2, rkdf2, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL,0,10, 0, 0, 0, 0, 0 , 0,Section::JNONE},
     {0, Section::VIRTUAL2, Section::COLOR, CSPD, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, 0, mode2, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,GREEN_H, 0.10, 0 , 0,Section::JNONE},
 
 
