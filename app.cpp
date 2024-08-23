@@ -78,6 +78,7 @@ ArmWalker *gArmWalker;
 Scene *gScene;
 
 PipeComm *gPcomm;
+PipeComm *gPcomm2;
 
 float gStart;
 float gStartAngle;
@@ -130,6 +131,7 @@ static void user_system_create() {
 
   gScene = new Scene();
   gPcomm = new PipeComm("run2cam","cam2run");
+  gPcomm2 = new PipeComm("run2cam_b","cam2run_b");
 
   //gArmWalker->setPwm(-50,1,0,0);
 
@@ -209,6 +211,7 @@ void polling_task(intptr_t unused) {
 void pipe_open_task(intptr_t unused){
 
   gPcomm->open();
+  gPcomm2->open();
   ext_tsk();
 
 }
@@ -261,8 +264,15 @@ void send_task(intptr_t unused) {
 void send_rcv_task(intptr_t unused)
 {
     printf("send rcv task\n");
-    unsigned char res = gPcomm->request();
-    printf("send rcv task end %c\n",res);  
+    char *res = gPcomm->request();
+    printf("send rcv task end %s\n",res);  
+    ext_tsk();
+}
+void send_rcv_task2(intptr_t unused)
+{
+    printf("send rcv task 2\n");
+    char *res = gPcomm2->request();
+    printf("send rcv task2end %s\n",res);  
     ext_tsk();
 }
 

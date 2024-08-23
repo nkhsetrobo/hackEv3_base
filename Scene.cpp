@@ -154,6 +154,8 @@ void Scene::execCalib()
         mColorSensor->calibMax();
         gGyro->reset();
         COURSE=1;
+        act_tsk(SEND_RCV_TASK2);
+
     }
 
 

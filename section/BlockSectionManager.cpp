@@ -94,6 +94,9 @@ bool BlockSectionManager::run()
     case CARRY:
       execCarry();
     break;
+    case INITEXIT:
+      initExit();
+      break;
     case END:
       return true;
   }
@@ -132,7 +135,11 @@ void  BlockSectionManager::initEnter()
     //   init(enter);
     // else
     //   init(enter2);
-    init(enter);
+    if(pattern==0 || pattern==2 || pattern==4)
+      init(enter);
+    else 
+      init(enter2);
+
     mState = ENTER;
 }
 
@@ -231,7 +238,7 @@ void BlockSectionManager::initMove()
         int idx=0;
         printf("block_fixed %d  2nd Block color %d\n",block_fix,color);
         if(color==0) { //２つ目が赤
-          idx==1; //回避
+          idx=1; //回避
         } else  {
           //青ならブロック位置を交換
           block_color[1] = 1; // 青
@@ -241,6 +248,7 @@ void BlockSectionManager::initMove()
             block_fix=true; // 両方赤ならここで確定
         if (block_color[0]==1 && block_color[1]==1 )
             block_fix=true; // 両方青ならここで確定
+        printf("block_fixed %d  2nd Block color %d idx=%d\n",block_fix,color,idx);
 
         if (idx==0) 
           multiinit(block2pushcmd[pattern]);
@@ -265,10 +273,10 @@ void BlockSectionManager::initMove()
         if(!block_fix) { //未確定の場合は、センサー値を書き込み
           if(color==0) {
             block_color[2]=0; 
-            block_color[2]=1; //最後は青で確定
+            block_color[3]=1; //最後は青で確定
           } else {
             block_color[2]=1;
-            block_color[2]=0; //最後は赤で確定
+            block_color[3]=0; //最後は赤で確定
           }
         }
         if(block_color[2]==0) {
@@ -313,43 +321,28 @@ void BlockSectionManager::initMove()
     } else if (block_phase==9) {  
       init(exitPhase[0]);
     }
-
     mState = MOVE;
+
     return;
-#if 0
-    for(int cnt=0;cnt<4;cnt++) {
-      int to_block_node = to_block_list[cur_no][cnt];
-      if (block_list_in_area[node_to_block[to_block_node]]==1) {     // ブロックが未処理である   
-        printf("================ MOVE %d -> %d\n",cur_no,to_block_node);
-        block_list_in_area[node_to_block[to_block_node]]=0; // ブロックを処理済みへ
-        if(move_list[cur_no][to_block_node]!=nullptr) {
-          init(move_list[cur_no][to_block_node]);
-        //  cur_no = to_block_node; // 次の走行体位置更新
-         // cur_no=next_pos;  // 次の走行体位置更新
-          mState = MOVE;
-        } else {
-          printf("move route NOT found\n");
-          mState = END;
-        }
-        return;
-      } 
-    }
-    printf("NO move block \n");
-    mState = END;
-#endif
 }
 
 void BlockSectionManager::execMove()
 {
   if(run_section()) {
    //mState = INITCOLOR;
-    mState = INITMOVE;
+   if (block_phase==9) 
+      mState=INITCARRY;
+    else
+      mState = INITMOVE;
   }
 }
 
 void BlockSectionManager::exitMove()
 {
+    if(run_section()) {
      mState = EXITMOVE;
+    }
+
 }
 
 
@@ -368,39 +361,19 @@ void BlockSectionManager::execColor()
   }
 }
 
-// 色検出前の位置からブロック運搬
+// キャリー補正に使用
 void BlockSectionManager::initCarry()
 {
-      printf("**CARRY**\n");
-
+    printf("**CARRY** %d\n",color);
     reset();
-#if defined(DEBUG_NOMOVE)
-    //debug
-      static BkCol c_list[] = {BKBLUE,BKRED,BKYELLOW,BKGREEN, BKBLUE,BKRED,BKYELLOW,BKGREEN};
-      static int c_list_cnt=0;
-
-      carry_block = c_list[c_list_cnt++];
-      printf("DEBUG carry block %d\n",carry_block);
-    //debug
-#endif
-
-    int dist_areano = getBonusArea(carry_block);
-
-
-    printf("############# carry block %d -> area %d\n",cur_no,dist_areano);
-    if(carry_list[cur_no][dist_areano]!=nullptr) {
-        init(carry_list[cur_no][dist_areano]);
-       //printf("prev cur_no %d %d\n",cur_no,dist_areano);
-       // printf("DEBUG %d %d %d %d\n",arry_endpt[cur_no][0],arry_endpt[cur_no][1],arry_endpt[cur_no][2],arry_endpt[cur_no][3]);
-        cur_no = arry_endpt[cur_no][dist_areano]; // 新しい走行体位置
-        printf("cur_no %d \n",cur_no);
-      // init(c_13_3);
-        mState = CARRY;
+    if(fabs(color)<10) {
+        mState = INITEXIT;
+    } else if (color>0) {
+      init(carry_adjust_r);
     } else {
-        printf("carry list no found.\n");
-        mState = END;
-
+      init(carry_adjust_l);
     }
+    mState = CARRY;
 }
 
 void BlockSectionManager::execCarry()
@@ -408,6 +381,14 @@ void BlockSectionManager::execCarry()
   if(run_section()) {
     mState = INITMOVE;
   }
+}
+
+void BlockSectionManager::initExit()
+{
+    reset();
+    init(toGoal);
+    mState = EXITMOVE;
+
 }
 
 
@@ -445,7 +426,7 @@ bool BlockSectionManager::run_section()
     if(mSection[mSectionIdx]->run()) {
         if(mSection[mSectionIdx]->getID()==100 ) {
             color = (int)mSection[mSectionIdx]->getStatus();
-            printf("COLOR %d\n",color);
+            printf("STATUS VAL %d\n",color);
        } 
         mSectionIdx++;
     }
@@ -453,6 +434,7 @@ bool BlockSectionManager::run_section()
     return false;
 }
 
+//コマンドパターンを読み込んで初期化
 void BlockSectionManager::multiinit(COMMAND cmd[])
 {
   for (int i=0;cmd[i]!=CMDEND;i++) {

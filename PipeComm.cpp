@@ -17,7 +17,7 @@ void PipeComm::open()
     printf("pipe opened\n");
 }
 
-unsigned char PipeComm::request()
+char *PipeComm::request()
 {
     char rcv_data='\0';
     if (fp_s!=nullptr) {
@@ -25,22 +25,24 @@ unsigned char PipeComm::request()
       fflush(fp_s);
     }
     if (fp_r!=nullptr) {
-      rcv_data=fgetc(fp_r);
-      fgetc(fp_r); // return skip
-      printf("RECV:%c %d\n",rcv_data,rcv_data);
+        int cnt=0;
+        while((response[cnt]=fgetc(fp_r))!='\n') {
+            cnt++;
+        }
+        response[cnt]='\0';
+        printf("RECV:%s\n",response);
     }
-    response = rcv_data;
-    return rcv_data;
+    return response;
 }
 
 void  PipeComm::resetResponse()
 {
-    response='\0';
+    response[0]='\0';
 }
 
-unsigned char  PipeComm::getResponse()
+void PipeComm::getResponse(char *res)
 {
-    return response;
+    strcpy(res,response);
 }
 
 

@@ -22,9 +22,9 @@ void CameraColorJudge::init()
 bool CameraColorJudge::run()
 {
    // printf("CameraColorJudge %c\n",rcv_data);
-    unsigned char res;
-    res = mPcomm->getResponse();
-    if (res!='\0' &&  res!='x') {
+    char res[256];
+    mPcomm->getResponse(res);
+    if (res[0]!='\0' &&  res[0]!='x') {
         stp_cyc(SEND_RCV_CYC);
         return true;
     }

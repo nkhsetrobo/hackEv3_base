@@ -33,8 +33,12 @@ bool Section::run()
 {
     error_code=0;
     status=0;
-    if (mStatusJudge!=nullptr)
+    if (mStatusJudge!=nullptr) {
+        if(first2) {
+            mStatusJudge->init();
+        }
         status = mStatusJudge->status();
+    }
     
     if(mJudge!=nullptr) {
         if(first2){
@@ -164,7 +168,9 @@ Judge *Section::selectJudgePtr(int no)
         case CAMERACOLORSTATUS:
             jptr =new CameraColorStatusJudge();            
             break;
-
+        case CAMERACARRYSTATUS:
+            jptr =new CameraCarryStatusJudge();            
+            break;
         case POSITION:
             jptr =new PositionJudge();            
             break;

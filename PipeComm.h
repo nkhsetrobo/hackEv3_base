@@ -8,16 +8,16 @@ class PipeComm
     public:
         PipeComm(char *pname_s,char *pname_r);
         void open();
-        unsigned char request();
+        char *request();
         void resetResponse();
-        unsigned char getResponse();
+        void getResponse(char *res);
     private:
         char pipename_s[256];
         char pipename_r[256];
         FILE *fp_s;
         FILE *fp_r;
 
-        char response;
+        char response[256];
 
 
 };

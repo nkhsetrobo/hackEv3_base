@@ -4,19 +4,17 @@ import cv2
 import sys
 import numpy as np
 import gc
+import threading
 
 
-
-def recv_from_pipe():
-    global fr
- 
+def recv_from_pipe(fr): 
     line = fr.readline()
 
     if len(line)>0 and line[0]=='c':
         return True
     return False
-def send_to_pipe(val):
-    global fw
+
+def send_to_pipe(fw,val):
     #print(('send: ',val,fw))
     #fw.write(val)
     print(val,file=fw)
@@ -26,13 +24,13 @@ def send_to_pipe(val):
 def getColor():
     ret_col='r'
 
-    LOW_COLOR1 = np.array([0, 80, 20]) # 各最小値を指定
-    HIGH_COLOR1 = np.array([8, 255, 255]) # 各最大値を指定
-    LOW_COLOR2 = np.array([171, 80, 20]) # 各最小値を指定
+    LOW_COLOR1 = np.array([0, 70, 140]) # 各最小値を指定
+    HIGH_COLOR1 = np.array([8, 255, 140]) # 各最大値を指定
+    LOW_COLOR2 = np.array([171, 70, 60]) # 各最小値を指定
     HIGH_COLOR2 = np.array([179, 255, 255]) # 各最大値を指定
 
-    LOW_COLOR3 = np.array([100, 80, 20]) # 各最小値を指定
-    HIGH_COLOR3 = np.array([140, 255, 255]) # 各最大値を指定
+    LOW_COLOR3 = np.array([90, 70, 140]) # 各最小値を指定
+    HIGH_COLOR3 = np.array([150, 255, 255]) # 各最大値を指定
 
     print("capture!")
     im = pc2.capture_array()
@@ -41,7 +39,7 @@ def getColor():
     y,x = im.shape[0],im.shape[1]
     cv2.imwrite("org.jpg",im)
 
-    im = trim(im,(0,0),(x,y//2-30)) # サークルの影響を排除するため上半分で判定
+    im = trim(im,(0,100),(x,y//2-30)) # サークルの影響を排除するため上半分で判定
     hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
 
     row ,col = im.shape[0]//2,im.shape[1]//2
@@ -59,8 +57,8 @@ def getColor():
 
     masked_img = cv2.bitwise_and(im,im, mask= mask_r) # 元画像から特定の色を抽出
 
-    area_r = contourarea(mask_r)
-    area_b = contourarea(mask_b)
+    area_r,_ = contourarea(mask_r)
+    area_b,_ = contourarea(mask_b)
 
     print(("R",area_r,"B",area_b))
     if area_r==0 and area_b==0:
@@ -78,30 +76,117 @@ def getColor():
 
     return ret_col
 
-def trim(img,top_left,bottom_right):
-    return img[top_left[1] : bottom_right[1]-top_left[1] , top_left[0]: bottom_right[0]-top_left[0]]
+def getMarker():
+    LOW_COLOR3 = np.array([90, 70, 140]) # 各最小値を指定
+    HIGH_COLOR3 = np.array([150, 255, 255]) # 各最大値を指定
 
-def contourarea(mask):
+    print("get marker!")
+    im = pc2.capture_array()
+    # im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+    im = cv2.resize(im,None,fx=0.25,fy=0.25)
+    y,x = im.shape[0],im.shape[1]
+    cv2.imwrite("marker_org.jpg",im)
+
+    im = trim(im,(0,y//2),(x,y//2-y//4)) #ボトルの影響を排除するため下半分で判定
+    hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
+
+    row ,col = im.shape[0]//2,im.shape[1]//2
+
+    mask_b = cv2.inRange(hsv, LOW_COLOR3, HIGH_COLOR3) # マスクを作成
+
+    area_b, cont = contourarea(mask_b,200)
+
+    rect = cv2.boundingRect(cont)
+    print(("marker",area_b,rect))
+    
+    left = rect[0]
+    right = rect[0]+rect[2]
+    if area_b==0:
+        adjust=0
+    elif x//2-left>right-x//2:
+        adjust = left-x//2
+    else:
+        adjust = right-x//2
+    
+    cv2.imwrite("marker_img.jpg",im)
+    cv2.imwrite("marker_b_mask.jpg",mask_b)
+    print("write ok")
+    gc.collect()
+
+    return adjust
+
+
+def trim(img,top_left,bottom_right):
+    return img[top_left[1] : bottom_right[1]+top_left[1] , top_left[0]: bottom_right[0]+top_left[0]]
+
+def contourarea(mask,min_area=5000):
         #物体検出
     contours, hierarchy = cv2.findContours(mask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     # 矩形検出された数（デフォルトで0を指定）
     detect_count = 0
     max_area=0
+    max_contour=None
     for i in range(0, len(contours)):
 
         # 輪郭の領域を計算
         area = cv2.contourArea(contours[i])
-        if area < 5000: # サークルが微妙に入っても除外
+        if area < min_area : # サークルが微妙に入っても除外
             continue
         if max_area<area:
             max_area=area
+            max_contour=contours[i]
         detect_count +=1
 
     print("detected ",max_area)
-    return max_area
+    return max_area,max_contour
+
+def getimage_thred():
+    global mode
+    # global fr,fw
+    if mode=='skip':
+        getMarker()
+        return
+
+    if mode!='r':
+        fw = open('/home/pi/RasPike-ART/sdk/workspace/cam2run_b', 'w',encoding='ascii')
+    else:
+        print("READ ONLY MODE")
+
+    fr = open('/home/pi/RasPike-ART/sdk/workspace/run2cam_b', 'r',encoding='ascii')
+
+    print("pipe open OK.")
+    while True:
+        if recv_from_pipe(fr):
+            ret = getMarker()
+            if mode!='r':
+                send_to_pipe(fw,ret)
+                print("send ok")
+
+def checkmk_thred():
+    global mode
+    # global fr,fw
+    if mode=='skip':
+        getColor()
+        return
+
+    if mode!='r':
+        fw = open('/home/pi/RasPike-ART/sdk/workspace/cam2run', 'w',encoding='ascii')
+    else:
+        print("READ ONLY MODE")
+
+    fr = open('/home/pi/RasPike-ART/sdk/workspace/run2cam', 'r',encoding='ascii')
+
+    print("pipe open OK.")
+    while True:
+        if recv_from_pipe(fr):
+            ret = getColor()
+            if mode!='r':
+                send_to_pipe(fw,ret)
+                print("send ok")
 
 def main():
-    global fr,fw,pc2
+    global pc2
+    global mode
     args = sys.argv
     
     if len(args)>1:
@@ -113,25 +198,10 @@ def main():
     pc2.configure(pc2.create_preview_configuration(main={"format": 'XRGB8888', "size": (3280, 2464)}))
     pc2.start()
     time.sleep( 1 )
-    if mode=='skip':
-        getColor()
-        return
 
-
-    if mode!='r':
-        fw = open('/home/pi/RasPike-ART/sdk/workspace/cam2run', 'w',encoding='ascii')
-    else:
-        print("READ ONLY MODE")
-
-    fr = open('/home/pi/RasPike-ART/sdk/workspace/run2cam', 'r',encoding='ascii')
-
-    # fw = open('/home/pi/RasPike-ART/sdk/workspace/cam2run', 'w', encoding="ascii")
-    print("pipe open OK.")
-    while True:
-        if recv_from_pipe():
-            ret = getColor()
-            if mode!='r':
-                send_to_pipe(ret)
-                print("send ok")
+    th1 = threading.Thread(target=getimage_thred)
+    th1.start()
+    th2 = threading.Thread(target=checkmk_thred)
+    th2.start()
 
 main()

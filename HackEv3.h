@@ -15,7 +15,7 @@ const float TREAD=12.7;
 
 #define GREEN_H 140
 #define RED_H 350
-#define YELLOW_H 50
+#define YELLOW_H 45
 #define BLUE_H 210
 
 #define SLALOM_GREEN_H 159
@@ -29,7 +29,7 @@ const float TREAD=12.7;
 
 //#define DEBUG_NOMOVE
 #define SKIP_SPEED
-//#define SKIP_BONUS
+// #define SKIP_BONUS
 
 #if defined(MAKE_RASPIKE)
 //#define MAKE_LEFT

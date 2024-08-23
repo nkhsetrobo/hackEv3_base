@@ -25,6 +25,7 @@
 #include "TurnWalker.h"
 #include "CameraColorJudge.h"
 #include "CameraColorStatusJudge.h"
+#include "CameraCarryStatusJudge.h"
 
 class Section
 {
@@ -72,6 +73,7 @@ public:
         COLORSTATUS_R,
         CAMERACOLOR,
         CAMERACOLORSTATUS,
+        CAMERACARRYSTATUS,
         POSITION,
         JEND=-1
     };

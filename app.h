@@ -29,6 +29,7 @@ extern void recieve_task(intptr_t unused);
 extern void send_task(intptr_t unused);
 extern void thread_task(intptr_t unused);
 extern void send_rcv_task(intptr_t unused);
+extern void send_rcv_task2(intptr_t unused);
 extern void pipe_open_task(intptr_t unused);
 
 static void user_system_create();

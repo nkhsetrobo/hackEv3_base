@@ -67,7 +67,7 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         ((VirtualLineTracer2 *)walk)->setvangle(wp[n].vangle);
         ((VirtualLineTracer2 *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp*mReverse);
          ((VirtualLineTracer2 *)walk)->setInitMode(wp[n].round);
-        ((VirtualLineTracer2 *)walk)->setTargetPos(wp[n].forward,wp[n].turn*mReverse); //walker用のパラメータを座標に使用
+        ((VirtualLineTracer2 *)walk)->setTargetPos(wp[n].forward,-wp[n].turn*mReverse); //mode 3 walker用のパラメータを目標座標に使用
         break;
     case Section::WALKER:
       //  printf("create WALKER \n");
@@ -85,7 +85,7 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         ((VirtualLineTracer *)walk)->setRound(wp[n].round*mReverse);
         ((VirtualLineTracer *)walk)->setParam(wp[n].speed, wp[n].kp, wp[n].ki, wp[n].kd, wp[n].angleTarget, wp[n].anglekp*mReverse); //(20,2, 0.2, 0,1,1)
         ((VirtualLineTracer *)walk)->setMode(wp[n].absangle);  // １つ目の要素をモードに使用
-        ((VirtualLineTracer *)walk)->setCenter(wp[n].forward,wp[n].turn*mReverse); //walker用のパラメータを座標に使用
+        ((VirtualLineTracer *)walk)->setCenter(wp[n].forward,-wp[n].turn*mReverse); //walker用のパラメータを座標に使用
         break;
     case Section::TRACER:
        printf("create TRACER ");
