@@ -28,7 +28,7 @@ LineTracer::LineTracer( Odometry *odo,
       mLimit(100),
       mBias(0)
 {
-    mPid->debug = false;
+    mPid->debug = true;
     mPid->debug_char='t';
 }
  

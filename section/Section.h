@@ -26,6 +26,7 @@
 #include "CameraColorJudge.h"
 #include "CameraColorStatusJudge.h"
 #include "CameraCarryStatusJudge.h"
+#include "CameraTracer.h"
 
 class Section
 {
@@ -55,6 +56,7 @@ public:
         VIRTUAL2,
         TAIL,
         ARM,
+        CAMTRACER,
         WEND=-1
     };
     enum JUDGE_NO

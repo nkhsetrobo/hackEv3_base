@@ -172,6 +172,7 @@ void main_task(intptr_t unused) {
 
   stp_cyc(POLLING_CYC);
   stp_cyc(TRACER_CYC);
+  stp_cyc(SEND_RCV_CYC2);
 
  pup_motor_set_power(gLeftWheel,0);
  pup_motor_set_power(gRightWheel,0);

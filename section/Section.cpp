@@ -103,6 +103,10 @@ Walker *Section::selectWalker(int  no)
             mWalker = (Walker*)(new ArmWalker(gOdo,gSpeed));
             // ((ArmWalker*)mWalker)->setFlag(1);
             break;
+        case CAMTRACER:
+            mWalker = new CameraTracer(gOdo,gSpeed);
+            break;
+
         default:
             printf("no selectWalker  %d \n",no);
     }

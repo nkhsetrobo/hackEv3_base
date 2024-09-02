@@ -17,7 +17,7 @@ PID::PID(float delta) {
     firstCnt = 0;
     resetFlg=true;
 
-    sec = 50;
+    sec = 500;
     cnt=0;
 
     for(int i=0;i<sec;i++) 

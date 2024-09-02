@@ -30,11 +30,11 @@ VirtualLineTracer2::VirtualLineTracer2(Odometry *odo,
 
     mPid->resetParam();
 
-    mPid->debug=false;
+    mPid->debug=true;
     mPid->debug_char = 'L';
 
     mLpf = new LowPassFilter();
-    mLpf->setRate(0.4);
+    mLpf->setRate(0.2);
 
 }
 

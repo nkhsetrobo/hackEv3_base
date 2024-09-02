@@ -32,11 +32,11 @@ MyColorSensor::MyColorSensor(pbio_port_id_t  port,
     mMin_B  = 8;
 #else
     mMax_R  = 255;
-    mMin_R  = 40;
+    mMin_R  = 37;
     mMax_G  = 255;
-    mMin_G  = 40;
+    mMin_G  = 43;
     mMax_B  = 255;
-    mMin_B  = 50;  
+    mMin_B  = 47;  
 #endif 
 }
 
@@ -233,6 +233,7 @@ pup_color_rgb_t MyColorSensor::getRgb()
 
 void MyColorSensor::calibMax()
 {
+    hsv_t hsv = mHsv;
 #if defined(MAKE_RASPIKE)
     raw = pup_color_sensor_rgb (mColor);
 
@@ -240,7 +241,13 @@ void MyColorSensor::calibMax()
     mMax_G  = raw.g;
     mMax_B  = raw.b;
 #endif
-    printf("calib %d,%d,%d\n",raw.r,raw.g,raw.b);
+
+    mRgb.r = normColor(raw.r,mMin_R,mMax_R);
+    mRgb.g = normColor(raw.g,mMin_G,mMax_G);
+    mRgb.b = normColor(raw.b,mMin_B,mMax_B);
+    getHSV(mRgb,mHsv);
+
+    printf("calib %d,%d,%d %f,%f,%f\n",raw.r,raw.g,raw.b, hsv.h, hsv.s,hsv.v);
 
 }
 

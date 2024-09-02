@@ -116,6 +116,7 @@ void Scene::execUndefined()
 void Scene::execCalib()
 {
     int volt = hub_battery_get_voltage();
+    static int center_btn=0;
     hub_button_t mask;
     hub_button_is_pressed(&mask);
     if(mask&HUB_BUTTON_LEFT)
@@ -159,10 +160,10 @@ void Scene::execCalib()
     }
 
 
-    if(mask&HUB_BUTTON_CENTER)
+    if(center_btn==1 && mask==0)
     {       
             gGyro->reset();
-            gOdo->reset();
+            gOdo->resetAngle();
 #if defined(MAKE_RASPIKE)
             mState=INIT_SPEED;
             //mState=INIT_GARAGE;
@@ -173,6 +174,9 @@ void Scene::execCalib()
 #endif
     }
 
+    if(mask&HUB_BUTTON_CENTER) {
+        center_btn=1;
+    }
 
 }
 void Scene::execStart()

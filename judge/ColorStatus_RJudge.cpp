@@ -74,8 +74,6 @@ float ColorStatus_RJudge::status()
             max_col=color[i];
         }
     }
-
-
     
     printf("hue %f sat %f color_id %d (r %d g %d b %d y %d) \n",hue,sat,color_id, color[0],color[1],color[2],color[3]);
     return color_id;

@@ -34,6 +34,8 @@ Odometry::Odometry(pup_motor_t *left, pup_motor_t *right,
 	sumlen=0;
 	prev_rs1=current_rs1=0;
 	prev_rs2=current_rs2=0;
+
+	fp=fopen("odometry.txt","w");
 }
 
 
@@ -146,6 +148,8 @@ void Odometry::calc()
 		out_cnt=0;
 	}*/
 
+	fprintf(fp,"%f,%f,%f,%f,%d,%d\n",sumlen,x,y,th,current_rs1,current_rs2);
+	fflush(fp);
 }
 
 void Odometry::setPwm(int left,int right)
@@ -156,8 +160,8 @@ void Odometry::setPwm(int left,int right)
 	int left_err=0;
 	int right_err=0;
 
-	int force_pwm=70;
-	int force_pwm_l=70;
+	int force_pwm=70>right?70:right;
+	int force_pwm_l=70>left?70:left;
 	int force_cnt=150;
 	if (left!=0 && no_run_count_l>force_cnt) {
 		left = left>0?force_pwm_l:-force_pwm_l;
@@ -169,13 +173,13 @@ void Odometry::setPwm(int left,int right)
 		right_err=1;
 		printf("pulse R\n");
 	}
-    //printf("Left %d, Right %d\n",left,right);
+    // printf("Left %d, Right %d\n",left,right);
 
 #if !defined(MAKE_SIM)
 	int volt = hub_battery_get_voltage();
-	double rate = 8350.0/volt;
-	left*=rate;
-	right*=rate;	
+	double rate = 8000.0/volt;
+	// left*=rate;
+	// right*=rate;	
 #endif
 #if !defined(MAKE_RASPIKE)
 	left = accel_L(left,left_err);

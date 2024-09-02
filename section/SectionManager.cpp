@@ -101,6 +101,9 @@ void SectionManager::setWalker(Section * sc,wParam *wp,int n)
         ((ArmWalker *)walk)->setPwm(wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd);
 
         break;
+    case Section::CAMTRACER:
+       ((CameraTracer *)walk)->setParam(wp[n].speed, wp[n].target, wp[n].kp, wp[n].ki, wp[n].kd);
+        break;
     }
 }
 
@@ -150,7 +153,7 @@ void SectionManager::setJudge(Section * sc,wParam *wp2, int n)
         ((SonerJudge *)judge)->setLength(wp2[n].flength,1);
         break;
     case Section::POSITION:
-        ((PositionJudge *)judge)->setParam(wp2[n].bright1,wp2[n].bright2,wp2[n].flength);
+        ((PositionJudge *)judge)->setParam(wp2[n].bright1,wp2[n].bright2*mReverse,wp2[n].flength);
             // bright1 x座標、bright2 y座標, flength 目標距離
 
     }
