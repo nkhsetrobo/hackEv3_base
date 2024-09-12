@@ -9,7 +9,8 @@ const  float BlockSectionManager::sign=-1;
  float BlockSectionManager::lvkp=20,BlockSectionManager::lvki=13.0+2,BlockSectionManager::lvkd=15.0; // lowpass 0.85
  float BlockSectionManager::rkp0=20,BlockSectionManager::rki0=12,BlockSectionManager::rkd0=3.4;
 
- float BlockSectionManager::rkp2=25,BlockSectionManager::rki2=30,BlockSectionManager::rkd2=7.0;  // lowpass 0.85
+// float BlockSectionManager::rkp2=25,BlockSectionManager::rki2=30,BlockSectionManager::rkd2=7.0;  // lowpass 0.85
+ float BlockSectionManager::rkp2=20,BlockSectionManager::rki2=40,BlockSectionManager::rkd2=5.0;  // lowpass 0.85
 
 
  double BlockSectionManager::normal_spd=46;
@@ -20,7 +21,10 @@ const  float BlockSectionManager::sign=-1;
 
  double BlockSectionManager::turnoffs=0;
 
-float BlockSectionManager::rkpf=12,BlockSectionManager::rkif=12.0,BlockSectionManager::rkdf=4.20;   //spd 100用 2024再調整
+//float rkpf=5,rkif=19.5,rkdf=3.3;   //spd 100用 2024再調整
+
+float BlockSectionManager::rkpf=8,BlockSectionManager::rkif=10.0,BlockSectionManager::rkdf=5.0;   //spd 100用 2024再調整
+//float BlockSectionManager::rkpf=12,BlockSectionManager::rkif=12.0,BlockSectionManager::rkdf=4.20;   //spd 100用 2024再調整
 float BlockSectionManager::rkpf2=BlockSectionManager::rkpf*1.5,BlockSectionManager::rkif2=BlockSectionManager::rkif*1.5,BlockSectionManager::rkdf2=BlockSectionManager::rkdf;   //spd 100用 2024再調整
 
 
@@ -561,7 +565,7 @@ COMMAND exit1cmd[5][50] =
     //pat5
     {
         GO,L2YR,TR1,
-        SL2YL,TL1,
+        SL2YL,TL2,
         SL2YR,GO,GO,
         CMDEND
     },
@@ -731,7 +735,7 @@ wParam BlockSectionManager::shortline2green_r[] = {
 wParam BlockSectionManager::shortline2yellow_l[] = {
   {0, Section::TRACER, Section::LENGTH, 40, 0, rkpf2,rkif2,rkdf2, +0,1 /*setparam*/, 0, 0, 0, 30, !_EDGE_R, Judge::UPDATE, 0, BLEN-11, 0, 0, 0, 0,0,false},
     // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
-  {12, Section::VIRTUAL2, Section::COLOR, CSPD, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  YELLOW_H, 0.10,0 ,false,Section::JNONE},
+  {12, Section::VIRTUAL2, Section::COLOR, CSPD, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  YELLOW_H, YELLOW_S,0 ,false,Section::JNONE},
 
    // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
     {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},   
@@ -739,7 +743,7 @@ wParam BlockSectionManager::shortline2yellow_l[] = {
 wParam BlockSectionManager::shortline2yellow_r[] = {
   {0, Section::TRACER, Section::LENGTH, 40, 0, rkpf2,rkif2,rkdf2, +0,1 /*setparam*/, 0, 0, 0, 30, _EDGE_R, Judge::UPDATE, 0, BLEN-11, 0, 0, 0, 0,0,false},
     // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
-  {12, Section::VIRTUAL2, Section::COLOR, CSPD, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  YELLOW_H, 0.10,0 ,false,Section::JNONE},
+  {12, Section::VIRTUAL2, Section::COLOR, CSPD, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  YELLOW_H, YELLOW_S,0 ,false,Section::JNONE},
 
    // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
     {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},   

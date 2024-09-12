@@ -115,12 +115,51 @@ def getMarker():
 
     return adjust
 
+def getMarker2(im):
+    LOW_COLOR3 = np.array([90, 70, 140]) # 各最小値を指定
+    HIGH_COLOR3 = np.array([150, 255, 255]) # 各最大値を指定
+
+    print("get marker!")
+    y,x = im.shape[0],im.shape[1]
+    cv2.imwrite("maker/marker_org.jpg",im)
+
+    im = trim(im,(0,y//4),(x,y//2-y//4)) #ボトルの影響を排除するため下半分で判定
+    hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
+
+    row ,col = im.shape[0]//2,im.shape[1]//2
+
+    mask_b = cv2.inRange(hsv, LOW_COLOR3, HIGH_COLOR3) # マスクを作成
+
+    area_b, cont = contourarea(mask_b,200)
+
+    rect = cv2.boundingRect(cont)
+    if(len(rect)==0): 
+        print("Maker None")
+        return 0
+    print(("marker",area_b,rect))
+    
+    left = rect[0]
+    right = rect[0]+rect[2]
+
+    center_pos=(left+right)/2
+    
+    cv2.imwrite("maker/marker_img.jpg",im)
+    cv2.imwrite("maker/marker_b_mask.jpg",mask_b)
+    print("write ok")
+
+    return int(center_pos*100/im.shape[1])
+
 def circle_center():
     global img_cnt
     img = pc2.capture_array()
     img = cv2.resize(img,None,fx=0.25,fy=0.25)
     y,x = img.shape[0],img.shape[1]
     cv2.imwrite("circle/circle_org%d.jpg"%img_cnt,img)
+
+    c=getMarker2(img)
+    if c!=0:
+        return c
+
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     img = trim(img,(0,y//2),(x,y//2-y//4)) #ボトルの影響を排除するため下半分で判定
@@ -174,7 +213,7 @@ def circle_center():
     return center
 
 def contourarea_circle(mask):
-        #物体検出
+    #物体検出
     contours, hierarchy = cv2.findContours(mask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     # print(contours)
     # 矩形検出された数（デフォルトで0を指定）
