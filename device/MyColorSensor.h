@@ -31,6 +31,8 @@ class MyColorSensor
         float normBrightness(float br,float min,float max);
         double normColor(float br,float min,float max);
         void getHSV(rgb_f_t rgb, hsv_t& hsv);
+        double getBright();
+        hsv_t getHSV_();
 
         static const int BRIGHT;
         static const int COLOR;
@@ -39,6 +41,7 @@ class MyColorSensor
         void calibMax();
         void calibBright();
         double adjust(double val);
+        double round_n(double number, double n);
 
     private:
         pbio_port_id_t  mPort;

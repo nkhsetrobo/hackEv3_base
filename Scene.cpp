@@ -117,6 +117,17 @@ void Scene::execCalib()
 {
     int volt = hub_battery_get_voltage();
     static int center_btn=0;
+
+    double bri = mColorSensor->getBright();
+    hsv_t hsv = mColorSensor->getHSV_();
+    static int calib_cnt=0;
+    if(calib_cnt++%100==0) {
+        if(bri>-0.1 && bri<0.1) {
+            printf("OK ");
+        }
+
+         printf("%f: %f,%f,%f\n",bri, hsv.h, hsv.s, hsv.v);
+    }
     hub_button_t mask;
     hub_button_is_pressed(&mask);
     if(mask&HUB_BUTTON_LEFT)

@@ -257,11 +257,11 @@ def getimage_thred():
         return
 
     if mode!='r':
-        fw = open('/home/pi/RasPike-ART/sdk/workspace/cam2run', 'w',encoding='ascii')
+        fw = open('/home/pi/RasPike/sdk/workspace/cam2run', 'w',encoding='ascii')
     else:
         print("READ ONLY MODE")
 
-    fr = open('/home/pi/RasPike-ART/sdk/workspace/run2cam', 'r',encoding='ascii')
+    fr = open('/home/pi/RasPike/sdk/workspace/run2cam', 'r',encoding='ascii')
 
     print("pipe open OK.")
     while True:
@@ -282,11 +282,11 @@ def checkcircle_thred():
         return
 
     if mode!='r':
-        fw = open('/home/pi/RasPike-ART/sdk/workspace/cam2run_b', 'w',encoding='ascii')
+        fw = open('/home/pi/RasPike/sdk/workspace/cam2run_b', 'w',encoding='ascii')
     else:
         print("READ ONLY MODE")
 
-    fr = open('/home/pi/RasPike-ART/sdk/workspace/run2cam_b', 'r',encoding='ascii')
+    fr = open('/home/pi/RasPike/sdk/workspace/run2cam_b', 'r',encoding='ascii')
 
     print("pipe open OK.")
     while True:

@@ -1,6 +1,7 @@
 #include "MyColorSensor.h"
 
 #include "util.h"
+#include "math.h"
 
  const int MyColorSensor::BRIGHT = false;
  const int MyColorSensor::COLOR = true;
@@ -40,7 +41,7 @@ MyColorSensor::MyColorSensor(pbio_port_id_t  port,
 #endif 
 }
 
-#define ADJUST 1
+#define ADJUST 2
 
 void MyColorSensor::update()
 {
@@ -95,6 +96,9 @@ float MyColorSensor::normBrightness(float br,float min, float max)
 #if ADJUST==1
     rate = adjust(rate);
 #endif
+#if ADJUST==2
+    rate = round_n(rate,4);
+#endif
 
     if(rate>1.0) rate=1.0;
     if(rate<-1.0) rate=-1.0;
@@ -121,6 +125,14 @@ double MyColorSensor::adjust(double val) {
     double adj = 2.43169E-01*val5 - 2.84993E-14*val4 - 8.29451E-02*val3 + 1.66475E-14*val2 + 8.10963E-01*val;
 
     return adj;
+}
+/* 小数点n以下で四捨五入する */
+double MyColorSensor::round_n(double number, double n)
+{
+    number = number * pow(10,n-1); //四捨五入したい値を10の(n-1)乗倍する。
+    number = round(number); //小数点以下を四捨五入する。
+    number /= pow(10, n-1); //10の(n-1)乗で割る。
+    return number;
 }
 
 
@@ -229,6 +241,14 @@ void MyColorSensor::getHSV(rgb_f_t rgb, hsv_t& hsv)
 pup_color_rgb_t MyColorSensor::getRgb()
 {
     return raw;
+}
+double MyColorSensor::getBright()
+{
+    return mNorm_bright;
+}
+hsv_t MyColorSensor::getHSV_()
+{
+    return mHsv;
 }
 
 void MyColorSensor::calibMax()

@@ -4,10 +4,7 @@ mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 LDFLAGS += -L/usr/lib/arm-linux-gnueabihf
 
-LIBS += \
-		-l opencv_core \
-		-l opencv_videoio \
-		-l opencv_imgcodecs \
+LIBS +=
 
 APPL_LIBS +=
 
@@ -68,8 +65,7 @@ APPL_CXXOBJS += \
 	CameraColorStatusJudge.o\
 	CameraCarryStatusJudge.o\
 	PipeComm.o\
-	CameraTracer.o\
-	thread_main.o
+	CameraTracer.o
 
 SRCLANG := c++
 
