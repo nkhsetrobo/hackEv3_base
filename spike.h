@@ -6,6 +6,7 @@ extern "C" {
 #include "spike/hub/battery.h"
 #include "spike/hub/button.h"
 #include "spike/hub/imu.h"
+#include "spike/hub/light.h"
 #include "spike/pup/colorsensor.h"
 #include "spike/pup/motor.h"
 //#include "spike/hub/speaker.h"

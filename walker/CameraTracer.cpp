@@ -17,7 +17,7 @@ CameraTracer::CameraTracer( Odometry *odo,
     : SimpleWalker(odo,scon)
 {
     mPid2=new PID(0.1);
-    mPid2->debug = false;
+    mPid2->debug = true;
     mPid2->debug_char='c';
 
     mPcomm  = gPcomm2;

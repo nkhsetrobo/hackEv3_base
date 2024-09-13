@@ -1523,7 +1523,7 @@ wParam carry_adjust_l[5] = {
 wParam carry_adjust_s[5] = {
        // {0, Section::WALKER, Section::LENGTH, 0, -0.0, 5, 5, 0.1, 0, 0 /*setparam*/, 0, 0, +30, 0, false,Judge::UPDATE, 0, 1.5, 0, 0, 0, 0, 0, 0,Section::JNONE},
         // {0, Section::CAMTRACER, Section::STOP,0, 50, 2.0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, false,Judge::UPDATE, 0, 7.0, 0, 0, 0, 0, 500, 0,Section::JNONE},
-        {0, Section::CAMTRACER, Section::LENGTH,30, 50, 1.2, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, false,Judge::UPDATE, 0, 7.0, 0, 0, 0, 0, 0, 0,Section::JNONE},
+        {0, Section::CAMTRACER, Section::LENGTH,30, 50, 2.0, 0.0, 0.0, 0, 0 /*setparam*/, 0, 0, 0, 0, false,Judge::UPDATE, 0, 7.0, 0, 0, 0, 0, 0, 0,Section::JNONE},
        {0, Section::WALKER, Section::LENGTH, 0, -0.0, 5, 5, 0.1, 0, 0 /*setparam*/, 0, 0, -50, 0, false,Judge::UNUPDATE, 0, -3, 0, 0, 0, 0, 0, 0,Section::JNONE},
         // {12, Section::VIRTUAL2, Section::LENGTH, -35, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UNUPDATE, 0, -10, 0, 0, 0, 0, 0 ,false,Section::JNONE},
         {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},

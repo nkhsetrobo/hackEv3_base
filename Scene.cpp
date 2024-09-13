@@ -8,8 +8,8 @@
 #include "app.h"
 #include "spike.h"
 
-extern Motor       *gLeftWheel;
-extern Motor       *gRightWheel;
+extern pup_motor_t       *gLeftWheel;
+extern pup_motor_t       *gRightWheel;
 extern MyColorSensor *gColor;
 extern MyGyroSensor *gGyro;
 extern Odometry *gOdo;
@@ -121,13 +121,21 @@ void Scene::execCalib()
     double bri = mColorSensor->getBright();
     hsv_t hsv = mColorSensor->getHSV_();
     static int calib_cnt=0;
-    if(calib_cnt++%100==0) {
-        if(bri>-0.1 && bri<0.1) {
-            printf("OK ");
+    if(calib_cnt++%50==0) {
+        if(bri<-0.1) {
+            hub_light_on_color(PBIO_COLOR_BLUE);
         }
-
+        else if(bri>0.1) {
+            hub_light_on_color(PBIO_COLOR_YELLOW);
+        } else {
+            printf("OK ");
+            hub_light_on_color(PBIO_COLOR_GREEN);
+        } 
          printf("%f: %f,%f,%f\n",bri, hsv.h, hsv.s, hsv.v);
     }
+	pup_motor_set_power(gLeftWheel,20);
+	pup_motor_set_power(gRightWheel,20);
+
     hub_button_t mask;
     hub_button_is_pressed(&mask);
     if(mask&HUB_BUTTON_LEFT)
@@ -257,8 +265,8 @@ void Scene::execBingo()
        // delete mBsm;
         // msg_log("Tail test");
         if(mBsm->getError()!=0) {
-            gLeftWheel->setPWM(0);
-            gRightWheel->setPWM(0);
+            pup_motor_set_power(gLeftWheel,0);
+            pup_motor_set_power(gRightWheel,0);
           Clock clock;
             ev3_led_set_color(LED_RED );
             clock.sleep(10000);
@@ -313,7 +321,7 @@ void Scene::execEnd()
 
     // msg_log("finish!");
     //ETRoboc_notifyCompletedToSimulator();
-    gLeftWheel->setPWM(0);
-    gRightWheel->setPWM(0);
+    pup_motor_set_power(gLeftWheel,0);
+    pup_motor_set_power(gRightWheel,0);
 
 } 
