@@ -1,0 +1,188 @@
+ev3api_brick.o: ../common/ev3api/src/ev3api_brick.c \
+ /usr/include/stdc-predef.h ../../include/kernel.h \
+ ../../include/t_stddef.h ../../target/raspi_gcc/target_stddef.h \
+ ../../arch/gcc/tool_stddef.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/stddef.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/limits.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/syslimits.h \
+ /usr/include/limits.h \
+ /usr/include/arm-linux-gnueabihf/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/arm-linux-gnueabihf/sys/cdefs.h \
+ /usr/include/arm-linux-gnueabihf/bits/wordsize.h \
+ /usr/include/arm-linux-gnueabihf/bits/long-double.h \
+ /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
+ /usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h \
+ /usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
+ /usr/include/arm-linux-gnueabihf/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
+ /usr/include/arm-linux-gnueabihf/bits/xopen_lim.h \
+ /usr/include/arm-linux-gnueabihf/bits/uio_lim.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdint.h \
+ /usr/include/stdint.h /usr/include/arm-linux-gnueabihf/bits/types.h \
+ /usr/include/arm-linux-gnueabihf/bits/timesize.h \
+ /usr/include/arm-linux-gnueabihf/bits/typesizes.h \
+ /usr/include/arm-linux-gnueabihf/bits/time64.h \
+ /usr/include/arm-linux-gnueabihf/bits/wchar.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdint-intn.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdint-uintn.h \
+ /usr/include/stdlib.h /usr/include/arm-linux-gnueabihf/bits/waitflags.h \
+ /usr/include/arm-linux-gnueabihf/bits/waitstatus.h \
+ /usr/include/arm-linux-gnueabihf/bits/floatn.h \
+ /usr/include/arm-linux-gnueabihf/bits/floatn-common.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/locale_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/__locale_t.h \
+ /usr/include/arm-linux-gnueabihf/sys/types.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/clock_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/clockid_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/time_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/timer_t.h \
+ /usr/include/endian.h /usr/include/arm-linux-gnueabihf/bits/endian.h \
+ /usr/include/arm-linux-gnueabihf/bits/endianness.h \
+ /usr/include/arm-linux-gnueabihf/bits/byteswap.h \
+ /usr/include/arm-linux-gnueabihf/bits/uintn-identity.h \
+ /usr/include/arm-linux-gnueabihf/sys/select.h \
+ /usr/include/arm-linux-gnueabihf/bits/select.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/sigset_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/__sigset_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/struct_timeval.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/struct_timespec.h \
+ /usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
+ /usr/include/arm-linux-gnueabihf/bits/thread-shared-types.h \
+ /usr/include/arm-linux-gnueabihf/bits/pthreadtypes-arch.h \
+ /usr/include/arm-linux-gnueabihf/bits/struct_mutex.h \
+ /usr/include/arm-linux-gnueabihf/bits/struct_rwlock.h \
+ /usr/include/alloca.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdlib-bsearch.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdlib-float.h \
+ ../../target/raspi_gcc/target_kernel.h ../common/ev3api/include/ev3api.h \
+ ../../include/t_syslog.h ../../include/t_stdlib.h /usr/include/stdio.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdarg.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/__fpos_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/__mbstate_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/__fpos64_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/__FILE.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/FILE.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/struct_FILE.h \
+ /usr/include/arm-linux-gnueabihf/bits/types/cookie_io_functions_t.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdio_lim.h \
+ /usr/include/arm-linux-gnueabihf/bits/sys_errlist.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdio.h \
+ ../common/ev3api/include/../src/ev3api_button.h \
+ ../common/ev3api/include/../src/ev3api_fs.h \
+ ../common/ev3api/include/../src/ev3api_lcd.h \
+ ../common/ev3api/include/../src/ev3api_led.h \
+ ../common/ev3api/include/../src/ev3api_motor.h \
+ ../common/ev3api/include/../src/ev3api_sensor.h \
+ ../common/ev3api/include/../src/ev3api_speaker.h \
+ ../common/ev3api/include/../src/ev3api_rtos.h \
+ ../common/ev3api/include/../src/ev3api_battery.h kernel_cfg.h \
+ ../../target/raspi_gcc/pil/include/platform_interface_layer.h \
+ ../../target/raspi_gcc/pil/include/driver_interface_lcd.h \
+ ../../include/itron.h ../../target/raspi_gcc/pil/include/driver_svc.h \
+ ../../target/raspi_gcc/pil/include/ev3_svc.h \
+ ../../target/raspi_gcc/pil/include/driver_interface_brick.h \
+ ../../target/raspi_gcc/pil/include/driver_interface_filesys.h \
+ ../../target/raspi_gcc/pil/include/driver_interface_sound.h \
+ ../../target/raspi_gcc/pil/include/driver_interface_bluetooth.h \
+ ../../target/raspi_gcc/pil/include/driver_interface.h \
+ ../common/ev3api/src/api_common.h
+/usr/include/stdc-predef.h:
+../../include/kernel.h:
+../../include/t_stddef.h:
+../../target/raspi_gcc/target_stddef.h:
+../../arch/gcc/tool_stddef.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/stddef.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/limits.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/syslimits.h:
+/usr/include/limits.h:
+/usr/include/arm-linux-gnueabihf/bits/libc-header-start.h:
+/usr/include/features.h:
+/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
+/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
+/usr/include/arm-linux-gnueabihf/bits/long-double.h:
+/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
+/usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h:
+/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
+/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
+/usr/include/linux/limits.h:
+/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
+/usr/include/arm-linux-gnueabihf/bits/xopen_lim.h:
+/usr/include/arm-linux-gnueabihf/bits/uio_lim.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/stdint.h:
+/usr/include/stdint.h:
+/usr/include/arm-linux-gnueabihf/bits/types.h:
+/usr/include/arm-linux-gnueabihf/bits/timesize.h:
+/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
+/usr/include/arm-linux-gnueabihf/bits/time64.h:
+/usr/include/arm-linux-gnueabihf/bits/wchar.h:
+/usr/include/arm-linux-gnueabihf/bits/stdint-intn.h:
+/usr/include/arm-linux-gnueabihf/bits/stdint-uintn.h:
+/usr/include/stdlib.h:
+/usr/include/arm-linux-gnueabihf/bits/waitflags.h:
+/usr/include/arm-linux-gnueabihf/bits/waitstatus.h:
+/usr/include/arm-linux-gnueabihf/bits/floatn.h:
+/usr/include/arm-linux-gnueabihf/bits/floatn-common.h:
+/usr/include/arm-linux-gnueabihf/bits/types/locale_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/__locale_t.h:
+/usr/include/arm-linux-gnueabihf/sys/types.h:
+/usr/include/arm-linux-gnueabihf/bits/types/clock_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/clockid_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/time_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/timer_t.h:
+/usr/include/endian.h:
+/usr/include/arm-linux-gnueabihf/bits/endian.h:
+/usr/include/arm-linux-gnueabihf/bits/endianness.h:
+/usr/include/arm-linux-gnueabihf/bits/byteswap.h:
+/usr/include/arm-linux-gnueabihf/bits/uintn-identity.h:
+/usr/include/arm-linux-gnueabihf/sys/select.h:
+/usr/include/arm-linux-gnueabihf/bits/select.h:
+/usr/include/arm-linux-gnueabihf/bits/types/sigset_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/__sigset_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/struct_timeval.h:
+/usr/include/arm-linux-gnueabihf/bits/types/struct_timespec.h:
+/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h:
+/usr/include/arm-linux-gnueabihf/bits/thread-shared-types.h:
+/usr/include/arm-linux-gnueabihf/bits/pthreadtypes-arch.h:
+/usr/include/arm-linux-gnueabihf/bits/struct_mutex.h:
+/usr/include/arm-linux-gnueabihf/bits/struct_rwlock.h:
+/usr/include/alloca.h:
+/usr/include/arm-linux-gnueabihf/bits/stdlib-bsearch.h:
+/usr/include/arm-linux-gnueabihf/bits/stdlib-float.h:
+../../target/raspi_gcc/target_kernel.h:
+../common/ev3api/include/ev3api.h:
+../../include/t_syslog.h:
+../../include/t_stdlib.h:
+/usr/include/stdio.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/stdarg.h:
+/usr/include/arm-linux-gnueabihf/bits/types/__fpos_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/__mbstate_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/__fpos64_t.h:
+/usr/include/arm-linux-gnueabihf/bits/types/__FILE.h:
+/usr/include/arm-linux-gnueabihf/bits/types/FILE.h:
+/usr/include/arm-linux-gnueabihf/bits/types/struct_FILE.h:
+/usr/include/arm-linux-gnueabihf/bits/types/cookie_io_functions_t.h:
+/usr/include/arm-linux-gnueabihf/bits/stdio_lim.h:
+/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h:
+/usr/include/arm-linux-gnueabihf/bits/stdio.h:
+../common/ev3api/include/../src/ev3api_button.h:
+../common/ev3api/include/../src/ev3api_fs.h:
+../common/ev3api/include/../src/ev3api_lcd.h:
+../common/ev3api/include/../src/ev3api_led.h:
+../common/ev3api/include/../src/ev3api_motor.h:
+../common/ev3api/include/../src/ev3api_sensor.h:
+../common/ev3api/include/../src/ev3api_speaker.h:
+../common/ev3api/include/../src/ev3api_rtos.h:
+../common/ev3api/include/../src/ev3api_battery.h:
+kernel_cfg.h:
+../../target/raspi_gcc/pil/include/platform_interface_layer.h:
+../../target/raspi_gcc/pil/include/driver_interface_lcd.h:
+../../include/itron.h:
+../../target/raspi_gcc/pil/include/driver_svc.h:
+../../target/raspi_gcc/pil/include/ev3_svc.h:
+../../target/raspi_gcc/pil/include/driver_interface_brick.h:
+../../target/raspi_gcc/pil/include/driver_interface_filesys.h:
+../../target/raspi_gcc/pil/include/driver_interface_sound.h:
+../../target/raspi_gcc/pil/include/driver_interface_bluetooth.h:
+../../target/raspi_gcc/pil/include/driver_interface.h:
+../common/ev3api/src/api_common.h:

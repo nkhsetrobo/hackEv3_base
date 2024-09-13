@@ -1,0 +1,1 @@
+cfg1_out.timestamp: ../../target/raspi_gcc/target_kernel.cfg tmp_app.cfg ../../target/raspi_gcc/target_timer.cfg ./gen/tecsgen.cfg ../common/app_common.cfg ../../target/raspi_gcc/ev3.cfg ../../target/raspi_gcc/platform/platform.cfg ../../target/raspi_gcc/drivers/brick/brick_dri.cfg ../common/ev3api/ev3api.cfg
