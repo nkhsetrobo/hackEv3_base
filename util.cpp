@@ -22,5 +22,7 @@ void msg_f(const char *str, int32_t line) {
 
 void msg_log(const char *str)
 {
-  syslog(LOG_NOTICE,str);
+//  syslog(LOG_NOTICE,str);
+  printf(str);
+  printf("\n");
 }

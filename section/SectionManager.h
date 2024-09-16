@@ -7,7 +7,7 @@ class SectionManager {
     public:
         SectionManager();
         ~SectionManager();
-        virtual bool run();
+        virtual bool run();    //もしかしたらvirtualになるかも
         void addSection(Section *);
         void reset();
 

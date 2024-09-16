@@ -23,9 +23,11 @@ class PID {
         void setDeltaT(float delta);
 
         bool debug = false;
+        char debug_char=' ';
     private:
        float diff[2];
        float integral;
+        float last_integral[40];
        float target;
        float limit; 
        float delta;
@@ -37,6 +39,10 @@ class PID {
        float tgt_limit;
 
        bool resetFlg;
+
+        int sec;
+        int cnt;
+
 };
 
 #endif

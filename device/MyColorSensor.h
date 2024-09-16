@@ -1,6 +1,6 @@
 #ifndef __MYCOLORSENSOR_H__
 #define __MYCOLORSENSOR_H__
-#include "MyColorSensor.h"
+
 
 #include "ColorSensor.h"
 #include "Brightness.h"

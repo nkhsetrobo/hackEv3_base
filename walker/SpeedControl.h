@@ -16,6 +16,7 @@ class SpeedControl
         void setBreak(bool brk);
         double getCurrentFwd();
         double getCurrentSpeed();
+		void changeAcc(float a);	//加速度変更
 
     private:
         PID *mPid;
@@ -25,6 +26,7 @@ class SpeedControl
         double mTargetSpeed;
         int mForward; //現在PWM値
         double mCurrentSpeed;
+		double bai;
 
         bool mBreake_flag;
         bool mMode_flag;//setComandVだとtrue、setComandだとfalse

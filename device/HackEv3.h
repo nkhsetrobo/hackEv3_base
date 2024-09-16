@@ -3,6 +3,6 @@
 
 const float D_RIGHT=9.00;
 const float D_LEFT=9.0;
-const float TREAD=14.3;
-
+const float TREAD=13.9;
+//14.3
 #endif

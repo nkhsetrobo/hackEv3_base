@@ -16,7 +16,8 @@ SpeedControl::SpeedControl(Odometry *odo,Velocity *v):
 void SpeedControl::setTargetSpeed(double speed)
 {
     static double prev_speed=0;
-    double bai =1.0;
+    //double bai =1.0;
+	bai = 1.0;
     //float bai =0.3;
     //float bai =speed/60.0;
 
@@ -46,7 +47,7 @@ void SpeedControl::setTargetSpeed(double speed)
     mPid->setKi(0);
         //mPid->setKd(0.03*bai);
     mPid->setKd(0.1*bai);
-    mPid->setLimit(15*bai+1);    
+    mPid->setLimit(30*bai+1);    
     //mPid->setLimit(1);    
 
 }
@@ -74,12 +75,12 @@ int SpeedControl::getPwm()
     int maxFwd = 83;
     
     if(mForward>maxFwd) {
-        syslog(LOG_NOTICE,"over speed");
+        // syslog(LOG_NOTICE,"over speed");
         mForward=maxFwd;
     }
 
     if(mForward<-maxFwd) {
-        syslog(LOG_NOTICE,"over speed");
+        // syslog(LOG_NOTICE,"over speed");
        mForward=-maxFwd;
     }
    
@@ -115,4 +116,12 @@ double SpeedControl::getCurrentFwd()
 double SpeedControl::getCurrentSpeed()
 {
     return mCurrentSpeed;
+}
+
+void SpeedControl::changeAcc(float a)
+{
+	printf("+-------------------------------------+\n");
+	printf("SpeedControl:: bai = %f\n", bai);
+	printf("+-------------------------------------+\n");
+	mPid->setLimit(a*bai + 1);
 }

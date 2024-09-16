@@ -3,6 +3,7 @@
 #include "Odometry.h"
 #include "math.h"
 #include "HackEv3.h"
+#include "util.h"
 
 #define M_PI 3.14159265358979323846
 
@@ -10,15 +11,24 @@
 Odometry::Odometry(Motor *left, Motor *right,
 					Length *len,
 					TurnAngle *angle,
-					Velocity *velo):
+					Velocity *velo,
+					XPosition *xposition,
+					YPosition *yposition,
+					Motor *tail,
+					TailAngle *tailangle):
 	mLeftMotor(left),
 	mRightMotor(right),
 	mTurnAngle(angle),
 	mLength(len),
-	mVelocity(velo)
+	mVelocity(velo),
+	mXPosition(xposition),
+	mYPosition(yposition),
+	mTailMotor(tail),
+	mTailAngle(tailangle)
 {
 	mLeftMotor->reset();
 	mRightMotor->reset();
+	mTailMotor->reset();
 
 	x=y=th=0.0;
 	sumlen=0;
@@ -49,7 +59,9 @@ void Odometry::update()
 {
 	current_rs1 = mLeftMotor->getCount();
 	current_rs2 = mRightMotor->getCount();
-	
+	current_rs3 = mTailMotor->getCount();
+	mTailAngle->update(current_rs3);
+
 	calc();
 	mVelocity->update(current_rs1,current_rs2);
 
@@ -82,11 +94,31 @@ void Odometry::calc()
 
 	mLength->update(sumlen);
 	mTurnAngle->update(th);
+	mXPosition->update(x);
+	mYPosition->update(y);
+	  static char buf[256];
+  //  sprintf(buf," %f,%f,%f",x,y,((th*180)/M_PI));
+  //  msg_log(buf);
 
 }
 
 void Odometry::setPwm(int left,int right)
 {
+	/*static char buf[256];
+    sprintf(buf,"Left %d, Right %d",left,right);
+    msg_log(buf);*/
+
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);
+}
+
+void Odometry::setBrake(bool brake)
+{
+	mLeftMotor->setBrake(brake);
+	mRightMotor->setBrake(brake);
+}
+
+void Odometry::setTailpwm(int tail)
+{
+	mTailMotor->setPWM(tail);
 }
