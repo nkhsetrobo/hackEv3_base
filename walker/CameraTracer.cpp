@@ -60,9 +60,9 @@ float CameraTracer::calcTurn(float val1) {
     mPid2->setKi(mIFactor);
     mPid2->setKd(mDFactor);
 
-    float val1_turn =  mPid2->getOperation(val1);
+    float val1_turn =  mPid2->getOperation(val1); //target-value 左方向で＋
 
-    float turn =  val1_turn;
+    float turn = -val1_turn;
    
     return turn;
 }

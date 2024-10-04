@@ -91,6 +91,8 @@ char rcv_data;
 
 int pipe_id;
 
+FILE *debuglogfp;
+
 static void user_system_create() {
   // gLeftWheel = new Motor(PORT_C,false,LARGE_MOTOR);
   // gRightWheel = new Motor(PORT_B,false,LARGE_MOTOR);
@@ -142,6 +144,8 @@ static void user_system_create() {
 //   send_pipe_fp = fopen("run2cam","w");
 
 //   printf("pipe opened\n");
+
+  debuglogfp = fopen("trace_log.txt","w");
 
   init_f("hackEv3_base");
   
@@ -287,10 +291,11 @@ void tracer_task(intptr_t unused) {
     static SYSTIM lasttime;
     SYSTIM sttime,edtime;
     get_tim(&sttime);
-    // printf("%d\n",(int)sttime);
+    fprintf(debuglogfp,"%ld\n",(unsigned long int)sttime);
     msg_logbuf[cnt][0]=sttime;
     if(sttime-lasttime>11000) {
        printf("delay time TRACER_TAASK %d-%d %d\n",(int)lasttime,(int)sttime,(int)(sttime-lasttime));
+       fflush(debuglogfp);
     }
     
 

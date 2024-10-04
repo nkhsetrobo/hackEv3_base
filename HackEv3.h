@@ -13,13 +13,17 @@ const float TREAD=12.7;
 #endif
 //14.3
 
-#define GREEN_H 140
-#define RED_H 353
-#define RED_S 0.2
+#define GREEN_H 148
+#define GREEN_S 0.08
 
-#define YELLOW_H 40
-#define YELLOW_S 0.2
-#define BLUE_H 215
+#define RED_H 353
+#define RED_S 0.3
+
+#define YELLOW_H 42
+#define YELLOW_S 0.25
+
+#define BLUE_H 212
+#define BLUE_S 0.15
 
 #define SLALOM_GREEN_H 159
 #define SLALOM_RED_H 0
@@ -47,6 +51,8 @@ const float TREAD=12.7;
 #define CLEN (7)
 #define CLEN_CENT (3)
 
-#define CSPD (44)
+#define CSPD (40)
+
+#define BLK_TGT (0.15)
 
 #endif

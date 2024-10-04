@@ -34,6 +34,8 @@ def getColor():
 
     print("capture!")
     im = pc2.capture_array()
+    cv2.imwrite("orgine.jpg",im)
+
     # im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
     im = cv2.resize(im,None,fx=0.25,fy=0.25)
     y,x = im.shape[0],im.shape[1]
@@ -153,6 +155,10 @@ def circle_center():
     global img_cnt
     img = pc2.capture_array()
     img = cv2.resize(img,None,fx=0.25,fy=0.25)
+
+    #debug 
+    # img = cv2.imread("circle_1820/circle_org4.jpg")
+
     y,x = img.shape[0],img.shape[1]
     cv2.imwrite("circle/circle_org%d.jpg"%img_cnt,img)
 
@@ -162,7 +168,7 @@ def circle_center():
 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    img = trim(img,(0,y//2),(x,y//2-y//4)) #ボトルの影響を排除するため下半分で判定
+    img = trim(img,(int(x*0.1),int(y*0.4)),(x-int(x*0.2),y//8)) #ボトルの影響を排除するため下半分で判定
     cv2.imwrite("circle/circle_trim%d.jpg"%img_cnt,img)
 
     #影を消せる？
@@ -226,7 +232,7 @@ def contourarea_circle(mask):
 
         # 輪郭の領域を計算
         area = cv2.contourArea(contours[i])
-        if area < 100 : #ノイズ
+        if area < 10 : #ノイズ
             continue
         rect = cv2.boundingRect(contours[i])
         print(rect)
@@ -240,7 +246,7 @@ def contourarea_circle(mask):
     print("left,center,right ",left_pos/mask.shape[1],center_pos/mask.shape[1],right_pos/mask.shape[1])
     return int(center_pos*100/mask.shape[1])
 
-
+#トリミング 左上xy座標とサイズ
 def trim(img,top_left,bottom_right):
     return img[top_left[1] : bottom_right[1]+top_left[1] , top_left[0]: bottom_right[0]+top_left[0]]
 
@@ -347,7 +353,9 @@ def main():
         mode =''
 
     pc2 = Picamera2()
-    pc2.configure(pc2.create_preview_configuration(main={"format": 'XRGB8888', "size": (3280, 2464)}))
+    fullReso = pc2.camera_properties['PixelArraySize']
+
+    pc2.configure(pc2.create_preview_configuration(main={"format": 'XRGB8888', "size": fullReso}, raw={ "size" : fullReso }))
     pc2.start()
     time.sleep( 1 )
 
