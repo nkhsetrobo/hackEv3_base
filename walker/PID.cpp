@@ -4,8 +4,6 @@
 PID::PID()
     :PID(0.010)
 {
-
-
 }
 
 PID::PID(float delta) {
@@ -85,6 +83,8 @@ float PID::getOperation(float value)
     if (debug) {
        // printf("pid:(%3.1f-%3.1f), diff:%4.2f d:%4.2f i:%4.2f  op:%5.3f\n",target,value,diff[1],delta,integral,val);
         printf("%c,%d,%f,%f,%f,%f\n",debug_char,clk->now(),diff[1],integral,delta, val);
+        if(fp) 
+            fprintf(fp,"%c,%d,%f,%f,%f,%f\n",debug_char,clk->now(),diff[1],integral,delta, val);
         msg_num(debug_char,i,diff[1],integral,delta, val);
         i++;
     }
@@ -137,4 +137,9 @@ float PID::getTarget()
 void PID::setDeltaT(float delta)
 {
     DELTAT = delta;
+}
+
+void PID::setFp(FILE *p)
+{
+    fp=p;
 }

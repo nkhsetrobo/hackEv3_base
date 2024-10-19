@@ -3,7 +3,7 @@
 LowPassFilter::LowPassFilter()
 {
     prev=0.0;
-    mRate = 0.40;
+    mRate = 0.41;
 }
 LowPassFilter::~LowPassFilter()
 {

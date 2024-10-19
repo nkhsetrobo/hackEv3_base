@@ -33,11 +33,11 @@ MyColorSensor::MyColorSensor(pbio_port_id_t  port,
     mMin_B  = 8;
 #else
     mMax_R  = 255;
-    mMin_R  = 37;
+    mMin_R  = 81;
     mMax_G  = 255;
-    mMin_G  = 43;
+    mMin_G  = 88;
     mMax_B  = 255;
-    mMin_B  = 47;  
+    mMin_B  = 94;  
 #endif 
 }
 

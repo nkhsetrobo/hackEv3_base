@@ -59,6 +59,8 @@ private:
     float mBias;
 
     int mLimit;  
+
+    FILE *fp;
 };
 
 #endif  // EV3_APP_LINETRACER_H_

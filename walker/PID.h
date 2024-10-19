@@ -26,6 +26,8 @@ class PID {
 
         void setDeltaT(float delta);
 
+        void setFp(FILE *fp);
+
         bool debug = false;
         char debug_char=' ';
     private:
@@ -50,7 +52,7 @@ class PID {
         int firstCnt=0;
 
         Clock *clk;
-
+        FILE *fp;
 };
 
 #endif

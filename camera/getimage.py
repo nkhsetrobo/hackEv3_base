@@ -73,7 +73,7 @@ def getColor():
     cv2.imwrite("img.jpg",im)
     cv2.imwrite("r_mask.jpg",mask_r)
     cv2.imwrite("b_mask.jpg",mask_b)
-    print("write ok")
+    print("write ok",ret_col)
     gc.collect()
 
     return ret_col

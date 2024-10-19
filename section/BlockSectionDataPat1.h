@@ -6,7 +6,7 @@ const  float BlockSectionManager::sign=-1;
 
  float BlockSectionManager::kp=37,BlockSectionManager::ki=20+8,BlockSectionManager::kd=6.2;
  float BlockSectionManager::rvkp=70,BlockSectionManager::rvki=80,BlockSectionManager::rvkd=20.0;  // lowpass 0.85
- float BlockSectionManager::lvkp=20,BlockSectionManager::lvki=13.0+2,BlockSectionManager::lvkd=15.0; // lowpass 0.85
+ float BlockSectionManager::lvkp=10,BlockSectionManager::lvki=10,BlockSectionManager::lvkd=4.0; // lowpass 0.85
  float BlockSectionManager::rkp0=20,BlockSectionManager::rki0=12,BlockSectionManager::rkd0=3.4;
 
 // float BlockSectionManager::rkp2=25,BlockSectionManager::rki2=30,BlockSectionManager::rkd2=7.0;  // lowpass 0.85
@@ -23,9 +23,9 @@ const  float BlockSectionManager::sign=-1;
 
 //float rkpf=5,rkif=19.5,rkdf=3.3;   //spd 100用 2024再調整
 
-float BlockSectionManager::rkpf=10,BlockSectionManager::rkif=10.0,BlockSectionManager::rkdf=5.8;   //spd 100用 2024再調整
+float BlockSectionManager::rkpf=2.8,BlockSectionManager::rkif=5.8,BlockSectionManager::rkdf=1.12;   //spd 100用 2024再調整
 //float BlockSectionManager::rkpf=12,BlockSectionManager::rkif=12.0,BlockSectionManager::rkdf=4.20;   //spd 100用 2024再調整
-float BlockSectionManager::rkpf2=BlockSectionManager::rkpf*1.5,BlockSectionManager::rkif2=BlockSectionManager::rkif*1.5,BlockSectionManager::rkdf2=BlockSectionManager::rkdf;   //spd 100用 2024再調整
+float BlockSectionManager::rkpf2=BlockSectionManager::rkpf*1.2,BlockSectionManager::rkif2=BlockSectionManager::rkif*1.2,BlockSectionManager::rkdf2=BlockSectionManager::rkdf*1.2;   //spd 100用 2024再調整
 
 
 

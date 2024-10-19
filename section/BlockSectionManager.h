@@ -1249,9 +1249,9 @@ wParam enter[10] = {
   //     {0, Section::WALKER, Section::STOP, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 1000 , 0,Section::JNONE},
   //  {100, Section::VIRTUAL2, Section::CAMERACOLOR, CSPD, 0,rkp2 ,rki2, rkd2 , 0,1 /*setparam*/, 0, mode2, 0, 30, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  BLUE_H, 0.10,0,0,Section::CAMERACOLORSTATUS},
   //     {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
-  {12, Section::TRACER, Section::LENGTH, CSPD, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 40, 0, 0, 0, 0, 0 ,false,Section::JNONE},
+  {12, Section::TRACER, Section::LENGTH, CSPD, 0,  rkpf2 ,rkif2, rkdf2, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 40, 0, 0, 0, 0, 0 ,false,Section::JNONE},
 
-  {0, Section::VIRTUAL2, Section::COLOR, CSPD, 0,rkp2 ,rki2, rkd2 , 0,1 /*setparam*/, 0, mode2, 0, 30, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  BLUE_H, 0.10,0,false},
+  {0, Section::VIRTUAL2, Section::COLOR, CSPD, 0,lvkp, lvki, lvkd , 0,1 /*setparam*/, 0, mode2, 0, 30, !_EDGE_R, Judge::UPDATEALL, 0, 0, 0, 0,  BLUE_H, 0.10,0,false},
   {-1, Section::WNONE, Section::JNONE, 0, 0, 0, 0, 0, 1, 1 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UNUPDATE, 0, 0, 0, 0, 0, 0, 0,Section::JNONE},
 
 };
@@ -1259,15 +1259,16 @@ wParam enter[10] = {
 //入口にボトルがあるパターン
 wParam enter2[20] = {
     //初手で入口横のサークルへ
-    {12, Section::TRACER, Section::LENGTH, CSPD, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 18, 0, 0, 0, 0, 0 ,false,Section::JNONE},
-    {12, Section::TRACER, Section::CAMERACOLOR, 35, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, _EDGE_R, Judge::UPDATE, 0, CLEN, 0, 0, 0, 0, 0 ,false,Section::JNONE},
-     {12, Section::VIRTUAL2, Section::LENGTH, 35, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATE, 0, +2.5, 0, 0, 0, 0, 0 ,false,Section::JNONE},
-    {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 0, +60*sign, _EDGE_R, Judge::UPDATEALL, -45*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+    {12, Section::TRACER, Section::LENGTH, CSPD, 0,  rkpf2 ,rkif2, rkdf2, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 12, 0, 0, 0, 0, 0 ,false,Section::JNONE},
+    {12, Section::TRACER, Section::CAMERACOLOR, 35, 0,  rkpf2 ,rkif2, rkdf2, 0, 0 /*setparam*/, 0, mode2, 0, 0, _EDGE_R, Judge::UPDATE, 0, CLEN, 0, 0, 0, 0, 0 ,false,Section::JNONE},
+        // {0, Section::WALKER, Section::LENGTH, 0, 0,35, 20.0, 2.0, 0, 0 /*setparam*/, 0, 0, 0, 0, _EDGE, Judge::UPDATEALL, 0, 10000, 0, 0, 0, 0.35, 0 , 0,Section::JNONE},
+    //  {12, Section::VIRTUAL2, Section::LENGTH, 35, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, 0, mode2, 0, 0, !_EDGE_R, Judge::UPDATE, 0, +2.5, 0, 0, 0, 0, 0 ,false,Section::JNONE},
+    {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 0, +55*sign, _EDGE_R, Judge::UPDATEALL, -45*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
     // {0, Section::VIRTUAL2, Section::LENGTH, CSPD, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, -88*sign, mode0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 25, 0, 0,0, 0, 100 , 0,Section::JNONE},
     // {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 0, -60*sign, _EDGE_R, Judge::UNUPDATE, 0*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
     {0, Section::VIRTUAL2, Section::BRIGHTNESS, CSPD, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, -45*sign, mode0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 0, -0.5, 0,0, 0, 100 , 0,Section::JNONE},
     {0, Section::VIRTUAL2, Section::LENGTH, CSPD, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, -45*sign, mode0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 2, 0, 0,0, 0, 100 , 0,Section::JNONE},
-    {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 0, +60*sign, _EDGE_R, Judge::UNUPDATE, -88*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
+    {0, Section::TURN, Section::TURNANGLE, 0, 0,rvkp, rvki ,rvkd,0, 0 /*setparam*/, 0, 0, 0, +55*sign, _EDGE_R, Judge::UNUPDATE, -88*sign, 0, 0, 0, 0, 0, 0 , 0,Section::JNONE},
     {0, Section::VIRTUAL2, Section::STOP, 0, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, -88*sign, mode0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 0, 0, 0,0, 0, 100, 0,Section::JNONE},
     {0, Section::VIRTUAL2, Section::COLOR, CSPD, 0,lvkp, lvki, lvkd, 0, 0 /*setparam*/, -88*sign, mode0, 0, 0, _EDGE_R, Judge::UPDATE, 0, 0, 0, 0, BLUE_H, 0.10, 0,Section::JNONE},
   {12, Section::VIRTUAL2, Section::LENGTH, CSPD, 0,  rkp2 ,rki2, rkd2, 0, 0 /*setparam*/, -88*sign, mode0, 0, 0, !_EDGE_R, Judge::UPDATE, 0, 2, 0, 0, 0, 0, 0 ,false,Section::JNONE},

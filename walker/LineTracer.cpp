@@ -30,6 +30,9 @@ LineTracer::LineTracer( Odometry *odo,
 {
     mPid->debug = true;
     mPid->debug_char='t';
+
+    fp= fopen("LTlog.txt","w");
+    mPid->setFp(fp);
 }
  
 void LineTracer::run()
